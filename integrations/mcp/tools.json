@@ -1,0 +1,350 @@
+{
+  "tools": [
+    {
+      "name": "get_regional_workspace",
+      "description": "Read the regional country and feature delivery matrix",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "policytracker/operationId": "getRegionalWorkspace"
+      }
+    },
+    {
+      "name": "list_countries",
+      "description": "List available country reports",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "policytracker/operationId": "listCountries"
+      }
+    },
+    {
+      "name": "get_country_prime",
+      "description": "Resolve a country Prime report",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          },
+          "country_code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id",
+          "country_code"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "policytracker/operationId": "getPrime"
+      }
+    },
+    {
+      "name": "get_dashboard",
+      "description": "Read a frozen country dashboard",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          },
+          "bundle_id": {
+            "type": "string"
+          },
+          "country_code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id",
+          "bundle_id",
+          "country_code"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "policytracker/operationId": "getDashboard"
+      }
+    },
+    {
+      "name": "query_evidence_records",
+      "description": "Filter commitments and risk evidence",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          },
+          "bundle_id": {
+            "type": "string"
+          },
+          "country_code": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "domain": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "topic": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "hazard": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "drr_phase": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "kind": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "query": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cursor": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "workspace_id",
+          "bundle_id",
+          "country_code",
+          "domain",
+          "topic",
+          "hazard",
+          "drr_phase",
+          "kind",
+          "query",
+          "cursor"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "policytracker/operationId": "queryRecords"
+      }
+    },
+    {
+      "name": "get_bilingual_evidence",
+      "description": "Read authorized source and English evidence",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          },
+          "bundle_id": {
+            "type": "string"
+          },
+          "evidence_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id",
+          "bundle_id",
+          "evidence_id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "policytracker/operationId": "getEvidence"
+      }
+    },
+    {
+      "name": "get_report",
+      "description": "Read a report without generating it",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          },
+          "bundle_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id",
+          "bundle_id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "policytracker/operationId": "getReport"
+      }
+    },
+    {
+      "name": "get_comparison",
+      "description": "Read an existing comparison",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          },
+          "bundle_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id",
+          "bundle_id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "policytracker/operationId": "getComparison"
+      }
+    },
+    {
+      "name": "get_workplan",
+      "description": "Read an existing programme/monitoring table",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          },
+          "bundle_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id",
+          "bundle_id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "policytracker/operationId": "getWorkplan"
+      }
+    },
+    {
+      "name": "get_run",
+      "description": "Read an authorized job status",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          },
+          "run_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id",
+          "run_id"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "_meta": {
+        "policytracker/operationId": "getRun"
+      }
+    }
+  ]
+}

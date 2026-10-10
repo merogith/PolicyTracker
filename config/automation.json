@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0-b62cbec8770f",
+  "output_language": "English",
+  "detail": "standard",
+  "topic_ids": [],
+  "instructions": "",
+  "glossary": "",
+  "ocr_languages": "auto",
+  "vision_recovery": true,
+  "retry_limit": 2
+}

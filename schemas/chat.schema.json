@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "chat v1.0.0",
+  "type": "object",
+  "properties": {
+    "answer_blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "statement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "epistemic_status": {
+            "type": "string",
+            "enum": [
+              "source_statement",
+              "derived",
+              "analyst_inference"
+            ]
+          }
+        },
+        "required": [
+          "text",
+          "evidence_ids",
+          "statement_ids",
+          "epistemic_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coverage_limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "clarification": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "proposed_brief": {
+      "type": "object",
+      "properties": {
+        "task": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "audience": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "length": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "task",
+        "topics",
+        "audience",
+        "length",
+        "question"
+      ],
+      "additionalProperties": false
+    },
+    "proposed_action": {
+      "type": "string",
+      "enum": [
+        "none",
+        "request_extraction_job",
+        "request_comparison_job",
+        "save_ad_hoc_report"
+      ]
+    }
+  },
+  "required": [
+    "answer_blocks",
+    "coverage_limitations",
+    "clarification",
+    "proposed_brief",
+    "proposed_action"
+  ],
+  "additionalProperties": false
+}

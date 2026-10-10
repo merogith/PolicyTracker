@@ -1,0 +1,570 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "extraction v1.0.0",
+  "type": "object",
+  "properties": {
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string"
+          },
+          "document_id": {
+            "type": "string"
+          },
+          "segment_id": {
+            "type": "string"
+          },
+          "pdf_page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "quote_original": {
+            "type": "string"
+          },
+          "quote_english": {
+            "type": "string"
+          },
+          "context_evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "evidence_id",
+          "document_id",
+          "segment_id",
+          "pdf_page",
+          "quote_original",
+          "quote_english",
+          "context_evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "statements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "statement_id": {
+            "type": "string"
+          },
+          "label_en": {
+            "type": "string"
+          },
+          "description_en": {
+            "type": "string"
+          },
+          "reporting_party": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "country_codes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "geographic_scope": {
+            "type": "string",
+            "enum": [
+              "national",
+              "subnational",
+              "regional",
+              "EU",
+              "multi_country",
+              "unknown"
+            ]
+          },
+          "location_text": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reference_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cross_cutting_tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "unmapped_topic": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "documentation_status": {
+            "type": "string",
+            "enum": [
+              "mentioned",
+              "priority_stated",
+              "action_proposed",
+              "action_committed",
+              "implementation_reported",
+              "result_reported",
+              "unclear"
+            ]
+          },
+          "assertion_kind": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "observed",
+              "projected",
+              "scenario",
+              "recommendation",
+              "historical",
+              "template",
+              "unclear"
+            ]
+          },
+          "record_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "objectives": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "mitigation",
+                "adaptation",
+                "disaster_risk_reduction",
+                "unspecified"
+              ]
+            }
+          },
+          "targets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "target_id": {
+                  "type": "string"
+                },
+                "wording_english": {
+                  "type": "string"
+                },
+                "value_decimal": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "lower_decimal": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "upper_decimal": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "comparator": {
+                  "type": "string",
+                  "enum": [
+                    "equal",
+                    "at_least",
+                    "at_most",
+                    "range",
+                    "approximate",
+                    "not_stated"
+                  ]
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "target_basis": {
+                  "type": "string",
+                  "enum": [
+                    "absolute",
+                    "historical_reduction",
+                    "BAU_reduction",
+                    "intensity",
+                    "share",
+                    "qualitative",
+                    "other",
+                    "not_stated"
+                  ]
+                },
+                "baseline_value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "baseline_year": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "deadline": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "denominator": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "scenario": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "conditionality": {
+                  "type": "string",
+                  "enum": [
+                    "explicitly_conditional",
+                    "explicitly_unconditional",
+                    "not_stated",
+                    "unclear"
+                  ]
+                },
+                "condition_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "total_or_additional": {
+                  "type": "string",
+                  "enum": [
+                    "total",
+                    "additional",
+                    "not_stated"
+                  ]
+                },
+                "sector_scope": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "gas_scope": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "lulucf_treatment": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "gwp_basis": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "uncertainty": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "target_id",
+                "wording_english",
+                "value_decimal",
+                "lower_decimal",
+                "upper_decimal",
+                "comparator",
+                "unit",
+                "target_basis",
+                "baseline_value",
+                "baseline_year",
+                "deadline",
+                "denominator",
+                "scenario",
+                "conditionality",
+                "condition_text",
+                "total_or_additional",
+                "sector_scope",
+                "gas_scope",
+                "lulucf_treatment",
+                "gwp_basis",
+                "evidence_ids",
+                "uncertainty"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "facts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "category": {
+                  "type": "string",
+                  "enum": [
+                    "actor",
+                    "institutional_arrangement",
+                    "legal_instrument",
+                    "finance_cost",
+                    "funding_secured",
+                    "funding_requested",
+                    "financing_source",
+                    "financing_gap",
+                    "indicator",
+                    "baseline",
+                    "monitoring_arrangement",
+                    "support_need",
+                    "barrier",
+                    "implementation_step",
+                    "hazard",
+                    "vulnerability",
+                    "beneficiary",
+                    "inclusion",
+                    "co_benefit",
+                    "tradeoff",
+                    "policy_link",
+                    "other"
+                  ]
+                },
+                "name": {
+                  "type": "string"
+                },
+                "value_text": {
+                  "type": "string"
+                },
+                "normalized_decimal": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "currency": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "price_year": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "period": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "role": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "source_or_method": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "category",
+                "name",
+                "value_text",
+                "normalized_decimal",
+                "unit",
+                "currency",
+                "price_year",
+                "period",
+                "role",
+                "source_or_method",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "field_support": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "field_path": {
+                  "type": "string"
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "method": {
+                  "type": "string",
+                  "enum": [
+                    "explicit",
+                    "contextual",
+                    "deterministic_conversion"
+                  ]
+                },
+                "explanation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "field_path",
+                "evidence_ids",
+                "method",
+                "explanation"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "review_flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "performance_status": {
+            "type": "string",
+            "enum": [
+              "not_assessed"
+            ]
+          }
+        },
+        "required": [
+          "statement_id",
+          "label_en",
+          "description_en",
+          "reporting_party",
+          "country_codes",
+          "geographic_scope",
+          "location_text",
+          "reference_date",
+          "topics",
+          "cross_cutting_tags",
+          "unmapped_topic",
+          "documentation_status",
+          "assertion_kind",
+          "record_types",
+          "objectives",
+          "targets",
+          "facts",
+          "evidence_ids",
+          "field_support",
+          "review_flags",
+          "performance_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "segment_id": {
+            "type": "string"
+          },
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "extracted",
+              "relevant_no_new_records",
+              "background",
+              "duplicate",
+              "unreadable",
+              "excluded"
+            ]
+          },
+          "statement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "segment_id",
+          "disposition",
+          "statement_ids",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "evidence",
+    "statements",
+    "coverage",
+    "issues"
+  ],
+  "additionalProperties": false
+}

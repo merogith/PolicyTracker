@@ -1,0 +1,17 @@
+{
+  "version": "1.2.0",
+  "mandatory_languages": ["original", "en"],
+  "full_document": true,
+  "original_preserved": true,
+  "source_unit": "immutable document version with per-segment language and physical/printed page locators",
+  "english_source_handling": "identity; preserve original English exactly",
+  "parallel_english": "reuse only verified aligned equivalents; retain conflicting passages",
+  "outputs": ["source-original.pdf", "original.txt", "english.md", "bilingual.html", "alignment.json", "manifest.json"],
+  "versioning": "One immutable translation version per source/method configuration. Reports pin the translation version used; newer translations do not mutate historical citations.",
+  "cache_key": ["source_sha256", "parser_version", "segment_hashes", "prompt_hashes", "glossary_hash", "model", "effort", "target_language"],
+  "coverage": "Every source segment accounted for, including tables, footnotes and headings. A failed/unreadable segment prevents a complete translation claim.",
+  "quality_reporting": "Advisory notes preserve scope and source qualifications in saved readings. Unresolved translation fidelity or required-coverage defects remain blocking quality flags; they are never silently cleared.",
+  "reading": "Read and download saved copies without a model call.",
+  "independent_job": "Translate one or many registered documents without running evidence extraction or changing Country Profiles.",
+  "current_status": "Local worker executes full-segment translation with explicit per-segment source language, frozen original bytes, aligned English, terminology decisions and execution receipts. Country and independent translation versions are saved in SQLite and read/downloaded without inference. Conditional page review/OCR preparation is local and requires visual approval. Official-parallel matching, semantic quality certification and hosted storage remain deferred. The standalone artifact writer produces the listed file set; the local reader offers JSON, CSV, readable HTML and English text exports."
+}

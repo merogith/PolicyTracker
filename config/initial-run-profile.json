@@ -1,0 +1,23 @@
+{
+  "profile_id": "initial-prime-astra-xhigh-v1",
+  "provider_route": "codex_chatgpt",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "fallback_allowed": false,
+  "api_spending_enabled": false,
+  "country_scope": "all_18_supplied_folders",
+  "source_scope": "curated_ndc_nap_and_verified_official_annexes",
+  "output_language": "en",
+  "translation_scope": "all_source_segments",
+  "prompt_version": "v2",
+  "schema_version": "2.0.0",
+  "taxonomy_version": "2.0.0",
+  "default_prime_mode": "latest_successful",
+  "publish_on_model_completion": false,
+  "publish_after_automated_validation": true,
+  "human_review_required": false,
+  "prime_controls": "all_signed_in_team_members",
+  "pin_until_reassigned_or_unpinned": true,
+  "regional_comparison_required_for_initial_release": false,
+  "status": "design_profile_not_executed"
+}

@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "run-request v1.0.0",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "enum": [
+        "prime_candidate",
+        "ad_hoc",
+        "comparison"
+      ]
+    },
+    "country_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_snapshot_id": {
+      "type": "string"
+    },
+    "source_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string"
+          },
+          "document_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "report_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "group_id",
+          "document_ids",
+          "report_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "provider_route": {
+      "type": "string",
+      "enum": [
+        "codex_chatgpt",
+        "chatgpt_plan",
+        "openai_api"
+      ]
+    },
+    "model": {
+      "type": "string"
+    },
+    "reasoning_effort": {
+      "type": "string"
+    },
+    "prompt_version": {
+      "type": "string"
+    },
+    "taxonomy_version": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "brief": {
+      "type": "object",
+      "properties": {
+        "task": {
+          "type": "string"
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "audience": {
+          "type": "string"
+        },
+        "length": {
+          "type": "string"
+        },
+        "question": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "task",
+        "topics",
+        "audience",
+        "length",
+        "question"
+      ],
+      "additionalProperties": false
+    },
+    "idempotency_key": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "country_code",
+    "source_snapshot_id",
+    "source_groups",
+    "provider_route",
+    "model",
+    "reasoning_effort",
+    "prompt_version",
+    "taxonomy_version",
+    "schema_version",
+    "brief",
+    "idempotency_key"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "reconciliation v1.0.0",
+  "type": "object",
+  "properties": {
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "proposed_commitment_id": {
+            "type": "string"
+          },
+          "statement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "distinct_variant_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "proposed_commitment_id",
+          "statement_ids",
+          "distinct_variant_ids",
+          "evidence_ids",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "target_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "relationship": {
+            "type": "string",
+            "enum": [
+              "repeated_assertion",
+              "translation_equivalent",
+              "same_variant",
+              "revises",
+              "supersedes",
+              "related",
+              "parent_child",
+              "contradicts",
+              "unrelated",
+              "unresolved"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          },
+          "needs_review": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "source_ids",
+          "target_ids",
+          "relationship",
+          "evidence_ids",
+          "reason",
+          "needs_review"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "before_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "after_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "change_type": {
+            "type": "string",
+            "enum": [
+              "added",
+              "restated",
+              "number_changed",
+              "scope_changed",
+              "condition_changed",
+              "not_restated",
+              "withdrawn",
+              "superseded",
+              "unresolved"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "comparability_note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "before_ids",
+          "after_ids",
+          "change_type",
+          "evidence_ids",
+          "description",
+          "comparability_note"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "statement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "epistemic_status": {
+            "type": "string",
+            "enum": [
+              "source_statement",
+              "derived",
+              "analyst_inference"
+            ]
+          }
+        },
+        "required": [
+          "text",
+          "evidence_ids",
+          "statement_ids",
+          "epistemic_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "review_queue": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "groups",
+    "relations",
+    "changes",
+    "conflicts",
+    "review_queue"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker triage method 3.0.0",
+  "type": "object",
+  "properties": {
+    "document_profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "input_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "instrument_type": {
+            "type": "string",
+            "enum": [
+              "NDC",
+              "NAP",
+              "NAP_annex",
+              "sectoral_NAP",
+              "support",
+              "unrelated",
+              "unknown"
+            ]
+          },
+          "document_state": {
+            "type": "string",
+            "enum": [
+              "adopted",
+              "submitted",
+              "draft",
+              "unknown"
+            ]
+          },
+          "publication_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "geography": {
+            "type": "object",
+            "properties": {
+              "reporting_party": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "country_codes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "scope": {
+                "type": "string",
+                "enum": [
+                  "national",
+                  "subnational",
+                  "regional",
+                  "EU",
+                  "multi_country",
+                  "unknown"
+                ]
+              },
+              "locations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "reporting_party",
+              "country_codes",
+              "scope",
+              "locations",
+              "evidence_ids"
+            ],
+            "additionalProperties": false
+          },
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "prime_candidate",
+              "ad_hoc_support",
+              "quarantine",
+              "needs_ocr"
+            ]
+          },
+          "metadata_evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Advisory scope, source and metadata qualifications; these do not certify official authority."
+          },
+          "issues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Unresolved defects preventing the proposed country/instrument attribution or use of the supplied text. General sample limitations belong in notes."
+          }
+        },
+        "required": [
+          "input_id",
+          "title",
+          "instrument_type",
+          "document_state",
+          "publication_date",
+          "languages",
+          "geography",
+          "disposition",
+          "metadata_evidence_ids",
+          "notes",
+          "issues"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "input_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "translation",
+              "revision",
+              "annex",
+              "duplicate",
+              "unknown"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "input_ids",
+          "kind",
+          "evidence_ids",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "document_profiles",
+    "relationships"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,13 @@
+{
+  "synthetic": true,
+  "owned_segment_ids": [
+    "s-meta",
+    "s-1",
+    "s-2"
+  ],
+  "source_segments": {
+    "s-meta": "Synthetic training example only. Reporting party: Kazakhstan. National scope. This is invented policy text, not an actual government document.",
+    "s-1": "К 2030 году установить 20 систем раннего предупреждения о наводнениях при условии международного финансирования.",
+    "s-2": "Ведущее ведомство — Министерство водных ресурсов. Мера направлена на повышение готовности к наводнениям."
+  }
+}

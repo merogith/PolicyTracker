@@ -1,0 +1,61 @@
+{
+  "release_id": "demo-kaz-v1",
+  "country_code": "KAZ",
+  "source_as_of": null,
+  "generated_at": "2026-10-08T10:00:00Z",
+  "availability": "complete_in_declared_scope",
+  "audit_state": "not_audited",
+  "highlights": [
+    {
+      "text_en": "Install 20 flood early-warning systems by 2030, conditional on international financing.",
+      "kind": "source_fact",
+      "citations": {
+        "evidence_ids": [
+          "e-1"
+        ],
+        "record_ids": [
+          "r-1"
+        ]
+      },
+      "calculation": null,
+      "limitations": [
+        "Invented demonstration only"
+      ]
+    }
+  ],
+  "counts": {
+    "canonical_commitments": 1,
+    "quantitative_variants": 1,
+    "qualitative_commitments": 0,
+    "risk_context_records": 1
+  },
+  "rows": [
+    {
+      "commitment_id": "demo-commitment-1",
+      "label_en": "Install flood early-warning systems",
+      "topic_ids": [
+        "CLM-04"
+      ],
+      "domain_ids": [
+        "climate"
+      ],
+      "hazards": [
+        "flood"
+      ],
+      "risk_functions": [
+        "early_warning_preparedness"
+      ],
+      "target_display": "20 systems by 2030 · conditional on international financing",
+      "conditionality": "explicitly_conditional",
+      "kind": "commitment",
+      "performance_status": "not_assessed",
+      "evidence_ids": [
+        "e-1"
+      ]
+    }
+  ],
+  "limitations": [
+    "Synthetic interface fixture. Not a Kazakhstan policy finding.",
+    "No actual performance assessment."
+  ]
+}

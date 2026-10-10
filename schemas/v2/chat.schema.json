@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker chat method 3.0.0",
+  "type": "object",
+  "properties": {
+    "answer_blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text_en": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "source_fact",
+              "source_reported_observation",
+              "derived",
+              "analyst_suggestion"
+            ]
+          },
+          "citations": {
+            "type": "object",
+            "properties": {
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "evidence_ids",
+              "record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "calculation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "text_en",
+          "kind",
+          "citations",
+          "calculation",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coverage_note": {
+      "type": "string"
+    },
+    "proposed_action": {
+      "type": "string",
+      "enum": [
+        "none",
+        "expand_sources",
+        "run_exhaustive_extraction",
+        "run_comparison",
+        "save_ad_hoc_version"
+      ]
+    },
+    "proposed_brief": {
+      "type": "object",
+      "properties": {
+        "task": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "focus_topic_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "CLM-01",
+              "CLM-02",
+              "CLM-03",
+              "CLM-04",
+              "CLM-05",
+              "CLM-06",
+              "CLM-07",
+              "ENE-01",
+              "ENE-02",
+              "ENE-03",
+              "ENE-04",
+              "ENE-05",
+              "ENE-06",
+              "AGR-01",
+              "AGR-02",
+              "AGR-03",
+              "AGR-04",
+              "WAT-01",
+              "WAT-02",
+              "WAT-03",
+              "WAT-04",
+              "BIO-01",
+              "BIO-02",
+              "BIO-03",
+              "HEA-01",
+              "HEA-02",
+              "HEA-03",
+              "URB-01",
+              "URB-02",
+              "URB-03",
+              "WST-01",
+              "WST-02",
+              "WST-03",
+              "TRN-01",
+              "TRN-02",
+              "TRN-03",
+              "IND-01",
+              "IND-02",
+              "TOU-01",
+              "TOU-02",
+              "CLM-08"
+            ]
+          }
+        },
+        "audience": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "length": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "task",
+        "focus_topic_ids",
+        "audience",
+        "length",
+        "question"
+      ],
+      "additionalProperties": false
+    },
+    "clarification": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "answer_blocks",
+    "coverage_note",
+    "proposed_action",
+    "proposed_brief",
+    "clarification"
+  ],
+  "additionalProperties": false
+}

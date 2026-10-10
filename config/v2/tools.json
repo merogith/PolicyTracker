@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "status": "interface_blueprint_not_implemented_tools",
+  "tools": [
+    {"id": "explore_evidence", "purpose": "Filter commitments and risk context by country, domain/topic, hazard, DRR phase, resilience function, actor, condition and period", "llm": false, "input": "authorized release/snapshot IDs plus filters", "output": "paged records, exact counts and linked details"},
+    {"id": "open_bilingual_evidence", "purpose": "Inspect original page and aligned English wording with table context", "llm": false, "input": "authorized evidence/segment ID", "output": "source version, original text/page, English alignment, provenance and quality flags"},
+    {"id": "export_evidence_table", "purpose": "Export targets, actions, actors, finance, indicators or risk context", "llm": false, "input": "snapshot ID, table type, filters and columns", "output": "JSON or CSV preserving record, variant and evidence IDs"},
+    {"id": "view_changes", "purpose": "Read already-produced revision and coherence findings", "llm": false, "input": "frozen release ID", "output": "before/after variants and cited changes"},
+    {"id": "run_report", "purpose": "Produce Prime or one of four ad hoc templates", "llm": true, "input": "run-request.schema.json", "output": "resumable job then versioned bundle in the correct history"},
+    {"id": "chat_with_report", "purpose": "Answer follow-up questions within a frozen authorized scope", "llm": true, "input": "session/report IDs, message, structured brief and retrieved evidence", "output": "chat.schema.json; any write is a separate application action"},
+    {"id": "inspect_coverage", "purpose": "See parsed, translated, extracted, unreadable and unresolved source material", "llm": false, "input": "snapshot/job ID", "output": "coverage ledger and optional audit queue; no inferred accuracy percentage"},
+    {"id": "inspect_labels", "purpose": "Understand label definitions, view unmapped concepts and propose a taxonomy change", "llm": false, "input": "taxonomy version plus filters", "output": "controlled vocabulary, examples and versioned change proposal"},
+    {"id": "select_prime", "purpose": "Pin a country release or unpin to automatic latest-successful selection", "llm": false, "input": "country, eligible release ID or unpin, expected pointer revision", "output": "atomic shared selection and actor event"},
+    {"id": "annotate_or_correct", "purpose": "Optional evidence annotation or correction", "llm": true, "llm_condition": "only_if_derived_views_need_regeneration", "input": "immutable entity/release ID, proposed change, evidence and expected version", "output": "annotation event or new validated bundle; original remains unchanged"}
+  ],
+  "llm_tool_access": ["explore_evidence", "open_bilingual_evidence"],
+  "application_only_actions": ["run_report", "select_prime", "annotate_or_correct"],
+  "access_rule": "derive identity and source permissions server-side before retrieval, model dispatch or export"
+}

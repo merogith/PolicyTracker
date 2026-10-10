@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "canonical_format": "UTF-8 JSON/JSONL with decimal strings",
+  "common_bundle": ["manifest.json", "documents.json", "coverage.json", "evidence.jsonl", "records.jsonl", "commitments.json", "translation-manifest.json", "limitations.json", "dashboard-index.json", "report.md"],
+  "prime": ["report.json", "dashboard.json", "changes.json"],
+  "briefing": ["report.json"],
+  "focused_analysis": ["report.json", "evidence-table.json"],
+  "comparison": ["comparison.json", "comparison-table.json"],
+  "workplan": ["workplan.json", "workplan-table.json"],
+  "optional_exports": ["CSV tables", "PDF rendered from the same bundle"],
+  "ad_hoc_dashboard_policy": "dashboard-index.json lists deterministic per-country dashboard slices scoped to the selected documents; these never replace Prime and need no separate model extraction",
+  "translation_policy": "full aligned English artifacts are immutable and referenced by hash; do not duplicate all translation bytes in every bundle",
+  "reading_policy": "opening or filtering a published bundle requires no LLM call",
+  "selection_policy": "one selected Prime manifest per country; separate ad hoc manifests and history"
+}

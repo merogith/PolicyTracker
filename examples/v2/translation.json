@@ -1,0 +1,38 @@
+{
+  "segments": [
+    {
+      "segment_id": "s-meta",
+      "source_language": "en",
+      "method": "identity",
+      "official_parallel_segment_id": null,
+      "english_text": "Synthetic training example only. Reporting party: Kazakhstan. National scope. This is invented policy text, not an actual government document.",
+      "term_decisions": [],
+      "notes": [],
+      "quality_flags": []
+    },
+    {
+      "segment_id": "s-1",
+      "source_language": "ru",
+      "method": "machine_translation",
+      "official_parallel_segment_id": null,
+      "english_text": "By 2030, install 20 flood early-warning systems, subject to international financing.",
+      "term_decisions": [],
+      "notes": [
+        "Synthetic example translation"
+      ],
+      "quality_flags": []
+    },
+    {
+      "segment_id": "s-2",
+      "source_language": "ru",
+      "method": "machine_translation",
+      "official_parallel_segment_id": null,
+      "english_text": "The lead agency is the Ministry of Water Resources. The measure aims to improve flood preparedness.",
+      "term_decisions": [],
+      "notes": [
+        "Synthetic example translation"
+      ],
+      "quality_flags": []
+    }
+  ]
+}

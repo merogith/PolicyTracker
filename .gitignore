@@ -1,0 +1,25 @@
+# Original country documents and metadata are local; publish only reviewed exports.
+data/sources/
+*.pdf
+**/Source.txt
+**/Read me.txt
+data/derived/
+data/private/
+data/methods/
+data/local-profiles/
+runs/
+tmp/
+.env
+.env.*
+!.env.example
+*credentials*.json
+*token*.json
+!design/tokens.json
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+node_modules/
+.DS_Store

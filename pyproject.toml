@@ -1,0 +1,16 @@
+[project]
+name = "policytracker"
+version = "0.1.0"
+description = "Auditable NDC and NAP evidence, country releases, and separate analyst reports"
+requires-python = ">=3.10"
+dependencies = ["pypdf>=5,<7", "jsonschema>=4.23,<5"]
+
+[project.scripts]
+policytracker = "policytracker.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

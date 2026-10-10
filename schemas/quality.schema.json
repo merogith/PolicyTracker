@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "quality v1.0.0",
+  "type": "object",
+  "properties": {
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "major",
+              "minor"
+            ]
+          },
+          "entity_id": {
+            "type": "string"
+          },
+          "field_path": {
+            "type": "string"
+          },
+          "issue": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "proposed_correction": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "severity",
+          "entity_id",
+          "field_path",
+          "issue",
+          "evidence_ids",
+          "proposed_correction",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coverage_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolved_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proposed_gate": {
+      "type": "string",
+      "enum": [
+        "pass_automated_checks",
+        "needs_repair",
+        "needs_human_review",
+        "incomplete_inputs"
+      ]
+    }
+  },
+  "required": [
+    "findings",
+    "coverage_gaps",
+    "unresolved_questions",
+    "proposed_gate"
+  ],
+  "additionalProperties": false
+}

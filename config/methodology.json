@@ -1,0 +1,239 @@
+{
+  "version": "3.1.0",
+  "status": "configured_not_executed",
+  "principle": "One Country Profile: an Overview and a Policy register, both useful with a single document.",
+  "views": [
+    {
+      "id": "brief",
+      "label": "Overview",
+      "short": "Overview",
+      "description": "Cited findings first, with qualifications and a full expandable thematic narrative.",
+      "question": "What needs attention in this country's climate and disaster resilience policies?",
+      "includes": [
+        "Documented priorities and important commitments, with deadlines and conditions",
+        "Risk and DRR context; adaptation, mitigation and resilience findings",
+        "Delivery responsibilities, finance and support needs, inclusion and evidence limitations",
+        "Within-country links or changes when suitable document editions exist; an explicit not-applicable note otherwise"
+      ],
+      "boundary": "A short interpretation and full cited narrative. The Policy register holds the complete structured evidence. One document is sufficient; it limits the source scope.",
+      "method": "The country synthesis prompt writes cited findings from validated records; the interface renders the brief and expandable narrative.",
+      "routes": [
+        "prime",
+        "quality"
+      ],
+      "schema_sections": [
+        "scope_and_method",
+        "risk_context_and_drr",
+        "adaptation_and_resilience",
+        "mitigation",
+        "implementation_and_actors",
+        "finance_and_support",
+        "inclusion_and_development",
+        "monitoring",
+        "limitations",
+        "changes_and_coherence"
+      ],
+      "artifacts": [
+        "report.json",
+        "report.md"
+      ]
+    },
+    {
+      "id": "commitments",
+      "label": "Policy register",
+      "short": "Register",
+      "description": "Explore source records through Summary, Targets, Risks and resilience, or Delivery and support; inspect original/English evidence.",
+      "question": "What exactly is stated, where, by whom and by when?",
+      "includes": [
+        "Quantitative targets and qualitative actions, with baselines, dates and conditions",
+        "Risk-context records: hazards, exposure, vulnerability, capacity and risk and resilience functions",
+        "Linked institutions, finance, support needs and monitoring indicators; original and English evidence"
+      ],
+      "boundary": "A structured evidence table. Risk, sector and delivery filters are lenses on these records, not separately generated reports.",
+      "method": "Code renders, filters, groups and exports frozen source records through one shared presentation model. Definitions come from the archived codebook. No additional synthesis or relabeling occurs.",
+      "routes": [
+        "extract",
+        "reconcile",
+        "quality"
+      ],
+      "schema_sections": [],
+      "artifacts": [
+        "records.jsonl",
+        "commitments.json",
+        "evidence.jsonl"
+      ]
+    }
+  ],
+  "utilities": [
+    {
+      "id": "documents",
+      "label": "Documents & translations",
+      "purpose": "Preserved originals and saved complete English/side-by-side copies, with aligned segments, document versions, language and translation provenance. Translate one or more documents independently.",
+      "routes": [
+        "triage",
+        "translate"
+      ]
+    },
+    {
+      "id": "history",
+      "label": "Version history",
+      "purpose": "See earlier Country Profiles and choose or pin the version everyone sees. Application logic; no prompt.",
+      "routes": []
+    },
+    {
+      "id": "regional",
+      "label": "Regional tracker",
+      "purpose": "Find countries, source coverage and available profile views. Saved release data supplies the dashboard; opening it makes no model call.",
+      "routes": []
+    }
+  ],
+  "steps": [
+    {
+      "id": "prepare",
+      "label": "Identify and read the sources",
+      "description": "Freeze the selected NDCs/NAPs and editions. Parse every page; inspect OCR and tables. Identify country, language and document relationships. Preserve originals and prepare aligned English, reusing verified English where available.",
+      "pipeline_stages": [
+        "register_parse",
+        "triage",
+        "translate"
+      ],
+      "routes": [
+        "triage",
+        "translate"
+      ],
+      "application": "File hashes, page parsing/OCR, source registration and coverage accounting.",
+      "implementation": "Automatic native parsing, alternate extraction, local OCR and visual recovery, followed by metadata triage and aligned English. Every physical page has an outcome; unresolved content stays explicit in partial coverage. Human review is optional."
+    },
+    {
+      "id": "extract",
+      "label": "Extract and label the evidence",
+      "description": "Process every source segment for commitments and targets, risk context, institutions, finance, inclusion and monitoring. Keep original quotations, English text and page references. Validate the structured records.",
+      "pipeline_stages": [
+        "extract",
+        "validate_extraction"
+      ],
+      "routes": [
+        "extract"
+      ],
+      "application": "JSON/schema checks and source-locator validation; bounded repair when needed.",
+      "implementation": "Chunked extraction and deterministic quotation, numeric, coverage and reference checks. All-field support, extraction recall and translation fidelity are not certified."
+    },
+    {
+      "id": "reconcile",
+      "label": "Connect statements across documents",
+      "description": "Propose links between source statements while retaining every record. Explain supported similarities, differences and possible conflicts; compare numbers only on a matching basis. Counts describe source records, not unique commitments.",
+      "pipeline_stages": [
+        "reconcile",
+        "canonicalize"
+      ],
+      "routes": [
+        "reconcile"
+      ],
+      "application": "Preserve source record IDs, quotations and target variants; validate proposed links and render the register.",
+      "implementation": "The existing worker proposes links and checks references. Source records remain separate; automatic merging and unique-commitment totals are deferred."
+    },
+    {
+      "id": "check_sources",
+      "label": "Additional evidence review (deferred)",
+      "description": "An optional model check for omissions and unsupported interpretations. Add it only if observed errors justify another processing step.",
+      "pipeline_stages": [
+        "challenge_sources",
+        "resolve_findings"
+      ],
+      "routes": [
+        "quality"
+      ],
+      "application": "Existing extraction checks already validate structure, quotations, numbers and references.",
+      "implementation": "The quality prompt is available but not executed. This extra AI stage is deferred, not required for country trials."
+    },
+    {
+      "id": "synthesize",
+      "label": "Write one Country Profile",
+      "description": "Write the short overview and full cited narrative. Include alignment or changes only when suitable sources exist. Render the Policy register from the same evidence.",
+      "pipeline_stages": [
+        "feature_synthesis"
+      ],
+      "routes": [
+        "prime"
+      ],
+      "application": "Render two core views and exports from one versioned bundle.",
+      "implementation": "The worker composes an Overview and saves the source records for the register. Both views and exports share the frozen profile."
+    },
+    {
+      "id": "publish",
+      "label": "Check and save the complete version",
+      "description": "Validate the source and report bundle, save the local profile and select the successful version. A pin preserves the selected version while new results remain in history.",
+      "pipeline_stages": [
+        "challenge_report",
+        "bundle_validate",
+        "publish"
+      ],
+      "routes": [
+        "quality"
+      ],
+      "application": "Eligibility, immutable history and the shared published-version pointer; no mandatory human approval.",
+      "implementation": "Deterministic validation, immutable storage and automatic local publication, respecting an existing pin. Optional moderation can unpublish or restore saved results. Hosted publication is separate."
+    }
+  ],
+  "labeling": {
+    "description": "Each record receives independent labels; a sector is not a risk type or a commitment type. Missing or uncertain labels stay explicit.",
+    "dimensions": [
+      "Country, document family, edition and source language",
+      "Domain and topic (sector/subdomain)",
+      "Statement type: context, priority, proposal, commitment, reported implementation/result, projection, scenario or unclear; linked facts for actors, finance and monitoring",
+      "Policy objective: adaptation, mitigation or disaster risk reduction; specific risk and resilience functions share one optional pool",
+      "Hazard, exposure, vulnerability, capacity and risk and resilience function",
+      "Target form, baseline, deadline, conditions and evidence status"
+    ],
+    "files": [
+      "config/v2/taxonomy.json",
+      "config/v2/vocabulary.json",
+      "config/v2/label-guide.json"
+    ],
+    "rule_prompt": "prompts/v2/01-labeling-rules.md"
+  },
+  "interpretation_rules": [
+    "A commitment is not evidence of implementation. Do not label it on track without suitable dated observations.",
+    "Not found in the selected documents does not mean absent from national policy.",
+    "Different baselines, units, scope or conditions can make targets incomparable.",
+    "Machine translation remains identifiable and linked to the original; ambiguous passages stay flagged.",
+    "Country Profiles share one release ID across all views. Optional analyses have a separate history.",
+    "Unreadable or unprocessed material is not a not-found result. An explicit source statement of absence is a cited finding within its stated scope."
+  ],
+  "run_transparency": {
+    "current": "This library shows current instructions. The local country worker records its actual requests separately; imports do not establish a generation method.",
+    "composition": "Every v2 model request combines the evidence contract, labeling rules and one stage prompt. JSON schemas, the taxonomy, task context and source data are supplied separately. Operational requests append their shared contract and task supplement. The labeling guide is attached to extraction/relabeling, and the translation policy to translation. Pipeline/task files are fingerprinted as composition context. The assembled instruction hash preserves Markdown line endings.",
+    "required_receipt": [
+      "Exact composed request and archived bytes/hashes for every prompt, schema, taxonomy, vocabulary, label guide and pipeline/task configuration actually used",
+      "Immutable source versions, parser/translation/segment versions, source snapshot and coverage",
+      "Requested and actual provider route, model and effort; provider request, input and output hashes; validation findings and receipt IDs",
+      "Origin run and immutable artifact IDs for reused stages; preserve their own method/model components instead of assigning current settings"
+    ],
+    "rule": "An executed report must link to its archived run components; never substitute today's edited prompt files for a historical run. This prototype catalog displays the current configuration only."
+  },
+  "conditional_comparison": {
+    "label": "Compare documents",
+    "minimum_distinct_editions": 2,
+    "placement": "Optional country action or Analysis tools; not a required profile view",
+    "single_document": "No cross-document comparison. Extract all supported evidence and summarize this source; internal tensions may be noted without inventing a revision trend."
+  },
+  "presentation": {
+    "hierarchy": "Understand in Overview; explore saved source records through four perspectives; verify original/English evidence and archived definitions.",
+    "perspectives": [
+      "Summary",
+      "Targets",
+      "Risks and resilience",
+      "Delivery and support"
+    ],
+    "rules": [
+      "Domain to topic is the only hierarchy. Derive domains from the selected version’s archived topic mappings; independent facets remain separate.",
+      "Counts are source records, not unique commitments. Cross-domain and multi-label categories overlap.",
+      "Reading, filtering, sorting, grouping, saving a named view and exporting never trigger model calls or alter evidence.",
+      "Narrative retains its saved full scope. Filtered charts and tables are deterministic views, not regenerated analysis.",
+      "Conditions and target periods must match one variant; actor, finance, risk and indicator details retain target-specific links.",
+      "Explain material gaps in evidence details; preserve conflicts and processing coverage. An unexplained empty field does not establish source absence.",
+      "Named views are browser-local presentation preferences. Applying one to another version validates its fields; shared defaults remain unchanged."
+    ],
+    "implementation": "The reader, evidence panel, browser-local views, saved request drafts and scoped exports work. Optional analyses execute only when explicitly started and save separate results. Sample outputs use invented evidence. Shared preferences and hosted links remain unavailable."
+  }
+}

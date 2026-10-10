@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker document-version method 3.0.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "document_version_id": {
+      "type": "string"
+    },
+    "document_family_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "blob_sha256": {
+      "type": "string"
+    },
+    "storage_key": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_checked_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "instrument_type": {
+      "type": "string"
+    },
+    "language_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reporting_party": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "country_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "publication_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authority_state": {
+      "type": "string",
+      "enum": [
+        "verified_official",
+        "declared_unverified",
+        "unofficial",
+        "unknown"
+      ]
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "other_version_id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "translation_of",
+              "revises",
+              "supersedes",
+              "annex_to",
+              "supports"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "other_version_id",
+          "kind",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "provenance_event_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "document_version_id",
+    "document_family_id",
+    "blob_sha256",
+    "storage_key",
+    "source_url",
+    "source_checked_at",
+    "title",
+    "instrument_type",
+    "language_codes",
+    "reporting_party",
+    "country_codes",
+    "publication_date",
+    "authority_state",
+    "relationships",
+    "provenance_event_id"
+  ],
+  "additionalProperties": false
+}

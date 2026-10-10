@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker dashboard method 3.0.0",
+  "type": "object",
+  "properties": {
+    "release_id": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "source_as_of": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "complete_in_declared_scope",
+        "partial",
+        "no_documents_supplied"
+      ]
+    },
+    "audit_state": {
+      "type": "string",
+      "enum": [
+        "not_audited",
+        "annotated",
+        "corrected"
+      ]
+    },
+    "highlights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text_en": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "source_fact",
+              "source_reported_observation",
+              "derived",
+              "analyst_suggestion"
+            ]
+          },
+          "citations": {
+            "type": "object",
+            "properties": {
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "evidence_ids",
+              "record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "calculation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "text_en",
+          "kind",
+          "citations",
+          "calculation",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "canonical_commitments": {
+          "type": "integer"
+        },
+        "quantitative_variants": {
+          "type": "integer"
+        },
+        "qualitative_commitments": {
+          "type": "integer"
+        },
+        "risk_context_records": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "canonical_commitments",
+        "quantitative_variants",
+        "qualitative_commitments",
+        "risk_context_records"
+      ],
+      "additionalProperties": false
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "commitment_id": {
+            "type": "string"
+          },
+          "label_en": {
+            "type": "string"
+          },
+          "topic_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "CLM-01",
+                "CLM-02",
+                "CLM-03",
+                "CLM-04",
+                "CLM-05",
+                "CLM-06",
+                "CLM-07",
+                "ENE-01",
+                "ENE-02",
+                "ENE-03",
+                "ENE-04",
+                "ENE-05",
+                "ENE-06",
+                "AGR-01",
+                "AGR-02",
+                "AGR-03",
+                "AGR-04",
+                "WAT-01",
+                "WAT-02",
+                "WAT-03",
+                "WAT-04",
+                "BIO-01",
+                "BIO-02",
+                "BIO-03",
+                "HEA-01",
+                "HEA-02",
+                "HEA-03",
+                "URB-01",
+                "URB-02",
+                "URB-03",
+                "WST-01",
+                "WST-02",
+                "WST-03",
+                "TRN-01",
+                "TRN-02",
+                "TRN-03",
+                "IND-01",
+                "IND-02",
+                "TOU-01",
+                "TOU-02",
+                "CLM-08"
+              ]
+            }
+          },
+          "domain_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "climate",
+                "energy",
+                "agriculture",
+                "water",
+                "biodiversity",
+                "health",
+                "urban",
+                "waste",
+                "transport",
+                "industry",
+                "tourism"
+              ]
+            }
+          },
+          "hazards": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "flood",
+                "drought",
+                "extreme_heat",
+                "wildfire",
+                "storm",
+                "sea_level_rise",
+                "coastal_erosion",
+                "landslide",
+                "avalanche",
+                "glacial_lake_outburst",
+                "water_scarcity",
+                "extreme_cold",
+                "disease",
+                "earthquake",
+                "tsunami",
+                "technological_accident",
+                "compound_hazard",
+                "other"
+              ]
+            }
+          },
+          "risk_functions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "risk_understanding",
+                "risk_prevention_reduction",
+                "early_warning_preparedness",
+                "anticipatory_action",
+                "emergency_response",
+                "recovery_reconstruction",
+                "coping_continuity",
+                "systemic_transformation"
+              ]
+            }
+          },
+          "target_display": {
+            "type": "string"
+          },
+          "conditionality": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "context",
+              "priority",
+              "proposal",
+              "commitment",
+              "implementation_observation",
+              "result_observation",
+              "projection",
+              "scenario",
+              "unclear"
+            ]
+          },
+          "performance_status": {
+            "type": "string",
+            "enum": [
+              "not_assessed"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "commitment_id",
+          "label_en",
+          "topic_ids",
+          "domain_ids",
+          "hazards",
+          "risk_functions",
+          "target_display",
+          "conditionality",
+          "kind",
+          "performance_status",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "release_id",
+    "country_code",
+    "source_as_of",
+    "generated_at",
+    "availability",
+    "audit_state",
+    "highlights",
+    "counts",
+    "rows",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

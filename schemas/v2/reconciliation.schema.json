@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker reconciliation method 3.0.0",
+  "type": "object",
+  "properties": {
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "local_group_id": {
+            "type": "string"
+          },
+          "proposed_existing_commitment_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "record_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "variants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "local_variant_id": {
+                  "type": "string"
+                },
+                "target_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "temporal_role": {
+                  "type": "string",
+                  "enum": [
+                    "current",
+                    "historical",
+                    "superseded",
+                    "parallel",
+                    "unresolved"
+                  ]
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "local_variant_id",
+                "target_ids",
+                "temporal_role",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "reason": {
+            "type": "string"
+          },
+          "unresolved": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "local_group_id",
+          "proposed_existing_commitment_id",
+          "record_ids",
+          "variants",
+          "reason",
+          "unresolved"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_record_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "target_record_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "same_variant",
+              "translation_equivalent",
+              "revises",
+              "supersedes",
+              "related",
+              "contradicts",
+              "not_restated",
+              "parent_child",
+              "unresolved"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source_record_ids",
+          "target_record_ids",
+          "kind",
+          "evidence_ids",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "before_record_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "after_record_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "added",
+              "restated",
+              "number_changed",
+              "scope_changed",
+              "condition_changed",
+              "not_restated",
+              "withdrawn",
+              "unresolved"
+            ]
+          },
+          "finding": {
+            "type": "object",
+            "properties": {
+              "text_en": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "source_fact",
+                  "source_reported_observation",
+                  "derived",
+                  "analyst_suggestion"
+                ]
+              },
+              "citations": {
+                "type": "object",
+                "properties": {
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "record_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "evidence_ids",
+                  "record_ids"
+                ],
+                "additionalProperties": false
+              },
+              "calculation": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "text_en",
+              "kind",
+              "citations",
+              "calculation",
+              "limitations"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "before_record_ids",
+          "after_record_ids",
+          "kind",
+          "finding"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "groups",
+    "relations",
+    "changes",
+    "issues"
+  ],
+  "additionalProperties": false
+}

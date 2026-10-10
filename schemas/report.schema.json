@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "report v1.0.0",
+  "type": "object",
+  "properties": {
+    "country_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "evidence_available",
+        "partial",
+        "no_documents_supplied"
+      ]
+    },
+    "headline_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "statement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "epistemic_status": {
+            "type": "string",
+            "enum": [
+              "source_statement",
+              "derived",
+              "analyst_inference"
+            ]
+          }
+        },
+        "required": [
+          "text",
+          "evidence_ids",
+          "statement_ids",
+          "epistemic_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "section_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "statement_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "epistemic_status": {
+                  "type": "string",
+                  "enum": [
+                    "source_statement",
+                    "derived",
+                    "analyst_inference"
+                  ]
+                }
+              },
+              "required": [
+                "text",
+                "evidence_ids",
+                "statement_ids",
+                "epistemic_status"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "evidence_gap": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "section_id",
+          "title",
+          "findings",
+          "evidence_gap"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "prioritized_commitment_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "questions_for_followup": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "statement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "epistemic_status": {
+            "type": "string",
+            "enum": [
+              "source_statement",
+              "derived",
+              "analyst_inference"
+            ]
+          }
+        },
+        "required": [
+          "text",
+          "evidence_ids",
+          "statement_ids",
+          "epistemic_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "country_codes",
+    "availability",
+    "headline_findings",
+    "sections",
+    "prioritized_commitment_ids",
+    "questions_for_followup",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

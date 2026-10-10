@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-10-09T12:19:39Z",
+  "base_url": "http://127.0.0.1:8767",
+  "checks": [
+    "Invalid API keys rejected before provider request",
+    "Unavailable model rejected without fallback",
+    "Country generation endpoint ready; no active country job",
+    "Usage limits returned successfully",
+    "Job restored from session status with exact model and effort"
+  ],
+  "live_models": [
+    {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "status": "completed",
+      "seconds": 4.1,
+      "usage": {
+        "input_tokens": 11210,
+        "output_tokens": 7,
+        "total_tokens": 11217
+      }
+    },
+    {
+      "model": "gpt-6-luna",
+      "effort": "low",
+      "status": "completed",
+      "seconds": 3.1,
+      "usage": {
+        "input_tokens": 11210,
+        "output_tokens": 7,
+        "total_tokens": 11217
+      }
+    }
+  ],
+  "catalog_models": [
+    "gpt-6.1-sol",
+    "gpt-6-astra",
+    "gpt-6-sol",
+    "gpt-6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-5.6-luna"
+  ],
+  "saved_country_count": 0,
+  "structured_response": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "status": "completed",
+    "seconds": 5.1,
+    "schema_valid": true,
+    "usage": {
+      "input_tokens": 11259,
+      "output_tokens": 15,
+      "total_tokens": 11274
+    }
+  }
+}

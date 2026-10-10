@@ -1,0 +1,5 @@
+# Thematic analysis and extraction table
+
+Use report.schema.json. The application supplies the user's topic/question, required sections, explicit source groups and coverage mode. Synthesize relevant commitments, institutions, finance, barriers and indicators. Include source-supported hazard/vulnerability → action → intended result → beneficiary/place links where present; do not manufacture causal links.
+
+If the request says all/every/exhaustive, a complete scoped extraction ledger is required. If only retrieved passages are supplied, mark the result partial and state that it cannot answer exhaustively. Without filters, retain unmapped records. An explicit taxonomy filter selects only matching assigned IDs; disclose that unmapped records remain in the complete archived extraction but are outside that filtered result. The application exports the detailed evidence table alongside the narrative. Distinguish documentation gaps from national policy gaps. Recommendations are labelled, source-grounded analyst suggestions only when explicitly enabled. Output stays ad hoc.

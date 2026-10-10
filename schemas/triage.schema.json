@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "triage v1.0.0",
+  "type": "object",
+  "properties": {
+    "document_id": {
+      "type": "string"
+    },
+    "metadata_proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "proposed_value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "field",
+          "proposed_value",
+          "evidence_ids",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "language_spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "page_from": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "page_to": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "page_from",
+          "page_to",
+          "languages",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "relationship_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "target_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "relationship": {
+            "type": "string",
+            "enum": [
+              "repeated_assertion",
+              "translation_equivalent",
+              "same_variant",
+              "revises",
+              "supersedes",
+              "related",
+              "parent_child",
+              "contradicts",
+              "unrelated",
+              "unresolved"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          },
+          "needs_review": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "source_ids",
+          "target_ids",
+          "relationship",
+          "evidence_ids",
+          "reason",
+          "needs_review"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "quality_issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_disposition": {
+      "type": "string",
+      "enum": [
+        "eligible_for_curated_review",
+        "ad_hoc_support",
+        "needs_metadata_review",
+        "needs_ocr",
+        "unrelated"
+      ]
+    },
+    "review_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "document_id",
+    "metadata_proposals",
+    "language_spans",
+    "relationship_candidates",
+    "quality_issues",
+    "recommended_disposition",
+    "review_questions"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,581 @@
+{
+  "status": "planned_not_executed",
+  "countries": [
+    {
+      "country_code": "ALB",
+      "document_ids": [
+        "doc-479fa14721aeb6b3",
+        "doc-899f2620ed676417",
+        "doc-24824efa654df87c"
+      ],
+      "source_hashes": {
+        "doc-479fa14721aeb6b3": "3315420f8eb77e99fb9b0a512fc6319493ed848b395a4e7f08aefcb34b78676b",
+        "doc-899f2620ed676417": "7652ff984915950d26045b43493ea4fe25da518f2562e8b3254bdb06d3d8876b",
+        "doc-24824efa654df87c": "7ab6384faddb623194d0956e6d4194107704b29ebb1bc1661b2a34b556cef165"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {
+        "doc-479fa14721aeb6b3": [
+          83,
+          113
+        ],
+        "doc-899f2620ed676417": [
+          2,
+          10,
+          69,
+          145
+        ]
+      }
+    },
+    {
+      "country_code": "ARM",
+      "document_ids": [
+        "doc-abb6069a44d55a5e",
+        "doc-d5f0e0611acdb670",
+        "doc-7d902daaee1522da"
+      ],
+      "source_hashes": {
+        "doc-abb6069a44d55a5e": "2596a27377eb76dd13320a2443db9d17edc61eaf1470ba85d21da4a5e7310c9f",
+        "doc-d5f0e0611acdb670": "3894e2035d3d4e8e98dc21438988a82f92b895494a03a1c139377fb459a85c1f",
+        "doc-7d902daaee1522da": "f9625c8a2cfab7d77638f1d0013bd7e30fecd189b491a83a350a58906f3f7e19"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {
+        "doc-abb6069a44d55a5e": [
+          1,
+          2,
+          37,
+          38
+        ]
+      }
+    },
+    {
+      "country_code": "BLR",
+      "document_ids": [
+        "doc-a2b2a58ff2573b05",
+        "doc-0c3ac57eba1f25c4"
+      ],
+      "source_hashes": {
+        "doc-a2b2a58ff2573b05": "4185e78f05f6724e984b837c76c5ebc395240e3e6d2a3fe0757860e17317006f",
+        "doc-0c3ac57eba1f25c4": "879977c958b50ff1daf6af6461ae35b840d6d119f18e1ea2dd95089a864add76"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {}
+    },
+    {
+      "country_code": "BIH",
+      "document_ids": [
+        "doc-cffa909b630b3e46",
+        "doc-da6c7f251423415f"
+      ],
+      "source_hashes": {
+        "doc-cffa909b630b3e46": "5c425919dd3d3b63b7c968917f1e6d87e9777835a024c7104092701f5d0d3330",
+        "doc-da6c7f251423415f": "42b1f733a2876743d5b633af3a95da5dbfa8332c9542ca7ef7c2f93e17249b53"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {
+        "doc-cffa909b630b3e46": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          165,
+          166,
+          167
+        ]
+      }
+    },
+    {
+      "country_code": "CYP",
+      "document_ids": [
+        "doc-d407b82a0608cd16",
+        "doc-e1d927f80e16d268"
+      ],
+      "source_hashes": {
+        "doc-d407b82a0608cd16": "407ddef0519841d4491d3a0cb51162d5fdd9b019fe5d94e51e0b8a67ee66566f",
+        "doc-e1d927f80e16d268": "3132b2a368f8cc2302ffac5c608358f4a734c81a4e3b0687040662473d64eb6d"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {}
+    },
+    {
+      "country_code": "GEO",
+      "document_ids": [
+        "doc-73709ff9b87aae0d",
+        "doc-2bbe58c31affdb4b"
+      ],
+      "source_hashes": {
+        "doc-73709ff9b87aae0d": "0c39fea98d3ad02c7063e22135fa441e2be64388430e480132636a6f8ba50480",
+        "doc-2bbe58c31affdb4b": "cabf1528cf49ac728ca703fbf8de9f34b6edc7b5a2590735995d6a8553ab9176"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {
+        "doc-73709ff9b87aae0d": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          12,
+          22,
+          26,
+          27,
+          30,
+          31,
+          34,
+          43,
+          44
+        ],
+        "doc-2bbe58c31affdb4b": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          11,
+          13,
+          16,
+          17,
+          22,
+          23,
+          27,
+          28,
+          33,
+          34,
+          37
+        ]
+      }
+    },
+    {
+      "country_code": "KAZ",
+      "document_ids": [
+        "doc-308f43b46e75702f",
+        "doc-f2def2eb3254f3ed"
+      ],
+      "source_hashes": {
+        "doc-308f43b46e75702f": "2e03558180915e262cc322a69bdfcbca94256616af5ff7fefe274e2860eb4412",
+        "doc-f2def2eb3254f3ed": "b8bbb89d7dd7e545660fb99836d8b5839aefb3eb172dc2a5adcc649bc5b062d1"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {
+        "doc-f2def2eb3254f3ed": [
+          9,
+          21,
+          39,
+          54,
+          61,
+          73
+        ]
+      }
+    },
+    {
+      "country_code": "XKX",
+      "document_ids": [],
+      "source_hashes": {},
+      "status": "no_documents_supplied",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [],
+      "human_review_required": false,
+      "flagged_pages": {}
+    },
+    {
+      "country_code": "KGZ",
+      "document_ids": [
+        "doc-66cd03e8fb5b04a2",
+        "doc-0b7cce024495d7c6"
+      ],
+      "source_hashes": {
+        "doc-66cd03e8fb5b04a2": "56b2c9cb637b0a700384fb2f27becf5149879b2106ea2c6016f8966450959395",
+        "doc-0b7cce024495d7c6": "34f308793516e0e77a4b4386ef89e1416cce536fcf6bb88e02b3ff0b87f7f464"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {
+        "doc-66cd03e8fb5b04a2": [
+          1,
+          6,
+          8,
+          11
+        ]
+      }
+    },
+    {
+      "country_code": "MDA",
+      "document_ids": [
+        "doc-adceb39228acab56",
+        "doc-6e1d7510907f9d39",
+        "doc-905abeb2a34e2d77",
+        "doc-a91bb2cbea6bbf02"
+      ],
+      "source_hashes": {
+        "doc-adceb39228acab56": "73cfcde65f1240317ac9b7e8992d727b97f725e862a89a08caa4fe148ac3c0f3",
+        "doc-6e1d7510907f9d39": "95ef7aa277a327d74921d5803bd39bd54e27d7284b8983f90da9ea6aa8929bd1",
+        "doc-905abeb2a34e2d77": "ecf8d194e4613af949232c8e928d7a9c1f018c62ad81aa3a00008ad8d118c833",
+        "doc-a91bb2cbea6bbf02": "896501ba40b4af93f24d5bcce9cc15ec02bb7b7c506526af43a24233c8c9b378"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {}
+    },
+    {
+      "country_code": "MNE",
+      "document_ids": [
+        "doc-48cdca3c56bf0c7d",
+        "doc-7529c87781de8972",
+        "doc-4a1795b7c5fe2f5c"
+      ],
+      "source_hashes": {
+        "doc-48cdca3c56bf0c7d": "9b0e9c63bc922d4ce9ed2b24bc1346a5d507596d1c20e74b5f7fd4301e6ff5eb",
+        "doc-7529c87781de8972": "c37e9639ceea43dadc1d3a962c9cac0172e4301b13678e9b08c280451be35efe",
+        "doc-4a1795b7c5fe2f5c": "48fcc5bf7567b402034e62b0ee50143c1de5f481b991031a2f5b27da96d275ea"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {}
+    },
+    {
+      "country_code": "MKD",
+      "document_ids": [
+        "doc-595c3500aece18f2"
+      ],
+      "source_hashes": {
+        "doc-595c3500aece18f2": "78ebd6e381ce8d9c636d457895980b4ea6f93ff8fa4d771a2b2a4c4e07ef19db"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {
+        "doc-595c3500aece18f2": [
+          4
+        ]
+      }
+    },
+    {
+      "country_code": "SRB",
+      "document_ids": [
+        "doc-2ebb4fe8294a0ae1",
+        "doc-3c65a5fcb6e952b1",
+        "doc-7ae0d2ee46c3a4a0"
+      ],
+      "source_hashes": {
+        "doc-2ebb4fe8294a0ae1": "88938c2dec785cb76cbb8aab5c8fc2a3e517e6b477ff46d6ff9acc3d5a828a8a",
+        "doc-3c65a5fcb6e952b1": "b9dd6dcffac3fb81737ffb2c57007a80d291ea8470390701fb43874d1b983a3f",
+        "doc-7ae0d2ee46c3a4a0": "843a04600b4f1586975f2097540da6fd79b02004716bb604c00be345d580c5ea"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {
+        "doc-2ebb4fe8294a0ae1": [
+          1,
+          180
+        ]
+      }
+    },
+    {
+      "country_code": "TJK",
+      "document_ids": [
+        "doc-6f622629c5d96265"
+      ],
+      "source_hashes": {
+        "doc-6f622629c5d96265": "7bac3e5139c2ca6cc724fdfdadac30a19d82b3541bd6ed46c40689af79dadff8"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {}
+    },
+    {
+      "country_code": "TUR",
+      "document_ids": [
+        "doc-6ac6f9eac76104a2",
+        "doc-14f27ffd8da0edee"
+      ],
+      "source_hashes": {
+        "doc-6ac6f9eac76104a2": "5e9ee188b3ddc97eb72d9a04465170672119f93878ddf7beb37a4d19a56e5de8",
+        "doc-14f27ffd8da0edee": "be178bd9a74dc9c913f8e46e70ac007d781e330e923ccefb8824f1c0ff23847d"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {
+        "doc-14f27ffd8da0edee": [
+          1
+        ]
+      }
+    },
+    {
+      "country_code": "TKM",
+      "document_ids": [
+        "doc-1a30e5de9e640f66"
+      ],
+      "source_hashes": {
+        "doc-1a30e5de9e640f66": "0714a2009a2260897edc9fd1f83771cf9a67a32056101ad4211bfd97a746c461"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {}
+    },
+    {
+      "country_code": "UKR",
+      "document_ids": [
+        "doc-079c7d831dd631e2",
+        "doc-fd07b699728ab55a"
+      ],
+      "source_hashes": {
+        "doc-079c7d831dd631e2": "6662f5cde6f41e933ae171eb60783c73b26a6646bf5943e5b6d0245ba9623620",
+        "doc-fd07b699728ab55a": "92bf75ed72bb63b129996e7cdc2f2f363d1a9c787c5d669a76388c40ca34216b"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {}
+    },
+    {
+      "country_code": "UZB",
+      "document_ids": [
+        "doc-cf8fc8e1c801c35a",
+        "doc-bbbbbfbca41ebe99",
+        "doc-73a32b277f82afda",
+        "doc-b86e688423064c3c",
+        "doc-984107ad78d7fb2c",
+        "doc-189f61eba13bfa7a",
+        "doc-dae766325f7e0bd4"
+      ],
+      "source_hashes": {
+        "doc-cf8fc8e1c801c35a": "5df06e5dab5cb1865cc2bedbae5bcc37893db4ab1e99a46019adb0f33cde189b",
+        "doc-bbbbbfbca41ebe99": "46f40590ebfe8f840479f7757e8b0190329ee4583d4dafa42d5d8f6b2f76cf6e",
+        "doc-73a32b277f82afda": "23a91655403dd60bf513c0bd9738b559c527b39c4ac82f0814f292e2dc276116",
+        "doc-b86e688423064c3c": "a61a46569d409756ed59baa2f45ca6b848f8c6bb0bf6b655a0c3e31576b87ba0",
+        "doc-984107ad78d7fb2c": "8cf159d6731fef67c349bbee52a3cf515e08f500acdba0394806425ae16074de",
+        "doc-189f61eba13bfa7a": "6de020d2364592f6e9203b562b7cd6a5a16a95ec88382f78a75303f3685bec87",
+        "doc-dae766325f7e0bd4": "2503ddca94a5528c57cd26b3469052af7e81fa937a6929f82b26884e9697cd1d"
+      },
+      "status": "needs_corpus_and_parse_validation",
+      "profile_id": "initial-prime-astra-xhigh-v1",
+      "published_report_id": null,
+      "required_stages": [
+        "source_scope_validation",
+        "parse_and_ocr_quality",
+        "complete_english_layer",
+        "evidence_extraction_and_labeling",
+        "reconciliation",
+        "country_profile_assembly",
+        "automated_evidence_and_bundle_checks",
+        "automatic_publication_respecting_pin"
+      ],
+      "human_review_required": false,
+      "flagged_pages": {
+        "doc-bbbbbfbca41ebe99": [
+          1
+        ],
+        "doc-73a32b277f82afda": [
+          151,
+          162
+        ],
+        "doc-984107ad78d7fb2c": [
+          80
+        ],
+        "doc-dae766325f7e0bd4": [
+          69
+        ]
+      }
+    }
+  ]
+}

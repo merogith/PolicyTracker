@@ -1,0 +1,1289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker extraction method 3.0.0",
+  "type": "object",
+  "properties": {
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "local_id": {
+            "type": "string"
+          },
+          "segment_id": {
+            "type": "string"
+          },
+          "quote_original": {
+            "type": "string"
+          },
+          "english_segment_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "context_evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "local_id",
+          "segment_id",
+          "quote_original",
+          "english_segment_id",
+          "context_evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "local_id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "context",
+              "priority",
+              "proposal",
+              "commitment",
+              "implementation_observation",
+              "result_observation",
+              "projection",
+              "scenario",
+              "unclear"
+            ]
+          },
+          "label_en": {
+            "type": "string"
+          },
+          "description_en": {
+            "type": "string"
+          },
+          "geography": {
+            "type": "object",
+            "properties": {
+              "reporting_party": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "country_codes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "scope": {
+                "type": "string",
+                "enum": [
+                  "national",
+                  "subnational",
+                  "regional",
+                  "EU",
+                  "multi_country",
+                  "unknown"
+                ]
+              },
+              "locations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "reporting_party",
+              "country_codes",
+              "scope",
+              "locations",
+              "evidence_ids"
+            ],
+            "additionalProperties": false
+          },
+          "labels": {
+            "type": "object",
+            "properties": {
+              "topic_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "CLM-01",
+                    "CLM-02",
+                    "CLM-03",
+                    "CLM-04",
+                    "CLM-05",
+                    "CLM-06",
+                    "CLM-07",
+                    "ENE-01",
+                    "ENE-02",
+                    "ENE-03",
+                    "ENE-04",
+                    "ENE-05",
+                    "ENE-06",
+                    "AGR-01",
+                    "AGR-02",
+                    "AGR-03",
+                    "AGR-04",
+                    "WAT-01",
+                    "WAT-02",
+                    "WAT-03",
+                    "WAT-04",
+                    "BIO-01",
+                    "BIO-02",
+                    "BIO-03",
+                    "HEA-01",
+                    "HEA-02",
+                    "HEA-03",
+                    "URB-01",
+                    "URB-02",
+                    "URB-03",
+                    "WST-01",
+                    "WST-02",
+                    "WST-03",
+                    "TRN-01",
+                    "TRN-02",
+                    "TRN-03",
+                    "IND-01",
+                    "IND-02",
+                    "TOU-01",
+                    "TOU-02",
+                    "CLM-08"
+                  ]
+                }
+              },
+              "objectives": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "adaptation",
+                    "mitigation",
+                    "disaster_risk_reduction",
+                    "unspecified"
+                  ]
+                }
+              },
+              "cross_cutting_tags": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "gender",
+                    "youth",
+                    "disability",
+                    "poverty",
+                    "inequality",
+                    "livelihoods",
+                    "just_transition",
+                    "capacity",
+                    "finance",
+                    "technology",
+                    "data",
+                    "transboundary",
+                    "participation",
+                    "nature_based_solutions"
+                  ]
+                }
+              },
+              "hazards": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "flood",
+                    "drought",
+                    "extreme_heat",
+                    "wildfire",
+                    "storm",
+                    "sea_level_rise",
+                    "coastal_erosion",
+                    "landslide",
+                    "avalanche",
+                    "glacial_lake_outburst",
+                    "water_scarcity",
+                    "extreme_cold",
+                    "disease",
+                    "earthquake",
+                    "tsunami",
+                    "technological_accident",
+                    "compound_hazard",
+                    "other"
+                  ]
+                }
+              },
+              "population_groups": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "women",
+                    "men",
+                    "children",
+                    "youth",
+                    "older_people",
+                    "persons_with_disabilities",
+                    "low_income_households",
+                    "farmers",
+                    "rural_communities",
+                    "urban_communities",
+                    "workers",
+                    "migrants_displaced_people",
+                    "indigenous_local_communities",
+                    "other"
+                  ]
+                }
+              },
+              "risk_components": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "hazard",
+                    "exposure",
+                    "vulnerability",
+                    "capacity",
+                    "impact",
+                    "risk_assessment",
+                    "residual_risk",
+                    "systemic_cascading_risk"
+                  ]
+                }
+              },
+              "risk_functions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "risk_understanding",
+                    "risk_prevention_reduction",
+                    "early_warning_preparedness",
+                    "anticipatory_action",
+                    "emergency_response",
+                    "recovery_reconstruction",
+                    "coping_continuity",
+                    "systemic_transformation"
+                  ]
+                }
+              },
+              "policy_instruments": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "strategy_plan",
+                    "law_regulation",
+                    "standard_code",
+                    "public_investment",
+                    "subsidy_incentive",
+                    "tax_pricing",
+                    "market_mechanism",
+                    "insurance_risk_finance",
+                    "institution_coordination",
+                    "information_warning",
+                    "research_data",
+                    "training_capacity",
+                    "ecosystem_management",
+                    "infrastructure_service",
+                    "other"
+                  ]
+                }
+              },
+              "unmapped_terms": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "facet": {
+                      "type": "string"
+                    },
+                    "term": {
+                      "type": "string"
+                    },
+                    "evidence_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "proposed_definition": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "facet",
+                    "term",
+                    "evidence_ids",
+                    "proposed_definition"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "topic_ids",
+              "objectives",
+              "cross_cutting_tags",
+              "hazards",
+              "population_groups",
+              "risk_components",
+              "risk_functions",
+              "policy_instruments",
+              "unmapped_terms"
+            ],
+            "additionalProperties": false
+          },
+          "reference_period": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "targets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "local_id": {
+                  "type": "string"
+                },
+                "metric_text": {
+                  "type": "string"
+                },
+                "metric_key_candidate": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "target_kind": {
+                  "type": "string",
+                  "enum": [
+                    "quantitative",
+                    "deliverable",
+                    "qualitative"
+                  ]
+                },
+                "value": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "raw_token": {
+                          "type": "string"
+                        },
+                        "decimal": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_id": {
+                          "type": "string"
+                        },
+                        "notation": {
+                          "type": "string",
+                          "enum": [
+                            "dot_decimal",
+                            "comma_decimal",
+                            "ambiguous",
+                            "textual"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "raw_token",
+                        "decimal",
+                        "evidence_id",
+                        "notation"
+                      ],
+                      "additionalProperties": false,
+                      "description": "Exact original numeric token plus decimal-string normalization; no unit conversion or inferred values. Ambiguous/textual tokens retain decimal=null pending an explicit normalizer."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "lower": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "raw_token": {
+                          "type": "string"
+                        },
+                        "decimal": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_id": {
+                          "type": "string"
+                        },
+                        "notation": {
+                          "type": "string",
+                          "enum": [
+                            "dot_decimal",
+                            "comma_decimal",
+                            "ambiguous",
+                            "textual"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "raw_token",
+                        "decimal",
+                        "evidence_id",
+                        "notation"
+                      ],
+                      "additionalProperties": false,
+                      "description": "Exact original numeric token plus decimal-string normalization; no unit conversion or inferred values. Ambiguous/textual tokens retain decimal=null pending an explicit normalizer."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "upper": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "raw_token": {
+                          "type": "string"
+                        },
+                        "decimal": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_id": {
+                          "type": "string"
+                        },
+                        "notation": {
+                          "type": "string",
+                          "enum": [
+                            "dot_decimal",
+                            "comma_decimal",
+                            "ambiguous",
+                            "textual"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "raw_token",
+                        "decimal",
+                        "evidence_id",
+                        "notation"
+                      ],
+                      "additionalProperties": false,
+                      "description": "Exact original numeric token plus decimal-string normalization; no unit conversion or inferred values. Ambiguous/textual tokens retain decimal=null pending an explicit normalizer."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "comparator": {
+                  "type": "string",
+                  "enum": [
+                    "equal",
+                    "at_least",
+                    "at_most",
+                    "range",
+                    "approximate",
+                    "not_stated"
+                  ]
+                },
+                "unit_raw": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "unit_key_candidate": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "desired_direction": {
+                  "type": "string",
+                  "enum": [
+                    "increase",
+                    "decrease",
+                    "maintain",
+                    "complete",
+                    "unspecified"
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "enum": [
+                    "absolute",
+                    "historical_reduction",
+                    "BAU_reduction",
+                    "intensity",
+                    "share",
+                    "qualitative",
+                    "other",
+                    "not_stated"
+                  ]
+                },
+                "baseline_value": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "raw_token": {
+                          "type": "string"
+                        },
+                        "decimal": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_id": {
+                          "type": "string"
+                        },
+                        "notation": {
+                          "type": "string",
+                          "enum": [
+                            "dot_decimal",
+                            "comma_decimal",
+                            "ambiguous",
+                            "textual"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "raw_token",
+                        "decimal",
+                        "evidence_id",
+                        "notation"
+                      ],
+                      "additionalProperties": false,
+                      "description": "Exact original numeric token plus decimal-string normalization; no unit conversion or inferred values. Ambiguous/textual tokens retain decimal=null pending an explicit normalizer."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "baseline_period": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "target_period": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "denominator": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "scenario": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "conditionality": {
+                  "type": "string",
+                  "enum": [
+                    "explicitly_conditional",
+                    "explicitly_unconditional",
+                    "not_stated",
+                    "unclear"
+                  ]
+                },
+                "condition_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "total_or_additional": {
+                  "type": "string",
+                  "enum": [
+                    "total",
+                    "additional",
+                    "not_stated"
+                  ]
+                },
+                "sector_scope": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "gas_scope": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "lulucf_treatment": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "gwp_basis": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "local_id",
+                "metric_text",
+                "metric_key_candidate",
+                "target_kind",
+                "value",
+                "lower",
+                "upper",
+                "comparator",
+                "unit_raw",
+                "unit_key_candidate",
+                "desired_direction",
+                "basis",
+                "baseline_value",
+                "baseline_period",
+                "target_period",
+                "denominator",
+                "scenario",
+                "conditionality",
+                "condition_text",
+                "total_or_additional",
+                "sector_scope",
+                "gas_scope",
+                "lulucf_treatment",
+                "gwp_basis",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "actors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "local_id": {
+                  "type": "string"
+                },
+                "name_original": {
+                  "type": "string"
+                },
+                "name_en": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string",
+                  "enum": [
+                    "lead",
+                    "supporting",
+                    "financier",
+                    "reporting",
+                    "beneficiary",
+                    "other",
+                    "unspecified"
+                  ]
+                },
+                "target_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "local_id",
+                "name_original",
+                "name_en",
+                "role",
+                "target_ids",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "finance": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "local_id": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "estimated_cost",
+                    "approved_budget",
+                    "secured",
+                    "requested",
+                    "stated_gap",
+                    "financing_source"
+                  ]
+                },
+                "amount": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "raw_token": {
+                          "type": "string"
+                        },
+                        "decimal": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_id": {
+                          "type": "string"
+                        },
+                        "notation": {
+                          "type": "string",
+                          "enum": [
+                            "dot_decimal",
+                            "comma_decimal",
+                            "ambiguous",
+                            "textual"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "raw_token",
+                        "decimal",
+                        "evidence_id",
+                        "notation"
+                      ],
+                      "additionalProperties": false,
+                      "description": "Exact original numeric token plus decimal-string normalization; no unit conversion or inferred values. Ambiguous/textual tokens retain decimal=null pending an explicit normalizer."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "currency": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "price_period": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "implementation_period": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "description_en": {
+                  "type": "string"
+                },
+                "target_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "local_id",
+                "kind",
+                "amount",
+                "currency",
+                "price_period",
+                "implementation_period",
+                "description_en",
+                "target_ids",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "indicators": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "local_id": {
+                  "type": "string"
+                },
+                "name_en": {
+                  "type": "string"
+                },
+                "unit_raw": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "baseline_value": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "raw_token": {
+                          "type": "string"
+                        },
+                        "decimal": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_id": {
+                          "type": "string"
+                        },
+                        "notation": {
+                          "type": "string",
+                          "enum": [
+                            "dot_decimal",
+                            "comma_decimal",
+                            "ambiguous",
+                            "textual"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "raw_token",
+                        "decimal",
+                        "evidence_id",
+                        "notation"
+                      ],
+                      "additionalProperties": false,
+                      "description": "Exact original numeric token plus decimal-string normalization; no unit conversion or inferred values. Ambiguous/textual tokens retain decimal=null pending an explicit normalizer."
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "baseline_period": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "cadence": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "data_source": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "target_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "local_id",
+                "name_en",
+                "unit_raw",
+                "baseline_value",
+                "baseline_period",
+                "cadence",
+                "data_source",
+                "target_ids",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "risk_contexts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "local_id": {
+                  "type": "string"
+                },
+                "hazard_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "exposed_assets_or_places": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "vulnerability_drivers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "stated_capacities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "consequence_en": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "likelihood_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "severity_text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "assessment_period": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "scenario": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "target_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "action_link": {
+                  "type": "string",
+                  "enum": [
+                    "assesses_risk",
+                    "reduces_exposure",
+                    "reduces_vulnerability",
+                    "builds_capacity",
+                    "prepares",
+                    "responds",
+                    "supports_recovery",
+                    "context_only",
+                    "not_stated"
+                  ]
+                },
+                "link_basis": {
+                  "type": "string",
+                  "enum": [
+                    "explicit",
+                    "inherited_context",
+                    "not_stated"
+                  ]
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "local_id",
+                "hazard_text",
+                "exposed_assets_or_places",
+                "vulnerability_drivers",
+                "stated_capacities",
+                "consequence_en",
+                "likelihood_text",
+                "severity_text",
+                "assessment_period",
+                "scenario",
+                "target_ids",
+                "action_link",
+                "link_basis",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "local_id": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "support_need",
+                    "barrier",
+                    "implementation_step",
+                    "coordination",
+                    "legal_instrument",
+                    "risk_context",
+                    "vulnerability",
+                    "inclusion",
+                    "co_benefit",
+                    "tradeoff",
+                    "dependency"
+                  ]
+                },
+                "text_en": {
+                  "type": "string"
+                },
+                "target_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "local_id",
+                "kind",
+                "text_en",
+                "target_ids",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "field_support": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "field_path": {
+                  "type": "string"
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "basis": {
+                  "type": "string",
+                  "enum": [
+                    "explicit",
+                    "inherited_context",
+                    "classification",
+                    "numeric_normalization"
+                  ]
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "field_path",
+                "evidence_ids",
+                "basis",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "missing_fields": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "field_path": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string",
+                  "enum": [
+                    "not_stated",
+                    "ambiguous",
+                    "not_applicable"
+                  ]
+                },
+                "detail": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "field_path",
+                "reason",
+                "detail"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "quality_flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "local_id",
+          "kind",
+          "label_en",
+          "description_en",
+          "geography",
+          "labels",
+          "reference_period",
+          "targets",
+          "actors",
+          "finance",
+          "indicators",
+          "risk_contexts",
+          "details",
+          "evidence_ids",
+          "field_support",
+          "missing_fields",
+          "quality_flags"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "segment_id": {
+            "type": "string"
+          },
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "extracted",
+              "background",
+              "unreadable"
+            ],
+            "description": "Use extracted for every relevant source occurrence, including repeated statements, with its supporting record/evidence links. Background covers non-policy text, blank templates and declared scope exclusions with a reason. Unreadable is a blocking processing defect, never absence. Do not discard repeated evidence as a duplicate."
+          },
+          "record_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "segment_id",
+          "disposition",
+          "record_ids",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Advisory source, scope and accounting qualifications retained for readers. These do not certify authority or complete-document coverage."
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Unresolved defects preventing use of the owned source evidence. Nonempty issues block acceptance. Declared sample boundaries, faithful source uncertainty, unavailable out-of-scope graphs and absent separate English-layer IDs belong in notes when original evidence remains usable. Never hide genuine defects merely to pass."
+    }
+  },
+  "required": [
+    "evidence",
+    "records",
+    "coverage",
+    "notes",
+    "issues"
+  ],
+  "additionalProperties": false
+}

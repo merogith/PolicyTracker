@@ -1,0 +1,102 @@
+{
+  "version": "1.3.0-implemented-reader",
+  "primary_navigation": [
+    "Regional tracker",
+    "Documents & translations"
+  ],
+  "utility_navigation": [
+    "Method & prompts",
+    "Knowledge & labels",
+    "Configuration",
+    "Integrations"
+  ],
+  "country_views": [
+    "Overview",
+    "Policy register"
+  ],
+  "exploration_lenses": [
+    "Summary",
+    "Targets",
+    "Risks and resilience",
+    "Delivery and support"
+  ],
+  "source_inspection": "Shared evidence dialog: archived original/English passages, page locators, typed details, field support, definitions and missing reasons; PDF access remains disconnected.",
+  "new_report_templates": [
+    "Extract evidence",
+    "Compare policies",
+    "Check implementation information",
+    "Prepare a brief",
+    "Translate documents"
+  ],
+  "always_visible_report_context": [
+    "Country Profile or optional analysis",
+    "source scope",
+    "source dates",
+    "release/version",
+    "availability limitations"
+  ],
+  "generation_settings": {
+    "scope": "per user and per run",
+    "fields": [
+      "provider route",
+      "model",
+      "effort"
+    ],
+    "required_for_reading": false
+  },
+  "publication_copy": {
+    "automatic": "New successful country reports become visible automatically.",
+    "pinned": "This version stays displayed until you choose another or unpin.",
+    "ad_hoc": "This report stays separate from shared country reports."
+  },
+  "loading_states": [
+    "loading_saved_report",
+    "preparing_sources",
+    "preparing_english",
+    "extracting_evidence",
+    "checking_evidence",
+    "assembling_report"
+  ],
+  "exception_states": [
+    "no_documents",
+    "not_generated",
+    "partial_sources",
+    "unreadable_content",
+    "quota_paused",
+    "auth_expired",
+    "run_failed",
+    "cancelled",
+    "newer_version_available_while_pinned",
+    "source_restricted",
+    "withdrawn",
+    "no_filter_matches",
+    "stale_selection_conflict"
+  ],
+  "empty_state_rule": "explain the specific cause and one useful next action; never substitute a fabricated summary",
+  "accessibility_target": "WCAG 2.2 AA; verification required before claiming conformance",
+  "responsive_widths_for_verification": [
+    390,
+    768,
+    1366
+  ],
+  "state_model": "Browser-local named/current view preferences per profile version; session navigation position; same-target predicates; exact archived codebook. Optional request setup remains in memory.",
+  "share_rule": "a saved link preserves snapshot/filter state but never grants document access",
+  "density": "summary first; advanced filters and provenance on demand",
+  "read_actions_use_llm": false,
+  "customization_rule": "Every control changes scope, an analysis rule, output fields/sections or execution behavior; no generic audience/length fields",
+  "regional_status_basis": "Actual supplied inventory; no production country releases yet",
+  "operational_request_schema": "schemas/operations/analysis-request.schema.json",
+  "product_name": "Regional Policy Tracker",
+  "mvp": "One published Country Profile per country from curated NDC/NAP evidence",
+  "secondary_navigation": [
+    "Analysis tools"
+  ],
+  "country_artifact": "Country Profile",
+  "shared_selection_name": "Published version",
+  "history_name": "Version history",
+  "primary_action": "Read an existing profile; Generate profile explicitly invokes the existing one-country worker.",
+  "secondary_layer_required_for_mvp": false,
+  "prompt_inspection": "Current exact Markdown contents and file hashes, mapped to views and pipeline stages. Historical runs must display archived components, not this mutable catalog.",
+  "presentation_contract": "docs/16-evidence-experience.md",
+  "optional_results": "Clearly labeled synthetic interface fixtures; no executed optional reports."
+}

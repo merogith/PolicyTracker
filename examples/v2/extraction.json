@@ -1,0 +1,358 @@
+{
+  "evidence": [
+    {
+      "local_id": "e-meta",
+      "segment_id": "s-meta",
+      "quote_original": "Synthetic training example only. Reporting party: Kazakhstan. National scope. This is invented policy text, not an actual government document.",
+      "english_segment_id": null,
+      "context_evidence_ids": []
+    },
+    {
+      "local_id": "e-1",
+      "segment_id": "s-1",
+      "quote_original": "К 2030 году установить 20 систем раннего предупреждения о наводнениях при условии международного финансирования.",
+      "english_segment_id": null,
+      "context_evidence_ids": [
+        "e-meta"
+      ]
+    },
+    {
+      "local_id": "e-2",
+      "segment_id": "s-2",
+      "quote_original": "Ведущее ведомство — Министерство водных ресурсов. Мера направлена на повышение готовности к наводнениям.",
+      "english_segment_id": null,
+      "context_evidence_ids": [
+        "e-1"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "local_id": "r-1",
+      "kind": "commitment",
+      "label_en": "Install flood early-warning systems",
+      "description_en": "Install 20 flood early-warning systems by 2030, conditional on international financing.",
+      "geography": {
+        "reporting_party": "Kazakhstan",
+        "country_codes": [
+          "KAZ"
+        ],
+        "scope": "national",
+        "locations": [],
+        "evidence_ids": [
+          "e-meta"
+        ]
+      },
+      "labels": {
+        "topic_ids": [
+          "CLM-04"
+        ],
+        "objectives": [
+          "disaster_risk_reduction"
+        ],
+        "cross_cutting_tags": [
+          "finance"
+        ],
+        "hazards": [
+          "flood"
+        ],
+        "population_groups": [],
+        "risk_components": [
+          "capacity"
+        ],
+        "risk_functions": [
+          "early_warning_preparedness"
+        ],
+        "policy_instruments": [
+          "information_warning"
+        ],
+        "unmapped_terms": []
+      },
+      "reference_period": null,
+      "targets": [
+        {
+          "local_id": "t-1",
+          "metric_text": "Flood early-warning systems installed",
+          "metric_key_candidate": "flood_warning_systems_installed_count",
+          "target_kind": "quantitative",
+          "value": {
+            "raw_token": "20",
+            "decimal": "20",
+            "evidence_id": "e-1",
+            "notation": "dot_decimal"
+          },
+          "lower": null,
+          "upper": null,
+          "comparator": "equal",
+          "unit_raw": "систем",
+          "unit_key_candidate": "count_systems",
+          "desired_direction": "increase",
+          "basis": "absolute",
+          "baseline_value": null,
+          "baseline_period": null,
+          "target_period": "2030",
+          "denominator": null,
+          "scenario": null,
+          "conditionality": "explicitly_conditional",
+          "condition_text": "Subject to international financing",
+          "total_or_additional": "not_stated",
+          "sector_scope": [],
+          "gas_scope": [],
+          "lulucf_treatment": null,
+          "gwp_basis": null,
+          "evidence_ids": [
+            "e-1"
+          ]
+        }
+      ],
+      "actors": [
+        {
+          "local_id": "a-1",
+          "name_original": "Министерство водных ресурсов",
+          "name_en": "Ministry of Water Resources",
+          "role": "lead",
+          "target_ids": [
+            "t-1"
+          ],
+          "evidence_ids": [
+            "e-2"
+          ]
+        }
+      ],
+      "finance": [],
+      "indicators": [],
+      "risk_contexts": [
+        {
+          "local_id": "risk-1",
+          "hazard_text": "наводнения",
+          "exposed_assets_or_places": [],
+          "vulnerability_drivers": [],
+          "stated_capacities": [],
+          "consequence_en": null,
+          "likelihood_text": null,
+          "severity_text": null,
+          "assessment_period": null,
+          "scenario": null,
+          "target_ids": [
+            "t-1"
+          ],
+          "action_link": "prepares",
+          "link_basis": "explicit",
+          "evidence_ids": [
+            "e-1",
+            "e-2"
+          ]
+        }
+      ],
+      "details": [
+        {
+          "local_id": "d-1",
+          "kind": "support_need",
+          "text_en": "International financing is required for this commitment.",
+          "target_ids": [
+            "t-1"
+          ],
+          "evidence_ids": [
+            "e-1"
+          ]
+        }
+      ],
+      "evidence_ids": [
+        "e-meta",
+        "e-1",
+        "e-2"
+      ],
+      "field_support": [
+        {
+          "field_path": "/geography",
+          "evidence_ids": [
+            "e-meta"
+          ],
+          "basis": "inherited_context",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/kind",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "classification",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/label_en",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/description_en",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/labels",
+          "evidence_ids": [
+            "e-1",
+            "e-2"
+          ],
+          "basis": "classification",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/targets/0/value",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "numeric_normalization",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/targets/0/target_period",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/targets/0/conditionality",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/targets/0/condition_text",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/targets/0/metric_text",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/targets/0/unit_raw",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/targets/0/comparator",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/targets/0/desired_direction",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "classification",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/targets/0/basis",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "classification",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/actors/0",
+          "evidence_ids": [
+            "e-2"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/risk_contexts/0",
+          "evidence_ids": [
+            "e-1",
+            "e-2"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        },
+        {
+          "field_path": "/details/0",
+          "evidence_ids": [
+            "e-1"
+          ],
+          "basis": "explicit",
+          "reason": "Supported by the cited synthetic wording/context."
+        }
+      ],
+      "missing_fields": [
+        {
+          "field_path": "/targets/0/baseline_value",
+          "reason": "not_stated",
+          "detail": null
+        },
+        {
+          "field_path": "/targets/0/baseline_period",
+          "reason": "not_stated",
+          "detail": null
+        },
+        {
+          "field_path": "/reference_period",
+          "reason": "not_stated",
+          "detail": null
+        }
+      ],
+      "quality_flags": [
+        "Synthetic demonstration only; not country evidence",
+        "Baseline and detailed financing amount not stated"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "segment_id": "s-meta",
+      "disposition": "extracted",
+      "record_ids": [
+        "r-1"
+      ],
+      "reason": "Supports the synthetic commitment or its metadata."
+    },
+    {
+      "segment_id": "s-1",
+      "disposition": "extracted",
+      "record_ids": [
+        "r-1"
+      ],
+      "reason": "Supports the synthetic commitment or its metadata."
+    },
+    {
+      "segment_id": "s-2",
+      "disposition": "extracted",
+      "record_ids": [
+        "r-1"
+      ],
+      "reason": "Supports the synthetic commitment or its metadata."
+    }
+  ],
+  "notes": [
+    "Invented evidence for software verification; not a country assessment."
+  ],
+  "issues": []
+}

@@ -1,0 +1,179 @@
+{
+  "country_codes": [
+    "KAZ"
+  ],
+  "source_group_ids": [
+    "synthetic-group"
+  ],
+  "availability": "complete_in_declared_scope",
+  "headline_findings": [
+    {
+      "text_en": "Install 20 flood early-warning systems by 2030, conditional on international financing.",
+      "kind": "source_fact",
+      "citations": {
+        "evidence_ids": [
+          "e-1"
+        ],
+        "record_ids": [
+          "r-1"
+        ]
+      },
+      "calculation": null,
+      "limitations": [
+        "Invented demonstration only"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "scope_and_method",
+      "state": "found",
+      "findings": [
+        {
+          "text_en": "The invented source identifies Kazakhstan and national scope.",
+          "kind": "source_fact",
+          "citations": {
+            "evidence_ids": [
+              "e-meta"
+            ],
+            "record_ids": [
+              "r-1"
+            ]
+          },
+          "calculation": null,
+          "limitations": [
+            "Invented demonstration only"
+          ]
+        }
+      ],
+      "gap_note": null
+    },
+    {
+      "section_id": "risk_context_and_drr",
+      "state": "found",
+      "findings": [
+        {
+          "text_en": "Install 20 flood early-warning systems by 2030, conditional on international financing.",
+          "kind": "source_fact",
+          "citations": {
+            "evidence_ids": [
+              "e-1"
+            ],
+            "record_ids": [
+              "r-1"
+            ]
+          },
+          "calculation": null,
+          "limitations": [
+            "Invented demonstration only"
+          ]
+        }
+      ],
+      "gap_note": null
+    },
+    {
+      "section_id": "adaptation_and_resilience",
+      "state": "not_found_in_scope",
+      "findings": [],
+      "gap_note": "Synthetic fixture has no material for this section."
+    },
+    {
+      "section_id": "mitigation",
+      "state": "not_found_in_scope",
+      "findings": [],
+      "gap_note": "Synthetic fixture has no material for this section."
+    },
+    {
+      "section_id": "implementation_and_actors",
+      "state": "found",
+      "findings": [
+        {
+          "text_en": "The Ministry of Water Resources is named as the lead agency; this is a stated role, not evidence of implementation.",
+          "kind": "source_fact",
+          "citations": {
+            "evidence_ids": [
+              "e-2"
+            ],
+            "record_ids": [
+              "r-1"
+            ]
+          },
+          "calculation": null,
+          "limitations": [
+            "Invented demonstration only"
+          ]
+        }
+      ],
+      "gap_note": null
+    },
+    {
+      "section_id": "finance_and_support",
+      "state": "found",
+      "findings": [
+        {
+          "text_en": "The commitment is conditional on international financing.",
+          "kind": "source_fact",
+          "citations": {
+            "evidence_ids": [
+              "e-1"
+            ],
+            "record_ids": [
+              "r-1"
+            ]
+          },
+          "calculation": null,
+          "limitations": [
+            "Invented demonstration only"
+          ]
+        }
+      ],
+      "gap_note": null
+    },
+    {
+      "section_id": "inclusion_and_development",
+      "state": "not_found_in_scope",
+      "findings": [],
+      "gap_note": "Synthetic fixture has no material for this section."
+    },
+    {
+      "section_id": "monitoring",
+      "state": "not_found_in_scope",
+      "findings": [],
+      "gap_note": "Synthetic fixture has no material for this section."
+    },
+    {
+      "section_id": "changes_and_coherence",
+      "state": "not_applicable",
+      "findings": [],
+      "gap_note": "One invented source; no cross-document comparison is possible."
+    },
+    {
+      "section_id": "limitations",
+      "state": "found",
+      "findings": [
+        {
+          "text_en": "The source explicitly identifies itself as invented training text, not a government document.",
+          "kind": "source_fact",
+          "citations": {
+            "evidence_ids": [
+              "e-meta"
+            ],
+            "record_ids": [
+              "r-1"
+            ]
+          },
+          "calculation": null,
+          "limitations": [
+            "Invented demonstration only"
+          ]
+        }
+      ],
+      "gap_note": null
+    }
+  ],
+  "prioritized_commitments": [],
+  "followup_questions": [],
+  "limitations": [
+    "This is not a real country report."
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker run-request method 3.0.0",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "enum": [
+        "prime",
+        "ad_hoc",
+        "comparison"
+      ]
+    },
+    "feature": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "corpus_snapshot_id": {
+      "type": "string"
+    },
+    "source_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "document_version_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "release_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scope_note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "group_id",
+          "label",
+          "document_version_ids",
+          "release_ids",
+          "scope_note"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "model": {
+      "type": "object",
+      "properties": {
+        "route": {
+          "type": "string",
+          "enum": [
+            "codex_chatgpt",
+            "chatgpt_plan",
+            "openai_api"
+          ]
+        },
+        "model": {
+          "type": "string"
+        },
+        "effort": {
+          "type": "string"
+        },
+        "fallback_allowed": {
+          "type": "string",
+          "enum": [
+            "never"
+          ]
+        }
+      },
+      "required": [
+        "route",
+        "model",
+        "effort",
+        "fallback_allowed"
+      ],
+      "additionalProperties": false
+    },
+    "brief": {
+      "type": "object",
+      "properties": {
+        "focus_topic_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "CLM-01",
+              "CLM-02",
+              "CLM-03",
+              "CLM-04",
+              "CLM-05",
+              "CLM-06",
+              "CLM-07",
+              "ENE-01",
+              "ENE-02",
+              "ENE-03",
+              "ENE-04",
+              "ENE-05",
+              "ENE-06",
+              "AGR-01",
+              "AGR-02",
+              "AGR-03",
+              "AGR-04",
+              "WAT-01",
+              "WAT-02",
+              "WAT-03",
+              "WAT-04",
+              "BIO-01",
+              "BIO-02",
+              "BIO-03",
+              "HEA-01",
+              "HEA-02",
+              "HEA-03",
+              "URB-01",
+              "URB-02",
+              "URB-03",
+              "WST-01",
+              "WST-02",
+              "WST-03",
+              "TRN-01",
+              "TRN-02",
+              "TRN-03",
+              "IND-01",
+              "IND-02",
+              "TOU-01",
+              "TOU-02",
+              "CLM-08"
+            ]
+          }
+        },
+        "audience": {
+          "type": "string"
+        },
+        "length": {
+          "type": "string"
+        },
+        "question": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "focus_topic_ids",
+        "audience",
+        "length",
+        "question"
+      ],
+      "additionalProperties": false
+    },
+    "idempotency_key": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "feature",
+    "country_code",
+    "corpus_snapshot_id",
+    "source_groups",
+    "model",
+    "brief",
+    "idempotency_key"
+  ],
+  "additionalProperties": false
+}

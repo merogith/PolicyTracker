@@ -1,0 +1,304 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker labels method 3.0.0",
+  "type": "object",
+  "properties": {
+    "assignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "record_id": {
+            "type": "string"
+          },
+          "labels": {
+            "type": "object",
+            "properties": {
+              "topic_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "CLM-01",
+                    "CLM-02",
+                    "CLM-03",
+                    "CLM-04",
+                    "CLM-05",
+                    "CLM-06",
+                    "CLM-07",
+                    "ENE-01",
+                    "ENE-02",
+                    "ENE-03",
+                    "ENE-04",
+                    "ENE-05",
+                    "ENE-06",
+                    "AGR-01",
+                    "AGR-02",
+                    "AGR-03",
+                    "AGR-04",
+                    "WAT-01",
+                    "WAT-02",
+                    "WAT-03",
+                    "WAT-04",
+                    "BIO-01",
+                    "BIO-02",
+                    "BIO-03",
+                    "HEA-01",
+                    "HEA-02",
+                    "HEA-03",
+                    "URB-01",
+                    "URB-02",
+                    "URB-03",
+                    "WST-01",
+                    "WST-02",
+                    "WST-03",
+                    "TRN-01",
+                    "TRN-02",
+                    "TRN-03",
+                    "IND-01",
+                    "IND-02",
+                    "TOU-01",
+                    "TOU-02",
+                    "CLM-08"
+                  ]
+                }
+              },
+              "objectives": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "adaptation",
+                    "mitigation",
+                    "disaster_risk_reduction",
+                    "unspecified"
+                  ]
+                }
+              },
+              "cross_cutting_tags": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "gender",
+                    "youth",
+                    "disability",
+                    "poverty",
+                    "inequality",
+                    "livelihoods",
+                    "just_transition",
+                    "capacity",
+                    "finance",
+                    "technology",
+                    "data",
+                    "transboundary",
+                    "participation",
+                    "nature_based_solutions"
+                  ]
+                }
+              },
+              "hazards": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "flood",
+                    "drought",
+                    "extreme_heat",
+                    "wildfire",
+                    "storm",
+                    "sea_level_rise",
+                    "coastal_erosion",
+                    "landslide",
+                    "avalanche",
+                    "glacial_lake_outburst",
+                    "water_scarcity",
+                    "extreme_cold",
+                    "disease",
+                    "earthquake",
+                    "tsunami",
+                    "technological_accident",
+                    "compound_hazard",
+                    "other"
+                  ]
+                }
+              },
+              "population_groups": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "women",
+                    "men",
+                    "children",
+                    "youth",
+                    "older_people",
+                    "persons_with_disabilities",
+                    "low_income_households",
+                    "farmers",
+                    "rural_communities",
+                    "urban_communities",
+                    "workers",
+                    "migrants_displaced_people",
+                    "indigenous_local_communities",
+                    "other"
+                  ]
+                }
+              },
+              "risk_components": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "hazard",
+                    "exposure",
+                    "vulnerability",
+                    "capacity",
+                    "impact",
+                    "risk_assessment",
+                    "residual_risk",
+                    "systemic_cascading_risk"
+                  ]
+                }
+              },
+              "risk_functions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "risk_understanding",
+                    "risk_prevention_reduction",
+                    "early_warning_preparedness",
+                    "anticipatory_action",
+                    "emergency_response",
+                    "recovery_reconstruction",
+                    "coping_continuity",
+                    "systemic_transformation"
+                  ]
+                }
+              },
+              "policy_instruments": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "strategy_plan",
+                    "law_regulation",
+                    "standard_code",
+                    "public_investment",
+                    "subsidy_incentive",
+                    "tax_pricing",
+                    "market_mechanism",
+                    "insurance_risk_finance",
+                    "institution_coordination",
+                    "information_warning",
+                    "research_data",
+                    "training_capacity",
+                    "ecosystem_management",
+                    "infrastructure_service",
+                    "other"
+                  ]
+                }
+              },
+              "unmapped_terms": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "facet": {
+                      "type": "string"
+                    },
+                    "term": {
+                      "type": "string"
+                    },
+                    "evidence_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "proposed_definition": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "facet",
+                    "term",
+                    "evidence_ids",
+                    "proposed_definition"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "topic_ids",
+              "objectives",
+              "cross_cutting_tags",
+              "hazards",
+              "population_groups",
+              "risk_components",
+              "risk_functions",
+              "policy_instruments",
+              "unmapped_terms"
+            ],
+            "additionalProperties": false
+          },
+          "field_support": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "field_path": {
+                  "type": "string"
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "basis": {
+                  "type": "string",
+                  "enum": [
+                    "explicit",
+                    "inherited_context",
+                    "classification",
+                    "numeric_normalization"
+                  ]
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "field_path",
+                "evidence_ids",
+                "basis",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "issues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "record_id",
+          "labels",
+          "field_support",
+          "issues"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "assignments"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,803 @@
+{
+  "version": "2.0.0",
+  "shared_required_fields": [
+    "country",
+    "source_version",
+    "original_evidence",
+    "english_evidence",
+    "conditionality",
+    "coverage_limitations"
+  ],
+  "tasks": [
+    {
+      "id": "extract",
+      "label": "Extract evidence",
+      "description": "A complete table of relevant commitments and risk information.",
+      "route": "focused_analysis",
+      "artifact": "evidence_table",
+      "options": [
+        {
+          "id": "targets",
+          "label": "Targets, dates and baselines",
+          "effect": "Include structured target variants; unknown baselines remain empty.",
+          "default": true
+        },
+        {
+          "id": "risk_context",
+          "label": "Hazards, vulnerability and exposure",
+          "effect": "Include linked risk-context records, not only commitments.",
+          "default": true
+        },
+        {
+          "id": "actors",
+          "label": "Responsible institutions",
+          "effect": "Include source-stated actor roles and unassigned responsibilities.",
+          "default": true
+        },
+        {
+          "id": "finance",
+          "label": "Finance and support needs",
+          "effect": "Include costs, financing conditions and stated capacity/technology needs.",
+          "default": true
+        },
+        {
+          "id": "indicators",
+          "label": "Indicators and monitoring",
+          "effect": "Include source-stated indicators, data sources and reporting arrangements.",
+          "default": false
+        }
+      ],
+      "minimum_documents": 1,
+      "allows_filters": true,
+      "requires_question": false,
+      "pipeline": "evidence",
+      "supplement": "prompts/operations/extract.md",
+      "requirements": "One or more documents. Multiple documents are processed together with country/source attribution preserved."
+    },
+    {
+      "id": "compare",
+      "label": "Compare policies",
+      "description": "Compare selected themes across countries, policy editions or document groups.",
+      "route": "comparison",
+      "artifact": "comparison_matrix",
+      "options": [
+        {
+          "id": "targets",
+          "label": "Targets and conditions",
+          "effect": "Compare only compatible baselines/units/scenarios; explain exclusions.",
+          "default": true
+        },
+        {
+          "id": "risk_context",
+          "label": "Risk and DRR coverage",
+          "effect": "Compare documented hazard, vulnerability and risk-function coverage.",
+          "default": true
+        },
+        {
+          "id": "actors",
+          "label": "Institutions and coordination",
+          "effect": "Compare responsibilities and coordination arrangements.",
+          "default": false
+        },
+        {
+          "id": "finance",
+          "label": "Finance and support",
+          "effect": "Compare stated resources, conditions and support needs without invented funding gaps.",
+          "default": true
+        },
+        {
+          "id": "indicators",
+          "label": "Monitoring provisions",
+          "effect": "Compare indicators and reporting arrangements; missing means not found in selected sources.",
+          "default": false
+        }
+      ],
+      "minimum_documents": 2,
+      "allows_filters": true,
+      "requires_question": false,
+      "pipeline": "evidence",
+      "supplement": "prompts/operations/compare.md",
+      "requirements": "Two or more distinct policy editions in comparable groups."
+    },
+    {
+      "id": "gaps",
+      "label": "Check implementation information",
+      "description": "Identify stated needs and missing implementation information.",
+      "route": "workplan",
+      "artifact": "delivery_gap_table",
+      "options": [
+        {
+          "id": "actors",
+          "label": "Missing lead or responsibility",
+          "effect": "Flag commitments without a source-stated lead in the chosen scope.",
+          "default": true
+        },
+        {
+          "id": "finance",
+          "label": "Finance and capacity needs",
+          "effect": "Separate explicitly stated needs from missing budget/finance information.",
+          "default": true
+        },
+        {
+          "id": "indicators",
+          "label": "Missing indicator or baseline",
+          "effect": "Flag absent measurement information; do not infer implementation failure.",
+          "default": true
+        },
+        {
+          "id": "targets",
+          "label": "Missing deadline or milestone",
+          "effect": "Flag absent timeframes while retaining qualitative commitments.",
+          "default": true
+        }
+      ],
+      "minimum_documents": 1,
+      "allows_filters": true,
+      "requires_question": false,
+      "pipeline": "evidence",
+      "supplement": "prompts/operations/gaps.md",
+      "requirements": "One or more documents. Multiple documents are processed together with country/source attribution preserved."
+    },
+    {
+      "id": "brief",
+      "label": "Prepare a brief",
+      "description": "A short answer to a policy question, with an evidence annex.",
+      "route": "briefing",
+      "artifact": "decision_brief",
+      "options": [
+        {
+          "id": "targets",
+          "label": "Key commitments and deadlines",
+          "effect": "Include a cited commitments section retaining conditions.",
+          "default": true
+        },
+        {
+          "id": "risk_context",
+          "label": "Risk and resilience context",
+          "effect": "Include documented hazard, vulnerability and resilience context.",
+          "default": true
+        },
+        {
+          "id": "finance",
+          "label": "Delivery constraints and support",
+          "effect": "Include source-stated constraints, institutions and support needs.",
+          "default": true
+        },
+        {
+          "id": "questions",
+          "label": "Questions for follow-up",
+          "effect": "Add analyst-drafted questions grounded in gaps, visibly separate from policy statements.",
+          "default": false
+        }
+      ],
+      "minimum_documents": 1,
+      "allows_filters": true,
+      "requires_question": true,
+      "pipeline": "evidence",
+      "supplement": "prompts/operations/brief.md",
+      "requirements": "One or more documents. Multiple documents are processed together with country/source attribution preserved."
+    },
+    {
+      "id": "translate",
+      "label": "Translate documents",
+      "description": "Save a complete English reading copy with aligned original text for every document.",
+      "route": "translate",
+      "artifact": "bilingual_documents",
+      "options": [],
+      "minimum_documents": 1,
+      "allows_filters": false,
+      "requires_question": false,
+      "pipeline": "translation",
+      "supplement": "prompts/operations/translate.md",
+      "requirements": "One or more documents. Full text is retained; this task does not summarize or extract policy evidence."
+    }
+  ],
+  "comparison_modes": [
+    {
+      "id": "documents",
+      "label": "Documents",
+      "help": "One column per selected document. Use this for two or more documents from one or several countries. Verified translations of one edition are not independent policies.",
+      "grouping": "document",
+      "min_groups": 2
+    },
+    {
+      "id": "countries",
+      "label": "Countries",
+      "help": "One column per country, combining its selected documents. Requires at least two countries.",
+      "grouping": "country",
+      "min_groups": 2
+    },
+    {
+      "id": "revision",
+      "label": "Earlier and later editions",
+      "help": "Exactly two edition groups from one country and instrument. Assign older and newer documents; edition order is checked before execution.",
+      "grouping": "manual",
+      "min_groups": 2,
+      "max_groups": 2,
+      "labels": [
+        "Earlier edition",
+        "Later edition"
+      ]
+    },
+    {
+      "id": "ndc_nap",
+      "label": "NDC and NAP",
+      "help": "Two groups from one country: at least one NDC and one NAP. Tests policy coherence rather than national performance.",
+      "grouping": "instrument",
+      "min_groups": 2,
+      "max_groups": 2,
+      "labels": [
+        "NDC",
+        "NAP"
+      ]
+    },
+    {
+      "id": "custom",
+      "label": "Custom groups",
+      "help": "Two or more named document groups. Assign every selected document exactly once.",
+      "grouping": "manual",
+      "min_groups": 2,
+      "labels": [
+        "Group A",
+        "Group B"
+      ]
+    }
+  ],
+  "filter_rule": "AND across sector, topic, hazard and risk and resilience function; OR within a dimension. Apply the same thematic scope to every comparison group. Keep missing-in-scope cells visible.",
+  "facets": {
+    "domains": [
+      {
+        "id": "climate",
+        "name": "Climate & disaster policy"
+      },
+      {
+        "id": "energy",
+        "name": "Energy"
+      },
+      {
+        "id": "agriculture",
+        "name": "Agriculture"
+      },
+      {
+        "id": "water",
+        "name": "Water"
+      },
+      {
+        "id": "biodiversity",
+        "name": "Biodiversity"
+      },
+      {
+        "id": "health",
+        "name": "Health"
+      },
+      {
+        "id": "urban",
+        "name": "Urban"
+      },
+      {
+        "id": "waste",
+        "name": "Waste"
+      },
+      {
+        "id": "transport",
+        "name": "Transport"
+      },
+      {
+        "id": "industry",
+        "name": "Industry"
+      },
+      {
+        "id": "tourism",
+        "name": "Tourism"
+      }
+    ],
+    "topics": [
+      {
+        "id": "CLM-01",
+        "name": "Climate planning and governance",
+        "definition": "Strategies, plans, laws, institutional coordination and mainstreaming.",
+        "routing_rule": "A finance mechanism also needs CLM-02; do not tag all climate text here.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-02",
+        "name": "Climate finance and support",
+        "definition": "Funding mechanisms, investment planning, budget integration, insurance and international support.",
+        "routing_rule": "A funding source alone does not establish conditionality.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-03",
+        "name": "Climate information and risk assessment",
+        "definition": "Observations, scenarios, vulnerability assessments, risk maps and climate services.",
+        "routing_rule": "Use CLM-04 for operational warnings and preparedness.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-04",
+        "name": "Early warning and disaster preparedness",
+        "definition": "Warnings, emergency planning, evacuation, civil protection and disaster readiness.",
+        "routing_rule": "Do not infer operational warning capacity from a risk study.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-05",
+        "name": "Climate monitoring and reporting",
+        "definition": "GHG inventories, transparency, adaptation indicators, evaluation and reporting.",
+        "routing_rule": "An expected monitoring indicator is not evidence of a result.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-06",
+        "name": "Economy-wide emissions targets",
+        "definition": "National emissions ceilings, reduction pledges, net-zero and economy-wide intensity targets.",
+        "routing_rule": "Sectoral targets use the relevant sector topic; keep EU-wide scope explicit.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-07",
+        "name": "Land carbon and removals",
+        "definition": "Sequestration, land-use emissions/removals, forest carbon and LULUCF accounting.",
+        "routing_rule": "Carbon-sink wording alone does not establish biodiversity benefits.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "ENE-01",
+        "name": "Renewable electricity",
+        "definition": "Solar, wind, hydropower and other renewable electricity, including distributed generation.",
+        "routing_rule": "Rooftop PV alone does not imply an Urban label.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "ENE-02",
+        "name": "Grids and energy storage",
+        "definition": "Transmission, distribution, interconnection, flexibility, storage and network resilience.",
+        "routing_rule": "A generating plant without grid measures belongs to ENE-01 or ENE-05.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "ENE-03",
+        "name": "Clean heating and fuels",
+        "definition": "District heating, heat pumps, renewable heat and lower-emission fuel switching.",
+        "routing_rule": "Vehicle fuel measures use TRN-01; building retrofit packages may also use URB-01.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "ENE-04",
+        "name": "Energy efficiency and demand management",
+        "definition": "Energy audits, performance standards, efficient equipment and demand management.",
+        "routing_rule": "Prefer a more specific building, industrial or transport topic when applicable.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "ENE-05",
+        "name": "Fossil energy transition",
+        "definition": "Coal/oil/gas transition, fossil asset retirement, subsidy reform and supply changes.",
+        "routing_rule": "Do not infer transition success from a plan or fuel switch.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "ENE-06",
+        "name": "Oil and gas methane",
+        "definition": "Fugitive emissions, leaks, venting and flaring across oil/gas supply.",
+        "routing_rule": "Landfill methane uses WST-02; agricultural methane uses AGR-03.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "AGR-01",
+        "name": "Irrigation efficiency",
+        "definition": "Agricultural water delivery, irrigation modernization and water-saving technologies.",
+        "routing_rule": "Municipal water supply uses WAT-01; solar irrigation may also use ENE-01.",
+        "domain_ids": [
+          "agriculture",
+          "water"
+        ]
+      },
+      {
+        "id": "AGR-02",
+        "name": "Resilient crops and soils",
+        "definition": "Crop varieties, soil health, erosion control, land management and resilient farming.",
+        "routing_rule": "Forest management uses BIO-01; record explicit carbon accounting under CLM-07.",
+        "domain_ids": [
+          "agriculture"
+        ]
+      },
+      {
+        "id": "AGR-03",
+        "name": "Livestock and manure",
+        "definition": "Animal health/resilience, feed, manure and agricultural methane/nitrous oxide measures.",
+        "routing_rule": "Human health uses HEA topics.",
+        "domain_ids": [
+          "agriculture"
+        ]
+      },
+      {
+        "id": "AGR-04",
+        "name": "Food systems and farm livelihoods",
+        "definition": "Food security, agricultural advice, storage, value chains and farm livelihoods.",
+        "routing_rule": "Food-waste disposal can also use WST-01 when a distinct measure is stated.",
+        "domain_ids": [
+          "agriculture"
+        ]
+      },
+      {
+        "id": "WAT-01",
+        "name": "Water supply and groundwater",
+        "definition": "Water availability, abstraction, groundwater, drinking water, storage and network losses.",
+        "routing_rule": "Farm irrigation uses AGR-01; sanitation uses WST-03.",
+        "domain_ids": [
+          "water"
+        ]
+      },
+      {
+        "id": "WAT-02",
+        "name": "River basins and drought management",
+        "definition": "Basin management, allocation, drought planning, environmental flows and shared waters.",
+        "routing_rule": "Flood defenses use WAT-03; warnings may also use CLM-04.",
+        "domain_ids": [
+          "water"
+        ]
+      },
+      {
+        "id": "WAT-03",
+        "name": "Flood and coastal protection",
+        "definition": "River/coastal flood risk, defenses, erosion and sea-level adaptation.",
+        "routing_rule": "General settlement planning may additionally use URB-02.",
+        "domain_ids": [
+          "water"
+        ]
+      },
+      {
+        "id": "WAT-04",
+        "name": "Water quality and reuse",
+        "definition": "Surface-water quality, pollution prevention, safe reuse and receiving-water protection.",
+        "routing_rule": "Wastewater treatment systems use WST-03; keep both if both purposes are explicit.",
+        "domain_ids": [
+          "water"
+        ]
+      },
+      {
+        "id": "BIO-01",
+        "name": "Forest health and management",
+        "definition": "Forest condition, sustainable management, wildfire/pest control and forest resilience.",
+        "routing_rule": "Carbon-only forest targets use CLM-07 without an inferred biodiversity claim.",
+        "domain_ids": [
+          "biodiversity"
+        ]
+      },
+      {
+        "id": "BIO-02",
+        "name": "Species, habitats and protected areas",
+        "definition": "Species conservation, habitats, connectivity and terrestrial/aquatic protected areas.",
+        "routing_rule": "Active ecosystem restoration uses BIO-03.",
+        "domain_ids": [
+          "biodiversity"
+        ]
+      },
+      {
+        "id": "BIO-03",
+        "name": "Ecosystem restoration",
+        "definition": "Restoration of forests, wetlands, peatlands and ecosystems, including ecosystem adaptation.",
+        "routing_rule": "Record carbon or adaptation co-benefits only with evidence.",
+        "domain_ids": [
+          "biodiversity"
+        ]
+      },
+      {
+        "id": "HEA-01",
+        "name": "Heat and human health",
+        "definition": "Heat-health plans, cooling access, exposure and vulnerable-group protection.",
+        "routing_rule": "Urban greening uses URB-03 when the physical intervention is stated.",
+        "domain_ids": [
+          "health"
+        ]
+      },
+      {
+        "id": "HEA-02",
+        "name": "Climate-sensitive disease and exposure",
+        "definition": "Infectious disease, water/vector-borne illness, air-quality exposure and surveillance.",
+        "routing_rule": "Do not assume health outcomes from emissions reductions alone.",
+        "domain_ids": [
+          "health"
+        ]
+      },
+      {
+        "id": "HEA-03",
+        "name": "Resilient health services",
+        "definition": "Health facilities, service delivery, emergency capacity, staffing and essential supplies.",
+        "routing_rule": "General civil protection uses CLM-04.",
+        "domain_ids": [
+          "health"
+        ]
+      },
+      {
+        "id": "URB-01",
+        "name": "Building energy performance",
+        "definition": "Building insulation, retrofits, performance codes, passive design and energy-saving systems.",
+        "routing_rule": "Urban is a taxonomy domain here, not proof of urban geographic scope.",
+        "domain_ids": [
+          "urban",
+          "energy"
+        ]
+      },
+      {
+        "id": "URB-02",
+        "name": "Resilient settlements and infrastructure",
+        "definition": "Spatial planning, building safety, urban drainage and local infrastructure resilience.",
+        "routing_rule": "Sector-specific transport or energy networks use their specific topics.",
+        "domain_ids": [
+          "urban"
+        ]
+      },
+      {
+        "id": "URB-03",
+        "name": "Urban cooling and green spaces",
+        "definition": "Trees, green/blue spaces, shading and cooling-oriented public-space design.",
+        "routing_rule": "General forest restoration uses BIO-03; health links require explicit evidence.",
+        "domain_ids": [
+          "urban"
+        ]
+      },
+      {
+        "id": "WST-01",
+        "name": "Materials, recycling and circularity",
+        "definition": "Prevention, separate collection, recycling, composting, food waste and circular material use.",
+        "routing_rule": "Landfill gas uses WST-02; industrial production measures may use IND-01.",
+        "domain_ids": [
+          "waste"
+        ]
+      },
+      {
+        "id": "WST-02",
+        "name": "Solid-waste disposal and methane",
+        "definition": "Landfill management/emissions, gas capture and disposal-facility resilience.",
+        "routing_rule": "Oil/gas methane uses ENE-06.",
+        "domain_ids": [
+          "waste"
+        ]
+      },
+      {
+        "id": "WST-03",
+        "name": "Wastewater and sanitation",
+        "definition": "Sewage, wastewater treatment, sanitation, sludge and associated emissions/resilience.",
+        "routing_rule": "Receiving-water quality/reuse measures may also use WAT-04.",
+        "domain_ids": [
+          "waste",
+          "water"
+        ]
+      },
+      {
+        "id": "TRN-01",
+        "name": "Low-emission vehicles and fuels",
+        "definition": "Electrification, charging, cleaner transport fuels and vehicle standards.",
+        "routing_rule": "Public transport service improvements use TRN-02 where relevant.",
+        "domain_ids": [
+          "transport"
+        ]
+      },
+      {
+        "id": "TRN-02",
+        "name": "Public, active and shared mobility",
+        "definition": "Public transport, rail shift, walking, cycling and reduced private-car dependence.",
+        "routing_rule": "Transport hazard resilience uses TRN-03.",
+        "domain_ids": [
+          "transport"
+        ]
+      },
+      {
+        "id": "TRN-03",
+        "name": "Resilient transport networks",
+        "definition": "Protection/adaptation of roads, railways, ports, airports and logistics.",
+        "routing_rule": "Emissions measures use TRN-01 or TRN-02.",
+        "domain_ids": [
+          "transport"
+        ]
+      },
+      {
+        "id": "IND-01",
+        "name": "Cleaner production and industrial efficiency",
+        "definition": "Industrial energy/material efficiency, production technology, modernization and factory resilience.",
+        "routing_rule": "Process gases/refrigerants use IND-02.",
+        "domain_ids": [
+          "industry"
+        ]
+      },
+      {
+        "id": "IND-02",
+        "name": "Process emissions and refrigerants",
+        "definition": "Industrial process emissions, cement/chemicals, fluorinated gases and refrigerants.",
+        "routing_rule": "Generic factory energy efficiency uses IND-01.",
+        "domain_ids": [
+          "industry"
+        ]
+      },
+      {
+        "id": "TOU-01",
+        "name": "Tourism adaptation and destination resilience",
+        "definition": "Destination risks, changing seasons, diversification and resilient visitor infrastructure.",
+        "routing_rule": "Only use Tourism when the sector is explicit.",
+        "domain_ids": [
+          "tourism"
+        ]
+      },
+      {
+        "id": "TOU-02",
+        "name": "Tourism resource efficiency",
+        "definition": "Tourism-specific water, energy, waste and sustainable visitor/accommodation measures.",
+        "routing_rule": "Keep sector topics too where the source explicitly describes the intervention.",
+        "domain_ids": [
+          "tourism"
+        ]
+      },
+      {
+        "id": "CLM-08",
+        "name": "Disaster risk and management",
+        "definition": "Cross-sector all-hazards risk context, disaster governance, emergency response, relief and recovery arrangements.",
+        "routing_rule": "Use for substantive cross-sector disaster material without a fitting narrower topic. Prefer CLM-04 for warning/readiness and sector topics for sector measures. Select specific risk functions separately; do not add this topic to every hazard mention or infer climate causation.",
+        "domain_ids": [
+          "climate"
+        ]
+      }
+    ],
+    "hazards": [
+      {
+        "id": "flood",
+        "label": "Flood",
+        "definition": "Water inundating land that is normally dry."
+      },
+      {
+        "id": "drought",
+        "label": "Drought",
+        "definition": "A sustained precipitation or water deficit affecting systems or people."
+      },
+      {
+        "id": "extreme_heat",
+        "label": "Extreme heat",
+        "definition": "Unusually high temperatures or heat episodes."
+      },
+      {
+        "id": "wildfire",
+        "label": "Wildfire",
+        "definition": "Uncontrolled vegetation fire."
+      },
+      {
+        "id": "storm",
+        "label": "Storm",
+        "definition": "Damaging wind or storm conditions; preserve the specific storm type in the source text."
+      },
+      {
+        "id": "sea_level_rise",
+        "label": "Sea level rise",
+        "definition": "Rising average sea level affecting coastal systems."
+      },
+      {
+        "id": "coastal_erosion",
+        "label": "Coastal erosion",
+        "definition": "Loss or retreat of coastal land through erosion."
+      },
+      {
+        "id": "landslide",
+        "label": "Landslide",
+        "definition": "Downslope movement of soil, rock or debris."
+      },
+      {
+        "id": "avalanche",
+        "label": "Avalanche",
+        "definition": "Rapid downslope movement of snow or ice."
+      },
+      {
+        "id": "glacial_lake_outburst",
+        "label": "Glacial lake outburst",
+        "definition": "Sudden release of water from a glacial lake."
+      },
+      {
+        "id": "water_scarcity",
+        "label": "Water scarcity",
+        "definition": "Insufficient usable water relative to demand; distinguish drivers from drought when stated."
+      },
+      {
+        "id": "extreme_cold",
+        "label": "Extreme cold",
+        "definition": "Unusually low temperatures or cold episodes."
+      },
+      {
+        "id": "disease",
+        "label": "Disease",
+        "definition": "A disease-related threat; preserve pathogen, vector and climate linkage where stated."
+      },
+      {
+        "id": "earthquake",
+        "label": "Earthquake",
+        "definition": "Ground shaking or associated seismic threat; not automatically climate-related."
+      },
+      {
+        "id": "tsunami",
+        "label": "Tsunami",
+        "definition": "Large sea waves generated by displacement; not automatically climate-related."
+      },
+      {
+        "id": "technological_accident",
+        "label": "Technological accident",
+        "definition": "Accidental technological or industrial threat."
+      },
+      {
+        "id": "compound_hazard",
+        "label": "Compound hazard",
+        "definition": "Interacting or concurrent hazards explicitly discussed together."
+      },
+      {
+        "id": "other",
+        "label": "Other",
+        "definition": "A supported hazard outside this compact list; retain the exact source term in unmapped_terms."
+      }
+    ],
+    "risk_functions": [
+      {
+        "id": "risk_understanding",
+        "label": "Risk understanding",
+        "definition": "Assess hazards, exposure, vulnerability and risk, or develop relevant risk information."
+      },
+      {
+        "id": "risk_prevention_reduction",
+        "label": "Risk prevention and reduction",
+        "definition": "Avoid new risk or reduce existing exposure, vulnerability or potential harm."
+      },
+      {
+        "id": "early_warning_preparedness",
+        "label": "Early warning and preparedness",
+        "definition": "Build warning capability, contingency plans, exercises and readiness to act."
+      },
+      {
+        "id": "anticipatory_action",
+        "label": "Anticipatory action",
+        "definition": "Act ahead of a predicted event using a forecast, warning or trigger. General readiness alone is insufficient."
+      },
+      {
+        "id": "emergency_response",
+        "label": "Emergency response",
+        "definition": "Protect people and meet urgent needs during or immediately after an event."
+      },
+      {
+        "id": "recovery_reconstruction",
+        "label": "Recovery and reconstruction",
+        "definition": "Restore affected livelihoods, infrastructure and services, including rebuilding more safely."
+      },
+      {
+        "id": "coping_continuity",
+        "label": "Coping and continuity",
+        "definition": "Maintain essential functions during disruption through buffers, redundancy or backup arrangements."
+      },
+      {
+        "id": "systemic_transformation",
+        "label": "Systemic transformation",
+        "definition": "Fundamentally change systems or development pathways to address risk; routine improvements alone are insufficient."
+      }
+    ]
+  }
+}

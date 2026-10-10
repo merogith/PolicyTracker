@@ -1,0 +1,279 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker workplan method 3.0.0",
+  "type": "object",
+  "properties": {
+    "country_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_group_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "commitment_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_stated_action": {
+            "type": "object",
+            "properties": {
+              "text_en": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "source_fact",
+                  "source_reported_observation",
+                  "derived",
+                  "analyst_suggestion"
+                ]
+              },
+              "citations": {
+                "type": "object",
+                "properties": {
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "record_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "evidence_ids",
+                  "record_ids"
+                ],
+                "additionalProperties": false
+              },
+              "calculation": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "text_en",
+              "kind",
+              "citations",
+              "calculation",
+              "limitations"
+            ],
+            "additionalProperties": false
+          },
+          "source_actor_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_finance_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_indicator_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "proposed_support_activity": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "text_en": {
+                    "type": "string"
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "source_fact",
+                      "source_reported_observation",
+                      "derived",
+                      "analyst_suggestion"
+                    ]
+                  },
+                  "citations": {
+                    "type": "object",
+                    "properties": {
+                      "evidence_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "record_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": [
+                      "evidence_ids",
+                      "record_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "calculation": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "limitations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "text_en",
+                  "kind",
+                  "citations",
+                  "calculation",
+                  "limitations"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "proposed_indicator": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "text_en": {
+                    "type": "string"
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "source_fact",
+                      "source_reported_observation",
+                      "derived",
+                      "analyst_suggestion"
+                    ]
+                  },
+                  "citations": {
+                    "type": "object",
+                    "properties": {
+                      "evidence_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "record_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": [
+                      "evidence_ids",
+                      "record_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "calculation": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "limitations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "text_en",
+                  "kind",
+                  "citations",
+                  "calculation",
+                  "limitations"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "missing_information": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "verification_questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "commitment_ids",
+          "source_stated_action",
+          "source_actor_ids",
+          "source_finance_ids",
+          "source_indicator_ids",
+          "proposed_support_activity",
+          "proposed_indicator",
+          "missing_information",
+          "verification_questions"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "country_codes",
+    "source_group_ids",
+    "rows",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

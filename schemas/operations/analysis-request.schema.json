@@ -1,0 +1,342 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "kind": {
+      "const": "ad_hoc"
+    },
+    "task": {
+      "enum": [
+        "extract",
+        "compare",
+        "gaps",
+        "brief",
+        "translate"
+      ]
+    },
+    "source_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "document_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "document_ids"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "topic_ids": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "CLM-01",
+              "CLM-02",
+              "CLM-03",
+              "CLM-04",
+              "CLM-05",
+              "CLM-06",
+              "CLM-07",
+              "ENE-01",
+              "ENE-02",
+              "ENE-03",
+              "ENE-04",
+              "ENE-05",
+              "ENE-06",
+              "AGR-01",
+              "AGR-02",
+              "AGR-03",
+              "AGR-04",
+              "WAT-01",
+              "WAT-02",
+              "WAT-03",
+              "WAT-04",
+              "BIO-01",
+              "BIO-02",
+              "BIO-03",
+              "HEA-01",
+              "HEA-02",
+              "HEA-03",
+              "URB-01",
+              "URB-02",
+              "URB-03",
+              "WST-01",
+              "WST-02",
+              "WST-03",
+              "TRN-01",
+              "TRN-02",
+              "TRN-03",
+              "IND-01",
+              "IND-02",
+              "TOU-01",
+              "TOU-02",
+              "CLM-08"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "domain_ids": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "climate",
+              "energy",
+              "agriculture",
+              "water",
+              "biodiversity",
+              "health",
+              "urban",
+              "waste",
+              "transport",
+              "industry",
+              "tourism"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "hazards": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "flood",
+              "drought",
+              "extreme_heat",
+              "wildfire",
+              "storm",
+              "sea_level_rise",
+              "coastal_erosion",
+              "landslide",
+              "avalanche",
+              "glacial_lake_outburst",
+              "water_scarcity",
+              "extreme_cold",
+              "disease",
+              "earthquake",
+              "tsunami",
+              "technological_accident",
+              "compound_hazard",
+              "other"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "risk_functions": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "risk_understanding",
+              "risk_prevention_reduction",
+              "early_warning_preparedness",
+              "anticipatory_action",
+              "emergency_response",
+              "recovery_reconstruction",
+              "coping_continuity",
+              "systemic_transformation"
+            ]
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "topic_ids",
+        "domain_ids",
+        "hazards",
+        "risk_functions"
+      ],
+      "additionalProperties": false
+    },
+    "requested_fields": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "actors",
+          "finance",
+          "indicators",
+          "questions",
+          "risk_context",
+          "targets"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "comparison_mode": {
+      "enum": [
+        null,
+        "documents",
+        "countries",
+        "revision",
+        "ndc_nap",
+        "custom"
+      ]
+    },
+    "include_analyst_proposals": {
+      "type": "boolean"
+    },
+    "question": {
+      "type": "string"
+    },
+    "instructions": {
+      "type": "string"
+    },
+    "model": {
+      "type": "object",
+      "properties": {
+        "route": {
+          "enum": [
+            "codex_chatgpt",
+            "openai_api"
+          ]
+        },
+        "model": {
+          "type": "string"
+        },
+        "effort": {
+          "enum": [
+            "default",
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max",
+            "ultra"
+          ]
+        },
+        "fallback_allowed": {
+          "const": "never"
+        }
+      },
+      "required": [
+        "route",
+        "model",
+        "effort",
+        "fallback_allowed"
+      ],
+      "additionalProperties": false
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "artifact": {
+          "enum": [
+            "evidence_table",
+            "comparison_matrix",
+            "delivery_gap_table",
+            "decision_brief",
+            "bilingual_documents"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "include_original_evidence": {
+          "const": true
+        },
+        "coverage_mode": {
+          "const": "all_selected_documents"
+        }
+      },
+      "required": [
+        "artifact",
+        "language",
+        "include_original_evidence",
+        "coverage_mode"
+      ],
+      "additionalProperties": false
+    },
+    "uploads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "state": {
+            "const": "local_pending"
+          }
+        },
+        "required": [
+          "filename",
+          "state"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "execution_state": {
+      "const": "not_run"
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "task",
+    "source_groups",
+    "filters",
+    "requested_fields",
+    "comparison_mode",
+    "include_analyst_proposals",
+    "question",
+    "instructions",
+    "model",
+    "output",
+    "uploads",
+    "execution_state"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Operational analysis request 2.0.0",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "task": {
+            "const": "translate"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "requested_fields": {
+            "maxItems": 0
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "requested_fields": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ]
+}

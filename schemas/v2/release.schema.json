@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker release method 3.0.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "corpus_snapshot_id": {
+      "type": "string"
+    },
+    "corpus_generation": {
+      "type": "integer"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "run_sequence": {
+      "type": "integer"
+    },
+    "bundle_sha256": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "complete_in_declared_scope",
+        "partial",
+        "no_documents_supplied"
+      ]
+    },
+    "automated_validation": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "passed",
+            "passed_with_limitations",
+            "failed"
+          ]
+        },
+        "receipt_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "validator_version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "receipt_id",
+        "validator_version"
+      ],
+      "additionalProperties": false
+    },
+    "audit": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": [
+            "not_audited",
+            "annotated",
+            "corrected"
+          ]
+        },
+        "event_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "state",
+        "event_ids"
+      ],
+      "additionalProperties": false
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "storage_key": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "storage_key",
+          "sha256"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "stage_provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stage": {
+            "type": "string"
+          },
+          "artifact_hash": {
+            "type": "string"
+          },
+          "reused": {
+            "type": "boolean"
+          },
+          "provider_route": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "requested_model": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "actual_model": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "requested_effort": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "confirmed_effort": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "prompt_hash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "schema_hash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "taxonomy_hash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "input_hash": {
+            "type": "string"
+          },
+          "origin_run_id": {
+            "type": "string"
+          },
+          "source_version_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "validation_receipt_id": {
+            "type": "string"
+          },
+          "method_components": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "archive_key": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path",
+                "sha256",
+                "archive_key"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "prepared_packet_sha256": {
+            "type": "string"
+          },
+          "prepared_packet_archive_key": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "stage",
+          "artifact_hash",
+          "reused",
+          "provider_route",
+          "requested_model",
+          "actual_model",
+          "requested_effort",
+          "confirmed_effort",
+          "prompt_hash",
+          "schema_hash",
+          "taxonomy_hash",
+          "input_hash",
+          "origin_run_id",
+          "source_version_ids",
+          "validation_receipt_id",
+          "method_components",
+          "prepared_packet_sha256",
+          "prepared_packet_archive_key"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "release_id",
+    "country_code",
+    "corpus_snapshot_id",
+    "corpus_generation",
+    "run_id",
+    "run_sequence",
+    "bundle_sha256",
+    "availability",
+    "automated_validation",
+    "audit",
+    "artifacts",
+    "stage_provenance",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

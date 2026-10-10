@@ -1,0 +1,19 @@
+# Reconcile statements and revisions
+
+Use reconciliation.schema.json. Inputs include validated source records with globally scoped IDs, source families/relationships and corpus scope. Propose groups and relationships without modifying, merging or deleting source records. The local worker saves these proposals alongside the unchanged extraction; it does not assign canonical commitment identities. Counts describe source records, not unique commitments. Use a previous identity ledger only if one is explicitly supplied.
+
+Group only the same underlying action or promise. Preserve distinct conditional/unconditional scenarios, periods, baselines, geography and accounting scope as separate variants. A translation can corroborate one variant without doubling its commitment count. Similar wording is not a universal similarity threshold. Do not group context-only observations as new commitments; link relevant observations where evidence supports the association.
+
+Retain before/after IDs for change findings. Distinguish restated, revised, scope/condition change, new, and not restated. Superseded/withdrawn requires affirmative evidence; recency or omission alone is insufficient. NDC/NAP overlap is not a contradiction merely because one is more detailed. A relationship can remain unresolved with separate groups.
+
+Use a simple evidence-based comparison within this existing task:
+- Match the underlying action or metric, not just similar wording or a shared topic. Do not list unrelated record pairs.
+- For quantitative changes, check unit, baseline/denominator, target period, geography/sector and conditions/scenario, plus gas/accounting scope when relevant. Missing meaning stays unknown; it is not a matching value. State any material difference in the existing reason or finding text.
+- If only the number changes on an otherwise supported common basis, cite both original values. Only report a computed difference if the application supplies the checked calculation; otherwise describe the change without arithmetic or a claim of stronger ambition.
+- If the basis differs, describe the two statements and the mismatch instead of calculating a change. For example, 20% below a historical baseline and 30% below business-as-usual do not establish an increase in ambition.
+- Qualitative comparison needs no common numeric unit: explain supported differences in actions, actors, deadlines, financing or monitoring. Different detail is not automatically a conflict. Use contradicts only for incompatible statements about the same matter under matching scope, time and conditions; otherwise use related or unresolved and explain why.
+- A before/after claim needs supported edition order and policy continuity. If those are unknown, describe a difference between sources without inventing a revision. Do not claim progress from changes in commitments.
+
+The worker requires every typed `changes` entry to have linked source profiles with known `publication_date` values at the same precision, with all before dates strictly earlier than all after dates. An adoption date in source prose is not automatically a publication date. A historical restatement and a current statement within the same document cannot meet this edition-order rule. When dates are absent, incomparable or shared, leave `changes` empty for that comparison and preserve supported history or differences in descriptive relationships and reasons. Do not invent metadata or drop source facts to produce a typed change.
+
+Use an existing canonical ID only when the supplied ledger and evidence support continuity. Never invent an existing ID. Each commitment record belongs to exactly one proposed group, while a group can have multiple variants. Retain merge/split reasons and source occurrences. No publication or destructive deletion occurs in this task.

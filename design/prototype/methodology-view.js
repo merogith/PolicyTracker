@@ -1,0 +1,55 @@
+// Display trusted configuration as escaped text. Prompts are inspectable data here.
+const esc=value=>String(value??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
+const list=items=>`<ul>${items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
+const promptLink=p=>`<button class="prompt-link" data-prompt="${esc(p.path)}">${esc(p.path.split('/').at(-1))}</button>`;
+const taskPrompts=(method,id)=>(method.assemblies.find(a=>a.id===`operation:${id}`)?.instruction_paths||[]).map(path=>promptLink(method.prompts.find(p=>p.path===path))).join('');
+const routes=(method,ids)=>ids.map(id=>promptLink(method.prompts.find(p=>p.route===id))).join('');
+
+export function viewCards(method){
+  return `<div class="view-cards">${method.views.map((v,i)=>`<article><span class="view-number">0${i+1}</span><h3>${esc(v.label)}</h3><p>${esc(v.question)}</p><button class="text-link" data-method="${v.id}">What it includes & how it is prepared →</button></article>`).join('')}</div>`;
+}
+
+export function viewExplanation(method,id){
+  const v=method.views.find(v=>v.id===id);
+  return `<section class="paper view-explanation"><div class="eyebrow">${esc(v.label)}</div><h2>${esc(v.question)}</h2>${list(v.includes)}<p class="muted">${esc(v.boundary)}</p><div class="method-detail"><h3>How it is prepared</h3><p>${esc(v.method)}</p><div class="prompt-links">${routes(method,v.routes)}</div><p class="small-note muted">Plus the shared evidence and labeling rules, and the preceding source-processing steps.</p></div><details class="artifact-details"><summary>Structured outputs</summary><p>${v.artifacts.map(x=>`<code>${esc(x)}</code>`).join(' · ')}</p>${v.schema_sections.length?`<p class="muted">Report sections: ${v.schema_sections.map(esc).join(', ')}</p>`:''}</details></section>`;
+}
+
+export function methodologyPage(method,focus){
+  return `<div class="title-row"><div><div class="eyebrow">METHOD & PROMPT LIBRARY</div><h1>Method & prompts</h1><p class="muted">Documents become cited findings and searchable policy records.</p></div><button data-download-method>Download method & prompts</button></div>
+    <p class="method-status"><strong>Current configuration.</strong> ${esc(method.run_transparency.current)}</p>${method.execution_note?`<p class="muted">${esc(method.execution_note)}</p>`:''}
+    <section class="method-intro"><h2>From documents to findings</h2><p>Read the original documents and prepare aligned English text. Extract statements with their sources, dates and conditions. Link related or conflicting statements, write the country overview, then check and save the version.</p><p>Software checks verify structure and source links. They do not establish expert review or implementation progress. A saved profile’s <strong>Version, definitions and run details</strong> identifies its archived method.</p></section>
+    <label class="full-label">Find a prompt<input id="prompt-query" type="search" placeholder="For example: translation, extraction, comparison"></label><div class="prompt-directory">${method.prompts.map(p=>`<div data-prompt-search="${esc([p.label,p.role,p.path,p.content].join(' ').toLowerCase())}"><button data-prompt="${esc(p.path)}">${esc(p.label)}</button><span>${esc(p.role)}</span></div>`).join('')}</div><p id="prompt-search-count" role="status"></p>
+    <details class="method-reference" ${focus?'open':''}><summary>Complete method, rules and preparation steps</summary>
+    ${method.presentation?`<section class="paper method-section"><h2>Reading, exploring and verifying evidence</h2><p>${esc(method.presentation.hierarchy)}</p><p><strong>Perspectives:</strong> ${method.presentation.perspectives.map(esc).join(' · ')}</p><details><summary>Presentation and interpretation rules</summary>${list(method.presentation.rules)}</details><p class="muted">${esc(method.presentation.implementation)}</p></section>`:''}
+    ${focus?`<button class="text-link" data-method="">← All views and the complete method</button>${viewExplanation(method,focus)}`:`<section aria-label="Two core country views">${viewCards(method)}</section>`}
+    <section class="paper utility-explainer"><h2>Sources, translations and history</h2><p><strong>Documents & translations</strong> holds the original documents, complete aligned English text, citations and translation coverage. English is a reading layer supporting every view.</p><p class="muted">Risk, DRR and delivery details are retained in the Overview and Policy register. Comparison is optional and requires suitable document groups. Version history selects or pins the shared Country Profile. Opening a dashboard, filtering saved records or exporting them needs no new model call.</p><button class="text-link" data-nav="library">Inspect the source inventory →</button></section>
+    <section class="method-section"><div class="section-title"><div><h2>Preparation steps and optional checks</h2><p class="muted">Each step states what the local worker runs. Deferred checks are optional, not prerequisites for country trials. Markdown links open the configured source files.</p></div></div><ol class="method-steps">${method.steps.map(s=>`<li><div><h3>${esc(s.label)}</h3><p>${esc(s.description)}</p><p class="small-note"><strong>Current behavior:</strong> ${esc(s.implementation || 'See the current architecture guide.')}</p><div class="prompt-links">${routes(method,s.routes)}</div><details><summary>What the application handles</summary><p>${esc(s.application)}</p></details></div></li>`).join('')}</ol></section>
+    <section class="paper method-section"><h2>Shared extraction and analysis rules</h2><p>${esc(method.run_transparency.composition)}</p><div class="prompt-links">${method.prompts.filter(p=>p.group==='shared').map(promptLink).join('')}</div><details class="method-expand"><summary>How categories and labels work</summary><p>${esc(method.labeling.description)}</p>${list(method.labeling.dimensions)}<p class="muted">Controlled vocabularies: ${method.labeling.files.map(x=>`<code>${esc(x)}</code>`).join(' and ')}.</p></details><details class="method-expand"><summary>How to interpret the results</summary>${list(method.interpretation_rules)}</details></section>
+    <section class="paper method-section"><h2>Optional reports and analyses</h2><p class="muted">Same evidence preparation, a different output task and a separate history. Source selection and task options are supplied as structured JSON.</p><div class="operation-methods">${method.analysis_tasks.map(t=>`<article><h3>${esc(t.label)}</h3><p>${esc(t.description)}</p><div class="prompt-links">${taskPrompts(method,t.id)}</div><p class="small-note muted">Output: ${esc(t.artifact.replaceAll('_',' '))}</p></article>`).join('')}</div><p>Instruction links follow each task’s configured assembly. Translation and image recovery have their own instruction combinations.</p><details class="method-expand"><summary>Prepared extensions, outside the first delivery</summary><p class="muted">Relabeling is for a taxonomy update. Chat is for evidence-grounded follow-up. Neither is a country-view generation step.</p><div class="prompt-links">${method.prompts.filter(p=>p.group==='utility').map(promptLink).join('')}</div></details></section>
+    <section class="paper method-section"><h2>What each generated version must record</h2>${list(method.run_transparency.required_receipt)}<p class="muted">${esc(method.run_transparency.rule)}</p><p class="muted">The local worker archives its requests and responses. Additional AI review is deferred; structural checks do not establish extraction accuracy.</p></section></details>`;
+}
+
+export function showPrompt(method,path,detail){
+  const p=method.prompts.find(p=>p.path===path);
+  if(!p)throw Error('Unknown configured prompt');
+  detail(p.label,`<p class="badge neutral">Configured prompt · not an executed run record</p><p class="prompt-path">${esc(p.path)}</p><p>${esc(p.role)}</p>${p.schema?`<p class="muted">Structured output: <code>${esc(p.schema)}</code></p>`:''}<button id="download-prompt">Download this Markdown file</button><details class="prompt-hash"><summary>File fingerprint (SHA-256)</summary><code>${esc(p.sha256)}</code></details><pre class="prompt-source" tabindex="0" aria-label="Exact Markdown prompt source">${esc(p.content)}</pre>`);
+  document.getElementById('download-prompt').onclick=()=>{
+    const url=URL.createObjectURL(new Blob([p.content],{type:'text/markdown;charset=utf-8'}));
+    const a=document.createElement('a');a.href=url;a.download=p.path.split('/').at(-1);a.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  };
+  // Assign as text after parsing the modal HTML so CRLF source bytes remain
+  // represented exactly in textContent as well as in the Markdown download.
+  document.querySelector('[aria-label="Exact Markdown prompt source"]').textContent=p.content;
+}
+
+export function assemblyPanel(method){
+  return `<details class="method-reference"><summary>Inspect exact instruction assembly</summary><section class="paper method-section"><h2>Inspect instruction assembly</h2><p>Choose a task to see the exact instruction order used by the composer. This preview shows instructions and component fingerprints; a complete request also includes its task settings, output schema and source inputs.</p><label class="full-label">Configured task<select id="method-assembly">${method.assemblies.map(a=>`<option value="${esc(a.id)}">${esc(a.id)} · ${esc(a.label)}</option>`).join('')}</select></label><button id="inspect-assembly">Inspect assembled instructions</button><p class="muted">Each task lists its actual instruction files and output schema. Image recovery uses a standalone transcription prompt. Operational supplements refine selected options; source passages and free-form requests cannot override evidence rules. A conflicting configuration needs correction before a run.</p></section></details>`;
+}
+
+export function showAssembly(method,id,detail){
+  const a=method.assemblies.find(a=>a.id===id);
+  const instructions=a.instruction_paths.map(path=>method.prompts.find(p=>p.path===path).content).join('\n\n');
+  detail(a.label,`<p class="badge neutral">Current configuration · not an executed request</p><h3>Instruction order</h3><ol>${a.instruction_paths.map(p=>`<li><code>${esc(p)}</code></li>`).join('')}</ol><details><summary>Attached schemas and configuration fingerprints</summary>${Object.entries(a.component_hashes).filter(([p])=>!a.instruction_paths.includes(p)).map(([p,h])=>`<p><code>${esc(p)}</code><br><code>${esc(h)}</code></p>`).join('')}</details><p class="muted">At composition time, task settings and source data are supplied as separate JSON. Source text is untrusted evidence. This preview contains no country inputs, credentials or hidden model reasoning.</p><details><summary>Assembled instruction fingerprint (SHA-256)</summary><code>${esc(a.instructions_hash)}</code></details><pre class="prompt-source" tabindex="0" aria-label="Assembled Markdown instructions">${esc(instructions)}</pre>`);
+  document.querySelector('[aria-label="Assembled Markdown instructions"]').textContent=instructions;
+}

@@ -1,0 +1,3423 @@
+{
+  "id": "design-example-v2",
+  "country_code": "KAZ",
+  "synthetic": true,
+  "presentation_fixture": true,
+  "created_at": "2026-10-09T09:00:00Z",
+  "provenance_note": "Invented presentation fixture. Not imported, generated, checked or selected as a Country Profile.",
+  "sources": [
+    {
+      "document_id": "design-doc-1",
+      "title": "Invented adaptation plan · earlier edition",
+      "pages": 12,
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "segments": [
+        {
+          "id": "design-s-1",
+          "page": 1,
+          "language": "ru",
+          "text": "К 2030 году установить 20 систем раннего предупреждения о наводнениях при условии международного финансирования. Ведущее ведомство — Министерство водных ресурсов.",
+          "english_text": "Install 20 flood early-warning systems by 2030, conditional on international financing. The Water Ministry will lead delivery.",
+          "translation_method": "machine_translation"
+        },
+        {
+          "id": "design-s-2",
+          "page": 2,
+          "language": "en",
+          "text": "Modernize 30 hectares of irrigation by 2030; extend to 50 hectares by 2035 if external finance is secured. The Agriculture Agency is the lead.",
+          "english_text": "Modernize 30 hectares of irrigation by 2030; extend to 50 hectares by 2035 if external finance is secured. The Agriculture Agency is the lead.",
+          "translation_method": "identity"
+        },
+        {
+          "id": "design-s-3",
+          "page": 3,
+          "language": "en",
+          "text": "Heat protection for older people is an explicit priority; no action or numeric target is specified.",
+          "english_text": "Heat protection for older people is an explicit priority; no action or numeric target is specified.",
+          "translation_method": "identity"
+        },
+        {
+          "id": "design-s-4",
+          "page": 4,
+          "language": "en",
+          "text": "Flood-prone settlements face disrupted road access. Older people have limited evacuation access; local shelters provide emergency capacity.",
+          "english_text": "Flood-prone settlements face disrupted road access. Older people have limited evacuation access; local shelters provide emergency capacity.",
+          "translation_method": "identity"
+        },
+        {
+          "id": "design-s-5",
+          "page": 5,
+          "language": "en",
+          "text": "Prepare community cooling plans with participation by older people and persons with disabilities. No deadline or lead institution is stated.",
+          "english_text": "Prepare community cooling plans with participation by older people and persons with disabilities. No deadline or lead institution is stated.",
+          "translation_method": "identity"
+        },
+        {
+          "id": "design-s-7",
+          "page": 7,
+          "language": "en",
+          "text": "Reduce emissions by 25 percent against a business-as-usual scenario by 2030.",
+          "english_text": "Reduce emissions by 25 percent against a business-as-usual scenario by 2030.",
+          "translation_method": "identity"
+        },
+        {
+          "id": "design-s-9",
+          "page": 9,
+          "language": "en",
+          "text": "Improve wastewater and sanitation systems. Partners are a financing source; no delivery condition is stated.",
+          "english_text": "Improve wastewater and sanitation systems. Partners are a financing source; no delivery condition is stated.",
+          "translation_method": "identity"
+        },
+        {
+          "id": "design-s-10",
+          "page": 10,
+          "language": "en",
+          "text": "Establish community repair circles to maintain emergency equipment. The local term repair circles has no agreed topic mapping in this example.",
+          "english_text": "Establish community repair circles to maintain emergency equipment. The local term repair circles has no agreed topic mapping in this example.",
+          "translation_method": "identity"
+        },
+        {
+          "id": "design-s-12",
+          "page": 12,
+          "language": "en",
+          "text": "Coordinate health, water, electricity and transport services for heat emergencies. Agencies will share risk information, prepare backup arrangements and consult affected communities. Financing responsibilities remain ambiguous; the schedule is in an unprocessed annex, and a scanned finance table is unreadable.",
+          "english_text": "Coordinate health, water, electricity and transport services for heat emergencies. Agencies will share risk information, prepare backup arrangements and consult affected communities. Financing responsibilities remain ambiguous; the schedule is in an unprocessed annex, and a scanned finance table is unreadable.",
+          "translation_method": "identity"
+        }
+      ]
+    },
+    {
+      "document_id": "design-doc-2",
+      "title": "Invented policy update · later edition",
+      "pages": 12,
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "segments": [
+        {
+          "id": "design-s-6",
+          "page": 6,
+          "language": "en",
+          "text": "The invented update reports that five warning systems operated in 2024. This statement does not assess progress against the 2030 target.",
+          "english_text": "The invented update reports that five warning systems operated in 2024. This statement does not assess progress against the 2030 target.",
+          "translation_method": "identity"
+        },
+        {
+          "id": "design-s-8",
+          "page": 8,
+          "language": "en",
+          "text": "Reduce emissions by 40 percent against the 1990 historical baseline by 2030, subject to international support.",
+          "english_text": "Reduce emissions by 40 percent against the 1990 historical baseline by 2030, subject to international support.",
+          "translation_method": "identity"
+        },
+        {
+          "id": "design-s-11",
+          "page": 11,
+          "language": "en",
+          "text": "The later invented edition states 20 flood warning systems by 2032; continuity with the earlier 2030 statement is unresolved.",
+          "english_text": "The later invented edition states 20 flood warning systems by 2032; continuity with the earlier 2030 statement is unresolved.",
+          "translation_method": "identity"
+        }
+      ]
+    }
+  ],
+  "validation": {},
+  "archive": {},
+  "validation_codebook": {
+    "taxonomy_version": "3.0.0",
+    "vocabulary_version": "3.0.0",
+    "domains": [
+      {
+        "id": "climate",
+        "name": "Climate & disaster policy",
+        "definition": "Cross-sector climate and disaster policy, risk information, preparedness, finance and climate-wide commitments. Membership does not establish climate causation or an adaptation objective."
+      },
+      {
+        "id": "energy",
+        "name": "Energy",
+        "definition": "Energy supply, demand, efficiency, renewables and energy systems."
+      },
+      {
+        "id": "agriculture",
+        "name": "Agriculture",
+        "definition": "Farming, livestock, agricultural production and food systems."
+      },
+      {
+        "id": "water",
+        "name": "Water",
+        "definition": "Water resources, supply, irrigation and water management."
+      },
+      {
+        "id": "biodiversity",
+        "name": "Biodiversity",
+        "definition": "Species, habitats, ecosystems and biodiversity conservation."
+      },
+      {
+        "id": "health",
+        "name": "Health",
+        "definition": "Human health systems and climate/disaster-related health needs."
+      },
+      {
+        "id": "urban",
+        "name": "Urban",
+        "definition": "Settlements, buildings, urban planning and municipal services."
+      },
+      {
+        "id": "waste",
+        "name": "Waste",
+        "definition": "Solid waste, wastewater and waste-related emissions or management."
+      },
+      {
+        "id": "transport",
+        "name": "Transport",
+        "definition": "Mobility, transport services and transport infrastructure."
+      },
+      {
+        "id": "industry",
+        "name": "Industry",
+        "definition": "Industrial production, processes, efficiency and emissions."
+      },
+      {
+        "id": "tourism",
+        "name": "Tourism",
+        "definition": "Tourism systems, destinations and climate/disaster resilience."
+      }
+    ],
+    "topics": [
+      {
+        "id": "CLM-01",
+        "name": "Climate planning and governance",
+        "definition": "Strategies, plans, laws, institutional coordination and mainstreaming.",
+        "routing_rule": "A finance mechanism also needs CLM-02; do not tag all climate text here.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-02",
+        "name": "Climate finance and support",
+        "definition": "Funding mechanisms, investment planning, budget integration, insurance and international support.",
+        "routing_rule": "A funding source alone does not establish conditionality.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-03",
+        "name": "Climate information and risk assessment",
+        "definition": "Observations, scenarios, vulnerability assessments, risk maps and climate services.",
+        "routing_rule": "Use CLM-04 for operational warnings and preparedness.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-04",
+        "name": "Early warning and disaster preparedness",
+        "definition": "Warnings, emergency planning, evacuation, civil protection and disaster readiness.",
+        "routing_rule": "Do not infer operational warning capacity from a risk study.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-05",
+        "name": "Climate monitoring and reporting",
+        "definition": "GHG inventories, transparency, adaptation indicators, evaluation and reporting.",
+        "routing_rule": "An expected monitoring indicator is not evidence of a result.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-06",
+        "name": "Economy-wide emissions targets",
+        "definition": "National emissions ceilings, reduction pledges, net-zero and economy-wide intensity targets.",
+        "routing_rule": "Sectoral targets use the relevant sector topic; keep EU-wide scope explicit.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "CLM-07",
+        "name": "Land carbon and removals",
+        "definition": "Sequestration, land-use emissions/removals, forest carbon and LULUCF accounting.",
+        "routing_rule": "Carbon-sink wording alone does not establish biodiversity benefits.",
+        "domain_ids": [
+          "climate"
+        ]
+      },
+      {
+        "id": "ENE-01",
+        "name": "Renewable electricity",
+        "definition": "Solar, wind, hydropower and other renewable electricity, including distributed generation.",
+        "routing_rule": "Rooftop PV alone does not imply an Urban label.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "ENE-02",
+        "name": "Grids and energy storage",
+        "definition": "Transmission, distribution, interconnection, flexibility, storage and network resilience.",
+        "routing_rule": "A generating plant without grid measures belongs to ENE-01 or ENE-05.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "ENE-03",
+        "name": "Clean heating and fuels",
+        "definition": "District heating, heat pumps, renewable heat and lower-emission fuel switching.",
+        "routing_rule": "Vehicle fuel measures use TRN-01; building retrofit packages may also use URB-01.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "ENE-04",
+        "name": "Energy efficiency and demand management",
+        "definition": "Energy audits, performance standards, efficient equipment and demand management.",
+        "routing_rule": "Prefer a more specific building, industrial or transport topic when applicable.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "ENE-05",
+        "name": "Fossil energy transition",
+        "definition": "Coal/oil/gas transition, fossil asset retirement, subsidy reform and supply changes.",
+        "routing_rule": "Do not infer transition success from a plan or fuel switch.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "ENE-06",
+        "name": "Oil and gas methane",
+        "definition": "Fugitive emissions, leaks, venting and flaring across oil/gas supply.",
+        "routing_rule": "Landfill methane uses WST-02; agricultural methane uses AGR-03.",
+        "domain_ids": [
+          "energy"
+        ]
+      },
+      {
+        "id": "AGR-01",
+        "name": "Irrigation efficiency",
+        "definition": "Agricultural water delivery, irrigation modernization and water-saving technologies.",
+        "routing_rule": "Municipal water supply uses WAT-01; solar irrigation may also use ENE-01.",
+        "domain_ids": [
+          "agriculture",
+          "water"
+        ]
+      },
+      {
+        "id": "AGR-02",
+        "name": "Resilient crops and soils",
+        "definition": "Crop varieties, soil health, erosion control, land management and resilient farming.",
+        "routing_rule": "Forest management uses BIO-01; record explicit carbon accounting under CLM-07.",
+        "domain_ids": [
+          "agriculture"
+        ]
+      },
+      {
+        "id": "AGR-03",
+        "name": "Livestock and manure",
+        "definition": "Animal health/resilience, feed, manure and agricultural methane/nitrous oxide measures.",
+        "routing_rule": "Human health uses HEA topics.",
+        "domain_ids": [
+          "agriculture"
+        ]
+      },
+      {
+        "id": "AGR-04",
+        "name": "Food systems and farm livelihoods",
+        "definition": "Food security, agricultural advice, storage, value chains and farm livelihoods.",
+        "routing_rule": "Food-waste disposal can also use WST-01 when a distinct measure is stated.",
+        "domain_ids": [
+          "agriculture"
+        ]
+      },
+      {
+        "id": "WAT-01",
+        "name": "Water supply and groundwater",
+        "definition": "Water availability, abstraction, groundwater, drinking water, storage and network losses.",
+        "routing_rule": "Farm irrigation uses AGR-01; sanitation uses WST-03.",
+        "domain_ids": [
+          "water"
+        ]
+      },
+      {
+        "id": "WAT-02",
+        "name": "River basins and drought management",
+        "definition": "Basin management, allocation, drought planning, environmental flows and shared waters.",
+        "routing_rule": "Flood defenses use WAT-03; warnings may also use CLM-04.",
+        "domain_ids": [
+          "water"
+        ]
+      },
+      {
+        "id": "WAT-03",
+        "name": "Flood and coastal protection",
+        "definition": "River/coastal flood risk, defenses, erosion and sea-level adaptation.",
+        "routing_rule": "General settlement planning may additionally use URB-02.",
+        "domain_ids": [
+          "water"
+        ]
+      },
+      {
+        "id": "WAT-04",
+        "name": "Water quality and reuse",
+        "definition": "Surface-water quality, pollution prevention, safe reuse and receiving-water protection.",
+        "routing_rule": "Wastewater treatment systems use WST-03; keep both if both purposes are explicit.",
+        "domain_ids": [
+          "water"
+        ]
+      },
+      {
+        "id": "BIO-01",
+        "name": "Forest health and management",
+        "definition": "Forest condition, sustainable management, wildfire/pest control and forest resilience.",
+        "routing_rule": "Carbon-only forest targets use CLM-07 without an inferred biodiversity claim.",
+        "domain_ids": [
+          "biodiversity"
+        ]
+      },
+      {
+        "id": "BIO-02",
+        "name": "Species, habitats and protected areas",
+        "definition": "Species conservation, habitats, connectivity and terrestrial/aquatic protected areas.",
+        "routing_rule": "Active ecosystem restoration uses BIO-03.",
+        "domain_ids": [
+          "biodiversity"
+        ]
+      },
+      {
+        "id": "BIO-03",
+        "name": "Ecosystem restoration",
+        "definition": "Restoration of forests, wetlands, peatlands and ecosystems, including ecosystem adaptation.",
+        "routing_rule": "Record carbon or adaptation co-benefits only with evidence.",
+        "domain_ids": [
+          "biodiversity"
+        ]
+      },
+      {
+        "id": "HEA-01",
+        "name": "Heat and human health",
+        "definition": "Heat-health plans, cooling access, exposure and vulnerable-group protection.",
+        "routing_rule": "Urban greening uses URB-03 when the physical intervention is stated.",
+        "domain_ids": [
+          "health"
+        ]
+      },
+      {
+        "id": "HEA-02",
+        "name": "Climate-sensitive disease and exposure",
+        "definition": "Infectious disease, water/vector-borne illness, air-quality exposure and surveillance.",
+        "routing_rule": "Do not assume health outcomes from emissions reductions alone.",
+        "domain_ids": [
+          "health"
+        ]
+      },
+      {
+        "id": "HEA-03",
+        "name": "Resilient health services",
+        "definition": "Health facilities, service delivery, emergency capacity, staffing and essential supplies.",
+        "routing_rule": "General civil protection uses CLM-04.",
+        "domain_ids": [
+          "health"
+        ]
+      },
+      {
+        "id": "URB-01",
+        "name": "Building energy performance",
+        "definition": "Building insulation, retrofits, performance codes, passive design and energy-saving systems.",
+        "routing_rule": "Urban is a taxonomy domain here, not proof of urban geographic scope.",
+        "domain_ids": [
+          "urban",
+          "energy"
+        ]
+      },
+      {
+        "id": "URB-02",
+        "name": "Resilient settlements and infrastructure",
+        "definition": "Spatial planning, building safety, urban drainage and local infrastructure resilience.",
+        "routing_rule": "Sector-specific transport or energy networks use their specific topics.",
+        "domain_ids": [
+          "urban"
+        ]
+      },
+      {
+        "id": "URB-03",
+        "name": "Urban cooling and green spaces",
+        "definition": "Trees, green/blue spaces, shading and cooling-oriented public-space design.",
+        "routing_rule": "General forest restoration uses BIO-03; health links require explicit evidence.",
+        "domain_ids": [
+          "urban"
+        ]
+      },
+      {
+        "id": "WST-01",
+        "name": "Materials, recycling and circularity",
+        "definition": "Prevention, separate collection, recycling, composting, food waste and circular material use.",
+        "routing_rule": "Landfill gas uses WST-02; industrial production measures may use IND-01.",
+        "domain_ids": [
+          "waste"
+        ]
+      },
+      {
+        "id": "WST-02",
+        "name": "Solid-waste disposal and methane",
+        "definition": "Landfill management/emissions, gas capture and disposal-facility resilience.",
+        "routing_rule": "Oil/gas methane uses ENE-06.",
+        "domain_ids": [
+          "waste"
+        ]
+      },
+      {
+        "id": "WST-03",
+        "name": "Wastewater and sanitation",
+        "definition": "Sewage, wastewater treatment, sanitation, sludge and associated emissions/resilience.",
+        "routing_rule": "Receiving-water quality/reuse measures may also use WAT-04.",
+        "domain_ids": [
+          "waste",
+          "water"
+        ]
+      },
+      {
+        "id": "TRN-01",
+        "name": "Low-emission vehicles and fuels",
+        "definition": "Electrification, charging, cleaner transport fuels and vehicle standards.",
+        "routing_rule": "Public transport service improvements use TRN-02 where relevant.",
+        "domain_ids": [
+          "transport"
+        ]
+      },
+      {
+        "id": "TRN-02",
+        "name": "Public, active and shared mobility",
+        "definition": "Public transport, rail shift, walking, cycling and reduced private-car dependence.",
+        "routing_rule": "Transport hazard resilience uses TRN-03.",
+        "domain_ids": [
+          "transport"
+        ]
+      },
+      {
+        "id": "TRN-03",
+        "name": "Resilient transport networks",
+        "definition": "Protection/adaptation of roads, railways, ports, airports and logistics.",
+        "routing_rule": "Emissions measures use TRN-01 or TRN-02.",
+        "domain_ids": [
+          "transport"
+        ]
+      },
+      {
+        "id": "IND-01",
+        "name": "Cleaner production and industrial efficiency",
+        "definition": "Industrial energy/material efficiency, production technology, modernization and factory resilience.",
+        "routing_rule": "Process gases/refrigerants use IND-02.",
+        "domain_ids": [
+          "industry"
+        ]
+      },
+      {
+        "id": "IND-02",
+        "name": "Process emissions and refrigerants",
+        "definition": "Industrial process emissions, cement/chemicals, fluorinated gases and refrigerants.",
+        "routing_rule": "Generic factory energy efficiency uses IND-01.",
+        "domain_ids": [
+          "industry"
+        ]
+      },
+      {
+        "id": "TOU-01",
+        "name": "Tourism adaptation and destination resilience",
+        "definition": "Destination risks, changing seasons, diversification and resilient visitor infrastructure.",
+        "routing_rule": "Only use Tourism when the sector is explicit.",
+        "domain_ids": [
+          "tourism"
+        ]
+      },
+      {
+        "id": "TOU-02",
+        "name": "Tourism resource efficiency",
+        "definition": "Tourism-specific water, energy, waste and sustainable visitor/accommodation measures.",
+        "routing_rule": "Keep sector topics too where the source explicitly describes the intervention.",
+        "domain_ids": [
+          "tourism"
+        ]
+      },
+      {
+        "id": "CLM-08",
+        "name": "Disaster risk and management",
+        "definition": "Cross-sector all-hazards risk context, disaster governance, emergency response, relief and recovery arrangements.",
+        "routing_rule": "Use for substantive cross-sector disaster material without a fitting narrower topic. Prefer CLM-04 for warning/readiness and sector topics for sector measures. Select specific risk functions separately; do not add this topic to every hazard mention or infer climate causation.",
+        "domain_ids": [
+          "climate"
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "objectives",
+        "label": "Objectives",
+        "question": "What policy purpose is evidenced?",
+        "rule": "Choose only source-supported purposes; a NAP location alone does not establish adaptation. Mitigation here means emissions reduction or carbon sinks. Disaster-impact mitigation (such as flood mitigation) belongs to disaster risk reduction when supported; a word match alone is insufficient.",
+        "options": [
+          {
+            "id": "adaptation",
+            "label": "Adaptation",
+            "definition": "Adjustment to actual or expected climate effects and their consequences."
+          },
+          {
+            "id": "mitigation",
+            "label": "Climate mitigation",
+            "definition": "Reduction of greenhouse-gas emissions or enhancement of carbon sinks."
+          },
+          {
+            "id": "disaster_risk_reduction",
+            "label": "Disaster risk reduction",
+            "definition": "Prevention of new disaster risk, reduction of existing risk, or management of residual risk."
+          },
+          {
+            "id": "unspecified",
+            "label": "Unspecified",
+            "definition": "The purpose is relevant but cannot be determined from this evidence."
+          }
+        ],
+        "category": "policy"
+      },
+      {
+        "id": "record_kinds",
+        "label": "Statement types",
+        "question": "What does this claim assert?",
+        "rule": "Choose one type per coherent claim. Split independently actionable measures and promises from observations. Keep target variants together. Historical periods belong in dates; templates belong in coverage exclusions. An actionable source priority is a commitment with its priority wording retained in details.",
+        "options": [
+          {
+            "id": "context",
+            "label": "Context / finding",
+            "definition": "A source-described condition, risk, need or background finding without an actionable undertaking."
+          },
+          {
+            "id": "priority",
+            "label": "Priority",
+            "definition": "An explicitly important area or goal without a concrete undertaking."
+          },
+          {
+            "id": "proposal",
+            "label": "Proposal / recommendation",
+            "definition": "An action suggested, advised or considered without established adoption."
+          },
+          {
+            "id": "commitment",
+            "label": "Commitment",
+            "definition": "An attributable undertaking to act or achieve a target, including qualitative and conditional commitments. Preserve source authority and draft/adopted status."
+          },
+          {
+            "id": "implementation_observation",
+            "label": "Implementation reported",
+            "definition": "An attributed report of activity or delivery, such as installation or programme operation; not independent verification."
+          },
+          {
+            "id": "result_observation",
+            "label": "Result reported",
+            "definition": "An attributed report of an outcome associated with an action; preserve period and method. Delivery of an output alone is implementation."
+          },
+          {
+            "id": "projection",
+            "label": "Projection",
+            "definition": "An estimated future condition or effect based on assumptions or modelling; never an achieved result."
+          },
+          {
+            "id": "scenario",
+            "label": "Scenario",
+            "definition": "A hypothetical pathway or set of future assumptions. A projection using a scenario remains a projection with scenario details."
+          },
+          {
+            "id": "unclear",
+            "label": "Unclear",
+            "definition": "The evidence does not support a reliable statement classification. Explain the material uncertainty."
+          }
+        ],
+        "category": "policy"
+      },
+      {
+        "id": "temporal_roles",
+        "label": "Temporal roles",
+        "question": "How does an edition relate to the selected period?",
+        "rule": "Do not infer supersession from a later filename or upload timestamp.",
+        "options": [
+          {
+            "id": "current",
+            "label": "Current",
+            "definition": "The variant applies to the selected current reporting scope."
+          },
+          {
+            "id": "historical",
+            "label": "Historical",
+            "definition": "Retained to describe an earlier period."
+          },
+          {
+            "id": "superseded",
+            "label": "Superseded",
+            "definition": "Evidence explicitly establishes replacement by another variant."
+          },
+          {
+            "id": "parallel",
+            "label": "Parallel",
+            "definition": "Coexisting variants, such as conditional scenarios, without established replacement."
+          },
+          {
+            "id": "unresolved",
+            "label": "Unresolved",
+            "definition": "The temporal relationship remains uncertain."
+          }
+        ],
+        "category": "evidence"
+      },
+      {
+        "id": "conditionalities",
+        "label": "Conditionalities",
+        "question": "Does delivery depend on a stated condition?",
+        "rule": "A financing mention alone does not prove conditionality. Keep conditions next to headline numbers.",
+        "options": [
+          {
+            "id": "explicitly_conditional",
+            "label": "Explicitly conditional",
+            "definition": "The source explicitly makes the action or target dependent on support or another condition."
+          },
+          {
+            "id": "explicitly_unconditional",
+            "label": "Explicitly unconditional",
+            "definition": "The source explicitly describes the action or target as unconditional."
+          },
+          {
+            "id": "not_stated",
+            "label": "Not stated",
+            "definition": "The selected source states no condition; do not relabel this as unconditional."
+          },
+          {
+            "id": "unclear",
+            "label": "Unclear",
+            "definition": "Conditional wording exists but its scope or meaning is uncertain."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "hazards",
+        "label": "Hazards",
+        "question": "Which potentially damaging process is discussed?",
+        "rule": "Apply only to supported content. A hazard is not exposure or vulnerability. This compact list is not the complete UNDRR hazard classification.",
+        "options": [
+          {
+            "id": "flood",
+            "label": "Flood",
+            "definition": "Water inundating land that is normally dry."
+          },
+          {
+            "id": "drought",
+            "label": "Drought",
+            "definition": "A sustained precipitation or water deficit affecting systems or people."
+          },
+          {
+            "id": "extreme_heat",
+            "label": "Extreme heat",
+            "definition": "Unusually high temperatures or heat episodes."
+          },
+          {
+            "id": "wildfire",
+            "label": "Wildfire",
+            "definition": "Uncontrolled vegetation fire."
+          },
+          {
+            "id": "storm",
+            "label": "Storm",
+            "definition": "Damaging wind or storm conditions; preserve the specific storm type in the source text."
+          },
+          {
+            "id": "sea_level_rise",
+            "label": "Sea level rise",
+            "definition": "Rising average sea level affecting coastal systems."
+          },
+          {
+            "id": "coastal_erosion",
+            "label": "Coastal erosion",
+            "definition": "Loss or retreat of coastal land through erosion."
+          },
+          {
+            "id": "landslide",
+            "label": "Landslide",
+            "definition": "Downslope movement of soil, rock or debris."
+          },
+          {
+            "id": "avalanche",
+            "label": "Avalanche",
+            "definition": "Rapid downslope movement of snow or ice."
+          },
+          {
+            "id": "glacial_lake_outburst",
+            "label": "Glacial lake outburst",
+            "definition": "Sudden release of water from a glacial lake."
+          },
+          {
+            "id": "water_scarcity",
+            "label": "Water scarcity",
+            "definition": "Insufficient usable water relative to demand; distinguish drivers from drought when stated."
+          },
+          {
+            "id": "extreme_cold",
+            "label": "Extreme cold",
+            "definition": "Unusually low temperatures or cold episodes."
+          },
+          {
+            "id": "disease",
+            "label": "Disease",
+            "definition": "A disease-related threat; preserve pathogen, vector and climate linkage where stated."
+          },
+          {
+            "id": "earthquake",
+            "label": "Earthquake",
+            "definition": "Ground shaking or associated seismic threat; not automatically climate-related."
+          },
+          {
+            "id": "tsunami",
+            "label": "Tsunami",
+            "definition": "Large sea waves generated by displacement; not automatically climate-related."
+          },
+          {
+            "id": "technological_accident",
+            "label": "Technological accident",
+            "definition": "Accidental technological or industrial threat."
+          },
+          {
+            "id": "compound_hazard",
+            "label": "Compound hazard",
+            "definition": "Interacting or concurrent hazards explicitly discussed together."
+          },
+          {
+            "id": "other",
+            "label": "Other",
+            "definition": "A supported hazard outside this compact list; retain the exact source term in unmapped_terms."
+          }
+        ],
+        "category": "policy"
+      },
+      {
+        "id": "risk_functions",
+        "label": "Risk and resilience functions",
+        "question": "What specific risk function is described or supported?",
+        "rule": "Select every substantively supported function, without duplicating the record. Leave irrelevant or unresolved functions empty. A generic resilience reference is not evidence of several functions. Co-occurring hazards and functions do not establish every possible relationship; split independent actions or explain the relationship in linked risk details.",
+        "options": [
+          {
+            "id": "risk_understanding",
+            "label": "Risk understanding",
+            "definition": "Assess hazards, exposure, vulnerability and risk, or develop relevant risk information."
+          },
+          {
+            "id": "risk_prevention_reduction",
+            "label": "Risk prevention and reduction",
+            "definition": "Avoid new risk or reduce existing exposure, vulnerability or potential harm."
+          },
+          {
+            "id": "early_warning_preparedness",
+            "label": "Early warning and preparedness",
+            "definition": "Build warning capability, contingency plans, exercises and readiness to act."
+          },
+          {
+            "id": "anticipatory_action",
+            "label": "Anticipatory action",
+            "definition": "Act ahead of a predicted event using a forecast, warning or trigger. General readiness alone is insufficient."
+          },
+          {
+            "id": "emergency_response",
+            "label": "Emergency response",
+            "definition": "Protect people and meet urgent needs during or immediately after an event."
+          },
+          {
+            "id": "recovery_reconstruction",
+            "label": "Recovery and reconstruction",
+            "definition": "Restore affected livelihoods, infrastructure and services, including rebuilding more safely."
+          },
+          {
+            "id": "coping_continuity",
+            "label": "Coping and continuity",
+            "definition": "Maintain essential functions during disruption through buffers, redundancy or backup arrangements."
+          },
+          {
+            "id": "systemic_transformation",
+            "label": "Systemic transformation",
+            "definition": "Fundamentally change systems or development pathways to address risk; routine improvements alone are insufficient."
+          }
+        ],
+        "category": "policy"
+      },
+      {
+        "id": "risk_components",
+        "label": "Risk components",
+        "question": "Which part of the risk pathway is described?",
+        "rule": "Use components independently. A hazard mention does not establish exposed people, susceptibility or a quantified risk. Optional analytical detail, not a mandatory second classification of every risk field. Use populated risk details for exposure, vulnerability and capacity displays; retain explicit residual/cascading distinctions where useful.",
+        "options": [
+          {
+            "id": "hazard",
+            "label": "Hazard",
+            "definition": "A potentially damaging event, process or activity."
+          },
+          {
+            "id": "exposure",
+            "label": "Exposure",
+            "definition": "People, livelihoods, assets or systems located where hazards may occur."
+          },
+          {
+            "id": "vulnerability",
+            "label": "Vulnerability",
+            "definition": "Conditions that make exposed people or systems more susceptible to harm."
+          },
+          {
+            "id": "capacity",
+            "label": "Capacity",
+            "definition": "Resources, skills, institutions or capabilities to manage risk."
+          },
+          {
+            "id": "impact",
+            "label": "Impact",
+            "definition": "A consequence or loss resulting from an event or pressure."
+          },
+          {
+            "id": "risk_assessment",
+            "label": "Risk assessment",
+            "definition": "An assessment connecting hazard, exposure, vulnerability or capacity."
+          },
+          {
+            "id": "residual_risk",
+            "label": "Residual risk",
+            "definition": "Risk remaining after measures have been applied or planned."
+          },
+          {
+            "id": "systemic_cascading_risk",
+            "label": "Systemic cascading risk",
+            "definition": "Risk that spreads through linked systems or creates successive effects."
+          }
+        ],
+        "category": "policy"
+      },
+      {
+        "id": "population_groups",
+        "label": "Population groups",
+        "question": "Which people are explicitly addressed?",
+        "rule": "Distinguish affected, targeted and participating groups in linked details. Mention alone does not establish a benefit.",
+        "options": [
+          {
+            "id": "women",
+            "label": "Women",
+            "definition": "Women explicitly identified in the source."
+          },
+          {
+            "id": "men",
+            "label": "Men",
+            "definition": "Men explicitly identified in the source."
+          },
+          {
+            "id": "children",
+            "label": "Children",
+            "definition": "Children as defined or described in the source."
+          },
+          {
+            "id": "youth",
+            "label": "Youth",
+            "definition": "Youth as defined or described in the source."
+          },
+          {
+            "id": "older_people",
+            "label": "Older people",
+            "definition": "Older people as defined or described in the source."
+          },
+          {
+            "id": "persons_with_disabilities",
+            "label": "Persons with disabilities",
+            "definition": "People with disabilities, including accessibility-related needs."
+          },
+          {
+            "id": "low_income_households",
+            "label": "Low income households",
+            "definition": "Households explicitly described as low income or economically disadvantaged."
+          },
+          {
+            "id": "farmers",
+            "label": "Farmers",
+            "definition": "Farmers and agricultural producers."
+          },
+          {
+            "id": "rural_communities",
+            "label": "Rural communities",
+            "definition": "People in rural communities."
+          },
+          {
+            "id": "urban_communities",
+            "label": "Urban communities",
+            "definition": "People in urban communities."
+          },
+          {
+            "id": "workers",
+            "label": "Workers",
+            "definition": "Workers or workforce groups."
+          },
+          {
+            "id": "migrants_displaced_people",
+            "label": "Migrants displaced people",
+            "definition": "Migrants or displaced people; retain the distinction in source text."
+          },
+          {
+            "id": "indigenous_local_communities",
+            "label": "Indigenous local communities",
+            "definition": "Indigenous peoples or local communities; do not treat the terms as interchangeable."
+          },
+          {
+            "id": "other",
+            "label": "Other",
+            "definition": "Another explicitly identified group; preserve the original term."
+          }
+        ],
+        "category": "policy"
+      },
+      {
+        "id": "cross_cutting_tags",
+        "label": "Cross cutting tags",
+        "question": "What cross-cutting issue is substantive?",
+        "rule": "Tag substantive treatment, not incidental words or assumed benefits. An amount or financing condition alone does not require a Finance theme; a population mention alone does not establish gender, disability or poverty analysis. Avoid repeating information already captured in typed details without a distinct thematic purpose.",
+        "options": [
+          {
+            "id": "gender",
+            "label": "Gender",
+            "definition": "Gender-related roles, inequalities, participation or outcomes."
+          },
+          {
+            "id": "youth",
+            "label": "Youth",
+            "definition": "Youth-specific needs, participation or outcomes."
+          },
+          {
+            "id": "disability",
+            "label": "Disability",
+            "definition": "Disability inclusion or accessibility."
+          },
+          {
+            "id": "poverty",
+            "label": "Poverty",
+            "definition": "Poverty-related conditions or objectives."
+          },
+          {
+            "id": "inequality",
+            "label": "Inequality",
+            "definition": "Distributional inequalities or unequal access."
+          },
+          {
+            "id": "livelihoods",
+            "label": "Livelihoods",
+            "definition": "Livelihood security or income-generating activities."
+          },
+          {
+            "id": "just_transition",
+            "label": "Just transition",
+            "definition": "Fair distribution of transition impacts and opportunities."
+          },
+          {
+            "id": "capacity",
+            "label": "Capacity",
+            "definition": "Institutional, technical or human capacity."
+          },
+          {
+            "id": "finance",
+            "label": "Finance",
+            "definition": "Finance, budgets, funding or investment."
+          },
+          {
+            "id": "technology",
+            "label": "Technology",
+            "definition": "Technology development, access or transfer."
+          },
+          {
+            "id": "data",
+            "label": "Data",
+            "definition": "Data availability, systems, methods or use."
+          },
+          {
+            "id": "transboundary",
+            "label": "Transboundary",
+            "definition": "Issues crossing national boundaries."
+          },
+          {
+            "id": "participation",
+            "label": "Participation",
+            "definition": "Participation, consultation or stakeholder engagement."
+          },
+          {
+            "id": "nature_based_solutions",
+            "label": "Nature based solutions",
+            "definition": "Actions using ecosystems or natural processes, when their nature-based role is evidenced."
+          }
+        ],
+        "category": "policy"
+      },
+      {
+        "id": "policy_instruments",
+        "label": "Policy instruments",
+        "question": "What policy mechanism is proposed or used?",
+        "rule": "Classify the mechanism, not the sector. Do not infer legal force merely from a policy document.",
+        "options": [
+          {
+            "id": "strategy_plan",
+            "label": "Strategy plan",
+            "definition": "A strategy, plan or programme organizing action."
+          },
+          {
+            "id": "law_regulation",
+            "label": "Law regulation",
+            "definition": "A law or regulatory requirement."
+          },
+          {
+            "id": "standard_code",
+            "label": "Standard code",
+            "definition": "A technical standard, code or specification."
+          },
+          {
+            "id": "public_investment",
+            "label": "Public investment",
+            "definition": "Public investment or expenditure."
+          },
+          {
+            "id": "subsidy_incentive",
+            "label": "Subsidy incentive",
+            "definition": "A subsidy or incentive encouraging action."
+          },
+          {
+            "id": "tax_pricing",
+            "label": "Tax pricing",
+            "definition": "Taxation or pricing to change incentives."
+          },
+          {
+            "id": "market_mechanism",
+            "label": "Market mechanism",
+            "definition": "A market-based trading or allocation mechanism."
+          },
+          {
+            "id": "insurance_risk_finance",
+            "label": "Insurance risk finance",
+            "definition": "Insurance or disaster/climate risk financing."
+          },
+          {
+            "id": "institution_coordination",
+            "label": "Institution coordination",
+            "definition": "Institutional arrangements and coordination."
+          },
+          {
+            "id": "information_warning",
+            "label": "Information warning",
+            "definition": "Information, communication or warning provision."
+          },
+          {
+            "id": "research_data",
+            "label": "Research data",
+            "definition": "Research, assessment or data provision."
+          },
+          {
+            "id": "training_capacity",
+            "label": "Training capacity",
+            "definition": "Training, skills or capacity development."
+          },
+          {
+            "id": "ecosystem_management",
+            "label": "Ecosystem management",
+            "definition": "Management or restoration of ecosystems."
+          },
+          {
+            "id": "infrastructure_service",
+            "label": "Infrastructure service",
+            "definition": "Infrastructure or service provision."
+          },
+          {
+            "id": "other",
+            "label": "Other",
+            "definition": "Another supported mechanism; preserve the source description."
+          }
+        ],
+        "category": "policy"
+      },
+      {
+        "id": "missing_reasons",
+        "label": "Evidence gaps and limitations",
+        "question": "What limits interpretation of this value?",
+        "rule": "Evidence metadata, not policy labels. Explain only material gaps. Not stated requires adequate reviewed evidence; unreadable and not processed belong in coverage/issues. Preserve conflicting values and source relationships. Omit irrelevant fields in routine views.",
+        "options": [
+          {
+            "id": "not_stated",
+            "label": "Not stated",
+            "definition": "The selected evidence does not state the value."
+          },
+          {
+            "id": "ambiguous",
+            "label": "Ambiguous",
+            "definition": "The source wording has more than one plausible interpretation."
+          },
+          {
+            "id": "conflicting_sources",
+            "label": "Conflicting sources",
+            "definition": "Sources provide incompatible values or statements."
+          },
+          {
+            "id": "unreadable",
+            "label": "Unreadable",
+            "definition": "The content cannot be read reliably."
+          },
+          {
+            "id": "not_processed",
+            "label": "Not processed",
+            "definition": "The relevant content has not yet been processed."
+          },
+          {
+            "id": "not_applicable",
+            "label": "Not applicable",
+            "definition": "This field or comparison does not apply to the stated scope."
+          }
+        ],
+        "category": "evidence"
+      },
+      {
+        "id": "section_states",
+        "label": "Section states",
+        "question": "What evidence is available for this section?",
+        "rule": "Availability is separate from policy quality and implementation performance.",
+        "options": [
+          {
+            "id": "found",
+            "label": "Found",
+            "definition": "Supported findings were identified."
+          },
+          {
+            "id": "not_found_in_scope",
+            "label": "Not found in scope",
+            "definition": "No relevant finding was found within the declared processed scope."
+          },
+          {
+            "id": "not_applicable",
+            "label": "Not applicable",
+            "definition": "The section is not applicable to this source configuration."
+          },
+          {
+            "id": "not_processed",
+            "label": "Not processed",
+            "definition": "The required processing has not been completed."
+          }
+        ],
+        "category": "evidence"
+      },
+      {
+        "id": "geography_scopes",
+        "label": "Geography scopes",
+        "question": "What is the geographic scope?",
+        "rule": "Preserve reporting party and named locations; country folder names are not sufficient evidence.",
+        "options": [
+          {
+            "id": "national",
+            "label": "National",
+            "definition": "The whole country or national level."
+          },
+          {
+            "id": "subnational",
+            "label": "Subnational",
+            "definition": "A region, municipality or other area within a country."
+          },
+          {
+            "id": "regional",
+            "label": "Regional",
+            "definition": "A regional scope described by the source; retain its geographic meaning."
+          },
+          {
+            "id": "EU",
+            "label": "Eu",
+            "definition": "European Union-level scope."
+          },
+          {
+            "id": "multi_country",
+            "label": "Multi country",
+            "definition": "More than one country explicitly covered."
+          },
+          {
+            "id": "unknown",
+            "label": "Unknown",
+            "definition": "The geographic scope cannot be established."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "target_kinds",
+        "label": "Target kinds",
+        "question": "What form does the target take?",
+        "rule": "Qualitative commitments are valid records. Do not invent a numeric measure.",
+        "options": [
+          {
+            "id": "quantitative",
+            "label": "Quantitative",
+            "definition": "An explicitly measurable quantity, percentage or numeric threshold."
+          },
+          {
+            "id": "deliverable",
+            "label": "Deliverable",
+            "definition": "A specified output such as adoption of a plan or establishment of a system."
+          },
+          {
+            "id": "qualitative",
+            "label": "Qualitative",
+            "definition": "A non-numeric direction or intended improvement."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "target_comparators",
+        "label": "Target comparators",
+        "question": "How should the numeric value be read?",
+        "rule": "Preserve mathematical meaning; do not convert a minimum into an exact target.",
+        "options": [
+          {
+            "id": "equal",
+            "label": "Equal",
+            "definition": "An exact stated value."
+          },
+          {
+            "id": "at_least",
+            "label": "At least",
+            "definition": "A lower bound or minimum."
+          },
+          {
+            "id": "at_most",
+            "label": "At most",
+            "definition": "An upper bound or maximum."
+          },
+          {
+            "id": "range",
+            "label": "Range",
+            "definition": "A stated lower-to-upper interval."
+          },
+          {
+            "id": "approximate",
+            "label": "Approximate",
+            "definition": "An explicitly approximate value."
+          },
+          {
+            "id": "not_stated",
+            "label": "Not stated",
+            "definition": "No comparison operator is stated."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "target_directions",
+        "label": "Target directions",
+        "question": "Which direction is intended?",
+        "rule": "Direction is not implementation progress and does not imply desirability without context.",
+        "options": [
+          {
+            "id": "increase",
+            "label": "Increase",
+            "definition": "Increase the stated measure."
+          },
+          {
+            "id": "decrease",
+            "label": "Decrease",
+            "definition": "Decrease the stated measure."
+          },
+          {
+            "id": "maintain",
+            "label": "Maintain",
+            "definition": "Keep the stated level or condition."
+          },
+          {
+            "id": "complete",
+            "label": "Complete",
+            "definition": "Complete the specified deliverable."
+          },
+          {
+            "id": "unspecified",
+            "label": "Unspecified",
+            "definition": "No direction is specified."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "target_bases",
+        "label": "Target bases",
+        "question": "What is the target measured against?",
+        "rule": "Compare numbers only after checking basis, unit, scope, denominator, dates and conditions.",
+        "options": [
+          {
+            "id": "absolute",
+            "label": "Absolute",
+            "definition": "An absolute level, such as tonnes, hectares or systems."
+          },
+          {
+            "id": "historical_reduction",
+            "label": "Historical reduction",
+            "definition": "A reduction relative to a historical reference period."
+          },
+          {
+            "id": "BAU_reduction",
+            "label": "Bau reduction",
+            "definition": "A reduction relative to a business-as-usual scenario; preserve scenario assumptions."
+          },
+          {
+            "id": "intensity",
+            "label": "Intensity",
+            "definition": "An amount per unit of activity, output or another denominator."
+          },
+          {
+            "id": "share",
+            "label": "Share",
+            "definition": "A proportion of a specified total."
+          },
+          {
+            "id": "qualitative",
+            "label": "Qualitative",
+            "definition": "A non-numeric target basis."
+          },
+          {
+            "id": "other",
+            "label": "Other",
+            "definition": "Another stated basis; preserve its definition."
+          },
+          {
+            "id": "not_stated",
+            "label": "Not stated",
+            "definition": "The source does not state the basis."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "target_totals",
+        "label": "Target totals",
+        "question": "Does the number mean total or additional?",
+        "rule": "Do not add a total to existing capacity or mistake an increment for the final total.",
+        "options": [
+          {
+            "id": "total",
+            "label": "Total",
+            "definition": "The final total intended at the target date."
+          },
+          {
+            "id": "additional",
+            "label": "Additional",
+            "definition": "An increment beyond a stated or unstated existing level."
+          },
+          {
+            "id": "not_stated",
+            "label": "Not stated",
+            "definition": "The source does not clarify total versus increment."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "actor_roles",
+        "label": "Actor roles",
+        "question": "What responsibility does the institution have?",
+        "rule": "Retain original/English names. A ministry mention does not establish leadership.",
+        "options": [
+          {
+            "id": "lead",
+            "label": "Lead",
+            "definition": "The source assigns lead responsibility."
+          },
+          {
+            "id": "supporting",
+            "label": "Supporting",
+            "definition": "The source assigns a supporting role."
+          },
+          {
+            "id": "financier",
+            "label": "Financier",
+            "definition": "The actor provides or is expected to provide finance."
+          },
+          {
+            "id": "reporting",
+            "label": "Reporting",
+            "definition": "The actor reports or monitors implementation/results."
+          },
+          {
+            "id": "beneficiary",
+            "label": "Beneficiary",
+            "definition": "The actor or group is identified as a beneficiary."
+          },
+          {
+            "id": "other",
+            "label": "Other",
+            "definition": "Another explicitly stated role."
+          },
+          {
+            "id": "unspecified",
+            "label": "Unspecified",
+            "definition": "The actor is mentioned but its role is unspecified."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "finance_kinds",
+        "label": "Finance kinds",
+        "question": "What does the financing amount or statement represent?",
+        "rule": "Do not merge costs, requests and secured funds or calculate a gap without compatible operands.",
+        "options": [
+          {
+            "id": "estimated_cost",
+            "label": "Estimated cost",
+            "definition": "An estimated cost of an action or programme."
+          },
+          {
+            "id": "approved_budget",
+            "label": "Approved budget",
+            "definition": "A budget described as approved."
+          },
+          {
+            "id": "secured",
+            "label": "Secured",
+            "definition": "Finance described by the source as secured; preserve date and attribution."
+          },
+          {
+            "id": "requested",
+            "label": "Requested",
+            "definition": "Finance requested or sought."
+          },
+          {
+            "id": "stated_gap",
+            "label": "Stated gap",
+            "definition": "A financing gap explicitly stated in the source."
+          },
+          {
+            "id": "financing_source",
+            "label": "Financing source",
+            "definition": "A named financing source or mechanism without necessarily specifying an amount."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "detail_kinds",
+        "label": "Detail kinds",
+        "question": "What supporting information is linked to the record?",
+        "rule": "Linked detail is distinct from the target. Keep its own evidence and relationship.",
+        "options": [
+          {
+            "id": "support_need",
+            "label": "Support need",
+            "definition": "A stated need for finance, capacity, technology or other support."
+          },
+          {
+            "id": "barrier",
+            "label": "Barrier",
+            "definition": "A stated obstacle to implementation."
+          },
+          {
+            "id": "implementation_step",
+            "label": "Implementation step",
+            "definition": "A stated operational step or sequence for implementation. Accounting conventions, baseline definitions and metric descriptions alone are not implementation steps; preserve them in the existing target basis, denominator, accounting-scope fields, indicators, context or notes."
+          },
+          {
+            "id": "coordination",
+            "label": "Coordination",
+            "definition": "A stated coordination arrangement."
+          },
+          {
+            "id": "legal_instrument",
+            "label": "Legal instrument",
+            "definition": "A legal or regulatory instrument relevant to the action."
+          },
+          {
+            "id": "risk_context",
+            "label": "Risk context",
+            "definition": "Risk background or assessment information."
+          },
+          {
+            "id": "vulnerability",
+            "label": "Vulnerability",
+            "definition": "Susceptibility or vulnerability information."
+          },
+          {
+            "id": "inclusion",
+            "label": "Inclusion",
+            "definition": "Participation, accessibility, equity or inclusion provisions."
+          },
+          {
+            "id": "co_benefit",
+            "label": "Co benefit",
+            "definition": "An additional positive effect claimed by the source."
+          },
+          {
+            "id": "tradeoff",
+            "label": "Tradeoff",
+            "definition": "A conflict, competing objective or adverse consequence identified by the source."
+          },
+          {
+            "id": "dependency",
+            "label": "Dependency",
+            "definition": "A stated prerequisite or dependency."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "risk_action_links",
+        "label": "Risk action links",
+        "question": "How is the action linked to risk?",
+        "rule": "A link must be explicit or justified through identified context, not guessed from a hazard word.",
+        "options": [
+          {
+            "id": "assesses_risk",
+            "label": "Assesses risk",
+            "definition": "The action evaluates risk or its components."
+          },
+          {
+            "id": "reduces_exposure",
+            "label": "Reduces exposure",
+            "definition": "The action is stated to reduce exposure."
+          },
+          {
+            "id": "reduces_vulnerability",
+            "label": "Reduces vulnerability",
+            "definition": "The action is stated to reduce vulnerability."
+          },
+          {
+            "id": "builds_capacity",
+            "label": "Builds capacity",
+            "definition": "The action is stated to strengthen relevant capacity."
+          },
+          {
+            "id": "prepares",
+            "label": "Prepares",
+            "definition": "The action supports readiness for an event."
+          },
+          {
+            "id": "responds",
+            "label": "Responds",
+            "definition": "The action supports disaster response."
+          },
+          {
+            "id": "supports_recovery",
+            "label": "Supports recovery",
+            "definition": "The action supports recovery."
+          },
+          {
+            "id": "context_only",
+            "label": "Context only",
+            "definition": "Risk is described as background without a supported action link."
+          },
+          {
+            "id": "not_stated",
+            "label": "Not stated",
+            "definition": "The source does not state an action-risk relationship."
+          }
+        ],
+        "category": "detail"
+      },
+      {
+        "id": "relation_kinds",
+        "label": "Relation kinds",
+        "question": "How do statements relate across sources?",
+        "rule": "Relationships require paired evidence. Preserve disagreements and do not count translations as new commitments.",
+        "options": [
+          {
+            "id": "same_variant",
+            "label": "Same variant",
+            "definition": "The statements express the same substantive target variant."
+          },
+          {
+            "id": "translation_equivalent",
+            "label": "Translation equivalent",
+            "definition": "The statements are verified equivalents across languages."
+          },
+          {
+            "id": "revises",
+            "label": "Revises",
+            "definition": "A later statement modifies an earlier one."
+          },
+          {
+            "id": "supersedes",
+            "label": "Supersedes",
+            "definition": "Evidence establishes that one statement replaces another."
+          },
+          {
+            "id": "related",
+            "label": "Related",
+            "definition": "The statements are substantively linked without a stronger verified relationship."
+          },
+          {
+            "id": "contradicts",
+            "label": "Contradicts",
+            "definition": "The statements make incompatible assertions within a comparable scope."
+          },
+          {
+            "id": "not_restated",
+            "label": "Not restated",
+            "definition": "A prior statement is not found again in the reviewed later scope; this is not proof of repeal."
+          },
+          {
+            "id": "parent_child",
+            "label": "Parent child",
+            "definition": "A broader commitment contains a more specific action or target."
+          },
+          {
+            "id": "unresolved",
+            "label": "Unresolved",
+            "definition": "The relationship cannot yet be resolved."
+          }
+        ],
+        "category": "evidence"
+      },
+      {
+        "id": "change_kinds",
+        "label": "Change kinds",
+        "question": "What changed across eligible editions?",
+        "rule": "Apply only to established earlier/later scope. Missing processing cannot establish a change.",
+        "options": [
+          {
+            "id": "added",
+            "label": "Added",
+            "definition": "A statement appears in the later reviewed edition and is not found in the earlier scope."
+          },
+          {
+            "id": "restated",
+            "label": "Restated",
+            "definition": "The substantive statement is retained."
+          },
+          {
+            "id": "number_changed",
+            "label": "Number changed",
+            "definition": "A numeric value changed; retain both bases and units."
+          },
+          {
+            "id": "scope_changed",
+            "label": "Scope changed",
+            "definition": "Geographic, sectoral or other scope changed."
+          },
+          {
+            "id": "condition_changed",
+            "label": "Condition changed",
+            "definition": "A condition or scenario changed."
+          },
+          {
+            "id": "not_restated",
+            "label": "Not restated",
+            "definition": "The earlier statement is not restated in the later reviewed scope."
+          },
+          {
+            "id": "withdrawn",
+            "label": "Withdrawn",
+            "definition": "The source explicitly establishes withdrawal."
+          },
+          {
+            "id": "unresolved",
+            "label": "Unresolved",
+            "definition": "The change cannot be characterized reliably."
+          }
+        ],
+        "category": "evidence"
+      }
+    ],
+    "guide_version": "3.0.1"
+  },
+  "extraction": {
+    "records": [
+      {
+        "local_id": "design-r-1",
+        "kind": "commitment",
+        "label_en": "Install flood early-warning systems",
+        "description_en": "Install 20 flood early-warning systems by 2030, conditional on international financing. The Water Ministry will lead delivery.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-1"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "CLM-04"
+          ],
+          "objectives": [
+            "disaster_risk_reduction"
+          ],
+          "cross_cutting_tags": [
+            "finance"
+          ],
+          "hazards": [
+            "flood"
+          ],
+          "population_groups": [],
+          "risk_components": [
+            "capacity"
+          ],
+          "risk_functions": [
+            "early_warning_preparedness"
+          ],
+          "policy_instruments": [
+            "information_warning"
+          ],
+          "unmapped_terms": []
+        },
+        "reference_period": null,
+        "targets": [
+          {
+            "local_id": "design-r-1-t-1",
+            "metric_text": "Flood early-warning systems",
+            "metric_key_candidate": null,
+            "target_kind": "quantitative",
+            "value": {
+              "raw_token": "20",
+              "decimal": "20",
+              "evidence_id": "design-e-1",
+              "notation": "dot_decimal"
+            },
+            "lower": null,
+            "upper": null,
+            "comparator": "equal",
+            "unit_raw": "systems",
+            "unit_key_candidate": null,
+            "desired_direction": "increase",
+            "basis": "absolute",
+            "baseline_value": null,
+            "baseline_period": null,
+            "target_period": "2030",
+            "denominator": null,
+            "scenario": null,
+            "conditionality": "explicitly_conditional",
+            "condition_text": "Subject to international financing",
+            "total_or_additional": "not_stated",
+            "sector_scope": [],
+            "gas_scope": [],
+            "lulucf_treatment": null,
+            "gwp_basis": null,
+            "evidence_ids": [
+              "design-e-1"
+            ]
+          }
+        ],
+        "actors": [
+          {
+            "local_id": "design-r-1-actor",
+            "name_original": "Water Ministry",
+            "name_en": "Water Ministry",
+            "role": "lead",
+            "target_ids": [],
+            "evidence_ids": [
+              "design-e-1"
+            ]
+          }
+        ],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [
+          {
+            "local_id": "support-1",
+            "kind": "support_need",
+            "text_en": "International financing is required.",
+            "target_ids": [
+              "design-r-1-t-1"
+            ],
+            "evidence_ids": [
+              "design-e-1"
+            ]
+          }
+        ],
+        "evidence_ids": [
+          "design-e-1"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-1"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-1"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [
+          {
+            "field_path": "/finance",
+            "reason": "not_stated",
+            "detail": "No amount is stated in this invented passage."
+          },
+          {
+            "field_path": "/targets/0/baseline_value",
+            "reason": "not_stated",
+            "detail": null
+          }
+        ],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding."
+        ]
+      },
+      {
+        "local_id": "design-r-2",
+        "kind": "commitment",
+        "label_en": "Modernize irrigation across two scenarios",
+        "description_en": "Modernize 30 hectares of irrigation by 2030; extend to 50 hectares by 2035 if external finance is secured. The Agriculture Agency is the lead.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-2"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "AGR-01"
+          ],
+          "objectives": [
+            "adaptation"
+          ],
+          "cross_cutting_tags": [],
+          "hazards": [
+            "drought"
+          ],
+          "population_groups": [],
+          "risk_components": [],
+          "risk_functions": [],
+          "policy_instruments": [
+            "infrastructure_service"
+          ],
+          "unmapped_terms": []
+        },
+        "reference_period": null,
+        "targets": [
+          {
+            "local_id": "design-r-2-t-1",
+            "metric_text": "Irrigation area modernized",
+            "metric_key_candidate": null,
+            "target_kind": "quantitative",
+            "value": {
+              "raw_token": "30",
+              "decimal": "30",
+              "evidence_id": "design-e-2",
+              "notation": "dot_decimal"
+            },
+            "lower": null,
+            "upper": null,
+            "comparator": "equal",
+            "unit_raw": "hectares",
+            "unit_key_candidate": null,
+            "desired_direction": "increase",
+            "basis": "absolute",
+            "baseline_value": null,
+            "baseline_period": null,
+            "target_period": "2030",
+            "denominator": null,
+            "scenario": null,
+            "conditionality": "not_stated",
+            "condition_text": null,
+            "total_or_additional": "not_stated",
+            "sector_scope": [],
+            "gas_scope": [],
+            "lulucf_treatment": null,
+            "gwp_basis": null,
+            "evidence_ids": [
+              "design-e-2"
+            ]
+          },
+          {
+            "local_id": "design-r-2-t-2",
+            "metric_text": "Irrigation area modernized",
+            "metric_key_candidate": null,
+            "target_kind": "quantitative",
+            "value": {
+              "raw_token": "50",
+              "decimal": "50",
+              "evidence_id": "design-e-2",
+              "notation": "dot_decimal"
+            },
+            "lower": null,
+            "upper": null,
+            "comparator": "equal",
+            "unit_raw": "hectares",
+            "unit_key_candidate": null,
+            "desired_direction": "increase",
+            "basis": "absolute",
+            "baseline_value": null,
+            "baseline_period": null,
+            "target_period": "2035",
+            "denominator": null,
+            "scenario": null,
+            "conditionality": "explicitly_conditional",
+            "condition_text": "If external finance is secured",
+            "total_or_additional": "not_stated",
+            "sector_scope": [],
+            "gas_scope": [],
+            "lulucf_treatment": null,
+            "gwp_basis": null,
+            "evidence_ids": [
+              "design-e-2"
+            ]
+          }
+        ],
+        "actors": [
+          {
+            "local_id": "design-r-2-actor",
+            "name_original": "Agriculture Agency",
+            "name_en": "Agriculture Agency",
+            "role": "lead",
+            "target_ids": [],
+            "evidence_ids": [
+              "design-e-2"
+            ]
+          }
+        ],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [],
+        "evidence_ids": [
+          "design-e-2"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-2"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-2"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding."
+        ]
+      },
+      {
+        "local_id": "design-r-3",
+        "kind": "priority",
+        "label_en": "Prioritize heat protection for older people",
+        "description_en": "Heat protection for older people is an explicit priority; no action or numeric target is specified.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-3"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "HEA-01"
+          ],
+          "objectives": [
+            "adaptation"
+          ],
+          "cross_cutting_tags": [],
+          "hazards": [
+            "extreme_heat"
+          ],
+          "population_groups": [
+            "older_people"
+          ],
+          "risk_components": [],
+          "risk_functions": [],
+          "policy_instruments": [],
+          "unmapped_terms": []
+        },
+        "reference_period": null,
+        "targets": [],
+        "actors": [],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [],
+        "evidence_ids": [
+          "design-e-3"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-3"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-3"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding."
+        ]
+      },
+      {
+        "local_id": "design-r-4",
+        "kind": "context",
+        "label_en": "Flood exposure and emergency access",
+        "description_en": "Flood-prone settlements face disrupted road access. Older people have limited evacuation access; local shelters provide emergency capacity.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-4"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "CLM-08",
+            "TRN-03"
+          ],
+          "objectives": [],
+          "cross_cutting_tags": [],
+          "hazards": [
+            "flood"
+          ],
+          "population_groups": [
+            "older_people"
+          ],
+          "risk_components": [
+            "exposure",
+            "vulnerability",
+            "capacity"
+          ],
+          "risk_functions": [],
+          "policy_instruments": [],
+          "unmapped_terms": []
+        },
+        "reference_period": null,
+        "targets": [],
+        "actors": [],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [
+          {
+            "local_id": "risk-context-4",
+            "hazard_text": "flood",
+            "exposed_assets_or_places": [
+              "settlements",
+              "roads"
+            ],
+            "vulnerability_drivers": [
+              "Limited evacuation access for older people"
+            ],
+            "stated_capacities": [
+              "Local shelters"
+            ],
+            "consequence_en": "Disrupted road access",
+            "likelihood_text": null,
+            "severity_text": null,
+            "assessment_period": null,
+            "scenario": null,
+            "target_ids": [],
+            "action_link": "context_only",
+            "link_basis": "explicit",
+            "evidence_ids": [
+              "design-e-4"
+            ]
+          }
+        ],
+        "details": [],
+        "evidence_ids": [
+          "design-e-4"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-4"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-4"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding."
+        ]
+      },
+      {
+        "local_id": "design-r-5",
+        "kind": "commitment",
+        "label_en": "Prepare community cooling plans",
+        "description_en": "Prepare community cooling plans with participation by older people and persons with disabilities. No deadline or lead institution is stated.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-5"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "HEA-01",
+            "URB-02"
+          ],
+          "objectives": [
+            "adaptation"
+          ],
+          "cross_cutting_tags": [
+            "participation",
+            "disability"
+          ],
+          "hazards": [
+            "extreme_heat"
+          ],
+          "population_groups": [
+            "older_people",
+            "persons_with_disabilities"
+          ],
+          "risk_components": [],
+          "risk_functions": [],
+          "policy_instruments": [
+            "strategy_plan"
+          ],
+          "unmapped_terms": []
+        },
+        "reference_period": null,
+        "targets": [],
+        "actors": [],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [],
+        "evidence_ids": [
+          "design-e-5"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-5"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-5"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [
+          {
+            "field_path": "/actors",
+            "reason": "not_stated",
+            "detail": "Lead institution is not stated."
+          },
+          {
+            "field_path": "/targets",
+            "reason": "not_stated",
+            "detail": "No deadline or structured target is stated."
+          }
+        ],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding."
+        ]
+      },
+      {
+        "local_id": "design-r-6",
+        "kind": "implementation_observation",
+        "label_en": "Reported warning-system operation in 2024",
+        "description_en": "The invented update reports that five warning systems operated in 2024. This statement does not assess progress against the 2030 target.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-6"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "CLM-04"
+          ],
+          "objectives": [],
+          "cross_cutting_tags": [],
+          "hazards": [
+            "flood"
+          ],
+          "population_groups": [],
+          "risk_components": [],
+          "risk_functions": [
+            "early_warning_preparedness"
+          ],
+          "policy_instruments": [],
+          "unmapped_terms": []
+        },
+        "reference_period": "2024",
+        "targets": [],
+        "actors": [],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [],
+        "evidence_ids": [
+          "design-e-6"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-6"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-6"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding."
+        ]
+      },
+      {
+        "local_id": "design-r-7",
+        "kind": "commitment",
+        "label_en": "Reduce emissions against a BAU scenario",
+        "description_en": "Reduce emissions by 25 percent against a business-as-usual scenario by 2030.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-7"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "CLM-06"
+          ],
+          "objectives": [
+            "mitigation"
+          ],
+          "cross_cutting_tags": [],
+          "hazards": [],
+          "population_groups": [],
+          "risk_components": [],
+          "risk_functions": [],
+          "policy_instruments": [],
+          "unmapped_terms": []
+        },
+        "reference_period": null,
+        "targets": [
+          {
+            "local_id": "design-r-7-t-1",
+            "metric_text": "Emissions reduction",
+            "metric_key_candidate": null,
+            "target_kind": "quantitative",
+            "value": {
+              "raw_token": "25",
+              "decimal": "25",
+              "evidence_id": "design-e-7",
+              "notation": "dot_decimal"
+            },
+            "lower": null,
+            "upper": null,
+            "comparator": "equal",
+            "unit_raw": "percent",
+            "unit_key_candidate": null,
+            "desired_direction": "increase",
+            "basis": "BAU_reduction",
+            "baseline_value": null,
+            "baseline_period": null,
+            "target_period": "2030",
+            "denominator": null,
+            "scenario": "Business as usual",
+            "conditionality": "not_stated",
+            "condition_text": null,
+            "total_or_additional": "not_stated",
+            "sector_scope": [],
+            "gas_scope": [],
+            "lulucf_treatment": null,
+            "gwp_basis": null,
+            "evidence_ids": [
+              "design-e-7"
+            ]
+          }
+        ],
+        "actors": [],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [],
+        "evidence_ids": [
+          "design-e-7"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-7"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-7"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding."
+        ]
+      },
+      {
+        "local_id": "design-r-8",
+        "kind": "commitment",
+        "label_en": "Reduce emissions against a historical baseline",
+        "description_en": "Reduce emissions by 40 percent against the 1990 historical baseline by 2030, subject to international support.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-8"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "CLM-06"
+          ],
+          "objectives": [
+            "mitigation"
+          ],
+          "cross_cutting_tags": [
+            "finance"
+          ],
+          "hazards": [],
+          "population_groups": [],
+          "risk_components": [],
+          "risk_functions": [],
+          "policy_instruments": [],
+          "unmapped_terms": []
+        },
+        "reference_period": null,
+        "targets": [
+          {
+            "local_id": "design-r-8-t-1",
+            "metric_text": "Emissions reduction",
+            "metric_key_candidate": null,
+            "target_kind": "quantitative",
+            "value": {
+              "raw_token": "40",
+              "decimal": "40",
+              "evidence_id": "design-e-8",
+              "notation": "dot_decimal"
+            },
+            "lower": null,
+            "upper": null,
+            "comparator": "equal",
+            "unit_raw": "percent",
+            "unit_key_candidate": null,
+            "desired_direction": "increase",
+            "basis": "historical_reduction",
+            "baseline_value": null,
+            "baseline_period": "1990",
+            "target_period": "2030",
+            "denominator": null,
+            "scenario": null,
+            "conditionality": "explicitly_conditional",
+            "condition_text": "Subject to international support",
+            "total_or_additional": "not_stated",
+            "sector_scope": [],
+            "gas_scope": [],
+            "lulucf_treatment": null,
+            "gwp_basis": null,
+            "evidence_ids": [
+              "design-e-8"
+            ]
+          }
+        ],
+        "actors": [],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [],
+        "evidence_ids": [
+          "design-e-8"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-8"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-8"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding."
+        ]
+      },
+      {
+        "local_id": "design-r-9",
+        "kind": "commitment",
+        "label_en": "Support wastewater resilience",
+        "description_en": "Improve wastewater and sanitation systems. Partners are a financing source; no delivery condition is stated.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-9"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "WST-03"
+          ],
+          "objectives": [
+            "adaptation"
+          ],
+          "cross_cutting_tags": [
+            "finance"
+          ],
+          "hazards": [],
+          "population_groups": [],
+          "risk_components": [],
+          "risk_functions": [],
+          "policy_instruments": [],
+          "unmapped_terms": []
+        },
+        "reference_period": null,
+        "targets": [],
+        "actors": [],
+        "finance": [
+          {
+            "local_id": "finance-source-9",
+            "kind": "financing_source",
+            "amount": null,
+            "currency": null,
+            "price_period": null,
+            "implementation_period": null,
+            "description_en": "Partners are named as a financing source; no amount is specified.",
+            "target_ids": [],
+            "evidence_ids": [
+              "design-e-9"
+            ]
+          }
+        ],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [],
+        "evidence_ids": [
+          "design-e-9"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-9"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-9"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding."
+        ]
+      },
+      {
+        "local_id": "design-r-10",
+        "kind": "commitment",
+        "label_en": "Establish community repair circles",
+        "description_en": "Establish community repair circles to maintain emergency equipment. The local term repair circles has no agreed topic mapping in this example.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-10"
+          ]
+        },
+        "labels": {
+          "topic_ids": [],
+          "objectives": [
+            "disaster_risk_reduction"
+          ],
+          "cross_cutting_tags": [],
+          "hazards": [],
+          "population_groups": [],
+          "risk_components": [],
+          "risk_functions": [
+            "early_warning_preparedness"
+          ],
+          "policy_instruments": [],
+          "unmapped_terms": [
+            {
+              "term": "repair circles",
+              "proposed_definition": "Community arrangements for equipment maintenance",
+              "facet": "topic",
+              "evidence_ids": [
+                "design-e-10"
+              ]
+            }
+          ]
+        },
+        "reference_period": null,
+        "targets": [],
+        "actors": [],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [],
+        "evidence_ids": [
+          "design-e-10"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-10"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-10"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding."
+        ]
+      },
+      {
+        "local_id": "design-r-11",
+        "kind": "commitment",
+        "label_en": "Conflicting warning-system deadline",
+        "description_en": "The later invented edition states 20 flood warning systems by 2032; continuity with the earlier 2030 statement is unresolved.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-11"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "CLM-04"
+          ],
+          "objectives": [],
+          "cross_cutting_tags": [],
+          "hazards": [
+            "flood"
+          ],
+          "population_groups": [],
+          "risk_components": [],
+          "risk_functions": [
+            "early_warning_preparedness"
+          ],
+          "policy_instruments": [],
+          "unmapped_terms": []
+        },
+        "reference_period": null,
+        "targets": [
+          {
+            "local_id": "design-r-11-t-1",
+            "metric_text": "Flood warning systems",
+            "metric_key_candidate": null,
+            "target_kind": "quantitative",
+            "value": {
+              "raw_token": "20",
+              "decimal": "20",
+              "evidence_id": "design-e-11",
+              "notation": "dot_decimal"
+            },
+            "lower": null,
+            "upper": null,
+            "comparator": "equal",
+            "unit_raw": "systems",
+            "unit_key_candidate": null,
+            "desired_direction": "increase",
+            "basis": "absolute",
+            "baseline_value": null,
+            "baseline_period": null,
+            "target_period": "2032",
+            "denominator": null,
+            "scenario": null,
+            "conditionality": "not_stated",
+            "condition_text": null,
+            "total_or_additional": "not_stated",
+            "sector_scope": [],
+            "gas_scope": [],
+            "lulucf_treatment": null,
+            "gwp_basis": null,
+            "evidence_ids": [
+              "design-e-11"
+            ]
+          }
+        ],
+        "actors": [],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [],
+        "evidence_ids": [
+          "design-e-11"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-11"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-11"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding.",
+          "The earlier statement says 2030; both values remain visible. Continuity is unresolved, not a missing value."
+        ]
+      },
+      {
+        "local_id": "design-r-12",
+        "kind": "commitment",
+        "label_en": "Coordinate resilient public services",
+        "description_en": "Coordinate health, water, electricity and transport services for heat emergencies. Agencies will share risk information, prepare backup arrangements and consult affected communities. Financing responsibilities remain ambiguous; the schedule is in an unprocessed annex, and a scanned finance table is unreadable.",
+        "geography": {
+          "reporting_party": "Kazakhstan",
+          "country_codes": [
+            "KAZ"
+          ],
+          "scope": "national",
+          "locations": [],
+          "evidence_ids": [
+            "design-e-12"
+          ]
+        },
+        "labels": {
+          "topic_ids": [
+            "HEA-03",
+            "ENE-02",
+            "TRN-03"
+          ],
+          "objectives": [
+            "adaptation",
+            "disaster_risk_reduction"
+          ],
+          "cross_cutting_tags": [
+            "capacity",
+            "data",
+            "participation"
+          ],
+          "hazards": [
+            "extreme_heat",
+            "compound_hazard"
+          ],
+          "population_groups": [],
+          "risk_components": [
+            "systemic_cascading_risk"
+          ],
+          "risk_functions": [
+            "early_warning_preparedness",
+            "coping_continuity"
+          ],
+          "policy_instruments": [],
+          "unmapped_terms": []
+        },
+        "reference_period": null,
+        "targets": [],
+        "actors": [],
+        "finance": [],
+        "indicators": [],
+        "risk_contexts": [],
+        "details": [],
+        "evidence_ids": [
+          "design-e-12"
+        ],
+        "field_support": [
+          {
+            "field_path": "/labels",
+            "evidence_ids": [
+              "design-e-12"
+            ],
+            "basis": "classification",
+            "reason": "Illustrative classification under the fixture codebook; inspect the invented statement."
+          },
+          {
+            "field_path": "/description_en",
+            "evidence_ids": [
+              "design-e-12"
+            ],
+            "basis": "explicit",
+            "reason": "Exact invented English statement."
+          }
+        ],
+        "missing_fields": [
+          {
+            "field_path": "/actors",
+            "reason": "ambiguous",
+            "detail": "Agencies are named collectively."
+          },
+          {
+            "field_path": "/indicators",
+            "reason": "not_applicable",
+            "detail": "This passage specifies coordination only."
+          }
+        ],
+        "quality_flags": [
+          "Invented interface fixture; not a government finding.",
+          "Schedule annex not processed; no source-absence inference.",
+          "Scanned finance table unreadable; no funding-absence inference."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "local_id": "design-e-1",
+        "segment_id": "design-s-1",
+        "english_segment_id": "design-s-1",
+        "quote_original": "К 2030 году установить 20 систем раннего предупреждения о наводнениях при условии международного финансирования. Ведущее ведомство — Министерство водных ресурсов.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-2",
+        "segment_id": "design-s-2",
+        "english_segment_id": "design-s-2",
+        "quote_original": "Modernize 30 hectares of irrigation by 2030; extend to 50 hectares by 2035 if external finance is secured. The Agriculture Agency is the lead.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-3",
+        "segment_id": "design-s-3",
+        "english_segment_id": "design-s-3",
+        "quote_original": "Heat protection for older people is an explicit priority; no action or numeric target is specified.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-4",
+        "segment_id": "design-s-4",
+        "english_segment_id": "design-s-4",
+        "quote_original": "Flood-prone settlements face disrupted road access. Older people have limited evacuation access; local shelters provide emergency capacity.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-5",
+        "segment_id": "design-s-5",
+        "english_segment_id": "design-s-5",
+        "quote_original": "Prepare community cooling plans with participation by older people and persons with disabilities. No deadline or lead institution is stated.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-6",
+        "segment_id": "design-s-6",
+        "english_segment_id": "design-s-6",
+        "quote_original": "The invented update reports that five warning systems operated in 2024. This statement does not assess progress against the 2030 target.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-7",
+        "segment_id": "design-s-7",
+        "english_segment_id": "design-s-7",
+        "quote_original": "Reduce emissions by 25 percent against a business-as-usual scenario by 2030.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-8",
+        "segment_id": "design-s-8",
+        "english_segment_id": "design-s-8",
+        "quote_original": "Reduce emissions by 40 percent against the 1990 historical baseline by 2030, subject to international support.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-9",
+        "segment_id": "design-s-9",
+        "english_segment_id": "design-s-9",
+        "quote_original": "Improve wastewater and sanitation systems. Partners are a financing source; no delivery condition is stated.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-10",
+        "segment_id": "design-s-10",
+        "english_segment_id": "design-s-10",
+        "quote_original": "Establish community repair circles to maintain emergency equipment. The local term repair circles has no agreed topic mapping in this example.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-11",
+        "segment_id": "design-s-11",
+        "english_segment_id": "design-s-11",
+        "quote_original": "The later invented edition states 20 flood warning systems by 2032; continuity with the earlier 2030 statement is unresolved.",
+        "context_evidence_ids": []
+      },
+      {
+        "local_id": "design-e-12",
+        "segment_id": "design-s-12",
+        "english_segment_id": "design-s-12",
+        "quote_original": "Coordinate health, water, electricity and transport services for heat emergencies. Agencies will share risk information, prepare backup arrangements and consult affected communities. Financing responsibilities remain ambiguous; the schedule is in an unprocessed annex, and a scanned finance table is unreadable.",
+        "context_evidence_ids": []
+      }
+    ],
+    "coverage": [
+      {
+        "segment_id": "design-s-1",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-1"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-2",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-2"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-3",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-3"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-4",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-4"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-5",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-5"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-6",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-6"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-7",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-7"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-8",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-8"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-9",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-9"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-10",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-10"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-11",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-11"
+        ],
+        "reason": "Synthetic passage"
+      },
+      {
+        "segment_id": "design-s-12",
+        "disposition": "extracted",
+        "record_ids": [
+          "design-r-12"
+        ],
+        "reason": "Synthetic passage"
+      }
+    ],
+    "notes": [
+      "Invented interface examples; not a processed country."
+    ],
+    "issues": []
+  },
+  "report": {
+    "country_codes": [
+      "KAZ"
+    ],
+    "source_group_ids": [
+      "design-only"
+    ],
+    "availability": "partial",
+    "headline_findings": [
+      {
+        "text_en": "Flood warning systems have a financing condition and unresolved deadlines across the two invented editions.",
+        "kind": "derived",
+        "citations": {
+          "record_ids": [
+            "design-r-1",
+            "design-r-11"
+          ],
+          "evidence_ids": [
+            "design-e-1",
+            "design-e-11"
+          ]
+        },
+        "calculation": null,
+        "limitations": [
+          "Invented demonstration; no country assessment."
+        ]
+      },
+      {
+        "text_en": "Heat protection is a source-stated priority; the cooling action lacks a stated lead and timeframe.",
+        "kind": "source_fact",
+        "citations": {
+          "record_ids": [
+            "design-r-3",
+            "design-r-5"
+          ],
+          "evidence_ids": [
+            "design-e-3",
+            "design-e-5"
+          ]
+        },
+        "calculation": null,
+        "limitations": [
+          "Invented demonstration; no country assessment."
+        ]
+      },
+      {
+        "text_en": "The two emissions percentages use different bases and cannot support a numerical ambition comparison.",
+        "kind": "derived",
+        "citations": {
+          "record_ids": [
+            "design-r-7",
+            "design-r-8"
+          ],
+          "evidence_ids": [
+            "design-e-7",
+            "design-e-8"
+          ]
+        },
+        "calculation": null,
+        "limitations": [
+          "Invented demonstration; no country assessment."
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "section_id": "scope_and_method",
+        "state": "found",
+        "findings": [
+          {
+            "text_en": "This interface collection contains invented source passages and classifications; it is not a national assessment.",
+            "kind": "derived",
+            "citations": {
+              "record_ids": [
+                "design-r-1"
+              ],
+              "evidence_ids": [
+                "design-e-1"
+              ]
+            },
+            "calculation": null,
+            "limitations": [
+              "Invented demonstration; no country assessment."
+            ]
+          }
+        ],
+        "gap_note": null
+      },
+      {
+        "section_id": "risk_context_and_drr",
+        "state": "found",
+        "findings": [
+          {
+            "text_en": "Flood warning systems have a financing condition and unresolved deadlines across the two invented editions.",
+            "kind": "derived",
+            "citations": {
+              "record_ids": [
+                "design-r-1",
+                "design-r-11"
+              ],
+              "evidence_ids": [
+                "design-e-1",
+                "design-e-11"
+              ]
+            },
+            "calculation": null,
+            "limitations": [
+              "Invented demonstration; no country assessment."
+            ]
+          }
+        ],
+        "gap_note": null
+      },
+      {
+        "section_id": "adaptation_and_resilience",
+        "state": "found",
+        "findings": [
+          {
+            "text_en": "Heat protection is a source-stated priority; the cooling action lacks a stated lead and timeframe.",
+            "kind": "source_fact",
+            "citations": {
+              "record_ids": [
+                "design-r-3",
+                "design-r-5"
+              ],
+              "evidence_ids": [
+                "design-e-3",
+                "design-e-5"
+              ]
+            },
+            "calculation": null,
+            "limitations": [
+              "Invented demonstration; no country assessment."
+            ]
+          }
+        ],
+        "gap_note": null
+      },
+      {
+        "section_id": "mitigation",
+        "state": "found",
+        "findings": [
+          {
+            "text_en": "The two emissions percentages use different bases and cannot support a numerical ambition comparison.",
+            "kind": "derived",
+            "citations": {
+              "record_ids": [
+                "design-r-7",
+                "design-r-8"
+              ],
+              "evidence_ids": [
+                "design-e-7",
+                "design-e-8"
+              ]
+            },
+            "calculation": null,
+            "limitations": [
+              "Invented demonstration; no country assessment."
+            ]
+          }
+        ],
+        "gap_note": null
+      },
+      {
+        "section_id": "implementation_and_actors",
+        "state": "found",
+        "findings": [
+          {
+            "text_en": "The Water Ministry is named as lead for the conditional warning-system action.",
+            "kind": "source_fact",
+            "citations": {
+              "record_ids": [
+                "design-r-1"
+              ],
+              "evidence_ids": [
+                "design-e-1"
+              ]
+            },
+            "calculation": null,
+            "limitations": [
+              "Invented demonstration; no country assessment."
+            ]
+          }
+        ],
+        "gap_note": null
+      },
+      {
+        "section_id": "finance_and_support",
+        "state": "found",
+        "findings": [
+          {
+            "text_en": "Flood warning systems have a financing condition and unresolved deadlines across the two invented editions.",
+            "kind": "derived",
+            "citations": {
+              "record_ids": [
+                "design-r-1",
+                "design-r-11"
+              ],
+              "evidence_ids": [
+                "design-e-1",
+                "design-e-11"
+              ]
+            },
+            "calculation": null,
+            "limitations": [
+              "Invented demonstration; no country assessment."
+            ]
+          }
+        ],
+        "gap_note": null
+      },
+      {
+        "section_id": "inclusion_and_development",
+        "state": "found",
+        "findings": [
+          {
+            "text_en": "Heat protection is a source-stated priority; the cooling action lacks a stated lead and timeframe.",
+            "kind": "source_fact",
+            "citations": {
+              "record_ids": [
+                "design-r-3",
+                "design-r-5"
+              ],
+              "evidence_ids": [
+                "design-e-3",
+                "design-e-5"
+              ]
+            },
+            "calculation": null,
+            "limitations": [
+              "Invented demonstration; no country assessment."
+            ]
+          }
+        ],
+        "gap_note": null
+      },
+      {
+        "section_id": "monitoring",
+        "state": "not_processed",
+        "findings": [],
+        "gap_note": "An illustrative annex is unprocessed. This does not establish absent monitoring."
+      },
+      {
+        "section_id": "limitations",
+        "state": "found",
+        "findings": [
+          {
+            "text_en": "The coordination passage identifies an unprocessed schedule annex and unreadable finance table.",
+            "kind": "source_fact",
+            "citations": {
+              "record_ids": [
+                "design-r-12"
+              ],
+              "evidence_ids": [
+                "design-e-12"
+              ]
+            },
+            "calculation": null,
+            "limitations": [
+              "Invented demonstration; no country assessment."
+            ]
+          }
+        ],
+        "gap_note": null
+      },
+      {
+        "section_id": "changes_and_coherence",
+        "state": "found",
+        "findings": [
+          {
+            "text_en": "Flood warning systems have a financing condition and unresolved deadlines across the two invented editions.",
+            "kind": "derived",
+            "citations": {
+              "record_ids": [
+                "design-r-1",
+                "design-r-11"
+              ],
+              "evidence_ids": [
+                "design-e-1",
+                "design-e-11"
+              ]
+            },
+            "calculation": null,
+            "limitations": [
+              "Invented demonstration; no country assessment."
+            ]
+          }
+        ],
+        "gap_note": null
+      }
+    ],
+    "prioritized_commitments": [
+      {
+        "commitment_id": "design-r-1",
+        "reason": "Analytical highlight: explicit financing condition and unresolved timing; not a national priority ranking.",
+        "evidence_ids": [
+          "design-e-1",
+          "design-e-11"
+        ]
+      }
+    ],
+    "followup_questions": [
+      {
+        "text_en": "Which financing and deadline apply to the warning-system action?",
+        "kind": "analyst_suggestion",
+        "citations": {
+          "record_ids": [
+            "design-r-1",
+            "design-r-11"
+          ],
+          "evidence_ids": [
+            "design-e-1",
+            "design-e-11"
+          ]
+        },
+        "calculation": null,
+        "limitations": [
+          "Invented demonstration; no country assessment."
+        ]
+      }
+    ],
+    "limitations": [
+      "All passages and classifications are invented for interface verification.",
+      "The collection includes an unprocessed annex and an unreadable table example.",
+      "No implementation progress or unique-commitment totals are established."
+    ]
+  },
+  "reconciliation": {
+    "relations": [
+      {
+        "kind": "unresolved",
+        "source_record_ids": [
+          "design-r-1"
+        ],
+        "target_record_ids": [
+          "design-r-11"
+        ],
+        "evidence_ids": [
+          "design-e-1",
+          "design-e-11"
+        ],
+        "reason": "Different stated deadlines; no established supersession."
+      }
+    ],
+    "issues": [
+      "Preserve both source variants."
+    ]
+  }
+}

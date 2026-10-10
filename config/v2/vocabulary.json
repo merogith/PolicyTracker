@@ -1,0 +1,242 @@
+{
+  "version": "3.0.0",
+  "status": "engineering_proposal_not_accuracy_benchmarked",
+  "objectives": [
+    "adaptation",
+    "mitigation",
+    "disaster_risk_reduction",
+    "unspecified"
+  ],
+  "record_kinds": [
+    "context",
+    "priority",
+    "proposal",
+    "commitment",
+    "implementation_observation",
+    "result_observation",
+    "projection",
+    "scenario",
+    "unclear"
+  ],
+  "temporal_roles": [
+    "current",
+    "historical",
+    "superseded",
+    "parallel",
+    "unresolved"
+  ],
+  "conditionalities": [
+    "explicitly_conditional",
+    "explicitly_unconditional",
+    "not_stated",
+    "unclear"
+  ],
+  "hazards": [
+    "flood",
+    "drought",
+    "extreme_heat",
+    "wildfire",
+    "storm",
+    "sea_level_rise",
+    "coastal_erosion",
+    "landslide",
+    "avalanche",
+    "glacial_lake_outburst",
+    "water_scarcity",
+    "extreme_cold",
+    "disease",
+    "earthquake",
+    "tsunami",
+    "technological_accident",
+    "compound_hazard",
+    "other"
+  ],
+  "risk_components": [
+    "hazard",
+    "exposure",
+    "vulnerability",
+    "capacity",
+    "impact",
+    "risk_assessment",
+    "residual_risk",
+    "systemic_cascading_risk"
+  ],
+  "population_groups": [
+    "women",
+    "men",
+    "children",
+    "youth",
+    "older_people",
+    "persons_with_disabilities",
+    "low_income_households",
+    "farmers",
+    "rural_communities",
+    "urban_communities",
+    "workers",
+    "migrants_displaced_people",
+    "indigenous_local_communities",
+    "other"
+  ],
+  "cross_cutting_tags": [
+    "gender",
+    "youth",
+    "disability",
+    "poverty",
+    "inequality",
+    "livelihoods",
+    "just_transition",
+    "capacity",
+    "finance",
+    "technology",
+    "data",
+    "transboundary",
+    "participation",
+    "nature_based_solutions"
+  ],
+  "policy_instruments": [
+    "strategy_plan",
+    "law_regulation",
+    "standard_code",
+    "public_investment",
+    "subsidy_incentive",
+    "tax_pricing",
+    "market_mechanism",
+    "insurance_risk_finance",
+    "institution_coordination",
+    "information_warning",
+    "research_data",
+    "training_capacity",
+    "ecosystem_management",
+    "infrastructure_service",
+    "other"
+  ],
+  "missing_reasons": [
+    "not_stated",
+    "ambiguous",
+    "conflicting_sources",
+    "unreadable",
+    "not_processed",
+    "not_applicable"
+  ],
+  "section_states": [
+    "found",
+    "not_found_in_scope",
+    "not_applicable",
+    "not_processed"
+  ],
+  "geography_scopes": [
+    "national",
+    "subnational",
+    "regional",
+    "EU",
+    "multi_country",
+    "unknown"
+  ],
+  "target_kinds": [
+    "quantitative",
+    "deliverable",
+    "qualitative"
+  ],
+  "target_comparators": [
+    "equal",
+    "at_least",
+    "at_most",
+    "range",
+    "approximate",
+    "not_stated"
+  ],
+  "target_directions": [
+    "increase",
+    "decrease",
+    "maintain",
+    "complete",
+    "unspecified"
+  ],
+  "target_bases": [
+    "absolute",
+    "historical_reduction",
+    "BAU_reduction",
+    "intensity",
+    "share",
+    "qualitative",
+    "other",
+    "not_stated"
+  ],
+  "target_totals": [
+    "total",
+    "additional",
+    "not_stated"
+  ],
+  "actor_roles": [
+    "lead",
+    "supporting",
+    "financier",
+    "reporting",
+    "beneficiary",
+    "other",
+    "unspecified"
+  ],
+  "finance_kinds": [
+    "estimated_cost",
+    "approved_budget",
+    "secured",
+    "requested",
+    "stated_gap",
+    "financing_source"
+  ],
+  "detail_kinds": [
+    "support_need",
+    "barrier",
+    "implementation_step",
+    "coordination",
+    "legal_instrument",
+    "risk_context",
+    "vulnerability",
+    "inclusion",
+    "co_benefit",
+    "tradeoff",
+    "dependency"
+  ],
+  "risk_action_links": [
+    "assesses_risk",
+    "reduces_exposure",
+    "reduces_vulnerability",
+    "builds_capacity",
+    "prepares",
+    "responds",
+    "supports_recovery",
+    "context_only",
+    "not_stated"
+  ],
+  "relation_kinds": [
+    "same_variant",
+    "translation_equivalent",
+    "revises",
+    "supersedes",
+    "related",
+    "contradicts",
+    "not_restated",
+    "parent_child",
+    "unresolved"
+  ],
+  "change_kinds": [
+    "added",
+    "restated",
+    "number_changed",
+    "scope_changed",
+    "condition_changed",
+    "not_restated",
+    "withdrawn",
+    "unresolved"
+  ],
+  "risk_functions": [
+    "risk_understanding",
+    "risk_prevention_reduction",
+    "early_warning_preparedness",
+    "anticipatory_action",
+    "emergency_response",
+    "recovery_reconstruction",
+    "coping_continuity",
+    "systemic_transformation"
+  ]
+}

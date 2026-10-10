@@ -1,0 +1,720 @@
+{
+  "schema_version": "1.0.0",
+  "inventory_date": "2026-10-09",
+  "status_basis": "Supplied local inventory; no production release registry is connected. No completed Prime reports have been produced.",
+  "country_code_note": "XKX is a local application code, not an assigned ISO 3166-1 alpha-3 code.",
+  "features": [
+    {
+      "id": "brief",
+      "label": "Overview",
+      "short": "Overview",
+      "description": "Cited findings first, with qualifications and a full expandable thematic narrative."
+    },
+    {
+      "id": "commitments",
+      "label": "Policy register",
+      "short": "Register",
+      "description": "Explore source records through Summary, Targets, Risks and resilience, or Delivery and support; inspect original/English evidence."
+    }
+  ],
+  "countries": [
+    {
+      "code": "ALB",
+      "name": "Albania",
+      "document_count": 3,
+      "pages": 346,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "ARM",
+      "name": "Armenia",
+      "document_count": 3,
+      "pages": 97,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "BLR",
+      "name": "Belarus",
+      "document_count": 2,
+      "pages": 33,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "BIH",
+      "name": "Bosnia and Herzegovina",
+      "document_count": 2,
+      "pages": 179,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "CYP",
+      "name": "Cyprus",
+      "document_count": 2,
+      "pages": 70,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "GEO",
+      "name": "Georgia",
+      "document_count": 2,
+      "pages": 81,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "KAZ",
+      "name": "Kazakhstan",
+      "document_count": 2,
+      "pages": 112,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "XKX",
+      "name": "Kosovo",
+      "document_count": 0,
+      "pages": 0,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "no_sources",
+        "commitments": "no_sources"
+      }
+    },
+    {
+      "code": "KGZ",
+      "name": "Kyrgyzstan",
+      "document_count": 2,
+      "pages": 135,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "MDA",
+      "name": "Moldova",
+      "document_count": 4,
+      "pages": 291,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "MNE",
+      "name": "Montenegro",
+      "document_count": 3,
+      "pages": 268,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "MKD",
+      "name": "North Macedonia",
+      "document_count": 1,
+      "pages": 26,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "SRB",
+      "name": "Serbia",
+      "document_count": 3,
+      "pages": 206,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "TJK",
+      "name": "Tajikistan",
+      "document_count": 1,
+      "pages": 36,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "TUR",
+      "name": "Türkiye",
+      "document_count": 2,
+      "pages": 65,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "TKM",
+      "name": "Turkmenistan",
+      "document_count": 1,
+      "pages": 60,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "UKR",
+      "name": "Ukraine",
+      "document_count": 2,
+      "pages": 40,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    },
+    {
+      "code": "UZB",
+      "name": "Uzbekistan",
+      "document_count": 7,
+      "pages": 625,
+      "prime_release_id": null,
+      "prime_mode": "latest_successful",
+      "history_count": 0,
+      "features": {
+        "brief": "not_generated",
+        "commitments": "not_generated"
+      }
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-479fa14721aeb6b3",
+      "country_code": "ALB",
+      "title": "Albania National Adaptation Plan",
+      "declared_type": "NAP",
+      "pages": 131,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 8,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-899f2620ed676417",
+      "country_code": "ALB",
+      "title": "Albania First NDC (Updated submission)",
+      "declared_type": "NDC",
+      "pages": 145,
+      "submission_date": "2021-10-12",
+      "metadata_status": "unverified",
+      "flagged_pages": 40,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-24824efa654df87c",
+      "country_code": "ALB",
+      "title": "NDC 3.0",
+      "declared_type": "NDC",
+      "pages": 70,
+      "submission_date": "2026-09-16",
+      "metadata_status": "unverified",
+      "flagged_pages": 1,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-abb6069a44d55a5e",
+      "country_code": "ARM",
+      "title": "Armenia National Adaptation Plan",
+      "declared_type": "NAP",
+      "pages": 38,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 5,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-d5f0e0611acdb670",
+      "country_code": "ARM",
+      "title": "Armenia First NDC (Updated submission)",
+      "declared_type": "NDC",
+      "pages": 16,
+      "submission_date": "2021-05-05",
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-7d902daaee1522da",
+      "country_code": "ARM",
+      "title": "NDC 3.0",
+      "declared_type": "NDC",
+      "pages": 43,
+      "submission_date": "2025-12-31",
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-a2b2a58ff2573b05",
+      "country_code": "BLR",
+      "title": "Belarus First NDC (Updated submission)",
+      "declared_type": "NDC",
+      "pages": 8,
+      "submission_date": "2021-10-11",
+      "metadata_status": "unverified",
+      "flagged_pages": 1,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-0c3ac57eba1f25c4",
+      "country_code": "BLR",
+      "title": "NDC for 2026–2035",
+      "declared_type": "NDC",
+      "pages": 25,
+      "submission_date": "2025-11-10",
+      "metadata_status": "unverified",
+      "flagged_pages": 17,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-cffa909b630b3e46",
+      "country_code": "BIH",
+      "title": "Bosnia and Herzegovina National Adaptation Plan",
+      "declared_type": "NAP",
+      "pages": 168,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 20,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-da6c7f251423415f",
+      "country_code": "BIH",
+      "title": "Updated first NDC",
+      "declared_type": "NDC",
+      "pages": 11,
+      "submission_date": "2021-04-20",
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-d407b82a0608cd16",
+      "country_code": "CYP",
+      "title": "EU and its Member States NDC",
+      "declared_type": "NDC",
+      "pages": 47,
+      "submission_date": "2025-11-05",
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-e1d927f80e16d268",
+      "country_code": "CYP",
+      "title": "EU NDC 2023 update",
+      "declared_type": "NDC",
+      "pages": 23,
+      "submission_date": "2023-10-19",
+      "metadata_status": "unverified",
+      "flagged_pages": 14,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-73709ff9b87aae0d",
+      "country_code": "GEO",
+      "title": "Georgia First NDC (Updated submission)",
+      "declared_type": "NDC",
+      "pages": 44,
+      "submission_date": "2021-05-05",
+      "metadata_status": "unverified",
+      "flagged_pages": 11,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-2bbe58c31affdb4b",
+      "country_code": "GEO",
+      "title": "NDC 3.0",
+      "declared_type": "NDC",
+      "pages": 37,
+      "submission_date": "2026-03-25",
+      "metadata_status": "unverified",
+      "flagged_pages": 17,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-308f43b46e75702f",
+      "country_code": "KAZ",
+      "title": "Kazakhstan First NDC (Updated submission)",
+      "declared_type": "NDC",
+      "pages": 19,
+      "submission_date": "2023-06-27",
+      "metadata_status": "unverified",
+      "flagged_pages": 1,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-f2def2eb3254f3ed",
+      "country_code": "KAZ",
+      "title": "NDC 3.0",
+      "declared_type": "NDC",
+      "pages": 93,
+      "submission_date": "2025-11-26",
+      "metadata_status": "unverified",
+      "flagged_pages": 12,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-66cd03e8fb5b04a2",
+      "country_code": "KGZ",
+      "title": "Kyrgyzstan First NDC (Updated submission)",
+      "declared_type": "NDC",
+      "pages": 41,
+      "submission_date": "2021-10-09",
+      "metadata_status": "unverified",
+      "flagged_pages": 7,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-0b7cce024495d7c6",
+      "country_code": "KGZ",
+      "title": "NDC 3.0",
+      "declared_type": "NDC",
+      "pages": 94,
+      "submission_date": "2025-10-02",
+      "metadata_status": "unverified",
+      "flagged_pages": 91,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-adceb39228acab56",
+      "country_code": "MDA",
+      "title": "Moldova National Adaptation Plan",
+      "declared_type": "NAP",
+      "pages": 99,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 11,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-6e1d7510907f9d39",
+      "country_code": "MDA",
+      "title": "Action Plan to the NAP",
+      "declared_type": "NAP supporting output",
+      "pages": 37,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-905abeb2a34e2d77",
+      "country_code": "MDA",
+      "title": "NDC 3.0",
+      "declared_type": "NDC",
+      "pages": 81,
+      "submission_date": "2025-05-06",
+      "metadata_status": "unverified",
+      "flagged_pages": 7,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-a91bb2cbea6bbf02",
+      "country_code": "MDA",
+      "title": "Republic of Moldova First NDC (Updated submission)",
+      "declared_type": "NDC",
+      "pages": 74,
+      "submission_date": "2020-03-04",
+      "metadata_status": "unverified",
+      "flagged_pages": 6,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-48cdca3c56bf0c7d",
+      "country_code": "MNE",
+      "title": "Montenegro National Adaptation Plan",
+      "declared_type": "NAP",
+      "pages": 229,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 14,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-7529c87781de8972",
+      "country_code": "MNE",
+      "title": "Montenegro First NDC (Updated submission)",
+      "declared_type": "NDC",
+      "pages": 25,
+      "submission_date": "2021-06-15",
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-4a1795b7c5fe2f5c",
+      "country_code": "MNE",
+      "title": "Third NDC",
+      "declared_type": "NDC",
+      "pages": 14,
+      "submission_date": "2025-02-21",
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-595c3500aece18f2",
+      "country_code": "MKD",
+      "title": "Enhanced first NDC",
+      "declared_type": "NDC",
+      "pages": 26,
+      "submission_date": "2021-04-16",
+      "metadata_status": "unverified",
+      "flagged_pages": 13,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-2ebb4fe8294a0ae1",
+      "country_code": "SRB",
+      "title": "Serbia National Adaptation Plan",
+      "declared_type": "NAP",
+      "pages": 180,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 48,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-3c65a5fcb6e952b1",
+      "country_code": "SRB",
+      "title": "NDC 3.0",
+      "declared_type": "NDC",
+      "pages": 13,
+      "submission_date": "2025-09-12",
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-7ae0d2ee46c3a4a0",
+      "country_code": "SRB",
+      "title": "Updated NDC Serbia",
+      "declared_type": "NDC",
+      "pages": 13,
+      "submission_date": "2022-08-24",
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-6f622629c5d96265",
+      "country_code": "TJK",
+      "title": "Updated first NDC",
+      "declared_type": "NDC",
+      "pages": 36,
+      "submission_date": "2021-10-12",
+      "metadata_status": "unverified",
+      "flagged_pages": 2,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-6ac6f9eac76104a2",
+      "country_code": "TUR",
+      "title": "Second NDC (NDC 3.0)",
+      "declared_type": "NDC",
+      "pages": 21,
+      "submission_date": "2025-11-09",
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-14f27ffd8da0edee",
+      "country_code": "TUR",
+      "title": "TÜRKİYE UPDATED 1st NDC",
+      "declared_type": "NDC",
+      "pages": 44,
+      "submission_date": "2023-04-13",
+      "metadata_status": "unverified",
+      "flagged_pages": 0,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-1a30e5de9e640f66",
+      "country_code": "TKM",
+      "title": "Updated NDC",
+      "declared_type": "NDC",
+      "pages": 60,
+      "submission_date": "2023-01-30",
+      "metadata_status": "unverified",
+      "flagged_pages": 3,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-079c7d831dd631e2",
+      "country_code": "UKR",
+      "title": "Second NDC",
+      "declared_type": "NDC",
+      "pages": 21,
+      "submission_date": "2025-11-11",
+      "metadata_status": "unverified",
+      "flagged_pages": 1,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-fd07b699728ab55a",
+      "country_code": "UKR",
+      "title": "Ukraine First NDC (Updated submission)",
+      "declared_type": "NDC",
+      "pages": 19,
+      "submission_date": "2021-07-31",
+      "metadata_status": "unverified",
+      "flagged_pages": 1,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-cf8fc8e1c801c35a",
+      "country_code": "UZB",
+      "title": "NDC 3.0",
+      "declared_type": "NDC",
+      "pages": 60,
+      "submission_date": "2025-11-06",
+      "metadata_status": "unverified",
+      "flagged_pages": 1,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-bbbbbfbca41ebe99",
+      "country_code": "UZB",
+      "title": "Uzbekistan First NDC (Updated submission)",
+      "declared_type": "NDC",
+      "pages": 28,
+      "submission_date": "2021-10-30",
+      "metadata_status": "unverified",
+      "flagged_pages": 3,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-73a32b277f82afda",
+      "country_code": "UZB",
+      "title": "Agriculture adaptation plan",
+      "declared_type": "Sectoral NAP",
+      "pages": 162,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 32,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-b86e688423064c3c",
+      "country_code": "UZB",
+      "title": "Buildings adaptation plan",
+      "declared_type": "Sectoral NAP",
+      "pages": 130,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 14,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-984107ad78d7fb2c",
+      "country_code": "UZB",
+      "title": "Emergencies adaptation plan",
+      "declared_type": "Sectoral NAP",
+      "pages": 80,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 7,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-189f61eba13bfa7a",
+      "country_code": "UZB",
+      "title": "Health adaptation plan",
+      "declared_type": "Sectoral NAP",
+      "pages": 96,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 7,
+      "english_status": "not_prepared"
+    },
+    {
+      "id": "doc-dae766325f7e0bd4",
+      "country_code": "UZB",
+      "title": "Water adaptation plan",
+      "declared_type": "Sectoral NAP",
+      "pages": 69,
+      "submission_date": null,
+      "metadata_status": "unverified",
+      "flagged_pages": 14,
+      "english_status": "not_prepared"
+    }
+  ]
+}

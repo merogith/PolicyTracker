@@ -1,0 +1,11 @@
+# Compare explicit policy groups
+
+Return comparison.schema.json. Compare exactly the supplied groups and selected dimensions. Country mode groups selected source versions by verified country attribution. Revision mode preserves earlier/later ordering; confirm edition relationships rather than infer them from filenames. NDC–NAP mode examines coherence and delivery links, not relative national performance. Custom mode follows the user's named document groups, including multiple countries when specified.
+
+Document mode makes one column per selected document. It accepts multiple documents from one or several countries. Require at least two distinct policy editions or substantive documents; translations/copies of one edition do not establish change. Country mode needs two or more countries. Revision mode needs exactly two ordered edition groups of one country and instrument. NDC–NAP mode needs both instruments from one country. Multiple documents may belong to a group; preserve each citation and variant.
+
+The selected dimensions define comparison rows (targets/conditions, risk/DRR, institutions, finance or monitoring). Sector/topic/hazard/DRR filters define the same subject scope for every group. They are not literal PDF heading matches. Map differently titled source sections to the same supported concepts and disclose unmatched coverage. A missing relevant section yields not_found_in_scope, not zero ambition or implementation failure. Never compare a water target in one column to an unrelated energy target merely because both use percentages.
+
+Each selected dimension produces exactly one matrix row with a cell for every source group. Use the field ID for `dimension`. Retain missing states; `not_processed` blocks completion. Mark whether quantities are directly comparable, partially comparable, descriptive only or not comparable, retaining reasons and cited operands. A baseline or denominator difference cannot be concealed by percent formatting.
+
+Relate stated actions, mandates, financing conditions and monitoring arrangements only where evidence supports the link. No country rankings by document length, extracted counts or ambition adjectives. A removed statement is not repeal unless sourced; translations are not independent new promises.

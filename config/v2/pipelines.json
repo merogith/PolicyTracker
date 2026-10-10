@@ -1,0 +1,57 @@
+{
+  "version": "2.1.0",
+  "status": "local_worker_active_with_prepared_extensions",
+  "execution_note": "The local country worker performs preparation (including conditional visual recovery), triage, translation, extraction with code validation, proposed source relationships, Overview synthesis and local save/publication. Analysis tasks share preparation and extraction, then run their selected output route; independent translation stops after aligned reading copies. The stages below retain the reference blueprint for compatibility, not an executable local plan: canonicalization and additional model quality-review stages are not implemented. Relabeling and chat are prepared extensions. Request sizing uses conservative serialized-byte and source-character limits, not measured tokenizer budgets.",
+  "shared_contract": "prompts/v2/00-evidence-contract.md",
+  "labeling_contract": "prompts/v2/01-labeling-rules.md",
+  "routes": {
+    "triage": {"prompt": "02-triage.md", "schema": "triage", "scope": "document_metadata_and_context", "execution": "country"},
+    "translate": {"prompt": "03-translate.md", "schema": "translation", "scope": "all_owned_source_segments", "execution": "country"},
+    "extract": {"prompt": "04-extract.md", "schema": "extraction", "scope": "all_owned_source_segments_with_context", "execution": "country"},
+    "relabel": {"prompt": "05-relabel.md", "schema": "labels", "scope": "existing_records_and_original_evidence", "execution": "prepared"},
+    "reconcile": {"prompt": "06-reconcile.md", "schema": "reconciliation", "scope": "complete_document_family_or_country_partitions", "execution": "country"},
+    "quality": {"prompt": "07-quality.md", "schema": "quality", "scope": "source_and_candidate_with_explicit_check_scope", "execution": "prepared"},
+    "prime": {"prompt": "08-prime-report.md", "schema": "report", "scope": "whole_country_curated_snapshot", "execution": "country"},
+    "briefing": {"prompt": "09-briefing.md", "schema": "report", "scope": "selected_evidence_snapshot", "execution": "analysis"},
+    "focused_analysis": {"prompt": "10-focused-analysis.md", "schema": "report", "scope": "complete_selected_scope", "execution": "analysis"},
+    "comparison": {"prompt": "11-comparison.md", "schema": "comparison", "scope": "explicit_frozen_source_groups", "execution": "analysis"},
+    "workplan": {"prompt": "12-workplan.md", "schema": "workplan", "scope": "selected_commitments_and_linked_details", "execution": "analysis"},
+    "chat": {"prompt": "13-chat.md", "schema": "chat", "scope": "authorized_snapshot_and_retrieved_context", "execution": "prepared"}
+  },
+  "stages": [
+    {"id": "register_parse", "executor": "application", "depends_on": [], "output": "immutable_sources_segments_and_corpus"},
+    {"id": "triage", "executor": "llm", "route": "triage", "depends_on": ["register_parse"], "output": "typed_metadata_proposals"},
+    {"id": "translate", "executor": "application_or_llm", "route": "translate", "depends_on": ["triage"], "output": "complete_aligned_english_layer"},
+    {"id": "extract", "executor": "llm", "route": "extract", "depends_on": ["translate"], "output": "evidence_records_and_coverage"},
+    {"id": "validate_extraction", "executor": "application", "depends_on": ["extract"], "output": "validated_records_or_bounded_repair"},
+    {"id": "reconcile", "executor": "llm", "route": "reconcile", "depends_on": ["validate_extraction"], "output": "group_and_relation_proposals"},
+    {"id": "canonicalize", "executor": "application", "depends_on": ["reconcile"], "output": "stable_commitments_variants_and_identity_events"},
+    {"id": "challenge_sources", "executor": "llm", "route": "quality", "depends_on": ["canonicalize"], "output": "omission_and_interpretation_findings"},
+    {"id": "resolve_findings", "executor": "application", "depends_on": ["challenge_sources"], "output": "repaired_or_qualified_evidence_snapshot"},
+    {"id": "feature_synthesis", "executor": "selected_feature_route", "depends_on": ["resolve_findings"], "output": "report_comparison_or_workplan"},
+    {"id": "challenge_report", "executor": "llm", "route": "quality", "depends_on": ["feature_synthesis"], "output": "claim_support_findings"},
+    {"id": "bundle_validate", "executor": "application", "depends_on": ["challenge_report"], "output": "complete_bundle_and_internal_eligibility_receipt"},
+    {"id": "publish", "executor": "application", "depends_on": ["bundle_validate"], "output": "prime_history_and_optional_pointer_update_or_ad_hoc_history"}
+  ],
+  "features": {
+    "prime": {"route": "prime", "required_sections": ["scope_and_method", "risk_context_and_drr", "adaptation_and_resilience", "mitigation", "implementation_and_actors", "finance_and_support", "inclusion_and_development", "monitoring", "changes_and_coherence", "limitations"], "history": "prime", "source_policy": "curated_ndc_nap_and_eligible_annexes"},
+    "briefing": {"route": "briefing", "required_sections": ["scope", "key_commitments", "implications", "meeting_questions", "limitations"], "history": "ad_hoc", "source_policy": "authorized_selected_inputs"},
+    "focused_analysis": {"route": "focused_analysis", "required_sections": ["scope", "findings", "implementation_and_support", "evidence_gaps", "limitations"], "history": "ad_hoc", "source_policy": "authorized_selected_inputs"},
+    "comparison": {"route": "comparison", "required_sections": [], "history": "ad_hoc", "source_policy": "authorized_explicit_groups"},
+    "workplan": {"route": "workplan", "required_sections": [], "history": "ad_hoc", "source_policy": "authorized_selected_inputs"}
+  },
+  "shared_run_policy": {
+    "requested_initial_model": "gpt-6-astra",
+    "requested_initial_effort": "xhigh",
+    "requested_initial_route": "codex_chatgpt",
+    "user_can_select_model_effort_and_route": true,
+    "silent_fallback": false,
+    "api_enabled_until_key_configured": false,
+    "default_prime_mode": "latest_successful",
+    "manual_audit_required": false,
+    "max_repair_attempts_per_task": 2,
+    "request_sizing": "serialized_byte_limits_and_source_character_batches_with_repair_reserve",
+    "initial_concurrency": 1,
+    "cache_scope": "authorized_input_hashes_processing_versions_and_model_settings"
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker report method 3.0.0",
+  "type": "object",
+  "properties": {
+    "country_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_group_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "complete_in_declared_scope",
+        "partial",
+        "no_documents_supplied"
+      ]
+    },
+    "headline_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text_en": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "source_fact",
+              "source_reported_observation",
+              "derived",
+              "analyst_suggestion"
+            ]
+          },
+          "citations": {
+            "type": "object",
+            "properties": {
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "evidence_ids",
+              "record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "calculation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "text_en",
+          "kind",
+          "citations",
+          "calculation",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "section_id": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "found",
+              "not_found_in_scope",
+              "not_applicable",
+              "not_processed"
+            ]
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text_en": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "source_fact",
+                    "source_reported_observation",
+                    "derived",
+                    "analyst_suggestion"
+                  ]
+                },
+                "citations": {
+                  "type": "object",
+                  "properties": {
+                    "evidence_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "record_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": [
+                    "evidence_ids",
+                    "record_ids"
+                  ],
+                  "additionalProperties": false
+                },
+                "calculation": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "limitations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "text_en",
+                "kind",
+                "citations",
+                "calculation",
+                "limitations"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "gap_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "section_id",
+          "state",
+          "findings",
+          "gap_note"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "prioritized_commitments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "commitment_id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "commitment_id",
+          "reason",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "followup_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text_en": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "source_fact",
+              "source_reported_observation",
+              "derived",
+              "analyst_suggestion"
+            ]
+          },
+          "citations": {
+            "type": "object",
+            "properties": {
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "evidence_ids",
+              "record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "calculation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "text_en",
+          "kind",
+          "citations",
+          "calculation",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "country_codes",
+    "source_group_ids",
+    "availability",
+    "headline_findings",
+    "sections",
+    "prioritized_commitments",
+    "followup_questions",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

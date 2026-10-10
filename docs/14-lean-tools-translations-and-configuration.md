@@ -1,0 +1,102 @@
+# Lean country delivery, document tools and editable methodology
+
+## Prepare and reopen work
+
+Open **Reports & analysis → Prepare a report**. Choose the task, select documents and essential options, then review the scope and save a named request. Prepared requests survive reload in browser local storage and are explicitly unexecuted. **Run this analysis** is a separate action; completed and failed operations have their own local history, source details and exports. Model choices and specialist options are available when needed.
+
+Country navigation uses one row: Overview, Policy register, Documents & translations and Version history. The global **Guides & settings** menu contains help, method/prompts, searchable labels, configuration, AI connection and integrations. Current presentation is specified in [document 16](16-evidence-experience.md); [browser verification](../design/verification/usability-review.md) records the tested journeys and limitations.
+
+## Current reader update
+
+The [evidence experience](16-evidence-experience.md) implements four perspectives inside the two country views, readable evidence/details, browser-local named views, exact-version context and explicit filtered/full exports. Optional task setup remains as described below; tasks now execute and save separate results, with synthetic demonstrations retained as examples. The broader reader filters do not expand the generation-request contract. Translation reading uses stored aligned pages; independent translation shares the existing country worker and bypasses extraction.
+
+
+This is the current design decision. It supersedes the three-view navigation introduced in the preceding revision. The first MVP is still one automatically published Country Profile per country, with optional pinning and a separate operational-report history. No human review is required for publication.
+
+## Core profile: useful with one document
+
+Only **Overview** and **Policy register** are mandatory country views. Overview provides a five-minute briefing and the full thematic narrative. The register exposes all structured commitments, targets, risks, responsibilities, finance, support needs and monitoring information with original/English evidence. These serve interpretation and detailed evidence exploration respectively, without duplicate prose reports.
+
+With one NDC or NAP, extract and synthesize everything supported by that source. Disclose missing instruments and source coverage. `changes_and_coherence` remains a conditional subsection: no eligible pair means `not_applicable` for cross-document comparison, with a reason. Internal tensions can still be documented, but cannot establish revision history. Multiple eligible editions enable supported links/changes within the same narrative; a translation does not count as a new edition.
+
+The regional dashboard therefore has two analysis-status columns. **Compare documents** is an optional country action that opens the comparison tool. It is disabled for a one-document inventory. A two-file inventory is only an initial eligibility hint: source verification must still establish that the files are substantive distinct documents/editions.
+
+## Documents and saved translations
+
+The library column is **Translations**. Each document keeps:
+
+- Its immutable original file and original-language text, with per-segment language for mixed-language documents.
+- A complete English reading copy; English originals use identity and are not rewritten.
+- Aligned bilingual JSON and a side-by-side HTML reading copy, linked by page and segment IDs.
+- Translation method, terminology notes, quality/coverage flags, model provenance and file hashes.
+
+The new **Translate documents** task accepts one or many documents, including supporting documents once registered. It bypasses policy extraction and has no thematic filters. Original + English are mandatory. Reuse compatible saved translations; a revised translation creates a new version. Published reports keep the translation version used in their evidence, so later corrections do not silently change historical citations. Original files are never overwritten. Downloads/reading do not call the model.
+
+`config/translations.json` is the contract. `prompts/v2/03-translate.md` plus `prompts/operations/translate.md` defines model behavior. `src/policytracker/translations.py` now writes original, English, bilingual and manifest artifacts from completed aligned input. It checks source hashes, segment coverage, identity handling and immutable output paths. These checks do not verify translation meaning or prove that a parser captured the whole PDF. Local preparation, conditional reviewed OCR, actual transport, archived SQLite storage and authorized original-PDF downloads are implemented. PDF-quality translated layout, automatic official-parallel matching and real-model quality acceptance remain unverified/deferred. No real country translation was generated by this update.
+
+## Tasks and source requirements
+
+| Task | Minimum input | Meaningful customization | Result |
+|---|---|---|---|
+| Extract evidence | 1 document; multiple countries/documents allowed with separate attribution | Fields and thematic scope | Complete scoped evidence table plus cited findings |
+| Compare policies | 2 substantive documents/editions, in valid groups | Columns/grouping; rows/dimensions; same subject scope per group | Cited matrix and comparability explanations |
+| Check implementation information | 1 document; multiple allowed | Missing responsibility/finance/measurement/deadline checks; optional suggestions | Stated needs and missing-information table, not a finding of implementation failure |
+| Prepare a brief | 1 document and a concrete policy question | Question, evidence scope, included sections | Question-led answer with full cited annex |
+| Translate documents | 1 document; multiple allowed | Selected documents and optional terminology instructions | Full original, English and aligned bilingual copies |
+
+Source grouping and country attribution are retained even for mixed-country non-comparison outputs. Do not merge targets just because their text looks similar across countries. Pending upload filenames are not valid evidence; uploaded files must be registered, authorized, parsed and classified first.
+
+### Comparison columns
+
+| Mode | Rule |
+|---|---|
+| Documents (default) | One column per selected document, from one or several countries. Translations/copies of the same edition cannot oppose each other as different policies. |
+| Countries | One column per country containing its selected documents; requires two or more countries. |
+| Earlier and later editions | Exactly two edition groups of one country and instrument, with verified earlier/later order. Translation copies stay within the same edition group. |
+| NDC and NAP | Exactly two groups from one country; both instruments required. Groups are assigned from declared types in the UI and rechecked against verified metadata before execution. |
+| Custom groups | Two or more named non-empty groups. Each selected document belongs to exactly one group. |
+
+### Comparison rows and scope
+
+Rows are the selected dimensions: targets/conditions, risk/DRR, institutions, finance/support or monitoring. This is what “compare sections” should mean in the first implementation. Domain → topic, hazard and risk/resilience-function filters narrow the common subject; they are not literal PDF heading matching. Different documents can organize the same subject under different headings. Preserve missing-in-scope cells and incompatible units/bases/conditions; never replace them with zero or rank countries by document length.
+
+Filters use AND across fields and OR within a field. The form and request JSON both accept multiple domains, topics, hazards and risk/resilience functions. Compact checkbox groups show the selected count and use codebook labels. Incompatible topic/domain selections produce a visible error; clearing subject filters restores all selected evidence. A no-match result is explicit and never silently broadens the source scope.
+
+Every control now shows its effect beside the option and in the request preview. Invalid setup disables saving with a specific reason. Model settings and thematic filters are collapsed until needed. There is no audience/length questionnaire. Brief questions and translation terminology have different, stated roles.
+
+## Predefined knowledge structure
+
+See the complete [labeling guide](knowledge/labeling-guide.md): **11 domains, 41 topics, 24 dimensions and 190 defined values** in method 3.0, grouped as policy labels, linked facts and evidence metadata. It includes one statement type, hazards, risk components and one optional risk/resilience-function pool; target forms/bases/comparators/conditions; institutions, finance, linked details; geography, relationships, changes and missing reasons. Every option has a meaning and each dimension has assignment guidance. Topics include definitions and domain mappings. Institutions, geographic names, units and source terminology retain evidence-linked open text when appropriate.
+
+This is a project codebook, not a claim to describe every possible policy concept or to reproduce an official UN classification. Unmapped terms preserve evidence for later additions. The [UNDRR glossary](https://www.undrr.org/drr-glossary) informs risk terminology; the [UNDP implementation guide](https://climatepromise.undp.org/research-and-reports/ndc-implementation-guide) informs the focus on institutions, finance, implementation and monitoring. Our compact facets, task choices and interface are design recommendations.
+
+## Customize without application-code edits
+
+| Editable source | Controls |
+|---|---|
+| `prompts/v2/*.md`, `prompts/operations/*.md` | Stage instructions and task supplements |
+| `config/v2/taxonomy.json` | Domains, topics, mappings, definitions and assignment rules |
+| `config/v2/vocabulary.json` | Supported categorical values |
+| `config/v2/label-guide.json` | Definitions and guidance for every value |
+| `config/operations/tasks.json` | Supported tasks' wording, output options, effects and defaults |
+| `config/methodology.json` | View descriptions, method explanation and prompt mapping |
+| `config/translations.json` | Saved translation/output contract |
+
+The **Configuration** page edits a browser-session draft of these files and exports the whole package. It does not activate changes. The local workflow is:
+
+```powershell
+python scripts/method_pack.py validate path/to/method-pack-draft.json
+python scripts/method_pack.py apply path/to/method-pack-draft.json
+```
+
+Or edit the source MD/JSON files directly and run `python scripts/method_pack.py build`. Rebuilding derives schemas, request options, UI catalogs, prompt/codebook downloads and integration schemas from the edited source. Generators no longer overwrite these source definitions from Python literals. Extraction/relabeling receive the definition guide as model input with its hash.
+
+The validator rejects unknown file paths, missing definitions, duplicate IDs, invalid topic mappings and unsupported operation shapes. Applying archives a package and rebuilds local assets, rolling source files back on failure. Stop workers during local application. This is not a live multi-user deployment/activation service. Production needs immutable method versions and one atomically selected method ID per run; old releases always retain old component hashes and archived sources.
+
+Change stable IDs deliberately, increment affected versions, and maintain a migration/deprecation map if old IDs are retired. Prompt wording, label options and mappings are configuration. New task types, output field structures, providers, authorization rules and executable stages require implementation. Structurally valid configuration can still reduce analytical accuracy: evaluate representative multilingual sources and synthetic cases before treating a method revision as production-ready.
+
+The [worked customization guide](CUSTOMIZATION.md) is the current editing reference. Drafts disappear on reload unless downloaded; apply rejects stale original-file fingerprints. Supported operation shapes are checked against developer-owned `schemas/method-protocol.json`, including for direct source edits. Topic-only CSV export/import creates validated JSON drafts; nested method/evidence structures remain JSON. Some pipeline/translation settings describe future workers rather than active execution controls. The [review](METHOD_REVIEW.md) identifies these boundaries.
+
+## Current verification and remaining work
+
+Country and optional execution, checkpoint/resume, separate task history, version reading/pinning, bilingual reading and exports are connected and verified with fake providers. Registered documents are required; pending uploads must still be inventoried. Conditional OCR requires installed local engines and visual approval. Real-model source attribution, extraction recall, translation, table handling and comparison quality remain to be evaluated. See the [complete audit](../design/verification/workflow-audit.md) and [concrete evaluation plan](../evals/workflow-live-evaluation.md). No real country was generated during software checks.

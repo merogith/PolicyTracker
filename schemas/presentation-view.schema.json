@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker browser presentation view v1 (not a model output)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "profileId",
+    "codebook",
+    "perspective",
+    "filters",
+    "sort",
+    "group",
+    "columns",
+    "sections",
+    "name"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "profileId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "codebook": {
+      "type": "object",
+      "required": [
+        "taxonomy",
+        "vocabulary",
+        "guide"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "taxonomy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "vocabulary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "guide": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "perspective": {
+      "enum": [
+        "summary",
+        "targets",
+        "risk",
+        "delivery"
+      ]
+    },
+    "sort": {
+      "enum": [
+        "source",
+        "label",
+        "kind",
+        "period"
+      ]
+    },
+    "group": {
+      "enum": [
+        "none",
+        "domain",
+        "kind",
+        "source"
+      ]
+    },
+    "columns": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "contains": {
+        "const": "statement"
+      },
+      "items": {
+        "enum": [
+          "statement",
+          "kind",
+          "topics",
+          "objectives",
+          "targets",
+          "risk",
+          "actors",
+          "finance",
+          "monitoring",
+          "sources"
+        ]
+      }
+    },
+    "sections": {
+      "type": "object",
+      "required": [
+        "visuals",
+        "priorities",
+        "questions"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "visuals": {
+          "type": "boolean"
+        },
+        "priorities": {
+          "type": "boolean"
+        },
+        "questions": {
+          "type": "boolean"
+        }
+      }
+    },
+    "filters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "domain": {
+          "$ref": "#/$defs/selection"
+        },
+        "topic": {
+          "$ref": "#/$defs/selection"
+        },
+        "objectives": {
+          "$ref": "#/$defs/selection"
+        },
+        "kind": {
+          "$ref": "#/$defs/selection"
+        },
+        "assertion_kind": {
+          "$ref": "#/$defs/selection"
+        },
+        "documentation_status": {
+          "$ref": "#/$defs/selection"
+        },
+        "hazards": {
+          "$ref": "#/$defs/selection"
+        },
+        "risk_components": {
+          "$ref": "#/$defs/selection"
+        },
+        "drr_phases": {
+          "$ref": "#/$defs/selection"
+        },
+        "resilience_functions": {
+          "$ref": "#/$defs/selection"
+        },
+        "population_groups": {
+          "$ref": "#/$defs/selection"
+        },
+        "cross_cutting_tags": {
+          "$ref": "#/$defs/selection"
+        },
+        "policy_instruments": {
+          "$ref": "#/$defs/selection"
+        },
+        "source": {
+          "$ref": "#/$defs/selection"
+        },
+        "actor": {
+          "$ref": "#/$defs/selection"
+        },
+        "conditionality": {
+          "$ref": "#/$defs/selection"
+        },
+        "period": {
+          "$ref": "#/$defs/selection"
+        },
+        "missing": {
+          "$ref": "#/$defs/selection"
+        },
+        "geography": {
+          "$ref": "#/$defs/selection"
+        },
+        "risk_functions": {
+          "$ref": "#/$defs/selection"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "selection": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

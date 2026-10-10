@@ -1,0 +1,385 @@
+{
+  "version": "1.0.0",
+  "status": "proposed_not_benchmarked",
+  "provenance": "IDs and topic names from supplied design v1.1 pp. 7-9. Definitions condensed; routing rules are proposed engineering guidance. Referenced companion JSON was not supplied.",
+  "cross_cutting_tags": [
+    "gender",
+    "youth",
+    "children",
+    "disability",
+    "older_people",
+    "just_transition",
+    "livelihoods",
+    "capacity",
+    "finance",
+    "technology",
+    "data",
+    "transboundary",
+    "hazards"
+  ],
+  "topics": [
+    {
+      "id": "CLM-01",
+      "name": "Climate planning and governance",
+      "domains": [
+        "Climate"
+      ],
+      "definition": "Strategies, plans, laws, institutional coordination and mainstreaming.",
+      "routing_rule": "A finance mechanism also needs CLM-02; do not tag all climate text here."
+    },
+    {
+      "id": "CLM-02",
+      "name": "Climate finance and support",
+      "domains": [
+        "Climate"
+      ],
+      "definition": "Funding mechanisms, investment planning, budget integration, insurance and international support.",
+      "routing_rule": "A funding source alone does not establish conditionality."
+    },
+    {
+      "id": "CLM-03",
+      "name": "Climate information and risk assessment",
+      "domains": [
+        "Climate"
+      ],
+      "definition": "Observations, scenarios, vulnerability assessments, risk maps and climate services.",
+      "routing_rule": "Use CLM-04 for operational warnings and preparedness."
+    },
+    {
+      "id": "CLM-04",
+      "name": "Early warning and disaster preparedness",
+      "domains": [
+        "Climate"
+      ],
+      "definition": "Warnings, emergency planning, evacuation, civil protection and disaster readiness.",
+      "routing_rule": "Do not infer operational warning capacity from a risk study."
+    },
+    {
+      "id": "CLM-05",
+      "name": "Climate monitoring and reporting",
+      "domains": [
+        "Climate"
+      ],
+      "definition": "GHG inventories, transparency, adaptation indicators, evaluation and reporting.",
+      "routing_rule": "An expected monitoring indicator is not evidence of a result."
+    },
+    {
+      "id": "CLM-06",
+      "name": "Economy-wide emissions targets",
+      "domains": [
+        "Climate"
+      ],
+      "definition": "National emissions ceilings, reduction pledges, net-zero and economy-wide intensity targets.",
+      "routing_rule": "Sectoral targets use the relevant sector topic; keep EU-wide scope explicit."
+    },
+    {
+      "id": "CLM-07",
+      "name": "Land carbon and removals",
+      "domains": [
+        "Climate"
+      ],
+      "definition": "Sequestration, land-use emissions/removals, forest carbon and LULUCF accounting.",
+      "routing_rule": "Carbon-sink wording alone does not establish biodiversity benefits."
+    },
+    {
+      "id": "ENE-01",
+      "name": "Renewable electricity",
+      "domains": [
+        "Energy"
+      ],
+      "definition": "Solar, wind, hydropower and other renewable electricity, including distributed generation.",
+      "routing_rule": "Rooftop PV alone does not imply an Urban label."
+    },
+    {
+      "id": "ENE-02",
+      "name": "Grids and energy storage",
+      "domains": [
+        "Energy"
+      ],
+      "definition": "Transmission, distribution, interconnection, flexibility, storage and network resilience.",
+      "routing_rule": "A generating plant without grid measures belongs to ENE-01 or ENE-05."
+    },
+    {
+      "id": "ENE-03",
+      "name": "Clean heating and fuels",
+      "domains": [
+        "Energy"
+      ],
+      "definition": "District heating, heat pumps, renewable heat and lower-emission fuel switching.",
+      "routing_rule": "Vehicle fuel measures use TRN-01; building retrofit packages may also use URB-01."
+    },
+    {
+      "id": "ENE-04",
+      "name": "Energy efficiency and demand management",
+      "domains": [
+        "Energy"
+      ],
+      "definition": "Energy audits, performance standards, efficient equipment and demand management.",
+      "routing_rule": "Prefer a more specific building, industrial or transport topic when applicable."
+    },
+    {
+      "id": "ENE-05",
+      "name": "Fossil energy transition",
+      "domains": [
+        "Energy"
+      ],
+      "definition": "Coal/oil/gas transition, fossil asset retirement, subsidy reform and supply changes.",
+      "routing_rule": "Do not infer transition success from a plan or fuel switch."
+    },
+    {
+      "id": "ENE-06",
+      "name": "Oil and gas methane",
+      "domains": [
+        "Energy"
+      ],
+      "definition": "Fugitive emissions, leaks, venting and flaring across oil/gas supply.",
+      "routing_rule": "Landfill methane uses WST-02; agricultural methane uses AGR-03."
+    },
+    {
+      "id": "AGR-01",
+      "name": "Irrigation efficiency",
+      "domains": [
+        "Agriculture",
+        "Water"
+      ],
+      "definition": "Agricultural water delivery, irrigation modernization and water-saving technologies.",
+      "routing_rule": "Municipal water supply uses WAT-01; solar irrigation may also use ENE-01."
+    },
+    {
+      "id": "AGR-02",
+      "name": "Resilient crops and soils",
+      "domains": [
+        "Agriculture"
+      ],
+      "definition": "Crop varieties, soil health, erosion control, land management and resilient farming.",
+      "routing_rule": "Forest management uses BIO-01; record explicit carbon accounting under CLM-07."
+    },
+    {
+      "id": "AGR-03",
+      "name": "Livestock and manure",
+      "domains": [
+        "Agriculture"
+      ],
+      "definition": "Animal health/resilience, feed, manure and agricultural methane/nitrous oxide measures.",
+      "routing_rule": "Human health uses HEA topics."
+    },
+    {
+      "id": "AGR-04",
+      "name": "Food systems and farm livelihoods",
+      "domains": [
+        "Agriculture"
+      ],
+      "definition": "Food security, agricultural advice, storage, value chains and farm livelihoods.",
+      "routing_rule": "Food-waste disposal can also use WST-01 when a distinct measure is stated."
+    },
+    {
+      "id": "WAT-01",
+      "name": "Water supply and groundwater",
+      "domains": [
+        "Water"
+      ],
+      "definition": "Water availability, abstraction, groundwater, drinking water, storage and network losses.",
+      "routing_rule": "Farm irrigation uses AGR-01; sanitation uses WST-03."
+    },
+    {
+      "id": "WAT-02",
+      "name": "River basins and drought management",
+      "domains": [
+        "Water"
+      ],
+      "definition": "Basin management, allocation, drought planning, environmental flows and shared waters.",
+      "routing_rule": "Flood defenses use WAT-03; warnings may also use CLM-04."
+    },
+    {
+      "id": "WAT-03",
+      "name": "Flood and coastal protection",
+      "domains": [
+        "Water"
+      ],
+      "definition": "River/coastal flood risk, defenses, erosion and sea-level adaptation.",
+      "routing_rule": "General settlement planning may additionally use URB-02."
+    },
+    {
+      "id": "WAT-04",
+      "name": "Water quality and reuse",
+      "domains": [
+        "Water"
+      ],
+      "definition": "Surface-water quality, pollution prevention, safe reuse and receiving-water protection.",
+      "routing_rule": "Wastewater treatment systems use WST-03; keep both if both purposes are explicit."
+    },
+    {
+      "id": "BIO-01",
+      "name": "Forest health and management",
+      "domains": [
+        "Biodiversity"
+      ],
+      "definition": "Forest condition, sustainable management, wildfire/pest control and forest resilience.",
+      "routing_rule": "Carbon-only forest targets use CLM-07 without an inferred biodiversity claim."
+    },
+    {
+      "id": "BIO-02",
+      "name": "Species, habitats and protected areas",
+      "domains": [
+        "Biodiversity"
+      ],
+      "definition": "Species conservation, habitats, connectivity and terrestrial/aquatic protected areas.",
+      "routing_rule": "Active ecosystem restoration uses BIO-03."
+    },
+    {
+      "id": "BIO-03",
+      "name": "Ecosystem restoration",
+      "domains": [
+        "Biodiversity"
+      ],
+      "definition": "Restoration of forests, wetlands, peatlands and ecosystems, including ecosystem adaptation.",
+      "routing_rule": "Record carbon or adaptation co-benefits only with evidence."
+    },
+    {
+      "id": "HEA-01",
+      "name": "Heat and human health",
+      "domains": [
+        "Health"
+      ],
+      "definition": "Heat-health plans, cooling access, exposure and vulnerable-group protection.",
+      "routing_rule": "Urban greening uses URB-03 when the physical intervention is stated."
+    },
+    {
+      "id": "HEA-02",
+      "name": "Climate-sensitive disease and exposure",
+      "domains": [
+        "Health"
+      ],
+      "definition": "Infectious disease, water/vector-borne illness, air-quality exposure and surveillance.",
+      "routing_rule": "Do not assume health outcomes from emissions reductions alone."
+    },
+    {
+      "id": "HEA-03",
+      "name": "Resilient health services",
+      "domains": [
+        "Health"
+      ],
+      "definition": "Health facilities, service delivery, emergency capacity, staffing and essential supplies.",
+      "routing_rule": "General civil protection uses CLM-04."
+    },
+    {
+      "id": "URB-01",
+      "name": "Building energy performance",
+      "domains": [
+        "Urban",
+        "Energy"
+      ],
+      "definition": "Building insulation, retrofits, performance codes, passive design and energy-saving systems.",
+      "routing_rule": "Urban is a taxonomy domain here, not proof of urban geographic scope."
+    },
+    {
+      "id": "URB-02",
+      "name": "Resilient settlements and infrastructure",
+      "domains": [
+        "Urban"
+      ],
+      "definition": "Spatial planning, building safety, urban drainage and local infrastructure resilience.",
+      "routing_rule": "Sector-specific transport or energy networks use their specific topics."
+    },
+    {
+      "id": "URB-03",
+      "name": "Urban cooling and green spaces",
+      "domains": [
+        "Urban"
+      ],
+      "definition": "Trees, green/blue spaces, shading and cooling-oriented public-space design.",
+      "routing_rule": "General forest restoration uses BIO-03; health links require explicit evidence."
+    },
+    {
+      "id": "WST-01",
+      "name": "Materials, recycling and circularity",
+      "domains": [
+        "Waste"
+      ],
+      "definition": "Prevention, separate collection, recycling, composting, food waste and circular material use.",
+      "routing_rule": "Landfill gas uses WST-02; industrial production measures may use IND-01."
+    },
+    {
+      "id": "WST-02",
+      "name": "Solid-waste disposal and methane",
+      "domains": [
+        "Waste"
+      ],
+      "definition": "Landfill management/emissions, gas capture and disposal-facility resilience.",
+      "routing_rule": "Oil/gas methane uses ENE-06."
+    },
+    {
+      "id": "WST-03",
+      "name": "Wastewater and sanitation",
+      "domains": [
+        "Waste",
+        "Water"
+      ],
+      "definition": "Sewage, wastewater treatment, sanitation, sludge and associated emissions/resilience.",
+      "routing_rule": "Receiving-water quality/reuse measures may also use WAT-04."
+    },
+    {
+      "id": "TRN-01",
+      "name": "Low-emission vehicles and fuels",
+      "domains": [
+        "Transport"
+      ],
+      "definition": "Electrification, charging, cleaner transport fuels and vehicle standards.",
+      "routing_rule": "Public transport service improvements use TRN-02 where relevant."
+    },
+    {
+      "id": "TRN-02",
+      "name": "Public, active and shared mobility",
+      "domains": [
+        "Transport"
+      ],
+      "definition": "Public transport, rail shift, walking, cycling and reduced private-car dependence.",
+      "routing_rule": "Transport hazard resilience uses TRN-03."
+    },
+    {
+      "id": "TRN-03",
+      "name": "Resilient transport networks",
+      "domains": [
+        "Transport"
+      ],
+      "definition": "Protection/adaptation of roads, railways, ports, airports and logistics.",
+      "routing_rule": "Emissions measures use TRN-01 or TRN-02."
+    },
+    {
+      "id": "IND-01",
+      "name": "Cleaner production and industrial efficiency",
+      "domains": [
+        "Industry"
+      ],
+      "definition": "Industrial energy/material efficiency, production technology, modernization and factory resilience.",
+      "routing_rule": "Process gases/refrigerants use IND-02."
+    },
+    {
+      "id": "IND-02",
+      "name": "Process emissions and refrigerants",
+      "domains": [
+        "Industry"
+      ],
+      "definition": "Industrial process emissions, cement/chemicals, fluorinated gases and refrigerants.",
+      "routing_rule": "Generic factory energy efficiency uses IND-01."
+    },
+    {
+      "id": "TOU-01",
+      "name": "Tourism adaptation and destination resilience",
+      "domains": [
+        "Tourism"
+      ],
+      "definition": "Destination risks, changing seasons, diversification and resilient visitor infrastructure.",
+      "routing_rule": "Only use Tourism when the sector is explicit."
+    },
+    {
+      "id": "TOU-02",
+      "name": "Tourism resource efficiency",
+      "domains": [
+        "Tourism"
+      ],
+      "definition": "Tourism-specific water, energy, waste and sustainable visitor/accommodation measures.",
+      "routing_rule": "Keep sector topics too where the source explicitly describes the intervention."
+    }
+  ]
+}

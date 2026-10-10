@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker source-segment method 3.0.0",
+  "type": "object",
+  "properties": {
+    "segment_id": {
+      "type": "string"
+    },
+    "document_version_id": {
+      "type": "string"
+    },
+    "source_sha256": {
+      "type": "string"
+    },
+    "parser_fingerprint": {
+      "type": "string"
+    },
+    "physical_page": {
+      "type": "integer"
+    },
+    "printed_page": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "prose",
+        "table",
+        "figure",
+        "footnote",
+        "metadata",
+        "unreadable"
+      ]
+    },
+    "language": {
+      "type": "string"
+    },
+    "original_text": {
+      "type": "string"
+    },
+    "headings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_context_segment_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "bbox": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "x0": {
+              "type": "number"
+            },
+            "y0": {
+              "type": "number"
+            },
+            "x1": {
+              "type": "number"
+            },
+            "y1": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x0",
+            "y0",
+            "x1",
+            "y1"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "segment_id",
+    "document_version_id",
+    "source_sha256",
+    "parser_fingerprint",
+    "physical_page",
+    "printed_page",
+    "kind",
+    "language",
+    "original_text",
+    "headings",
+    "required_context_segment_ids",
+    "bbox",
+    "quality_flags"
+  ],
+  "additionalProperties": false
+}

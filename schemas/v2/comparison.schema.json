@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker comparison method 3.0.0",
+  "type": "object",
+  "properties": {
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "document_version_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "release_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scope_note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "group_id",
+          "label",
+          "document_version_ids",
+          "release_ids",
+          "scope_note"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "type": "string"
+          },
+          "cells": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "group_id": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string",
+                  "enum": [
+                    "found",
+                    "not_found_in_scope",
+                    "not_applicable",
+                    "not_processed"
+                  ]
+                },
+                "findings": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "text_en": {
+                        "type": "string"
+                      },
+                      "kind": {
+                        "type": "string",
+                        "enum": [
+                          "source_fact",
+                          "source_reported_observation",
+                          "derived",
+                          "analyst_suggestion"
+                        ]
+                      },
+                      "citations": {
+                        "type": "object",
+                        "properties": {
+                          "evidence_ids": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "record_ids": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "required": [
+                          "evidence_ids",
+                          "record_ids"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "calculation": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "required": [
+                      "text_en",
+                      "kind",
+                      "citations",
+                      "calculation",
+                      "limitations"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "group_id",
+                "state",
+                "findings"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "comparability": {
+            "type": "string",
+            "enum": [
+              "comparable",
+              "partially_comparable",
+              "not_comparable",
+              "descriptive_only"
+            ]
+          },
+          "comparability_reason": {
+            "type": "string"
+          },
+          "normalization_calculation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "dimension",
+          "cells",
+          "comparability",
+          "comparability_reason",
+          "normalization_calculation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "synthesis": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text_en": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "source_fact",
+              "source_reported_observation",
+              "derived",
+              "analyst_suggestion"
+            ]
+          },
+          "citations": {
+            "type": "object",
+            "properties": {
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "evidence_ids",
+              "record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "calculation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "text_en",
+          "kind",
+          "citations",
+          "calculation",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "groups",
+    "rows",
+    "synthesis",
+    "exclusions",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

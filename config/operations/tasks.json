@@ -1,0 +1,247 @@
+{
+  "version": "2.0.0",
+  "shared_required_fields": [
+    "country",
+    "source_version",
+    "original_evidence",
+    "english_evidence",
+    "conditionality",
+    "coverage_limitations"
+  ],
+  "tasks": [
+    {
+      "id": "extract",
+      "label": "Extract evidence",
+      "description": "A complete table of relevant commitments and risk information.",
+      "route": "focused_analysis",
+      "artifact": "evidence_table",
+      "options": [
+        {
+          "id": "targets",
+          "label": "Targets, dates and baselines",
+          "effect": "Include structured target variants; unknown baselines remain empty.",
+          "default": true
+        },
+        {
+          "id": "risk_context",
+          "label": "Hazards, vulnerability and exposure",
+          "effect": "Include linked risk-context records, not only commitments.",
+          "default": true
+        },
+        {
+          "id": "actors",
+          "label": "Responsible institutions",
+          "effect": "Include source-stated actor roles and unassigned responsibilities.",
+          "default": true
+        },
+        {
+          "id": "finance",
+          "label": "Finance and support needs",
+          "effect": "Include costs, financing conditions and stated capacity/technology needs.",
+          "default": true
+        },
+        {
+          "id": "indicators",
+          "label": "Indicators and monitoring",
+          "effect": "Include source-stated indicators, data sources and reporting arrangements.",
+          "default": false
+        }
+      ],
+      "minimum_documents": 1,
+      "allows_filters": true,
+      "requires_question": false,
+      "pipeline": "evidence",
+      "supplement": "prompts/operations/extract.md",
+      "requirements": "One or more documents. Multiple documents are processed together with country/source attribution preserved."
+    },
+    {
+      "id": "compare",
+      "label": "Compare policies",
+      "description": "Compare selected themes across countries, policy editions or document groups.",
+      "route": "comparison",
+      "artifact": "comparison_matrix",
+      "options": [
+        {
+          "id": "targets",
+          "label": "Targets and conditions",
+          "effect": "Compare only compatible baselines/units/scenarios; explain exclusions.",
+          "default": true
+        },
+        {
+          "id": "risk_context",
+          "label": "Risk and DRR coverage",
+          "effect": "Compare documented hazard, vulnerability and risk-function coverage.",
+          "default": true
+        },
+        {
+          "id": "actors",
+          "label": "Institutions and coordination",
+          "effect": "Compare responsibilities and coordination arrangements.",
+          "default": false
+        },
+        {
+          "id": "finance",
+          "label": "Finance and support",
+          "effect": "Compare stated resources, conditions and support needs without invented funding gaps.",
+          "default": true
+        },
+        {
+          "id": "indicators",
+          "label": "Monitoring provisions",
+          "effect": "Compare indicators and reporting arrangements; missing means not found in selected sources.",
+          "default": false
+        }
+      ],
+      "minimum_documents": 2,
+      "allows_filters": true,
+      "requires_question": false,
+      "pipeline": "evidence",
+      "supplement": "prompts/operations/compare.md",
+      "requirements": "Two or more distinct policy editions in comparable groups."
+    },
+    {
+      "id": "gaps",
+      "label": "Check implementation information",
+      "description": "Identify stated needs and missing implementation information.",
+      "route": "workplan",
+      "artifact": "delivery_gap_table",
+      "options": [
+        {
+          "id": "actors",
+          "label": "Missing lead or responsibility",
+          "effect": "Flag commitments without a source-stated lead in the chosen scope.",
+          "default": true
+        },
+        {
+          "id": "finance",
+          "label": "Finance and capacity needs",
+          "effect": "Separate explicitly stated needs from missing budget/finance information.",
+          "default": true
+        },
+        {
+          "id": "indicators",
+          "label": "Missing indicator or baseline",
+          "effect": "Flag absent measurement information; do not infer implementation failure.",
+          "default": true
+        },
+        {
+          "id": "targets",
+          "label": "Missing deadline or milestone",
+          "effect": "Flag absent timeframes while retaining qualitative commitments.",
+          "default": true
+        }
+      ],
+      "minimum_documents": 1,
+      "allows_filters": true,
+      "requires_question": false,
+      "pipeline": "evidence",
+      "supplement": "prompts/operations/gaps.md",
+      "requirements": "One or more documents. Multiple documents are processed together with country/source attribution preserved."
+    },
+    {
+      "id": "brief",
+      "label": "Prepare a brief",
+      "description": "A short answer to a policy question, with an evidence annex.",
+      "route": "briefing",
+      "artifact": "decision_brief",
+      "options": [
+        {
+          "id": "targets",
+          "label": "Key commitments and deadlines",
+          "effect": "Include a cited commitments section retaining conditions.",
+          "default": true
+        },
+        {
+          "id": "risk_context",
+          "label": "Risk and resilience context",
+          "effect": "Include documented hazard, vulnerability and resilience context.",
+          "default": true
+        },
+        {
+          "id": "finance",
+          "label": "Delivery constraints and support",
+          "effect": "Include source-stated constraints, institutions and support needs.",
+          "default": true
+        },
+        {
+          "id": "questions",
+          "label": "Questions for follow-up",
+          "effect": "Add analyst-drafted questions grounded in gaps, visibly separate from policy statements.",
+          "default": false
+        }
+      ],
+      "minimum_documents": 1,
+      "allows_filters": true,
+      "requires_question": true,
+      "pipeline": "evidence",
+      "supplement": "prompts/operations/brief.md",
+      "requirements": "One or more documents. Multiple documents are processed together with country/source attribution preserved."
+    },
+    {
+      "id": "translate",
+      "label": "Translate documents",
+      "description": "Save a complete English reading copy with aligned original text for every document.",
+      "route": "translate",
+      "artifact": "bilingual_documents",
+      "options": [],
+      "minimum_documents": 1,
+      "allows_filters": false,
+      "requires_question": false,
+      "pipeline": "translation",
+      "supplement": "prompts/operations/translate.md",
+      "requirements": "One or more documents. Full text is retained; this task does not summarize or extract policy evidence."
+    }
+  ],
+  "comparison_modes": [
+    {
+      "id": "documents",
+      "label": "Documents",
+      "help": "One column per selected document. Use this for two or more documents from one or several countries. Verified translations of one edition are not independent policies.",
+      "grouping": "document",
+      "min_groups": 2
+    },
+    {
+      "id": "countries",
+      "label": "Countries",
+      "help": "One column per country, combining its selected documents. Requires at least two countries.",
+      "grouping": "country",
+      "min_groups": 2
+    },
+    {
+      "id": "revision",
+      "label": "Earlier and later editions",
+      "help": "Exactly two edition groups from one country and instrument. Assign older and newer documents; edition order is checked before execution.",
+      "grouping": "manual",
+      "min_groups": 2,
+      "max_groups": 2,
+      "labels": [
+        "Earlier edition",
+        "Later edition"
+      ]
+    },
+    {
+      "id": "ndc_nap",
+      "label": "NDC and NAP",
+      "help": "Two groups from one country: at least one NDC and one NAP. Tests policy coherence rather than national performance.",
+      "grouping": "instrument",
+      "min_groups": 2,
+      "max_groups": 2,
+      "labels": [
+        "NDC",
+        "NAP"
+      ]
+    },
+    {
+      "id": "custom",
+      "label": "Custom groups",
+      "help": "Two or more named document groups. Assign every selected document exactly once.",
+      "grouping": "manual",
+      "min_groups": 2,
+      "labels": [
+        "Group A",
+        "Group B"
+      ]
+    }
+  ],
+  "filter_rule": "AND across sector, topic, hazard and risk and resilience function; OR within a dimension. Apply the same thematic scope to every comparison group. Keep missing-in-scope cells visible."
+}

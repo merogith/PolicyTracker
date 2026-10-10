@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "dashboard v1.0.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "review_state": {
+      "type": "string"
+    },
+    "overview": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "statement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "epistemic_status": {
+            "type": "string",
+            "enum": [
+              "source_statement",
+              "derived",
+              "analyst_inference"
+            ]
+          }
+        },
+        "required": [
+          "text",
+          "evidence_ids",
+          "statement_ids",
+          "epistemic_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "policy_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "commitment_id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "target_display": {
+            "type": "string"
+          },
+          "topic_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "domains": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "objectives": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "documentation_status": {
+            "type": "string"
+          },
+          "performance_status": {
+            "type": "string",
+            "enum": [
+              "not_assessed",
+              "insufficient_evidence",
+              "on_track",
+              "off_track",
+              "wrong_direction",
+              "achieved"
+            ]
+          },
+          "performance_assessment_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "conditionality": {
+            "type": "string"
+          },
+          "deadline": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "commitment_id",
+          "label",
+          "target_display",
+          "topic_ids",
+          "domains",
+          "objectives",
+          "documentation_status",
+          "performance_status",
+          "performance_assessment_id",
+          "conditionality",
+          "deadline",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "source_coverage_note": {
+      "type": "string"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "release_id",
+    "country_code",
+    "review_state",
+    "overview",
+    "policy_rows",
+    "source_coverage_note",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

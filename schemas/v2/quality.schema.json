@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker quality method 3.0.0",
+  "type": "object",
+  "properties": {
+    "check_scope": {
+      "type": "string",
+      "enum": [
+        "extraction_source_coverage",
+        "reconciliation",
+        "report_claims",
+        "translation"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "major",
+              "minor"
+            ]
+          },
+          "entity_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "field_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "issue": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "repair",
+              "qualify",
+              "omit_unsupported_claim",
+              "retain_separate_variants",
+              "record_limitation"
+            ]
+          },
+          "correction": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "severity",
+          "entity_id",
+          "field_path",
+          "issue",
+          "evidence_ids",
+          "disposition",
+          "correction"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coverage_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proposed_result": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "repair",
+        "incomplete"
+      ]
+    }
+  },
+  "required": [
+    "check_scope",
+    "findings",
+    "coverage_gaps",
+    "proposed_result"
+  ],
+  "additionalProperties": false
+}

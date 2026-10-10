@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Regional Policy Tracker</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="regional.css"><link rel="stylesheet" href="ai.css"><link rel="stylesheet" href="generation.css"><link rel="stylesheet" href="reports.css"></head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">P</span><div>PolicyTracker<small>Regional policy evidence</small></div></div>
+      <button disabled data-startup id="navigation-toggle" aria-expanded="false" aria-controls="workspace-navigation">Menu</button><div id="workspace-navigation"><div class="workspace-label">Europe & Central Asia</div>
+      <nav aria-label="Main"><button disabled data-startup data-nav="regional">Regional picture</button><button disabled data-startup data-nav="library">Documents & translations</button><button disabled data-startup data-nav="reports">Reports & analysis <span id="report-count" hidden>0</span></button></nav>
+      <details class="utility-nav"><summary>Guides & settings</summary><nav aria-label="Utilities"><button disabled data-startup data-nav="help">Help & getting started</button><button disabled data-startup data-nav="methodology">Method & prompts</button><button disabled data-startup data-nav="knowledge">Knowledge & labels</button><button disabled data-startup data-nav="configuration">Method & output settings</button><button disabled data-startup data-nav="ai">AI connection</button><button disabled data-startup data-nav="integrations">Integrations</button></nav></details>
+      </div><div class="nav-bottom"><div class="member"><span class="avatar">IRH</span><div>Regional team<small>Climate & disaster resilience</small></div></div></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div id="breadcrumb">Regional tracker</div><div class="top-actions"><button disabled data-startup data-header-new>Create analysis</button><button disabled data-startup class="ai-header-button" id="ai-connection-link">Connect AI</button><button disabled data-startup id="generation-plan" hidden>How to generate</button></div></header>
+      <main id="main" tabindex="-1" aria-busy="true"><p role="status">Loading countries and saved work…</p></main>
+      <footer>Local workspace · Europe & Central Asia</footer>
+    </div>
+  </div>
+  <dialog id="detail-dialog" class="wide-dialog" aria-labelledby="detail-title"><div class="dialog-head"><h2 id="detail-title"></h2><button class="icon-button" data-close="detail-dialog" aria-label="Close details">×</button></div><div class="dialog-body" id="detail-body"></div></dialog>
+  <dialog id="evidence-dialog" class="drawer" aria-labelledby="evidence-title"><div class="dialog-head"><div><div class="eyebrow">SYNTHETIC EVIDENCE</div><h2 id="evidence-title">Flood early-warning systems</h2></div><button class="icon-button" data-close="evidence-dialog" aria-label="Close evidence">×</button></div><div class="dialog-body"><p class="sample-tag">Interface example · not a national policy finding</p><div class="bilingual"><section><h3>English <span class="mini">Machine translation</span></h3><p id="english-quote"></p></section><section><h3>Original <span class="mini">Russian</span></h3><p id="original-quote" lang="ru" dir="auto"></p></section></div><p class="callout">This invented commitment is conditional on international financing. No baseline or implementation evidence is supplied.</p></div></dialog>
+  <div id="toast" role="status" hidden></div>
+  <script type="module" src="app.js"></script>
+</body></html>

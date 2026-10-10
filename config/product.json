@@ -1,0 +1,65 @@
+{
+  "version": "1.2.0",
+  "product_name": "Regional Policy Tracker",
+  "mvp_deliverable": "Automatically generated and maintained Country Profiles for the 18-country region, derived from the curated NDC/NAP corpus",
+  "primary_layer": {
+    "name": "Regional tracker",
+    "country_artifact_name": "Country Profile",
+    "selected_release_name": "Published version",
+    "profile_sections": [
+      "brief",
+      "commitments"
+    ],
+    "published_versions_per_country": 1,
+    "full_profile_versions_are_immutable": true,
+    "profile_sections_have_independent_pointers": false,
+    "default_selection": "latest_successful",
+    "pin_behavior": "Keep selected version until reassigned or unpinned",
+    "publication": "Automatic after trusted automated checks; optional manual audit",
+    "source_policy": "Curated NDCs, NAPs and verified eligible annexes",
+    "initial_execution": "One resumable batch with independent country jobs",
+    "refresh_trigger": "Explicit country update after a new registered NDC/NAP version; no routine periodic regeneration",
+    "supporting_utilities": [
+      "documents",
+      "history",
+      "methodology"
+    ],
+    "view_contract": "config/methodology.json",
+    "optional_country_actions": [
+      "compare",
+      "translate"
+    ]
+  },
+  "secondary_layer": {
+    "name": "Analysis tools",
+    "tasks": [
+      "extract",
+      "compare",
+      "gaps",
+      "brief",
+      "translate"
+    ],
+    "required_for_mvp_acceptance": false,
+    "history": "Separate user analyses",
+    "may_change_published_country_profile": false
+  },
+  "compatibility": {
+    "prime": "Internal term for a shared country release and selection policy; user-facing term is Country Profile / Published version",
+    "ad_hoc": "Internal term for optional Analysis tools outputs",
+    "rename_wire_keys_in_this_revision": false,
+    "former_navigation_views": {
+      "risk": "commitments",
+      "delivery": "commitments",
+      "english": "documents",
+      "changes": "optional_compare"
+    }
+  },
+  "current_readiness": {
+    "country_entries": 18,
+    "supplied_documents": 42,
+    "countries_with_sources": 17,
+    "country_profiles_generated": 0,
+    "country_without_sources": "XKX",
+    "production_generation_service": "not_implemented"
+  }
+}

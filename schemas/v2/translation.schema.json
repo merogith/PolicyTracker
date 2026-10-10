@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker translation method 3.0.0",
+  "type": "object",
+  "properties": {
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "segment_id": {
+            "type": "string"
+          },
+          "source_language": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "identity",
+              "official_parallel",
+              "machine_translation"
+            ]
+          },
+          "official_parallel_segment_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "english_text": {
+            "type": "string"
+          },
+          "term_decisions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "original": {
+                  "type": "string"
+                },
+                "english": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "original",
+                "english",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Advisory scope and source qualifications preserved for readers; not unresolved translation defects."
+          },
+          "quality_flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Unresolved fidelity or coverage defects within the owned source text. Nonempty flags block acceptance; never clear them merely to pass validation."
+          }
+        },
+        "required": [
+          "segment_id",
+          "source_language",
+          "method",
+          "official_parallel_segment_id",
+          "english_text",
+          "term_decisions",
+          "notes",
+          "quality_flags"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "segments"
+  ],
+  "additionalProperties": false
+}

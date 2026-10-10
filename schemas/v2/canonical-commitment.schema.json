@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyTracker canonical-commitment method 3.0.0",
+  "type": "object",
+  "properties": {
+    "commitment_id": {
+      "type": "string"
+    },
+    "country_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reporting_party": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "domain_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "climate",
+          "energy",
+          "agriculture",
+          "water",
+          "biodiversity",
+          "health",
+          "urban",
+          "waste",
+          "transport",
+          "industry",
+          "tourism"
+        ]
+      }
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "variant_id": {
+            "type": "string"
+          },
+          "target_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "temporal_role": {
+            "type": "string",
+            "enum": [
+              "current",
+              "historical",
+              "superseded",
+              "parallel",
+              "unresolved"
+            ]
+          },
+          "relation_event_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "variant_id",
+          "target_ids",
+          "temporal_role",
+          "relation_event_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "identity_event_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "commitment_id",
+    "country_codes",
+    "reporting_party",
+    "record_ids",
+    "domain_ids",
+    "variants",
+    "aliases",
+    "identity_event_id"
+  ],
+  "additionalProperties": false
+}

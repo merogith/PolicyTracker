@@ -1,0 +1,336 @@
+{
+  "status": "Developer-owned compatibility constraints; changing this file requires code review and tests. Not editable through method packs.",
+  "routes": {
+    "triage": "triage",
+    "translate": "translation",
+    "extract": "extraction",
+    "relabel": "labels",
+    "reconcile": "reconciliation",
+    "quality": "quality",
+    "prime": "report",
+    "briefing": "report",
+    "focused_analysis": "report",
+    "comparison": "comparison",
+    "workplan": "workplan",
+    "chat": "chat"
+  },
+  "stages": [
+    {
+      "id": "register_parse",
+      "executor": "application",
+      "depends_on": [],
+      "output": "immutable_sources_segments_and_corpus"
+    },
+    {
+      "id": "triage",
+      "executor": "llm",
+      "route": "triage",
+      "depends_on": [
+        "register_parse"
+      ],
+      "output": "typed_metadata_proposals"
+    },
+    {
+      "id": "translate",
+      "executor": "application_or_llm",
+      "route": "translate",
+      "depends_on": [
+        "triage"
+      ],
+      "output": "complete_aligned_english_layer"
+    },
+    {
+      "id": "extract",
+      "executor": "llm",
+      "route": "extract",
+      "depends_on": [
+        "translate"
+      ],
+      "output": "evidence_records_and_coverage"
+    },
+    {
+      "id": "validate_extraction",
+      "executor": "application",
+      "depends_on": [
+        "extract"
+      ],
+      "output": "validated_records_or_bounded_repair"
+    },
+    {
+      "id": "reconcile",
+      "executor": "llm",
+      "route": "reconcile",
+      "depends_on": [
+        "validate_extraction"
+      ],
+      "output": "group_and_relation_proposals"
+    },
+    {
+      "id": "canonicalize",
+      "executor": "application",
+      "depends_on": [
+        "reconcile"
+      ],
+      "output": "stable_commitments_variants_and_identity_events"
+    },
+    {
+      "id": "challenge_sources",
+      "executor": "llm",
+      "route": "quality",
+      "depends_on": [
+        "canonicalize"
+      ],
+      "output": "omission_and_interpretation_findings"
+    },
+    {
+      "id": "resolve_findings",
+      "executor": "application",
+      "depends_on": [
+        "challenge_sources"
+      ],
+      "output": "repaired_or_qualified_evidence_snapshot"
+    },
+    {
+      "id": "feature_synthesis",
+      "executor": "selected_feature_route",
+      "depends_on": [
+        "resolve_findings"
+      ],
+      "output": "report_comparison_or_workplan"
+    },
+    {
+      "id": "challenge_report",
+      "executor": "llm",
+      "route": "quality",
+      "depends_on": [
+        "feature_synthesis"
+      ],
+      "output": "claim_support_findings"
+    },
+    {
+      "id": "bundle_validate",
+      "executor": "application",
+      "depends_on": [
+        "challenge_report"
+      ],
+      "output": "complete_bundle_and_internal_eligibility_receipt"
+    },
+    {
+      "id": "publish",
+      "executor": "application",
+      "depends_on": [
+        "bundle_validate"
+      ],
+      "output": "prime_history_and_optional_pointer_update_or_ad_hoc_history"
+    }
+  ],
+  "features": {
+    "prime": {
+      "route": "prime",
+      "history": "prime",
+      "source_policy": "curated_ndc_nap_and_eligible_annexes"
+    },
+    "briefing": {
+      "route": "briefing",
+      "history": "ad_hoc",
+      "source_policy": "authorized_selected_inputs"
+    },
+    "focused_analysis": {
+      "route": "focused_analysis",
+      "history": "ad_hoc",
+      "source_policy": "authorized_selected_inputs"
+    },
+    "comparison": {
+      "route": "comparison",
+      "history": "ad_hoc",
+      "source_policy": "authorized_explicit_groups"
+    },
+    "workplan": {
+      "route": "workplan",
+      "history": "ad_hoc",
+      "source_policy": "authorized_selected_inputs"
+    }
+  },
+  "tasks": {
+    "extract": {
+      "route": "focused_analysis",
+      "artifact": "evidence_table",
+      "pipeline": "evidence",
+      "minimum_documents": 1,
+      "allows_filters": true,
+      "requires_question": false,
+      "option_ids": [
+        "targets",
+        "risk_context",
+        "actors",
+        "finance",
+        "indicators"
+      ]
+    },
+    "compare": {
+      "route": "comparison",
+      "artifact": "comparison_matrix",
+      "pipeline": "evidence",
+      "minimum_documents": 2,
+      "allows_filters": true,
+      "requires_question": false,
+      "option_ids": [
+        "targets",
+        "risk_context",
+        "actors",
+        "finance",
+        "indicators"
+      ]
+    },
+    "gaps": {
+      "route": "workplan",
+      "artifact": "delivery_gap_table",
+      "pipeline": "evidence",
+      "minimum_documents": 1,
+      "allows_filters": true,
+      "requires_question": false,
+      "option_ids": [
+        "actors",
+        "finance",
+        "indicators",
+        "targets"
+      ]
+    },
+    "brief": {
+      "route": "briefing",
+      "artifact": "decision_brief",
+      "pipeline": "evidence",
+      "minimum_documents": 1,
+      "allows_filters": true,
+      "requires_question": true,
+      "option_ids": [
+        "targets",
+        "risk_context",
+        "finance",
+        "questions"
+      ]
+    },
+    "translate": {
+      "route": "translate",
+      "artifact": "bilingual_documents",
+      "pipeline": "translation",
+      "minimum_documents": 1,
+      "allows_filters": false,
+      "requires_question": false,
+      "option_ids": []
+    }
+  },
+  "comparison_modes": {
+    "documents": {
+      "id": "documents",
+      "grouping": "document",
+      "min_groups": 2
+    },
+    "countries": {
+      "id": "countries",
+      "grouping": "country",
+      "min_groups": 2
+    },
+    "revision": {
+      "id": "revision",
+      "grouping": "manual",
+      "min_groups": 2,
+      "max_groups": 2
+    },
+    "ndc_nap": {
+      "id": "ndc_nap",
+      "grouping": "instrument",
+      "min_groups": 2,
+      "max_groups": 2
+    },
+    "custom": {
+      "id": "custom",
+      "grouping": "manual",
+      "min_groups": 2
+    }
+  },
+  "shared_required_fields": [
+    "country",
+    "source_version",
+    "original_evidence",
+    "english_evidence",
+    "conditionality",
+    "coverage_limitations"
+  ],
+  "translation_invariants": {
+    "mandatory_languages": [
+      "original",
+      "en"
+    ],
+    "full_document": true,
+    "original_preserved": true,
+    "english_source_handling": "identity; preserve original English exactly",
+    "outputs": [
+      "source-original.pdf",
+      "original.txt",
+      "english.md",
+      "bilingual.html",
+      "alignment.json",
+      "manifest.json"
+    ]
+  },
+  "label_dimensions": [
+    "objectives",
+    "record_kinds",
+    "temporal_roles",
+    "conditionalities",
+    "hazards",
+    "risk_functions",
+    "risk_components",
+    "population_groups",
+    "cross_cutting_tags",
+    "policy_instruments",
+    "missing_reasons",
+    "section_states",
+    "geography_scopes",
+    "target_kinds",
+    "target_comparators",
+    "target_directions",
+    "target_bases",
+    "target_totals",
+    "actor_roles",
+    "finance_kinds",
+    "detail_kinds",
+    "risk_action_links",
+    "relation_kinds",
+    "change_kinds"
+  ],
+  "fixed_label_values": {
+    "record_kinds": [
+      "context",
+      "priority",
+      "proposal",
+      "commitment",
+      "implementation_observation",
+      "result_observation",
+      "projection",
+      "scenario",
+      "unclear"
+    ],
+    "conditionalities": [
+      "explicitly_conditional",
+      "explicitly_unconditional",
+      "not_stated",
+      "unclear"
+    ],
+    "section_states": [
+      "found",
+      "not_found_in_scope",
+      "not_applicable",
+      "not_processed"
+    ],
+    "target_comparators": [
+      "equal",
+      "at_least",
+      "at_most",
+      "range",
+      "approximate",
+      "not_stated"
+    ]
+  }
+}

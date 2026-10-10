@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "comparison v1.0.0",
+  "type": "object",
+  "properties": {
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group_id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "coverage_note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "group_id",
+          "label",
+          "source_ids",
+          "coverage_note"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "matrix": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "type": "string"
+          },
+          "cells": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "group_id": {
+                  "type": "string"
+                },
+                "findings": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "text": {
+                        "type": "string"
+                      },
+                      "evidence_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "statement_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "epistemic_status": {
+                        "type": "string",
+                        "enum": [
+                          "source_statement",
+                          "derived",
+                          "analyst_inference"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "text",
+                      "evidence_ids",
+                      "statement_ids",
+                      "epistemic_status"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "availability": {
+                  "type": "string",
+                  "enum": [
+                    "found",
+                    "not_found",
+                    "not_processed",
+                    "not_applicable"
+                  ]
+                }
+              },
+              "required": [
+                "group_id",
+                "findings",
+                "availability"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "dimension",
+          "cells"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "comparability": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "dimension": {
+            "type": "string"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "comparable",
+              "partially_comparable",
+              "not_comparable"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "group_ids",
+          "dimension",
+          "verdict",
+          "reason",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "synthesis": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "statement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "epistemic_status": {
+            "type": "string",
+            "enum": [
+              "source_statement",
+              "derived",
+              "analyst_inference"
+            ]
+          }
+        },
+        "required": [
+          "text",
+          "evidence_ids",
+          "statement_ids",
+          "epistemic_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "groups",
+    "matrix",
+    "comparability",
+    "synthesis",
+    "exclusions",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "translation v1.0.0",
+  "type": "object",
+  "properties": {
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "segment_id": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "identity",
+              "verified_official_parallel",
+              "machine_translation"
+            ]
+          },
+          "english_text": {
+            "type": "string"
+          },
+          "quality_flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "segment_id",
+          "method",
+          "english_text",
+          "quality_flags"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "segments"
+  ],
+  "additionalProperties": false
+}

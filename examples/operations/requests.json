@@ -1,0 +1,234 @@
+[
+  {
+    "schema_version": "2.0.0",
+    "kind": "ad_hoc",
+    "task": "extract",
+    "source_groups": [
+      {
+        "id": "selected",
+        "label": "Selected documents",
+        "document_ids": [
+          "doc-308f43b46e75702f",
+          "doc-f2def2eb3254f3ed"
+        ]
+      }
+    ],
+    "filters": {
+      "domain_ids": [],
+      "topic_ids": [],
+      "hazards": [
+        "flood"
+      ],
+      "risk_functions": []
+    },
+    "requested_fields": [
+      "targets",
+      "risk_context",
+      "actors",
+      "finance"
+    ],
+    "comparison_mode": null,
+    "include_analyst_proposals": false,
+    "question": "",
+    "instructions": "Preserve national and local actor roles.",
+    "model": {
+      "route": "codex_chatgpt",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "fallback_allowed": "never"
+    },
+    "output": {
+      "artifact": "evidence_table",
+      "language": "en",
+      "include_original_evidence": true,
+      "coverage_mode": "all_selected_documents"
+    },
+    "uploads": [],
+    "execution_state": "not_run"
+  },
+  {
+    "schema_version": "2.0.0",
+    "kind": "ad_hoc",
+    "task": "compare",
+    "source_groups": [
+      {
+        "id": "earlier",
+        "label": "Earlier edition",
+        "document_ids": [
+          "doc-308f43b46e75702f"
+        ]
+      },
+      {
+        "id": "later",
+        "label": "Later edition",
+        "document_ids": [
+          "doc-f2def2eb3254f3ed"
+        ]
+      }
+    ],
+    "filters": {
+      "domain_ids": [],
+      "topic_ids": [],
+      "hazards": [
+        "flood"
+      ],
+      "risk_functions": []
+    },
+    "requested_fields": [
+      "targets",
+      "risk_context",
+      "finance"
+    ],
+    "comparison_mode": "revision",
+    "include_analyst_proposals": false,
+    "question": "",
+    "instructions": "Preserve national and local actor roles.",
+    "model": {
+      "route": "codex_chatgpt",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "fallback_allowed": "never"
+    },
+    "output": {
+      "artifact": "comparison_matrix",
+      "language": "en",
+      "include_original_evidence": true,
+      "coverage_mode": "all_selected_documents"
+    },
+    "uploads": [],
+    "execution_state": "not_run"
+  },
+  {
+    "schema_version": "2.0.0",
+    "kind": "ad_hoc",
+    "task": "gaps",
+    "source_groups": [
+      {
+        "id": "selected",
+        "label": "Selected documents",
+        "document_ids": [
+          "doc-308f43b46e75702f",
+          "doc-f2def2eb3254f3ed"
+        ]
+      }
+    ],
+    "filters": {
+      "domain_ids": [],
+      "topic_ids": [],
+      "hazards": [
+        "flood"
+      ],
+      "risk_functions": []
+    },
+    "requested_fields": [
+      "actors",
+      "finance",
+      "indicators",
+      "targets"
+    ],
+    "comparison_mode": null,
+    "include_analyst_proposals": false,
+    "question": "",
+    "instructions": "Preserve national and local actor roles.",
+    "model": {
+      "route": "codex_chatgpt",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "fallback_allowed": "never"
+    },
+    "output": {
+      "artifact": "delivery_gap_table",
+      "language": "en",
+      "include_original_evidence": true,
+      "coverage_mode": "all_selected_documents"
+    },
+    "uploads": [],
+    "execution_state": "not_run"
+  },
+  {
+    "schema_version": "2.0.0",
+    "kind": "ad_hoc",
+    "task": "brief",
+    "source_groups": [
+      {
+        "id": "selected",
+        "label": "Selected documents",
+        "document_ids": [
+          "doc-308f43b46e75702f",
+          "doc-f2def2eb3254f3ed"
+        ]
+      }
+    ],
+    "filters": {
+      "domain_ids": [],
+      "topic_ids": [],
+      "hazards": [
+        "flood"
+      ],
+      "risk_functions": []
+    },
+    "requested_fields": [
+      "targets",
+      "risk_context",
+      "finance"
+    ],
+    "comparison_mode": null,
+    "include_analyst_proposals": false,
+    "question": "Which commitments require external finance?",
+    "instructions": "Preserve national and local actor roles.",
+    "model": {
+      "route": "codex_chatgpt",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "fallback_allowed": "never"
+    },
+    "output": {
+      "artifact": "decision_brief",
+      "language": "en",
+      "include_original_evidence": true,
+      "coverage_mode": "all_selected_documents"
+    },
+    "uploads": [],
+    "execution_state": "not_run"
+  },
+  {
+    "schema_version": "2.0.0",
+    "kind": "ad_hoc",
+    "task": "translate",
+    "source_groups": [
+      {
+        "id": "selected",
+        "label": "Selected documents",
+        "document_ids": [
+          "doc-308f43b46e75702f",
+          "doc-f2def2eb3254f3ed"
+        ]
+      }
+    ],
+    "filters": {
+      "domain_ids": [],
+      "topic_ids": [],
+      "hazards": [],
+      "risk_functions": []
+    },
+    "requested_fields": [],
+    "comparison_mode": null,
+    "include_analyst_proposals": false,
+    "question": "",
+    "instructions": "Preserve national and local actor roles.",
+    "model": {
+      "route": "codex_chatgpt",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "fallback_allowed": "never"
+    },
+    "output": {
+      "artifact": "bilingual_documents",
+      "language": "en",
+      "include_original_evidence": true,
+      "coverage_mode": "all_selected_documents"
+    },
+    "uploads": [],
+    "execution_state": "not_run"
+  }
+]

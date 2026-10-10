@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-08",
+  "scope": "synthetic local probes; no production data or model inference",
+  "results": {
+    "R1_wrong_number_and_no_field_support": {
+      "source_value": "20",
+      "extracted_value": "200",
+      "schema_accepts": true,
+      "semantic_errors": []
+    },
+    "R2_omitted_target_with_full_page_accounting": {
+      "schema_accepts": true,
+      "semantic_errors": []
+    },
+    "R3_empty_country_report": {
+      "schema_accepts": true
+    },
+    "R4_unsupported_progress_badge": {
+      "schema_accepts": true
+    },
+    "R5_registry_trusts_empty_artifact_and_receipt": {
+      "prime_report": "empty",
+      "artifact": {}
+    },
+    "R6_revised_source_overwrites_derived_version": {
+      "distinct_input_hashes": 2,
+      "retained_page_json_files": 1,
+      "retained_hash_is_latest": true
+    }
+  }
+}

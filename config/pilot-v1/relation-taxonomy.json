@@ -1,0 +1,270 @@
+{
+  "name": "PolicyTracker claim-relations and response-evidence taxonomy",
+  "version": "2.0.0-pilot",
+  "status": "test_only_not_active_runtime",
+  "purpose": "Relate labeled source records into traceable claims, preserve conflicting evidence, and assign each claim a transparent response-evidence level.",
+  "separation_rule": "Use after source extraction and labeling. This taxonomy does not assign or alter domains, topics, purposes, hazards, target values, or source metadata.",
+  "relations": [
+    {
+      "id": "same_claim",
+      "meaning": "Records restate the same underlying proposition, target, or measurable result.",
+      "grouping": "merge_evidence"
+    },
+    {
+      "id": "supports",
+      "meaning": "One record provides direct supporting evidence for another claim.",
+      "grouping": "attach_as_support_only_when_it_evidences_the_same_proposition"
+    },
+    {
+      "id": "same_fact_variant",
+      "meaning": "Records describe the same underlying quantitative fact or proposition with different reported values, wording, units, conditions, or interpretations; this applies to observations and projections as well as targets.",
+      "grouping": "keep_variants_together_for_review; add contradicts when the assertions are incompatible; never_average_or_overwrite"
+    },
+    {
+      "id": "revises",
+      "meaning": "A later or explicitly updated record changes an earlier value or statement.",
+      "grouping": "retain_both_versions_and_temporal_order"
+    },
+    {
+      "id": "supersedes",
+      "meaning": "A source explicitly replaces an earlier commitment, policy, or target.",
+      "grouping": "retain_superseded_version_in_history"
+    },
+    {
+      "id": "contradicts",
+      "meaning": "Records make incompatible assertions about comparable metric, period, scope, denominator, and basis.",
+      "grouping": "mark_contested; preserve_both_assertions"
+    },
+    {
+      "id": "related",
+      "meaning": "Records concern the same broader issue but make different propositions.",
+      "grouping": "keep_separate_claims"
+    },
+    {
+      "id": "parent_child",
+      "meaning": "One record states a broad objective while another states a distinct component, subset, or milestone.",
+      "grouping": "keep_separate_claims_and_link_hierarchy"
+    },
+    {
+      "id": "unresolved",
+      "meaning": "The candidate relationship cannot be decided from the available evidence.",
+      "grouping": "keep_separate_until_review"
+    }
+  ],
+  "claim_score": {
+    "name": "Documented response-evidence level",
+    "purpose": "Describe the strongest response stage documented for this claim. This is not a country performance, effectiveness, ambition, or on-track score.",
+    "levels": [
+      {
+        "score": 0,
+        "label": "Context / outcome only",
+        "assign_when": "The claim is context, risk, impact, projection, need, barrier, finance need, or observed outcome and does not itself evidence a response. A 0 does not mean the country has no response."
+      },
+      {
+        "score": 1,
+        "label": "Commitment / target",
+        "assign_when": "A goal, policy commitment, numeric target, or qualitative deliverable is stated, without sufficiently specified action or reported implementation."
+      },
+      {
+        "score": 2,
+        "label": "Defined action",
+        "assign_when": "A specific measure, policy instrument, or operational plan describes what is to be done. A target plus a clearly defined measure may score 2."
+      },
+      {
+        "score": 3,
+        "label": "Resourced / underway",
+        "assign_when": "The source reports actual allocation, mobilization, procurement, operation, or implementation underway. A finance need or estimate alone is not resourcing."
+      },
+      {
+        "score": 4,
+        "label": "Delivered output",
+        "assign_when": "The source reports a completed, checkable output or service. This does not prove the intended outcome or impact improved."
+      }
+    ],
+    "rules": [
+      "Score once per final claim after grouping. Do not add points for duplicate passages, repeat reports, or the number of supporting records.",
+      "Use the highest level explicitly supported by source evidence; do not infer a higher level from a target or aspirational language.",
+      "A measured outcome can be improving while its response-evidence score remains 0; record outcome direction separately.",
+      "Explicit delay, cancellation, funding withdrawal, reversal, or failure is a separate setback flag, never an arithmetic penalty.",
+      "Do not calculate a domain or country total, mean, rank, or red/green performance grade from claim scores.",
+      "Topic rollups count distinct claims by score and show evidence coverage; a multi-topic claim appears once in each applicable topic."
+    ]
+  },
+  "separate_claim_fields": {
+    "outcome_signal": [
+      "improving",
+      "worsening",
+      "no_clear_change",
+      "mixed",
+      "not_comparable",
+      "not_reported"
+    ],
+    "setback_flags": [
+      "delayed",
+      "cancelled",
+      "funding_withdrawn",
+      "reversed",
+      "explicit_failure",
+      "other"
+    ],
+    "claim_status": [
+      "proposed",
+      "reviewed",
+      "contested",
+      "superseded",
+      "closed"
+    ],
+    "review_status": [
+      "proposed",
+      "accepted",
+      "rejected",
+      "unresolved"
+    ]
+  },
+  "grouping_rules": [
+    "Compare the proposition and source evidence; matching topic, hazard, group, actor, or document type alone is never enough to merge.",
+    "Before relating quantitative records, compare metric, unit, baseline, denominator, time period, geography/sector scope, scenario, and condition; use same_fact_variant for matching facts with source variants, and contradicts only when the assertions are incompatible.",
+    "Keep separate years, conditional pathways, subtargets, and independent actions separate unless the source explicitly makes them one target with components.",
+    "A context record may support or explain a response claim but must not be rewritten as an action or commitment.",
+    "Conflicts remain visible as source variants. Never calculate a compromise value or silently decide which source is correct.",
+    "A newer document not repeating an older claim does not prove withdrawal or supersession.",
+    "Every source record maps to exactly one claim group, including singleton claims. Every claim label and quantitative fact must retain its originating record ID."
+  ],
+  "relation_object_shape": {
+    "relation_id": "stable ID",
+    "from_record_id": "source record ID",
+    "to_record_id": "source record ID",
+    "type": "relation ID",
+    "rationale": "source-grounded reason",
+    "confidence": "0.0-1.0",
+    "review_status": "proposed|accepted|rejected|unresolved"
+  },
+  "claim_object_shape": {
+    "claim_id": "stable ID",
+    "canonical_claim_text": "one faithful proposition",
+    "member_record_ids": [
+      "one or more source record IDs"
+    ],
+    "relation_ids": [
+      "relation IDs"
+    ],
+    "label_rollup": {
+      "subject_paths": [
+        {
+          "domain_id": "...",
+          "subdomain_id": "...",
+          "topic_id": "...",
+          "source_record_ids": [
+            "..."
+          ]
+        }
+      ],
+      "statement_types": [
+        {
+          "value": "...",
+          "source_record_ids": [
+            "..."
+          ]
+        }
+      ],
+      "purposes": [
+        {
+          "value": "...",
+          "source_record_ids": [
+            "..."
+          ]
+        }
+      ],
+      "risk_components": [
+        {
+          "value": "...",
+          "source_record_ids": [
+            "..."
+          ]
+        }
+      ],
+      "hazards": [
+        {
+          "value": "...",
+          "source_record_ids": [
+            "..."
+          ]
+        }
+      ],
+      "affected_groups": [
+        {
+          "value": "...",
+          "source_record_ids": [
+            "..."
+          ]
+        }
+      ],
+      "cross_cutting_themes": [
+        {
+          "value": "...",
+          "source_record_ids": [
+            "..."
+          ]
+        }
+      ],
+      "geographic_scopes": [
+        {
+          "value": "...",
+          "source_record_ids": [
+            "..."
+          ]
+        }
+      ],
+      "places": [
+        {
+          "value": "...",
+          "source_record_ids": [
+            "..."
+          ]
+        }
+      ],
+      "stakeholders": [
+        {
+          "name": "...",
+          "relationship": "...",
+          "source_record_ids": [
+            "..."
+          ]
+        }
+      ]
+    },
+    "quantitative_variants": [
+      {
+        "source_record_id": "...",
+        "source_fact_id": "...",
+        "source_wording": "preserve exact values, units, period, baseline, scope, condition, and finance status"
+      }
+    ],
+    "response_evidence_score": "integer 0-4",
+    "response_score_label": "one claim_score label",
+    "response_score_rationale": "cite supporting member record IDs",
+    "score_confidence": "high|medium|low",
+    "outcome_signal": "one separate_claim_fields value",
+    "setback_flags": [
+      "zero or more flags"
+    ],
+    "status": "claim_status value",
+    "open_issue": "null or concise review question",
+    "evidence_links": [
+      "all source document/page/segment/quote links"
+    ]
+  },
+  "topic_rollup_shape": {
+    "topic_id": "existing topic ID",
+    "distinct_claim_count": "integer",
+    "counts_by_response_score": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "highest_evidenced_level": "0-4 or null",
+    "summary": "coverage description only; no performance conclusion"
+  }
+}

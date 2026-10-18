@@ -529,6 +529,11 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(self.request("/api/ai/api-key", {"key": KEY}, {**headers, "Origin": "https://evil.invalid"})[0], 403)
         self.assertEqual(self.request("/api/ai/api-key", {"key": KEY}, {"Cookie": headers["Cookie"]})[0], 403)
         self.assertEqual(self.request("/api/ai/status", headers={**headers, "Host": "evil.invalid"})[0], 403)
+        status, _, _ = self.request("/design/prototype/?page=kazakhstanDemo", headers={
+            "Origin": "https://embedded-browser.invalid", "Sec-Fetch-Site": "cross-site"})
+        self.assertEqual(status, 200)  # UI navigation may be embedded; session/data routes remain same-origin.
+        self.assertEqual(self.request("/api/ai/session", headers={
+            "Origin": "https://embedded-browser.invalid", "Sec-Fetch-Site": "cross-site"})[0], 403)
         for path in ("/.git/config", "/src/policytracker/ai_runtime.py", "/tmp/ai-start-diagnostic.log", "/design/prototype/../../.env",
                      "/data/local-profiles/workspace.sqlite3", "/data/manifests/corpus.json",
                      "/data/sources/Albania/NAP/Albania%20National%20Adaptation%20Plan%20-%20aeb6b3/Current.pdf"):

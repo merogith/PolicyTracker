@@ -75,11 +75,14 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'")
         super().end_headers()
 
-    def allowed_origin(self):
+    def allowed_local_host(self):
         port = self.server.server_port
         hosts = {f"127.0.0.1:{port}", f"localhost:{port}"}
+        return self.headers.get("Host") in hosts
+
+    def allowed_origin(self):
         host = self.headers.get("Host")
-        return (host in hosts and self.headers.get("Sec-Fetch-Site") != "cross-site"
+        return (self.allowed_local_host() and self.headers.get("Sec-Fetch-Site") != "cross-site"
                 and self.headers.get("Origin", f"http://{host}") == f"http://{host}")
 
     def json_response(self, data, status=200, cookie=None):
@@ -118,10 +121,14 @@ class Handler(SimpleHTTPRequestHandler):
         return sid, session
 
     def do_GET(self):
-        if not self.allowed_origin():
+        path = urlsplit(self.path).path
+        # Static UI assets contain no session data. Allow navigation from the
+        # exact loopback host even when an embedded browser supplies a different
+        # Origin; keep data and AI routes protected by the strict origin check.
+        protected = path.startswith("/api/")
+        if not self.allowed_local_host() or (protected and not self.allowed_origin()):
             self.json_response({"error": {"code": "origin", "message": "Use the local PolicyTracker address."}}, 403)
             return
-        path = urlsplit(self.path).path
         if path.startswith("/api/ai/"):
             self.api(path, False)
         elif path == "/api/profiles" or path.startswith("/api/profiles/"):
@@ -130,7 +137,8 @@ class Handler(SimpleHTTPRequestHandler):
             super().do_GET()
 
     def do_HEAD(self):
-        if not self.allowed_origin() or urlsplit(self.path).path.startswith("/api/"):
+        path = urlsplit(self.path).path
+        if not self.allowed_local_host() or path.startswith("/api/"):
             self.send_error(403)
             return
         super().do_HEAD()

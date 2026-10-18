@@ -1,0 +1,301 @@
+{
+  "name": "PolicyTracker lightweight evidence taxonomy example",
+  "version": "0.1-example",
+  "status": "illustrative; not the active runtime taxonomy",
+  "design": {
+    "rule": "One source record can have zero or more labels in each applicable facet. Keep source evidence and label decisions attached to the record.",
+    "subject_hierarchy": "domain -> topic; topics may belong to more than one domain; domains are derived from selected topics",
+    "document_kind_is_metadata": true,
+    "time_is_optional_and_typed": true,
+    "unmapped_concepts_are_preserved": true
+  },
+  "classification": {
+    "statement_type": {
+      "cardinality": "one per coherent source record",
+      "values": [
+        "context",
+        "priority",
+        "proposal",
+        "commitment",
+        "implementation_reported",
+        "result_reported",
+        "projection",
+        "scenario",
+        "unclear"
+      ]
+    },
+    "information_roles": {
+      "cardinality": "zero or more; what the information is doing",
+      "values": ["context", "assessment", "action", "target", "implementation_status", "result", "projection", "resource_need", "barrier", "governance", "other"]
+    },
+    "topics": {
+      "cardinality": "zero or more",
+      "examples": [
+        { "id": "AGR-01", "name": "Irrigation efficiency", "domains": ["agriculture"] },
+        { "id": "AGR-02", "name": "Resilient crops and soils", "domains": ["agriculture"] },
+        { "id": "WAT-01", "name": "Water supply and groundwater", "domains": ["water"] },
+        { "id": "WAT-02", "name": "River basins and drought management", "domains": ["water"] },
+        { "id": "WAT-03", "name": "Flood and coastal protection", "domains": ["water"] },
+        { "id": "WAT-04", "name": "Water quality and reuse", "domains": ["water"] },
+        { "id": "CLM-04", "name": "Early warning and disaster preparedness", "domains": ["climate"] },
+        { "id": "CLM-08", "name": "Disaster risk and management", "domains": ["climate"] }
+      ]
+    },
+    "purpose": {
+      "cardinality": "zero or more",
+      "values": ["adaptation", "mitigation", "disaster_risk_reduction", "loss_and_damage", "other", "unclear"]
+    },
+    "optional_facets": {
+      "hazards": ["flood", "drought", "heat", "wildfire", "earthquake", "other_as_stated"],
+      "risk_components": ["hazard", "exposure", "vulnerability", "capacity", "impact", "risk_assessment", "other_as_stated"],
+      "risk_functions": ["risk_understanding", "prevention_and_reduction", "early_warning_and_preparedness", "anticipatory_action", "response", "recovery", "other_as_stated"],
+      "affected_groups": "people or communities explicitly described as affected or benefiting; open controlled list plus preserved source wording",
+      "places": "named place strings with optional normalized geography IDs",
+      "stakeholder_relationships": "named entities linked to the record with a role such as responsible, implementing, supporting, financing, reporting, consulted, affected, beneficiary, or monitoring",
+      "instruments": "law, plan, investment, service, infrastructure, training, information, or other stated mechanism"
+    }
+  },
+  "record_shape": {
+    "record_id": "stable source-record ID",
+    "document": {
+      "document_kind": "NDC | NAP | NDRR | other",
+      "title": "source document title",
+      "edition_date": "optional ISO date",
+      "language": "language code"
+    },
+    "statement_type": "one classification.statement_type value",
+    "information_roles": [],
+    "source_statement": "short faithful statement in source wording or a grounded paraphrase",
+    "evidence": [
+      { "page": "physical page or printed page", "quote": "short exact supporting text", "segment_id": "immutable source segment ID" }
+    ],
+    "labels": {
+      "topics": [],
+      "purpose": [],
+      "hazards": [],
+      "risk_components": [],
+      "risk_functions": [],
+      "affected_groups": [],
+      "places": [],
+      "stakeholder_relationships": [],
+      "instruments": [],
+      "unmapped_concepts": []
+    },
+    "time": {
+      "event_or_context_period": "optional; use only when the source provides it",
+      "observation_period": "optional; distinct from a target deadline"
+    },
+    "targets": "zero or more target objects; omit for records without a target",
+    "label_notes": "optional brief explanation for ambiguity, multi-topic assignment, or unmapped terms"
+  },
+  "target_shape": {
+    "kind": "quantitative | deliverable | qualitative",
+    "wording": "original target wording",
+    "metric": "what is counted or changed, if identifiable",
+    "value": "decimal string, range, or null",
+    "unit": "source unit, or null",
+    "comparator": "equal | at_least | at_most | range | approximate | not_stated",
+    "baseline": { "value": "decimal string or null", "unit": "string or null", "period": "string or null", "basis": "source wording or null" },
+    "target_period": "optional target deadline or period; separate from context/event time",
+    "geography": "optional stated scope",
+    "scenario": "optional named pathway or scenario",
+    "conditionality": { "kind": "unconditional | conditional | not_stated | unclear", "condition": "source wording or null" },
+    "total_or_additional": "total | additional | not_stated | unclear",
+    "evidence_ids": []
+  },
+  "labeling_rules": [
+    "Fill only fields supported by the source; an empty optional field means no label was established, not that the country lacks the feature.",
+    "A record may have multiple topics and multiple values in any multi-label facet. Derive all parent domains from its topics; do not choose a primary domain by default.",
+    "Keep affected groups separate from stakeholders: affected_groups contains people/community categories; stakeholder_relationships connects named entities to the record by their stated role.",
+    "Use information_roles to distinguish context, assessment, action, target, progress, result, projection, resource need, barrier, or governance information. Do not infer assessment merely because a sentence mentions a hazard or impact.",
+    "Apply adaptation or mitigation purpose only when supported by source context. Do not require a hazard or risk function for an adaptation record.",
+    "Context records may have hazard, place, group, and an optional event/context period, but need not have a target or a period.",
+    "Put each quantitative target's baseline, unit, scenario, condition, and target period on that target object, not on the record as a whole.",
+    "Keep the source's numeric wording and unit. Unknown is null, never zero. Do not compare targets until metric, basis, scope, period, and condition are compatible.",
+    "Preserve a useful concept that does not fit the current vocabulary in unmapped_concepts; do not force it into an unrelated topic or silently add a new taxonomy ID.",
+    "Document kind, statement type, subject topic, purpose, and hazard answer different questions and must remain separate fields."
+  ],
+  "organization_stage": {
+    "separate_from_labeling_stage": true,
+    "prompt_input": "preserved labeled records plus source/version metadata",
+    "relation_taxonomy": {
+      "values": [
+        "supports",
+        "same_claim",
+        "same_target_variant",
+        "revises",
+        "supersedes",
+        "contradicts",
+        "related",
+        "parent_child",
+        "unresolved"
+      ],
+      "relation_shape": {
+        "relation_id": "stable ID",
+        "from_record_id": "record ID",
+        "to_record_id": "record ID",
+        "type": "one relation_taxonomy value",
+        "rationale": "short explanation grounded in both records",
+        "confidence": "0 to 1 or qualitative band",
+        "review_status": "proposed | accepted | rejected | unresolved"
+      }
+    },
+    "claim_group_shape": {
+      "claim_id": "stable ID",
+      "member_record_ids": ["one or more record IDs; singleton groups are valid"],
+      "canonical_claim_text": "concise synthesis that preserves scope and conditions",
+      "variants": "preserve different values, periods, scenarios, conditions, and source wordings",
+      "status": "proposed | reviewed | contested | superseded",
+      "source_record_ids": "all members remain traceable to their exact evidence"
+    },
+    "organization_rules": [
+      "Keep this as a separate prompt and output schema from source extraction and labeling.",
+      "Use taxonomy labels and embeddings to find candidate pairs, but compare propositions and evidence before linking or grouping.",
+      "Create a stable claim group even for a single record; do not force unrelated records together.",
+      "Keep contradictions as distinct variants and never average, overwrite, or silently reconcile numbers.",
+      "Preserve every original record and its evidence when a group is proposed or reviewed."
+    ]
+  },
+  "kazakhstan_ndc_examples": [
+    {
+      "example_id": "KZ-NDC3-WATER-QUALITY-TARGET",
+      "source_page": 47,
+      "source_statement": "The NDC table lists a target for 35% of water bodies to have class II surface waters.",
+      "statement_type": "commitment",
+      "information_roles": ["target"],
+      "evidence": [
+        { "page": 47, "quote": "Target: 35% of water bodies with class II surface waters.", "segment_id": "KZ-NDC3-p47-water-quality" }
+      ],
+      "labels": {
+        "topics": ["WAT-04"],
+        "purpose": ["adaptation"],
+        "hazards": [],
+        "risk_components": [],
+        "risk_functions": [],
+        "affected_groups": [],
+        "places": [],
+        "stakeholder_relationships": [],
+        "instruments": [],
+        "unmapped_concepts": []
+      },
+      "time": {},
+      "targets": [
+        {
+          "kind": "quantitative",
+          "wording": "35% of water bodies with class II surface waters",
+          "metric": "share of water bodies meeting class II surface-water quality",
+          "value": "35",
+          "unit": "percent",
+          "comparator": "equal",
+          "baseline": { "value": null, "unit": "percent", "period": null, "basis": null },
+          "target_period": "by 2035 (table heading: measures and targets until 2035)",
+          "geography": "Kazakhstan, as scoped by the NDC table",
+          "scenario": null,
+          "conditionality": { "kind": "not_stated", "condition": null },
+          "total_or_additional": "not_stated",
+          "evidence_ids": ["KZ-NDC3-p47-water-quality"]
+        }
+      ],
+      "label_notes": "The source table provides a target period at table level; the target baseline is not stated in this row."
+    },
+    {
+      "example_id": "KZ-NDC3-FLOOD-CONTEXT",
+      "source_page": 44,
+      "source_statement": "The risk table identifies flooding in key grain and oilseed production areas and names farming communities among affected populations.",
+      "statement_type": "context",
+      "information_roles": ["context"],
+      "evidence": [
+        { "page": 44, "quote": "Flooding in key grain and oilseed production areas", "segment_id": "KZ-NDC3-p44-flood-risk" },
+        { "page": 44, "quote": "Farmers and farming communities", "segment_id": "KZ-NDC3-p44-flood-population" }
+      ],
+      "labels": {
+        "topics": ["AGR-02", "WAT-03"],
+        "purpose": ["adaptation", "disaster_risk_reduction"],
+        "hazards": ["flood"],
+        "risk_components": ["impact", "exposure"],
+        "risk_functions": [],
+        "affected_groups": ["farmers and farming communities"],
+        "places": ["Akmola", "Karaganda", "Abay", "East Kazakhstan"],
+        "stakeholder_relationships": [],
+        "instruments": [],
+        "unmapped_concepts": []
+      },
+      "time": {},
+      "targets": [],
+      "label_notes": "This is useful risk context with no action, numeric target, or event period stated in the table. Tag it as an assessment only when the source explicitly presents it as an assessment; a contextual impact statement alone is not enough. Affected groups are people/community categories, while stakeholders are named actors linked by a role. The two topics derive Agriculture and Water domains."
+    },
+    {
+      "example_id": "KZ-NDC3-EMISSIONS-PATHWAYS",
+      "source_page": 7,
+      "source_statement": "The NDC summary gives 2030 and 2035 net-emissions pathway values, and a lower 2035 value with international support.",
+      "statement_type": "commitment",
+      "information_roles": ["target"],
+      "evidence": [
+        { "page": 7, "quote": "Under the unconditional pathway, net emissions reach ~328 MtCO2e in 2030 (15%) and ~320 MtCO2e (17%) by 2035.", "segment_id": "KZ-NDC3-p7-unconditional-pathway" },
+        { "page": 11, "quote": "15 percent below 1990 by 2030 to 17 percent below 1990 levels by 2035", "segment_id": "KZ-NDC3-p11-target-basis" },
+        { "page": 7, "quote": "With international support, emissions can fall to ~288 MtCO2e by 2035.", "segment_id": "KZ-NDC3-p7-support-pathway" }
+      ],
+      "labels": {
+        "topics": ["CLM-06"],
+        "purpose": ["mitigation"],
+        "hazards": [],
+        "risk_components": [],
+        "risk_functions": [],
+        "affected_groups": [],
+        "places": [],
+        "stakeholder_relationships": [],
+        "instruments": [],
+        "unmapped_concepts": []
+      },
+      "time": {},
+      "targets": [
+        {
+          "kind": "quantitative",
+          "wording": "~328 MtCO2e in 2030 (15% below 1990); ~320 MtCO2e in 2035 (17% below 1990), unconditional pathway",
+          "metric": "net greenhouse-gas emissions",
+          "value": "328",
+          "unit": "MtCO2e",
+          "comparator": "approximate",
+          "baseline": { "value": null, "unit": "MtCO2e", "period": "1990", "basis": "15% below 1990 levels also stated; baseline quantity not supplied in this sentence" },
+          "target_period": "2030",
+          "geography": "Kazakhstan, economy-wide as described in the NDC summary",
+          "scenario": "unconditional pathway",
+          "conditionality": { "kind": "unconditional", "condition": null },
+          "total_or_additional": "total",
+          "evidence_ids": ["KZ-NDC3-p7-unconditional-pathway", "KZ-NDC3-p11-target-basis"]
+        },
+        {
+          "kind": "quantitative",
+          "wording": "~320 MtCO2e in 2035 (17% below 1990), unconditional pathway",
+          "metric": "net greenhouse-gas emissions",
+          "value": "320",
+          "unit": "MtCO2e",
+          "comparator": "approximate",
+          "baseline": { "value": null, "unit": "MtCO2e", "period": "1990", "basis": "17% below 1990 levels; baseline quantity not supplied in this sentence" },
+          "target_period": "2035",
+          "geography": "Kazakhstan, economy-wide as described in the NDC summary",
+          "scenario": "unconditional pathway",
+          "conditionality": { "kind": "unconditional", "condition": null },
+          "total_or_additional": "total",
+          "evidence_ids": ["KZ-NDC3-p7-unconditional-pathway", "KZ-NDC3-p11-target-basis"]
+        },
+        {
+          "kind": "quantitative",
+          "wording": "emissions can fall to ~288 MtCO2e by 2035 with international support",
+          "metric": "net greenhouse-gas emissions",
+          "value": "288",
+          "unit": "MtCO2e",
+          "comparator": "approximate",
+          "baseline": { "value": null, "unit": null, "period": null, "basis": null },
+          "target_period": "2035",
+          "geography": "Kazakhstan, economy-wide as described in the NDC summary",
+          "scenario": "support-enabled pathway; exact scenario name not stated in this summary sentence",
+          "conditionality": { "kind": "conditional", "condition": "with international support" },
+          "total_or_additional": "total",
+          "evidence_ids": ["KZ-NDC3-p7-support-pathway"]
+        }
+      ],
+      "label_notes": "Keep years and conditions as separate target objects. Do not calculate a reduction percentage for the 288 MtCO2e value unless another cited passage supplies a compatible basis."
+    }
+  ]
+}

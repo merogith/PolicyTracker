@@ -1,0 +1,3205 @@
+{
+  "title": "Kazakhstan NDC 3.0",
+  "document_date": "2025-11-26",
+  "pdf_pages": 93,
+  "sample_pages": "p. 8; pp. 12–18; pp. 22–38; pp. 40–53; pp. 55–60; pp. 62–72; pp. 74–82",
+  "source_record_count": 40,
+  "claim_count": 38,
+  "score_counts": [
+    9,
+    7,
+    14,
+    6,
+    2
+  ],
+  "topics": [
+    {
+      "topic_id": "CLM-01",
+      "label": "Climate planning and governance",
+      "claim_counts_by_score": [
+        0,
+        0,
+        3,
+        2,
+        0
+      ],
+      "claim_count": 5,
+      "summary": "Codes/plans, risk governance, reporting, representation",
+      "paths": [
+        {
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_governance",
+          "subdomain": "Climate governance, planning and coordination"
+        }
+      ]
+    },
+    {
+      "topic_id": "CLM-02",
+      "label": "Climate finance and support",
+      "claim_counts_by_score": [
+        2,
+        1,
+        0,
+        2,
+        0
+      ],
+      "claim_count": 5,
+      "summary": "Finance need, conditional support, spending/financing reported",
+      "paths": [
+        {
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_finance",
+          "subdomain": "Climate finance and support"
+        }
+      ]
+    },
+    {
+      "topic_id": "CLM-03",
+      "label": "Climate information and risk assessment",
+      "claim_counts_by_score": [
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 3,
+      "summary": "Risk context and projections",
+      "paths": [
+        {
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_information",
+          "subdomain": "Climate information, impacts and adaptation"
+        },
+        {
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        }
+      ]
+    },
+    {
+      "topic_id": "CLM-04",
+      "label": "Early warning and disaster preparedness",
+      "claim_counts_by_score": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "claim_count": 2,
+      "summary": "UAV capacity and warning-network measures",
+      "paths": [
+        {
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_preparedness",
+          "subdomain": "Early warning and preparedness"
+        }
+      ]
+    },
+    {
+      "topic_id": "CLM-05",
+      "label": "Climate monitoring and reporting",
+      "claim_counts_by_score": [
+        2,
+        0,
+        1,
+        0,
+        1
+      ],
+      "claim_count": 4,
+      "summary": "Emissions observations/conflict, QA/QC action, inventory output",
+      "paths": [
+        {
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_information",
+          "subdomain": "Climate information, impacts and adaptation"
+        }
+      ]
+    },
+    {
+      "topic_id": "CLM-06",
+      "label": "Economy-wide emissions targets",
+      "claim_counts_by_score": [
+        2,
+        3,
+        1,
+        1,
+        0
+      ],
+      "claim_count": 7,
+      "summary": "Emissions observations/conflict, targets, ETS and carbon-budget policy",
+      "paths": [
+        {
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        }
+      ]
+    },
+    {
+      "topic_id": "CLM-07",
+      "label": "Land carbon and removals",
+      "claim_counts_by_score": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Forest and land restoration targets",
+      "paths": [
+        {
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        },
+        {
+          "domain_id": "nature_land",
+          "domain": "Nature, Land, Forests & Biodiversity",
+          "subdomain_id": "nature_forests",
+          "subdomain": "Forests, land and soils"
+        }
+      ]
+    },
+    {
+      "topic_id": "CLM-08",
+      "label": "Disaster risk and management",
+      "claim_counts_by_score": [
+        3,
+        0,
+        3,
+        1,
+        0
+      ],
+      "claim_count": 7,
+      "summary": "Impacts/projection, risk governance, response mechanisms",
+      "paths": [
+        {
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_reduction",
+          "subdomain": "Prevention and risk reduction"
+        },
+        {
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_response_recovery",
+          "subdomain": "Response, recovery and reconstruction"
+        }
+      ]
+    },
+    {
+      "topic_id": "AGR-01",
+      "label": "Irrigation efficiency",
+      "claim_counts_by_score": [
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "claim_count": 3,
+      "summary": "Defined efficiency and irrigation expansion measures, plus one ambiguous target",
+      "paths": [
+        {
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "agriculture_water",
+          "subdomain": "Farm water, irrigation and drainage"
+        },
+        {
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_resources",
+          "subdomain": "Water resources, supply and groundwater"
+        }
+      ]
+    },
+    {
+      "topic_id": "AGR-02",
+      "label": "Resilient crops and soils",
+      "claim_counts_by_score": [
+        2,
+        0,
+        1,
+        1,
+        0
+      ],
+      "claim_count": 4,
+      "summary": "Risk context, pilots underway, crop-adaptation action",
+      "paths": [
+        {
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "agriculture_production",
+          "subdomain": "Crops, soils and farm adaptation"
+        }
+      ]
+    },
+    {
+      "topic_id": "AGR-03",
+      "label": "Livestock and manure",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "food_livestock_fisheries",
+          "subdomain": "Livestock, fisheries and food systems"
+        }
+      ]
+    },
+    {
+      "topic_id": "AGR-04",
+      "label": "Food systems and farm livelihoods",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Social-protection/resettlement mechanisms reported",
+      "paths": [
+        {
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "food_livestock_fisheries",
+          "subdomain": "Livestock, fisheries and food systems"
+        },
+        {
+          "domain_id": "livelihoods_social_protection",
+          "domain": "Livelihoods & Social Protection",
+          "subdomain_id": "livelihoods_jobs",
+          "subdomain": "Jobs, workers and livelihoods"
+        }
+      ]
+    },
+    {
+      "topic_id": "WAT-01",
+      "label": "Water supply and groundwater",
+      "claim_counts_by_score": [
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "claim_count": 3,
+      "summary": "Adaptation policy, water measures, reservoir action",
+      "paths": [
+        {
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_resources",
+          "subdomain": "Water resources, supply and groundwater"
+        }
+      ]
+    },
+    {
+      "topic_id": "WAT-02",
+      "label": "River basins and drought management",
+      "claim_counts_by_score": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Hydrological observation and warning network",
+      "paths": [
+        {
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_basins_drought",
+          "subdomain": "River basins and drought management"
+        }
+      ]
+    },
+    {
+      "topic_id": "WAT-03",
+      "label": "Flood and coastal protection",
+      "claim_counts_by_score": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 2,
+      "summary": "Flood impacts and risk context",
+      "paths": [
+        {
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_hazards",
+          "subdomain": "Flood, coast and erosion"
+        }
+      ]
+    },
+    {
+      "topic_id": "WAT-04",
+      "label": "Water quality and reuse",
+      "claim_counts_by_score": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "claim_count": 2,
+      "summary": "Water-quality and wastewater targets",
+      "paths": [
+        {
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_quality",
+          "subdomain": "Water quality, sanitation and reuse"
+        }
+      ]
+    },
+    {
+      "topic_id": "BIO-01",
+      "label": "Forest health and management",
+      "claim_counts_by_score": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Forest targets",
+      "paths": [
+        {
+          "domain_id": "nature_land",
+          "domain": "Nature, Land, Forests & Biodiversity",
+          "subdomain_id": "nature_forests",
+          "subdomain": "Forests, land and soils"
+        }
+      ]
+    },
+    {
+      "topic_id": "BIO-02",
+      "label": "Species, habitats and protected areas",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "nature_land",
+          "domain": "Nature, Land, Forests & Biodiversity",
+          "subdomain_id": "nature_biodiversity",
+          "subdomain": "Biodiversity and ecosystems"
+        }
+      ]
+    },
+    {
+      "topic_id": "BIO-03",
+      "label": "Ecosystem restoration",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "nature_land",
+          "domain": "Nature, Land, Forests & Biodiversity",
+          "subdomain_id": "nature_biodiversity",
+          "subdomain": "Biodiversity and ecosystems"
+        },
+        {
+          "domain_id": "nature_land",
+          "domain": "Nature, Land, Forests & Biodiversity",
+          "subdomain_id": "nature_forests",
+          "subdomain": "Forests, land and soils"
+        }
+      ]
+    },
+    {
+      "topic_id": "ENE-01",
+      "label": "Renewable electricity",
+      "claim_counts_by_score": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "claim_count": 3,
+      "summary": "Targets, financing/implementation, installed-capacity output",
+      "paths": [
+        {
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_supply",
+          "subdomain": "Energy supply, renewables and grids"
+        }
+      ]
+    },
+    {
+      "topic_id": "ENE-02",
+      "label": "Grids and energy storage",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_supply",
+          "subdomain": "Energy supply, renewables and grids"
+        },
+        {
+          "domain_id": "infrastructure_settlements",
+          "domain": "Infrastructure & Human Settlements",
+          "subdomain_id": "critical_infrastructure",
+          "subdomain": "Critical infrastructure and services"
+        }
+      ]
+    },
+    {
+      "topic_id": "ENE-03",
+      "label": "Clean heating and fuels",
+      "claim_counts_by_score": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Heating-system and household retrofit measures",
+      "paths": [
+        {
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_demand",
+          "subdomain": "Energy efficiency, buildings and heating"
+        }
+      ]
+    },
+    {
+      "topic_id": "ENE-04",
+      "label": "Energy efficiency and demand management",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_demand",
+          "subdomain": "Energy efficiency, buildings and heating"
+        }
+      ]
+    },
+    {
+      "topic_id": "ENE-05",
+      "label": "Fossil energy transition",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_transition",
+          "subdomain": "Fossil fuel transition and methane"
+        },
+        {
+          "domain_id": "economy_transition",
+          "domain": "Economy & Economic Transition",
+          "subdomain_id": "just_transition",
+          "subdomain": "Economic restructuring and just transition"
+        }
+      ]
+    },
+    {
+      "topic_id": "ENE-06",
+      "label": "Oil and gas methane",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Methane pilot projects reported underway",
+      "paths": [
+        {
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_transition",
+          "subdomain": "Fossil fuel transition and methane"
+        }
+      ]
+    },
+    {
+      "topic_id": "URB-01",
+      "label": "Building energy performance",
+      "claim_counts_by_score": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Building retrofit and code measures",
+      "paths": [
+        {
+          "domain_id": "infrastructure_settlements",
+          "domain": "Infrastructure & Human Settlements",
+          "subdomain_id": "built_environment",
+          "subdomain": "Buildings and settlements"
+        },
+        {
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_demand",
+          "subdomain": "Energy efficiency, buildings and heating"
+        }
+      ]
+    },
+    {
+      "topic_id": "URB-02",
+      "label": "Resilient settlements and infrastructure",
+      "claim_counts_by_score": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Reservoir construction includes Astana",
+      "paths": [
+        {
+          "domain_id": "infrastructure_settlements",
+          "domain": "Infrastructure & Human Settlements",
+          "subdomain_id": "built_environment",
+          "subdomain": "Buildings and settlements"
+        },
+        {
+          "domain_id": "infrastructure_settlements",
+          "domain": "Infrastructure & Human Settlements",
+          "subdomain_id": "critical_infrastructure",
+          "subdomain": "Critical infrastructure and services"
+        }
+      ]
+    },
+    {
+      "topic_id": "URB-03",
+      "label": "Urban cooling and green spaces",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "infrastructure_settlements",
+          "domain": "Infrastructure & Human Settlements",
+          "subdomain_id": "built_environment",
+          "subdomain": "Buildings and settlements"
+        },
+        {
+          "domain_id": "nature_land",
+          "domain": "Nature, Land, Forests & Biodiversity",
+          "subdomain_id": "nature_biodiversity",
+          "subdomain": "Biodiversity and ecosystems"
+        }
+      ]
+    },
+    {
+      "topic_id": "TRN-01",
+      "label": "Low-emission vehicles and fuels",
+      "claim_counts_by_score": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Sustainable aviation fuel target",
+      "paths": [
+        {
+          "domain_id": "transport",
+          "domain": "Transport & Mobility",
+          "subdomain_id": "transport_low_emission",
+          "subdomain": "Low-emission mobility"
+        }
+      ]
+    },
+    {
+      "topic_id": "TRN-02",
+      "label": "Public, active and shared mobility",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "transport",
+          "domain": "Transport & Mobility",
+          "subdomain_id": "transport_low_emission",
+          "subdomain": "Low-emission mobility"
+        }
+      ]
+    },
+    {
+      "topic_id": "TRN-03",
+      "label": "Resilient transport networks",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "transport",
+          "domain": "Transport & Mobility",
+          "subdomain_id": "transport_resilience",
+          "subdomain": "Transport resilience"
+        },
+        {
+          "domain_id": "infrastructure_settlements",
+          "domain": "Infrastructure & Human Settlements",
+          "subdomain_id": "critical_infrastructure",
+          "subdomain": "Critical infrastructure and services"
+        }
+      ]
+    },
+    {
+      "topic_id": "IND-01",
+      "label": "Cleaner production and industrial efficiency",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "industry_mining",
+          "domain": "Industry & Mining",
+          "subdomain_id": "industry_production",
+          "subdomain": "Industrial production and efficiency"
+        }
+      ]
+    },
+    {
+      "topic_id": "IND-02",
+      "label": "Process emissions and refrigerants",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "industry_mining",
+          "domain": "Industry & Mining",
+          "subdomain_id": "industry_process",
+          "subdomain": "Industrial processes and refrigerants"
+        }
+      ]
+    },
+    {
+      "topic_id": "HEA-01",
+      "label": "Heat and human health",
+      "claim_counts_by_score": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Heat-risk projection for vulnerable populations",
+      "paths": [
+        {
+          "domain_id": "health",
+          "domain": "Health",
+          "subdomain_id": "health_risks",
+          "subdomain": "Climate- and disaster-related health risks"
+        }
+      ]
+    },
+    {
+      "topic_id": "HEA-02",
+      "label": "Climate-sensitive disease and exposure",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "health",
+          "domain": "Health",
+          "subdomain_id": "health_risks",
+          "subdomain": "Climate- and disaster-related health risks"
+        }
+      ]
+    },
+    {
+      "topic_id": "HEA-03",
+      "label": "Resilient health services",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "health",
+          "domain": "Health",
+          "subdomain_id": "health_services",
+          "subdomain": "Health services and facilities"
+        }
+      ]
+    },
+    {
+      "topic_id": "WST-01",
+      "label": "Materials, recycling and circularity",
+      "claim_counts_by_score": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Waste recycling target and measures",
+      "paths": [
+        {
+          "domain_id": "waste_circular",
+          "domain": "Waste & Circular Economy",
+          "subdomain_id": "waste_materials",
+          "subdomain": "Materials, recycling and circularity"
+        }
+      ]
+    },
+    {
+      "topic_id": "WST-02",
+      "label": "Solid-waste disposal and methane",
+      "claim_counts_by_score": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "claim_count": 2,
+      "summary": "Waste-to-energy pilot and landfill measures",
+      "paths": [
+        {
+          "domain_id": "waste_circular",
+          "domain": "Waste & Circular Economy",
+          "subdomain_id": "waste_solid",
+          "subdomain": "Solid waste and methane"
+        }
+      ]
+    },
+    {
+      "topic_id": "WST-03",
+      "label": "Wastewater and sanitation",
+      "claim_counts_by_score": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "claim_count": 1,
+      "summary": "Wastewater-treatment target",
+      "paths": [
+        {
+          "domain_id": "waste_circular",
+          "domain": "Waste & Circular Economy",
+          "subdomain_id": "waste_water",
+          "subdomain": "Wastewater"
+        },
+        {
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_quality",
+          "subdomain": "Water quality, sanitation and reuse"
+        }
+      ]
+    },
+    {
+      "topic_id": "TOU-01",
+      "label": "Tourism adaptation and destination resilience",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "tourism",
+          "domain": "Tourism",
+          "subdomain_id": "tourism_resilience",
+          "subdomain": "Tourism systems and destination resilience"
+        }
+      ]
+    },
+    {
+      "topic_id": "TOU-02",
+      "label": "Tourism resource efficiency",
+      "claim_counts_by_score": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "claim_count": 0,
+      "summary": "No supporting claim found in this document sample.",
+      "paths": [
+        {
+          "domain_id": "tourism",
+          "domain": "Tourism",
+          "subdomain_id": "tourism_resilience",
+          "subdomain": "Tourism systems and destination resilience"
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C01",
+      "member_record_ids": [
+        "R01",
+        "R39"
+      ],
+      "statement": "2024 flood impacts are reported differently: p. 13 says >100,000 displaced and ~$450m loss; p. 56 says 118,000 displaced and $877m loss. Keep as a contested event variant pending scope/definition review.",
+      "topic_ids": [
+        "CLM-08",
+        "WAT-03"
+      ],
+      "score": 0,
+      "score_label": "Context / outcome only",
+      "outcome_signal": "not_comparable",
+      "score_rationale": "Observed hazard impact only; conflicting variants are preserved, not averaged.",
+      "relation_types": [
+        "same_fact_variant",
+        "contradicts"
+      ],
+      "pages": [
+        "13",
+        "56"
+      ],
+      "records": [
+        {
+          "record_id": "R01",
+          "page": "13",
+          "summary": "2024 spring floods forced over 100,000 people to flee; 45,000 were children; losses about USD 450m.",
+          "statement_type": "observed_result_or_impact",
+          "topic_ids": [
+            "CLM-08",
+            "WAT-03"
+          ],
+          "label_notes": "observed_result_or_impact; CLM-08 / WAT-03; flood; affected groups: people, children; observation: >100,000 displaced, USD 450m"
+        },
+        {
+          "record_id": "R39",
+          "page": "56",
+          "summary": "The 2024 flood table reports 118,000 people displaced and USD 877m estimated loss.",
+          "statement_type": "observed_result_or_impact",
+          "topic_ids": [
+            "CLM-08",
+            "WAT-03"
+          ],
+          "label_notes": "observed_result_or_impact; CLM-08 / WAT-03; flood; displaced people; 2024; USD 877m"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_reduction",
+          "subdomain": "Prevention and risk reduction"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_response_recovery",
+          "subdomain": "Response, recovery and reconstruction"
+        },
+        {
+          "topic_id": "WAT-03",
+          "topic": "Flood and coastal protection",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_hazards",
+          "subdomain": "Flood, coast and erosion"
+        }
+      ]
+    },
+    {
+      "claim_id": "C02",
+      "member_record_ids": [
+        "R02"
+      ],
+      "statement": "Flood risk affects grain/oilseed areas and farming communities in named oblasts.",
+      "topic_ids": [
+        "AGR-02",
+        "CLM-03",
+        "WAT-03"
+      ],
+      "score": 0,
+      "score_label": "Context / outcome only",
+      "score_rationale": "Risk context.",
+      "relation_types": [],
+      "pages": [
+        "44"
+      ],
+      "records": [
+        {
+          "record_id": "R02",
+          "page": "44",
+          "summary": "Flooding threatens grain and oilseed production areas in named northern/eastern oblasts and affects farming communities.",
+          "statement_type": "context_or_assessment",
+          "topic_ids": [
+            "AGR-02",
+            "CLM-03",
+            "WAT-03"
+          ],
+          "label_notes": "context_or_assessment; CLM-03 / AGR-02 / WAT-03; flood; affected groups: farmers, farming communities; places: Akmola, Karaganda, Abay, East Kazakhstan"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "AGR-02",
+          "topic": "Resilient crops and soils",
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "agriculture_production",
+          "subdomain": "Crops, soils and farm adaptation"
+        },
+        {
+          "topic_id": "CLM-03",
+          "topic": "Climate information and risk assessment",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_information",
+          "subdomain": "Climate information, impacts and adaptation"
+        },
+        {
+          "topic_id": "CLM-03",
+          "topic": "Climate information and risk assessment",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "topic_id": "WAT-03",
+          "topic": "Flood and coastal protection",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_hazards",
+          "subdomain": "Flood, coast and erosion"
+        }
+      ]
+    },
+    {
+      "claim_id": "C03",
+      "member_record_ids": [
+        "R03"
+      ],
+      "statement": "Future extreme heat threatens grain production and vulnerable people.",
+      "topic_ids": [
+        "AGR-02",
+        "CLM-03",
+        "HEA-01"
+      ],
+      "score": 0,
+      "score_label": "Context / outcome only",
+      "score_rationale": "Scenario projection.",
+      "relation_types": [],
+      "pages": [
+        "43–44"
+      ],
+      "records": [
+        {
+          "record_id": "R03",
+          "page": "43–44",
+          "summary": "Heat extremes are projected to affect grain output and stress children, older people, and people with health conditions, especially in urban/hot regions.",
+          "statement_type": "projection_or_scenario",
+          "topic_ids": [
+            "AGR-02",
+            "CLM-03",
+            "HEA-01"
+          ],
+          "label_notes": "projection_or_scenario; CLM-03 / AGR-02 / HEA-01; extreme_heat; affected groups: children, older people, people with health conditions; period: mid-century"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "AGR-02",
+          "topic": "Resilient crops and soils",
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "agriculture_production",
+          "subdomain": "Crops, soils and farm adaptation"
+        },
+        {
+          "topic_id": "CLM-03",
+          "topic": "Climate information and risk assessment",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_information",
+          "subdomain": "Climate information, impacts and adaptation"
+        },
+        {
+          "topic_id": "CLM-03",
+          "topic": "Climate information and risk assessment",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "topic_id": "HEA-01",
+          "topic": "Heat and human health",
+          "domain_id": "health",
+          "domain": "Health",
+          "subdomain_id": "health_risks",
+          "subdomain": "Climate- and disaster-related health risks"
+        }
+      ]
+    },
+    {
+      "claim_id": "C04",
+      "member_record_ids": [
+        "R04"
+      ],
+      "statement": "2023 net emissions are about 349.2 MtCO₂e, 9.4% below 1990 and 7.6% above 2021.",
+      "topic_ids": [
+        "CLM-05",
+        "CLM-06"
+      ],
+      "score": 0,
+      "score_label": "Context / outcome only",
+      "outcome_signal": "mixed",
+      "score_rationale": "Observed outcome; 349.22/349.2 are compatible rounding.",
+      "relation_types": [],
+      "pages": [
+        "14, 24"
+      ],
+      "records": [
+        {
+          "record_id": "R04",
+          "page": "14, 24",
+          "summary": "2023 net GHG emissions are reported as 349.22 MtCO₂e on p. 14 and about 349.2 MtCO₂e on p. 24; both are 9.4% below 1990 and 7.6% above 2021.",
+          "statement_type": "observed_result_or_impact",
+          "topic_ids": [
+            "CLM-05",
+            "CLM-06"
+          ],
+          "label_notes": "observed_result_or_impact; CLM-05 / CLM-06; observation; two near-identical rounded values retained"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-05",
+          "topic": "Climate monitoring and reporting",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_information",
+          "subdomain": "Climate information, impacts and adaptation"
+        },
+        {
+          "topic_id": "CLM-06",
+          "topic": "Economy-wide emissions targets",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        }
+      ]
+    },
+    {
+      "claim_id": "C05",
+      "member_record_ids": [
+        "R05",
+        "R06"
+      ],
+      "statement": "The 2023 energy-sector amount is 278.5 MtCO₂e, but the document gives shares of 70.8% and 79.8%.",
+      "topic_ids": [
+        "CLM-05",
+        "CLM-06"
+      ],
+      "score": 0,
+      "score_label": "Context / outcome only",
+      "outcome_signal": "not_comparable",
+      "score_rationale": "Outcome-statistic conflict; denominator/source calculation needs review.",
+      "relation_types": [
+        "same_fact_variant",
+        "contradicts"
+      ],
+      "pages": [
+        "14",
+        "24"
+      ],
+      "records": [
+        {
+          "record_id": "R05",
+          "page": "14",
+          "summary": "Energy emissions are 278.5 MtCO₂e (70.8%) in 2023.",
+          "statement_type": "observed_result_or_impact",
+          "topic_ids": [
+            "CLM-05",
+            "CLM-06"
+          ],
+          "label_notes": "observed_result_or_impact; CLM-05 / CLM-06; observation; 2023"
+        },
+        {
+          "record_id": "R06",
+          "page": "24",
+          "summary": "Energy emissions are 278.5 MtCO₂e (79.8%) in 2023, with energy industries about 40% of national net emissions.",
+          "statement_type": "observed_result_or_impact",
+          "topic_ids": [
+            "CLM-05",
+            "CLM-06"
+          ],
+          "label_notes": "observed_result_or_impact; CLM-05 / CLM-06; observation; 2023"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-05",
+          "topic": "Climate monitoring and reporting",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_information",
+          "subdomain": "Climate information, impacts and adaptation"
+        },
+        {
+          "topic_id": "CLM-06",
+          "topic": "Economy-wide emissions targets",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        }
+      ]
+    },
+    {
+      "claim_id": "C06",
+      "member_record_ids": [
+        "R07"
+      ],
+      "statement": "Renewable capacity is reported at 3,248 MW in September 2025 across 158 facilities; generation share reached 7.2% by November 2025.",
+      "topic_ids": [
+        "ENE-01"
+      ],
+      "score": 4,
+      "score_label": "Delivered output",
+      "score_rationale": "Checkable operating-capacity output is reported. Share is an outcome signal; neither proves wider impact.",
+      "relation_types": [],
+      "pages": [
+        "15"
+      ],
+      "records": [
+        {
+          "record_id": "R07",
+          "page": "15",
+          "summary": "158 renewable facilities operate at 3,248 MW (Sep 2025); generation share rose from 6.81% (end-2024) to 7.2% (Nov 2025).",
+          "statement_type": "observed_result_or_impact",
+          "topic_ids": [
+            "ENE-01"
+          ],
+          "label_notes": "observed_result_or_impact; ENE-01; observations; facility count, capacity, and dated shares kept as separate facts"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "ENE-01",
+          "topic": "Renewable electricity",
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_supply",
+          "subdomain": "Energy supply, renewables and grids"
+        }
+      ]
+    },
+    {
+      "claim_id": "C07",
+      "member_record_ids": [
+        "R08"
+      ],
+      "statement": "Pilot projects for methane, waste-to-energy, and climate-resilient agriculture have been launched with partners.",
+      "topic_ids": [
+        "AGR-02",
+        "ENE-06",
+        "WST-02"
+      ],
+      "score": 3,
+      "score_label": "Resourced / underway",
+      "score_rationale": "Explicitly reported as launched/underway.",
+      "relation_types": [],
+      "pages": [
+        "16"
+      ],
+      "records": [
+        {
+          "record_id": "R08",
+          "page": "16",
+          "summary": "Methane-reduction, waste-to-energy, and climate-resilient agriculture pilots have been launched with international partners.",
+          "statement_type": "implementation_update",
+          "topic_ids": [
+            "AGR-02",
+            "ENE-06",
+            "WST-02"
+          ],
+          "label_notes": "implementation_update; ENE-06 / WST-02 / AGR-02; purpose: mitigation, adaptation, enabling_support; policy status: under_implementation"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "AGR-02",
+          "topic": "Resilient crops and soils",
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "agriculture_production",
+          "subdomain": "Crops, soils and farm adaptation"
+        },
+        {
+          "topic_id": "ENE-06",
+          "topic": "Oil and gas methane",
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_transition",
+          "subdomain": "Fossil fuel transition and methane"
+        },
+        {
+          "topic_id": "WST-02",
+          "topic": "Solid-waste disposal and methane",
+          "domain_id": "waste_circular",
+          "domain": "Waste & Circular Economy",
+          "subdomain_id": "waste_solid",
+          "subdomain": "Solid waste and methane"
+        }
+      ]
+    },
+    {
+      "claim_id": "C08",
+      "member_record_ids": [
+        "R09"
+      ],
+      "statement": "Unconditional emissions pathway reaches 328 MtCO₂e by 2030 (15% below 1990).",
+      "topic_ids": [
+        "CLM-06"
+      ],
+      "score": 1,
+      "score_label": "Commitment / target",
+      "score_rationale": "Target/pathway only.",
+      "relation_types": [],
+      "pages": [
+        "27"
+      ],
+      "records": [
+        {
+          "record_id": "R09",
+          "page": "27",
+          "summary": "Unconditional net emissions pathway: about 328 MtCO₂e by 2030, 15% below 1990.",
+          "statement_type": "commitment_or_target",
+          "topic_ids": [
+            "CLM-06"
+          ],
+          "label_notes": "commitment_or_target; CLM-06; target; 2030; unconditional; baseline 1990"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-06",
+          "topic": "Economy-wide emissions targets",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        }
+      ]
+    },
+    {
+      "claim_id": "C09",
+      "member_record_ids": [
+        "R10"
+      ],
+      "statement": "Unconditional 2035 target is 320 MtCO₂e / 17% below 1990, repeated in annex.",
+      "topic_ids": [
+        "CLM-06"
+      ],
+      "score": 1,
+      "score_label": "Commitment / target",
+      "score_rationale": "Same commitment repeated; repetition adds no score.",
+      "relation_types": [],
+      "pages": [
+        "27, 29, 82"
+      ],
+      "records": [
+        {
+          "record_id": "R10",
+          "page": "27, 29, 82",
+          "summary": "Unconditional target/pathway: about 320 MtCO₂e / 17% below 1990 by 2035.",
+          "statement_type": "commitment_or_target",
+          "topic_ids": [
+            "CLM-06"
+          ],
+          "label_notes": "commitment_or_target; CLM-06; target; 2035; unconditional; baseline 1990; repeated in annex, retained as evidence of one target"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-06",
+          "topic": "Economy-wide emissions targets",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        }
+      ]
+    },
+    {
+      "claim_id": "C10",
+      "member_record_ids": [
+        "R11"
+      ],
+      "statement": "Conditional 2035 target is up to 25% below 1990; p. 29 also gives 288 MtCO₂e/about 32% below BAU.",
+      "topic_ids": [
+        "CLM-02",
+        "CLM-06"
+      ],
+      "score": 1,
+      "score_label": "Commitment / target",
+      "score_rationale": "Conditional commitment; preserve different reference bases.",
+      "relation_types": [],
+      "pages": [
+        "29, 82"
+      ],
+      "records": [
+        {
+          "record_id": "R11",
+          "page": "29, 82",
+          "summary": "Conditional 2035 target is expressed as up to 25% below 1990 with timely international finance, technology transfer, and capacity building; p. 29 also gives about 288 MtCO₂e and about 32% below BAU.",
+          "statement_type": "commitment_or_target",
+          "topic_ids": [
+            "CLM-02",
+            "CLM-06"
+          ],
+          "label_notes": "commitment_or_target; CLM-06 / CLM-02; target; 2035; conditional; preserve both reference bases"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-02",
+          "topic": "Climate finance and support",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_finance",
+          "subdomain": "Climate finance and support"
+        },
+        {
+          "topic_id": "CLM-06",
+          "topic": "Economy-wide emissions targets",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        }
+      ]
+    },
+    {
+      "claim_id": "C11",
+      "member_record_ids": [
+        "R12"
+      ],
+      "statement": "The ETS is operating across 212 installations and ~42.9% of national CO₂ emissions.",
+      "topic_ids": [
+        "CLM-01",
+        "CLM-06"
+      ],
+      "score": 3,
+      "score_label": "Resourced / underway",
+      "score_rationale": "Operational instrument and coverage reported.",
+      "relation_types": [],
+      "pages": [
+        "23"
+      ],
+      "records": [
+        {
+          "record_id": "R12",
+          "page": "23",
+          "summary": "Operating ETS covers about 42.9% of national CO₂ emissions from 212 large installations.",
+          "statement_type": "implementation_update",
+          "topic_ids": [
+            "CLM-01",
+            "CLM-06"
+          ],
+          "label_notes": "implementation_update; CLM-06 / CLM-01; policy status: under_implementation; coverage and installation count"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-01",
+          "topic": "Climate planning and governance",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_governance",
+          "subdomain": "Climate governance, planning and coordination"
+        },
+        {
+          "topic_id": "CLM-06",
+          "topic": "Economy-wide emissions targets",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        }
+      ]
+    },
+    {
+      "claim_id": "C12",
+      "member_record_ids": [
+        "R13"
+      ],
+      "statement": "Covered-sector carbon budget is planned to decline 3.41% annually through 2030.",
+      "topic_ids": [
+        "CLM-06"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "A defined policy trajectory is stated.",
+      "relation_types": [],
+      "pages": [
+        "23"
+      ],
+      "records": [
+        {
+          "record_id": "R13",
+          "page": "23",
+          "summary": "Carbon budget for covered sectors is being reduced by 3.41% annually through 2030.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "CLM-06"
+          ],
+          "label_notes": "policy_or_action; CLM-06; target/policy milestone; period through 2030"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-06",
+          "topic": "Economy-wide emissions targets",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        }
+      ]
+    },
+    {
+      "claim_id": "C13",
+      "member_record_ids": [
+        "R14"
+      ],
+      "statement": "Targets increase renewable generation to 20% and low-carbon generation to at least 35% by 2035.",
+      "topic_ids": [
+        "ENE-01"
+      ],
+      "score": 1,
+      "score_label": "Commitment / target",
+      "score_rationale": "Two targets; implementation is not established by these target statements.",
+      "relation_types": [],
+      "pages": [
+        "28"
+      ],
+      "records": [
+        {
+          "record_id": "R14",
+          "page": "28",
+          "summary": "Renewable share target rises from 7.2% to 20% by 2035; low-carbon electricity share target is at least 35% by 2035.",
+          "statement_type": "commitment_or_target",
+          "topic_ids": [
+            "ENE-01"
+          ],
+          "label_notes": "commitment_or_target; ENE-01; two distinct target facts; 2035"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "ENE-01",
+          "topic": "Renewable electricity",
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_supply",
+          "subdomain": "Energy supply, renewables and grids"
+        }
+      ]
+    },
+    {
+      "claim_id": "C14",
+      "member_record_ids": [
+        "R15"
+      ],
+      "statement": "Heating modernization, home retrofit, and building-code measures set specific service/actions and milestones.",
+      "topic_ids": [
+        "ENE-03",
+        "URB-01"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Defined measures and targets.",
+      "relation_types": [],
+      "pages": [
+        "31"
+      ],
+      "records": [
+        {
+          "record_id": "R15",
+          "page": "31",
+          "summary": "Modernize district heating serving around 60% of population; increase residential retrofit rate from about 0.1% (2023) to 0.5% annually from 2026; 50% of new homes meet advanced codes by 2030.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "ENE-03",
+            "URB-01"
+          ],
+          "label_notes": "policy_or_action; ENE-03 / URB-01; three separate measures/targets; preserve periods"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "ENE-03",
+          "topic": "Clean heating and fuels",
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_demand",
+          "subdomain": "Energy efficiency, buildings and heating"
+        },
+        {
+          "topic_id": "URB-01",
+          "topic": "Building energy performance",
+          "domain_id": "infrastructure_settlements",
+          "domain": "Infrastructure & Human Settlements",
+          "subdomain_id": "built_environment",
+          "subdomain": "Buildings and settlements"
+        },
+        {
+          "topic_id": "URB-01",
+          "topic": "Building energy performance",
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_demand",
+          "subdomain": "Energy efficiency, buildings and heating"
+        }
+      ]
+    },
+    {
+      "claim_id": "C15",
+      "member_record_ids": [
+        "R16"
+      ],
+      "statement": "Produce at least 30,000 tonnes of sustainable aviation fuel by 2035.",
+      "topic_ids": [
+        "TRN-01"
+      ],
+      "score": 1,
+      "score_label": "Commitment / target",
+      "score_rationale": "Target only.",
+      "relation_types": [],
+      "pages": [
+        "32"
+      ],
+      "records": [
+        {
+          "record_id": "R16",
+          "page": "32",
+          "summary": "Sustainable aviation fuel production is to reach at least 30,000 tonnes by 2035.",
+          "statement_type": "commitment_or_target",
+          "topic_ids": [
+            "TRN-01"
+          ],
+          "label_notes": "commitment_or_target; TRN-01; target; 2035"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "TRN-01",
+          "topic": "Low-emission vehicles and fuels",
+          "domain_id": "transport",
+          "domain": "Transport & Mobility",
+          "subdomain_id": "transport_low_emission",
+          "subdomain": "Low-emission mobility"
+        }
+      ]
+    },
+    {
+      "claim_id": "C16",
+      "member_record_ids": [
+        "R17"
+      ],
+      "statement": "Safeguard 800,000 ha of forest by 2035 and extend sustainable management to 1.3m ha by 2040.",
+      "topic_ids": [
+        "BIO-01",
+        "CLM-07"
+      ],
+      "score": 1,
+      "score_label": "Commitment / target",
+      "score_rationale": "Two distinct commitments.",
+      "relation_types": [],
+      "pages": [
+        "33"
+      ],
+      "records": [
+        {
+          "record_id": "R17",
+          "page": "33",
+          "summary": "Forest land safeguarded from degradation: 800,000 ha by 2035; sustainable forest management extended to 1.3m ha by 2040.",
+          "statement_type": "commitment_or_target",
+          "topic_ids": [
+            "BIO-01",
+            "CLM-07"
+          ],
+          "label_notes": "commitment_or_target; BIO-01 / CLM-07; separate target facts and periods"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "BIO-01",
+          "topic": "Forest health and management",
+          "domain_id": "nature_land",
+          "domain": "Nature, Land, Forests & Biodiversity",
+          "subdomain_id": "nature_forests",
+          "subdomain": "Forests, land and soils"
+        },
+        {
+          "topic_id": "CLM-07",
+          "topic": "Land carbon and removals",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        },
+        {
+          "topic_id": "CLM-07",
+          "topic": "Land carbon and removals",
+          "domain_id": "nature_land",
+          "domain": "Nature, Land, Forests & Biodiversity",
+          "subdomain_id": "nature_forests",
+          "subdomain": "Forests, land and soils"
+        }
+      ]
+    },
+    {
+      "claim_id": "C17",
+      "member_record_ids": [
+        "R18"
+      ],
+      "statement": "Waste policy targets 40% recycling by 2035 and defines landfill/methane actions.",
+      "topic_ids": [
+        "WST-01",
+        "WST-02"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Target paired with specified measures.",
+      "relation_types": [],
+      "pages": [
+        "34"
+      ],
+      "records": [
+        {
+          "record_id": "R18",
+          "page": "34",
+          "summary": "At least 40% waste recycling by 2035; landfill restrictions and methane capture also described.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "WST-01",
+            "WST-02"
+          ],
+          "label_notes": "policy_or_action; WST-01 / WST-02; target plus defined measures; 2035"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "WST-01",
+          "topic": "Materials, recycling and circularity",
+          "domain_id": "waste_circular",
+          "domain": "Waste & Circular Economy",
+          "subdomain_id": "waste_materials",
+          "subdomain": "Materials, recycling and circularity"
+        },
+        {
+          "topic_id": "WST-02",
+          "topic": "Solid-waste disposal and methane",
+          "domain_id": "waste_circular",
+          "domain": "Waste & Circular Economy",
+          "subdomain_id": "waste_solid",
+          "subdomain": "Solid waste and methane"
+        }
+      ]
+    },
+    {
+      "claim_id": "C18",
+      "member_record_ids": [
+        "R19"
+      ],
+      "statement": "Existing codes and plans provide an adaptation basis for water and other sectors.",
+      "topic_ids": [
+        "CLM-01",
+        "WAT-01"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Existing policy instruments are documented.",
+      "relation_types": [],
+      "pages": [
+        "40"
+      ],
+      "records": [
+        {
+          "record_id": "R19",
+          "page": "40",
+          "summary": "Environmental and Water Codes and sector plans provide the legal/planning basis for adaptation, including sustainable water management.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "CLM-01",
+            "WAT-01"
+          ],
+          "label_notes": "policy_or_action; CLM-01 / WAT-01; purpose: adaptation; policy status: existing_or_in_force"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-01",
+          "topic": "Climate planning and governance",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_governance",
+          "subdomain": "Climate governance, planning and coordination"
+        },
+        {
+          "topic_id": "WAT-01",
+          "topic": "Water supply and groundwater",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_resources",
+          "subdomain": "Water resources, supply and groundwater"
+        }
+      ]
+    },
+    {
+      "claim_id": "C19",
+      "member_record_ids": [
+        "R20"
+      ],
+      "statement": "Water storage, irrigation-loss reduction, canal modernization, and hydrological monitoring are specified.",
+      "topic_ids": [
+        "AGR-01",
+        "WAT-01"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Defined measures plus dated targets.",
+      "relation_types": [],
+      "pages": [
+        "41"
+      ],
+      "records": [
+        {
+          "record_id": "R20",
+          "page": "41",
+          "summary": "Increase water storage to 2.65bn m³ by 2028, reduce irrigation losses from 50% to 35%, modernize canals, and strengthen hydrological monitoring.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "AGR-01",
+            "WAT-01"
+          ],
+          "label_notes": "policy_or_action; WAT-01 / AGR-01; targets: 2028, 2.65bn m³, 50→35%; purpose: adaptation"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "AGR-01",
+          "topic": "Irrigation efficiency",
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "agriculture_water",
+          "subdomain": "Farm water, irrigation and drainage"
+        },
+        {
+          "topic_id": "AGR-01",
+          "topic": "Irrigation efficiency",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_resources",
+          "subdomain": "Water resources, supply and groundwater"
+        },
+        {
+          "topic_id": "WAT-01",
+          "topic": "Water supply and groundwater",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_resources",
+          "subdomain": "Water resources, supply and groundwater"
+        }
+      ]
+    },
+    {
+      "claim_id": "C20",
+      "member_record_ids": [
+        "R21"
+      ],
+      "statement": "Expand irrigation technology by 1.5m ha above 2025 levels, including a named priority-area allocation.",
+      "topic_ids": [
+        "AGR-01"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Defined expansion action and target.",
+      "relation_types": [],
+      "pages": [
+        "41, 47"
+      ],
+      "records": [
+        {
+          "record_id": "R21",
+          "page": "41, 47",
+          "summary": "Expand improved irrigation technology by 1.5m ha above 2025; 1,173,650 ha (78%) allocated to priority areas by 2035; table cost is USD 6.4bn (USD 708m/year).",
+          "statement_type": "commitment_or_target",
+          "topic_ids": [
+            "AGR-01"
+          ],
+          "label_notes": "commitment_or_target; AGR-01; target; baseline 2025; 2035; cost estimate kept separate from spending"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "AGR-01",
+          "topic": "Irrigation efficiency",
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "agriculture_water",
+          "subdomain": "Farm water, irrigation and drainage"
+        },
+        {
+          "topic_id": "AGR-01",
+          "topic": "Irrigation efficiency",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_resources",
+          "subdomain": "Water resources, supply and groundwater"
+        }
+      ]
+    },
+    {
+      "claim_id": "C21",
+      "member_record_ids": [
+        "R22"
+      ],
+      "statement": "Improve water bodies toward class II, targeting 35% of water bodies.",
+      "topic_ids": [
+        "WAT-04"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Defined action/target; listed cost remains an estimate.",
+      "relation_types": [],
+      "pages": [
+        "47"
+      ],
+      "records": [
+        {
+          "record_id": "R22",
+          "page": "47",
+          "summary": "Restore/improve water bodies to class II; target is 35% of water bodies at class II.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "WAT-04"
+          ],
+          "label_notes": "policy_or_action; WAT-04; target; cost estimate USD 1.2bn in table (not reported spending)"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "WAT-04",
+          "topic": "Water quality and reuse",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_quality",
+          "subdomain": "Water quality, sanitation and reuse"
+        }
+      ]
+    },
+    {
+      "claim_id": "C22",
+      "member_record_ids": [
+        "R23"
+      ],
+      "statement": "Construct/reconstruct reservoirs, including an additional Astana reservoir.",
+      "topic_ids": [
+        "URB-02",
+        "WAT-01"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Specified infrastructure action; finance is an estimate, not spend.",
+      "relation_types": [],
+      "pages": [
+        "47"
+      ],
+      "records": [
+        {
+          "record_id": "R23",
+          "page": "47",
+          "summary": "Build/reconstruct reservoirs, including an additional Astana reservoir.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "URB-02",
+            "WAT-01"
+          ],
+          "label_notes": "policy_or_action; WAT-01 / URB-02; cost estimate USD 1.153bn including USD 116m grants; not treated as allocated finance"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "URB-02",
+          "topic": "Resilient settlements and infrastructure",
+          "domain_id": "infrastructure_settlements",
+          "domain": "Infrastructure & Human Settlements",
+          "subdomain_id": "built_environment",
+          "subdomain": "Buildings and settlements"
+        },
+        {
+          "topic_id": "URB-02",
+          "topic": "Resilient settlements and infrastructure",
+          "domain_id": "infrastructure_settlements",
+          "domain": "Infrastructure & Human Settlements",
+          "subdomain_id": "critical_infrastructure",
+          "subdomain": "Critical infrastructure and services"
+        },
+        {
+          "topic_id": "WAT-01",
+          "topic": "Water supply and groundwater",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_resources",
+          "subdomain": "Water resources, supply and groundwater"
+        }
+      ]
+    },
+    {
+      "claim_id": "C23",
+      "member_record_ids": [
+        "R24"
+      ],
+      "statement": "Integrate disaster-risk reduction in adaptation policy across oblasts and train UAV operators.",
+      "topic_ids": [
+        "CLM-04",
+        "CLM-08"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Defined governance/capacity actions and targets.",
+      "relation_types": [],
+      "pages": [
+        "47"
+      ],
+      "records": [
+        {
+          "record_id": "R24",
+          "page": "47",
+          "summary": "Integrate disaster-risk reduction into adaptation policy in all oblasts; increase trained UAV operators to 50%.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "CLM-04",
+            "CLM-08"
+          ],
+          "label_notes": "policy_or_action; CLM-08 / CLM-04; target; all oblasts; 50% UAV operators"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-04",
+          "topic": "Early warning and disaster preparedness",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_preparedness",
+          "subdomain": "Early warning and preparedness"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_reduction",
+          "subdomain": "Prevention and risk reduction"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_response_recovery",
+          "subdomain": "Response, recovery and reconstruction"
+        }
+      ]
+    },
+    {
+      "claim_id": "C24",
+      "member_record_ids": [
+        "R25"
+      ],
+      "statement": "Expand hydrological posts to 450 and warning-device coverage to 80%.",
+      "topic_ids": [
+        "CLM-04",
+        "CLM-08",
+        "WAT-02"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Defined preparedness actions and targets; cost is not proof of allocation.",
+      "relation_types": [],
+      "pages": [
+        "50"
+      ],
+      "records": [
+        {
+          "record_id": "R25",
+          "page": "50",
+          "summary": "Hydrological warning target: 450 observation posts operational and 80% siren/voice-device coverage; table lists USD 5.5m.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "CLM-04",
+            "CLM-08",
+            "WAT-02"
+          ],
+          "label_notes": "policy_or_action; CLM-04 / CLM-08 / WAT-02; target and cost estimate; not treated as spent"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-04",
+          "topic": "Early warning and disaster preparedness",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_preparedness",
+          "subdomain": "Early warning and preparedness"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_reduction",
+          "subdomain": "Prevention and risk reduction"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_response_recovery",
+          "subdomain": "Response, recovery and reconstruction"
+        },
+        {
+          "topic_id": "WAT-02",
+          "topic": "River basins and drought management",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_basins_drought",
+          "subdomain": "River basins and drought management"
+        }
+      ]
+    },
+    {
+      "claim_id": "C25",
+      "member_record_ids": [
+        "R26"
+      ],
+      "statement": "Develop and introduce resilient crop varieties, targeting initial farmer uptake of 20%.",
+      "topic_ids": [
+        "AGR-02"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Defined R&D/dissemination measure; cost is an estimate.",
+      "relation_types": [],
+      "pages": [
+        "49"
+      ],
+      "records": [
+        {
+          "record_id": "R26",
+          "page": "49",
+          "summary": "Heat/drought-resistant crop varieties to be developed and introduced, with initial uptake by 20% of farmers; cost USD 1.32bn.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "AGR-02"
+          ],
+          "label_notes": "policy_or_action; AGR-02; target; affected group: farmers; cost estimate"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "AGR-02",
+          "topic": "Resilient crops and soils",
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "agriculture_production",
+          "subdomain": "Crops, soils and farm adaptation"
+        }
+      ]
+    },
+    {
+      "claim_id": "C26",
+      "member_record_ids": [
+        "R27"
+      ],
+      "statement": "Expand wastewater treatment to 53%.",
+      "topic_ids": [
+        "WAT-04",
+        "WST-03"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Defined service/infrastructure target.",
+      "relation_types": [],
+      "pages": [
+        "49"
+      ],
+      "records": [
+        {
+          "record_id": "R27",
+          "page": "49",
+          "summary": "Expand anthropogenic wastewater treatment to 53%; cost USD 4.5bn, including USD 500m/year.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "WAT-04",
+            "WST-03"
+          ],
+          "label_notes": "policy_or_action; WST-03 / WAT-04; target and cost estimate"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "WAT-04",
+          "topic": "Water quality and reuse",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_quality",
+          "subdomain": "Water quality, sanitation and reuse"
+        },
+        {
+          "topic_id": "WST-03",
+          "topic": "Wastewater and sanitation",
+          "domain_id": "waste_circular",
+          "domain": "Waste & Circular Economy",
+          "subdomain_id": "waste_water",
+          "subdomain": "Wastewater"
+        },
+        {
+          "topic_id": "WST-03",
+          "topic": "Wastewater and sanitation",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_quality",
+          "subdomain": "Water quality, sanitation and reuse"
+        }
+      ]
+    },
+    {
+      "claim_id": "C27",
+      "member_record_ids": [
+        "R28"
+      ],
+      "statement": "Disaster damages in 2020–24 total about $2bn (0.24% GDP annually), nearly 50 times the 2015–19 amount.",
+      "topic_ids": [
+        "CLM-08"
+      ],
+      "score": 0,
+      "score_label": "Context / outcome only",
+      "outcome_signal": "worsening",
+      "score_rationale": "Observed damage context, not response evidence.",
+      "relation_types": [],
+      "pages": [
+        "56"
+      ],
+      "records": [
+        {
+          "record_id": "R28",
+          "page": "56",
+          "summary": "Disasters caused about USD 2bn damage in 2020–24 (0.24% GDP annually, nearly 50× 2015–19).",
+          "statement_type": "observed_result_or_impact",
+          "topic_ids": [
+            "CLM-08"
+          ],
+          "label_notes": "observed_result_or_impact; CLM-08; observation; 2020–24"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_reduction",
+          "subdomain": "Prevention and risk reduction"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_response_recovery",
+          "subdomain": "Response, recovery and reconstruction"
+        }
+      ]
+    },
+    {
+      "claim_id": "C28",
+      "member_record_ids": [
+        "R29"
+      ],
+      "statement": "Flood and long-duration heatwave risks may increase under SSP2-4.5 by 2100.",
+      "topic_ids": [
+        "CLM-03",
+        "CLM-08"
+      ],
+      "score": 0,
+      "score_label": "Context / outcome only",
+      "score_rationale": "Conditional projection.",
+      "relation_types": [],
+      "pages": [
+        "56"
+      ],
+      "records": [
+        {
+          "record_id": "R29",
+          "page": "56",
+          "summary": "Under SSP2-4.5, high-hazard flood risk may triple and long-duration heatwaves may increase sixfold by 2100.",
+          "statement_type": "projection_or_scenario",
+          "topic_ids": [
+            "CLM-03",
+            "CLM-08"
+          ],
+          "label_notes": "projection_or_scenario; CLM-03 / CLM-08; flood, extreme_heat; scenario SSP2-4.5; period 2100"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-03",
+          "topic": "Climate information and risk assessment",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_information",
+          "subdomain": "Climate information, impacts and adaptation"
+        },
+        {
+          "topic_id": "CLM-03",
+          "topic": "Climate information and risk assessment",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_reduction",
+          "subdomain": "Prevention and risk reduction"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_response_recovery",
+          "subdomain": "Response, recovery and reconstruction"
+        }
+      ]
+    },
+    {
+      "claim_id": "C29",
+      "member_record_ids": [
+        "R30"
+      ],
+      "statement": "Social-protection mechanisms provide emergency food/cash, temporary housing, insurance, and loan deferrals for disaster-affected households/farmers.",
+      "topic_ids": [
+        "AGR-04",
+        "CLM-08"
+      ],
+      "score": 3,
+      "score_label": "Resourced / underway",
+      "score_rationale": "Existing mechanisms are reported; effectiveness is not established.",
+      "relation_types": [],
+      "pages": [
+        "58"
+      ],
+      "records": [
+        {
+          "record_id": "R30",
+          "page": "58",
+          "summary": "Social protection mechanisms include emergency food/cash, temporary housing, agricultural insurance, and loan deferrals for farmers affected by extreme weather.",
+          "statement_type": "implementation_update",
+          "topic_ids": [
+            "AGR-04",
+            "CLM-08"
+          ],
+          "label_notes": "implementation_update; CLM-08 / AGR-04; affected groups: farmers, displaced communities; policy status: under_implementation"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "AGR-04",
+          "topic": "Food systems and farm livelihoods",
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "food_livestock_fisheries",
+          "subdomain": "Livestock, fisheries and food systems"
+        },
+        {
+          "topic_id": "AGR-04",
+          "topic": "Food systems and farm livelihoods",
+          "domain_id": "livelihoods_social_protection",
+          "domain": "Livelihoods & Social Protection",
+          "subdomain_id": "livelihoods_jobs",
+          "subdomain": "Jobs, workers and livelihoods"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_reduction",
+          "subdomain": "Prevention and risk reduction"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_response_recovery",
+          "subdomain": "Response, recovery and reconstruction"
+        }
+      ]
+    },
+    {
+      "claim_id": "C30",
+      "member_record_ids": [
+        "R31"
+      ],
+      "statement": "Develop planned-relocation rules with participation and rights/livelihood safeguards.",
+      "topic_ids": [
+        "CLM-01",
+        "CLM-08"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Specific future policy action.",
+      "relation_types": [],
+      "pages": [
+        "59"
+      ],
+      "records": [
+        {
+          "record_id": "R31",
+          "page": "59",
+          "summary": "Planned-relocation guidance is to be developed, with participation and safeguards for rights, livelihoods, and cultural heritage.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "CLM-01",
+            "CLM-08"
+          ],
+          "label_notes": "policy_or_action; CLM-08 / CLM-01; purpose: loss_and_damage, disaster_risk_reduction; affected groups: relocated communities"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-01",
+          "topic": "Climate planning and governance",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_governance",
+          "subdomain": "Climate governance, planning and coordination"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_reduction",
+          "subdomain": "Prevention and risk reduction"
+        },
+        {
+          "topic_id": "CLM-08",
+          "topic": "Disaster risk and management",
+          "domain_id": "disaster_risk",
+          "domain": "Disaster Risk & Emergency Management",
+          "subdomain_id": "disaster_response_recovery",
+          "subdomain": "Response, recovery and reconstruction"
+        }
+      ]
+    },
+    {
+      "claim_id": "C31",
+      "member_record_ids": [
+        "R32"
+      ],
+      "statement": "Annual national inventory reporting tracks emissions/removals since 1990.",
+      "topic_ids": [
+        "CLM-05"
+      ],
+      "score": 4,
+      "score_label": "Delivered output",
+      "score_rationale": "Recurring completed monitoring output.",
+      "relation_types": [],
+      "pages": [
+        "64"
+      ],
+      "records": [
+        {
+          "record_id": "R32",
+          "page": "64",
+          "summary": "National Inventory Report has been prepared annually and tracks emissions/removals since 1990.",
+          "statement_type": "implementation_update",
+          "topic_ids": [
+            "CLM-05"
+          ],
+          "label_notes": "implementation_update; CLM-05; monitoring output; annual since 1990"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-05",
+          "topic": "Climate monitoring and reporting",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_information",
+          "subdomain": "Climate information, impacts and adaptation"
+        }
+      ]
+    },
+    {
+      "claim_id": "C32",
+      "member_record_ids": [
+        "R33"
+      ],
+      "statement": "Develop common QA/QC and validation protocols for cross-agency reporting.",
+      "topic_ids": [
+        "CLM-01",
+        "CLM-05"
+      ],
+      "score": 2,
+      "score_label": "Defined action",
+      "score_rationale": "Defined system-improvement action, not yet reported complete.",
+      "relation_types": [],
+      "pages": [
+        "64"
+      ],
+      "records": [
+        {
+          "record_id": "R33",
+          "page": "64",
+          "summary": "Unified QA/QC standards and data-validation protocols will be developed across agencies.",
+          "statement_type": "policy_or_action",
+          "topic_ids": [
+            "CLM-01",
+            "CLM-05"
+          ],
+          "label_notes": "policy_or_action; CLM-05 / CLM-01; purpose: enabling_support; planned data/monitoring action"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-01",
+          "topic": "Climate planning and governance",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_governance",
+          "subdomain": "Climate governance, planning and coordination"
+        },
+        {
+          "topic_id": "CLM-05",
+          "topic": "Climate monitoring and reporting",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_information",
+          "subdomain": "Climate information, impacts and adaptation"
+        }
+      ]
+    },
+    {
+      "claim_id": "C33",
+      "member_record_ids": [
+        "R34"
+      ],
+      "statement": "Youth hold at least 30% representation in specified decision-making bodies.",
+      "topic_ids": [
+        "CLM-01"
+      ],
+      "score": 3,
+      "score_label": "Resourced / underway",
+      "score_rationale": "Current arrangement is explicitly reported.",
+      "relation_types": [],
+      "pages": [
+        "63"
+      ],
+      "records": [
+        {
+          "record_id": "R34",
+          "page": "63",
+          "summary": "Youth representation of at least 30% is ensured in decision-making bodies under MENR and locally.",
+          "statement_type": "implementation_update",
+          "topic_ids": [
+            "CLM-01"
+          ],
+          "label_notes": "implementation_update; CLM-01; affected group: youth; stakeholder: MENR/local bodies; reported current arrangement"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-01",
+          "topic": "Climate planning and governance",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_governance",
+          "subdomain": "Climate governance, planning and coordination"
+        }
+      ]
+    },
+    {
+      "claim_id": "C34",
+      "member_record_ids": [
+        "R35"
+      ],
+      "statement": "NDC finance requirements are estimated at $175.6bn total/$128.5bn mitigation/$47bn adaptation, with $71.8bn additional-only.",
+      "topic_ids": [
+        "CLM-02"
+      ],
+      "score": 0,
+      "score_label": "Context / outcome only",
+      "score_rationale": "Funding need/estimate is not allocated funding.",
+      "relation_types": [],
+      "pages": [
+        "74–75"
+      ],
+      "records": [
+        {
+          "record_id": "R35",
+          "page": "74–75",
+          "summary": "NDC 2026–2035 investment needs: USD 175.6bn total, USD 128.5bn mitigation, USD 47bn adaptation; additional-only estimate USD 71.8bn.",
+          "statement_type": "finance_information",
+          "topic_ids": [
+            "CLM-02"
+          ],
+          "label_notes": "finance_information; CLM-02; finance type: need_or_estimate; period 2026–2035; figures retained by scope"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-02",
+          "topic": "Climate finance and support",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_finance",
+          "subdomain": "Climate finance and support"
+        }
+      ]
+    },
+    {
+      "claim_id": "C35",
+      "member_record_ids": [
+        "R36"
+      ],
+      "statement": "Government spent $921m on environmental protection in 2023, with category breakdown.",
+      "topic_ids": [
+        "CLM-02"
+      ],
+      "score": 3,
+      "score_label": "Resourced / underway",
+      "score_rationale": "Reported expenditure.",
+      "relation_types": [],
+      "pages": [
+        "76"
+      ],
+      "records": [
+        {
+          "record_id": "R36",
+          "page": "76",
+          "summary": "2023 government environmental-protection expenditure: USD 921m, including 187m air/climate, 356m renewable energy, 165m waste, 51m environmental R&D.",
+          "statement_type": "finance_information",
+          "topic_ids": [
+            "CLM-02"
+          ],
+          "label_notes": "finance_information; CLM-02; domestic_public_budget; spent; 2023"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-02",
+          "topic": "Climate finance and support",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_finance",
+          "subdomain": "Climate finance and support"
+        }
+      ]
+    },
+    {
+      "claim_id": "C36",
+      "member_record_ids": [
+        "R37"
+      ],
+      "statement": "SOE financing is reported for green projects and renewables through named instruments.",
+      "topic_ids": [
+        "CLM-02",
+        "ENE-01"
+      ],
+      "score": 3,
+      "score_label": "Resourced / underway",
+      "score_rationale": "Finance provision is reported; components stay distinct.",
+      "relation_types": [],
+      "pages": [
+        "77–78"
+      ],
+      "records": [
+        {
+          "record_id": "R37",
+          "page": "77–78",
+          "summary": "SOE financing includes Baiterek green-project support (~USD 355m as of July 2023), DBK renewables loans (~USD 237m), and other named instruments.",
+          "statement_type": "finance_information",
+          "topic_ids": [
+            "CLM-02",
+            "ENE-01"
+          ],
+          "label_notes": "finance_information; CLM-02 / ENE-01; domestic_public_budget/green finance; reported financing, components remain separate"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-02",
+          "topic": "Climate finance and support",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_finance",
+          "subdomain": "Climate finance and support"
+        },
+        {
+          "topic_id": "ENE-01",
+          "topic": "Renewable electricity",
+          "domain_id": "energy",
+          "domain": "Energy",
+          "subdomain_id": "energy_supply",
+          "subdomain": "Energy supply, renewables and grids"
+        }
+      ]
+    },
+    {
+      "claim_id": "C37",
+      "member_record_ids": [
+        "R38"
+      ],
+      "statement": "International climate support received over 15 years is reported below $1bn.",
+      "topic_ids": [
+        "CLM-02"
+      ],
+      "score": 0,
+      "score_label": "Context / outcome only",
+      "score_rationale": "Support context/financing gap, not a national response score.",
+      "relation_types": [],
+      "pages": [
+        "80"
+      ],
+      "records": [
+        {
+          "record_id": "R38",
+          "page": "80",
+          "summary": "Direct international climate-related support over 15 years is reported below USD 1bn, largely technical assistance/capacity building and MDB loans.",
+          "statement_type": "finance_information",
+          "topic_ids": [
+            "CLM-02"
+          ],
+          "label_notes": "finance_information; CLM-02; observation; period 15 years; reported support, not a response score"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "CLM-02",
+          "topic": "Climate finance and support",
+          "domain_id": "climate",
+          "domain": "Climate",
+          "subdomain_id": "climate_finance",
+          "subdomain": "Climate finance and support"
+        }
+      ]
+    },
+    {
+      "claim_id": "C38",
+      "member_record_ids": [
+        "R40"
+      ],
+      "statement": "The NDC includes an irrigation-loss target with unclear wording (“40-25% of the area”); its intended metric needs review.",
+      "topic_ids": [
+        "AGR-01"
+      ],
+      "score": 1,
+      "score_label": "Commitment / target",
+      "score_rationale": "A target is present but ambiguous. The source text is preserved, not interpreted as a precise value.",
+      "relation_types": [],
+      "pages": [
+        "47"
+      ],
+      "records": [
+        {
+          "record_id": "R40",
+          "page": "47",
+          "summary": "The irrigation table states “reducing current average losses in 40-25% of the area” where improved irrigation is implemented; the wording does not make the intended value/direction clear.",
+          "statement_type": "commitment_or_target",
+          "topic_ids": [
+            "AGR-01"
+          ],
+          "label_notes": "commitment_or_target; AGR-01; ambiguous target wording preserved verbatim in a note; do not normalize to 40% or 25%"
+        }
+      ],
+      "subject_paths": [
+        {
+          "topic_id": "AGR-01",
+          "topic": "Irrigation efficiency",
+          "domain_id": "food_agriculture",
+          "domain": "Food & Agriculture",
+          "subdomain_id": "agriculture_water",
+          "subdomain": "Farm water, irrigation and drainage"
+        },
+        {
+          "topic_id": "AGR-01",
+          "topic": "Irrigation efficiency",
+          "domain_id": "water_sanitation",
+          "domain": "Water & Sanitation",
+          "subdomain_id": "water_resources",
+          "subdomain": "Water resources, supply and groundwater"
+        }
+      ]
+    }
+  ],
+  "disclaimer": "Manual representative pilot from selected pages. Not exhaustive, not model output, and not a country performance or on-track rating.",
+  "domains": [
+    {
+      "domain_id": "climate",
+      "domain": "Climate",
+      "subdomains": [
+        {
+          "subdomain_id": "climate_governance",
+          "subdomain": "Climate governance, planning and coordination"
+        },
+        {
+          "subdomain_id": "climate_mitigation",
+          "subdomain": "Mitigation, emissions and carbon"
+        },
+        {
+          "subdomain_id": "climate_information",
+          "subdomain": "Climate information, impacts and adaptation"
+        },
+        {
+          "subdomain_id": "climate_finance",
+          "subdomain": "Climate finance and support"
+        },
+        {
+          "subdomain_id": "climate_loss_damage",
+          "subdomain": "Climate-related loss and damage"
+        }
+      ]
+    },
+    {
+      "domain_id": "disaster_risk",
+      "domain": "Disaster Risk & Emergency Management",
+      "subdomains": [
+        {
+          "subdomain_id": "disaster_knowledge",
+          "subdomain": "All-hazards risk knowledge, assessment and governance"
+        },
+        {
+          "subdomain_id": "disaster_reduction",
+          "subdomain": "Prevention and risk reduction"
+        },
+        {
+          "subdomain_id": "disaster_preparedness",
+          "subdomain": "Early warning and preparedness"
+        },
+        {
+          "subdomain_id": "disaster_response_recovery",
+          "subdomain": "Response, recovery and reconstruction"
+        }
+      ]
+    },
+    {
+      "domain_id": "food_agriculture",
+      "domain": "Food & Agriculture",
+      "subdomains": [
+        {
+          "subdomain_id": "agriculture_production",
+          "subdomain": "Crops, soils and farm adaptation"
+        },
+        {
+          "subdomain_id": "agriculture_water",
+          "subdomain": "Farm water, irrigation and drainage"
+        },
+        {
+          "subdomain_id": "food_livestock_fisheries",
+          "subdomain": "Livestock, fisheries and food systems"
+        }
+      ]
+    },
+    {
+      "domain_id": "water_sanitation",
+      "domain": "Water & Sanitation",
+      "subdomains": [
+        {
+          "subdomain_id": "water_resources",
+          "subdomain": "Water resources, supply and groundwater"
+        },
+        {
+          "subdomain_id": "water_basins_drought",
+          "subdomain": "River basins and drought management"
+        },
+        {
+          "subdomain_id": "water_quality",
+          "subdomain": "Water quality, sanitation and reuse"
+        },
+        {
+          "subdomain_id": "water_hazards",
+          "subdomain": "Flood, coast and erosion"
+        }
+      ]
+    },
+    {
+      "domain_id": "nature_land",
+      "domain": "Nature, Land, Forests & Biodiversity",
+      "subdomains": [
+        {
+          "subdomain_id": "nature_forests",
+          "subdomain": "Forests, land and soils"
+        },
+        {
+          "subdomain_id": "nature_biodiversity",
+          "subdomain": "Biodiversity and ecosystems"
+        }
+      ]
+    },
+    {
+      "domain_id": "energy",
+      "domain": "Energy",
+      "subdomains": [
+        {
+          "subdomain_id": "energy_supply",
+          "subdomain": "Energy supply, renewables and grids"
+        },
+        {
+          "subdomain_id": "energy_demand",
+          "subdomain": "Energy efficiency, buildings and heating"
+        },
+        {
+          "subdomain_id": "energy_transition",
+          "subdomain": "Fossil fuel transition and methane"
+        }
+      ]
+    },
+    {
+      "domain_id": "infrastructure_settlements",
+      "domain": "Infrastructure & Human Settlements",
+      "subdomains": [
+        {
+          "subdomain_id": "built_environment",
+          "subdomain": "Buildings and settlements"
+        },
+        {
+          "subdomain_id": "critical_infrastructure",
+          "subdomain": "Critical infrastructure and services"
+        }
+      ]
+    },
+    {
+      "domain_id": "transport",
+      "domain": "Transport & Mobility",
+      "subdomains": [
+        {
+          "subdomain_id": "transport_low_emission",
+          "subdomain": "Low-emission mobility"
+        },
+        {
+          "subdomain_id": "transport_resilience",
+          "subdomain": "Transport resilience"
+        }
+      ]
+    },
+    {
+      "domain_id": "industry_mining",
+      "domain": "Industry & Mining",
+      "subdomains": [
+        {
+          "subdomain_id": "industry_production",
+          "subdomain": "Industrial production and efficiency"
+        },
+        {
+          "subdomain_id": "industry_process",
+          "subdomain": "Industrial processes and refrigerants"
+        },
+        {
+          "subdomain_id": "mining_transition",
+          "subdomain": "Mining and extractive-sector transition"
+        }
+      ]
+    },
+    {
+      "domain_id": "health",
+      "domain": "Health",
+      "subdomains": [
+        {
+          "subdomain_id": "health_risks",
+          "subdomain": "Climate- and disaster-related health risks"
+        },
+        {
+          "subdomain_id": "health_services",
+          "subdomain": "Health services and facilities"
+        }
+      ]
+    },
+    {
+      "domain_id": "waste_circular",
+      "domain": "Waste & Circular Economy",
+      "subdomains": [
+        {
+          "subdomain_id": "waste_materials",
+          "subdomain": "Materials, recycling and circularity"
+        },
+        {
+          "subdomain_id": "waste_solid",
+          "subdomain": "Solid waste and methane"
+        },
+        {
+          "subdomain_id": "waste_water",
+          "subdomain": "Wastewater"
+        }
+      ]
+    },
+    {
+      "domain_id": "economy_transition",
+      "domain": "Economy & Economic Transition",
+      "subdomains": [
+        {
+          "subdomain_id": "economic_diversification",
+          "subdomain": "Diversification and economic resilience"
+        },
+        {
+          "subdomain_id": "just_transition",
+          "subdomain": "Economic restructuring and just transition"
+        }
+      ]
+    },
+    {
+      "domain_id": "livelihoods_social_protection",
+      "domain": "Livelihoods & Social Protection",
+      "subdomains": [
+        {
+          "subdomain_id": "livelihoods_jobs",
+          "subdomain": "Jobs, workers and livelihoods"
+        },
+        {
+          "subdomain_id": "social_protection",
+          "subdomain": "Poverty and social protection"
+        }
+      ]
+    },
+    {
+      "domain_id": "culture_heritage",
+      "domain": "Culture & Heritage",
+      "subdomains": [
+        {
+          "subdomain_id": "heritage",
+          "subdomain": "Tangible and intangible heritage"
+        }
+      ]
+    },
+    {
+      "domain_id": "education_knowledge",
+      "domain": "Education & Knowledge",
+      "subdomains": [
+        {
+          "subdomain_id": "education_awareness",
+          "subdomain": "Education and public awareness"
+        },
+        {
+          "subdomain_id": "research_information",
+          "subdomain": "Research and knowledge systems"
+        }
+      ]
+    },
+    {
+      "domain_id": "tourism",
+      "domain": "Tourism",
+      "subdomains": [
+        {
+          "subdomain_id": "tourism_resilience",
+          "subdomain": "Tourism systems and destination resilience"
+        }
+      ]
+    }
+  ]
+}
